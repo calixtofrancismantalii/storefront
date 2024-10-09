@@ -2032,6 +2032,46 @@ section,
   max-height: 1000px;
 }
 
+select {
+  font-size: 1.4em;
+}
+
+.regular label {
+  padding: 10px 10px 10px 5px;
+}
+
+.regular h5 {
+  color: #444444ee;
+}
+
+input[type=radio], input[type=checkbox] {
+  transform: scale(1.5);
+  margin-right: 2em;
+}
+
+/*----------BMI---------------
+#height_error{
+  color: red;
+}
+
+#weight_error{
+  color: red;
+}
+.wrapper{
+  margin-top: 20px;
+}
+
+input{
+  outline: none;
+  border: 2px solid #1977cc;
+  padding: 5px;
+}
+button{
+  align-content: center;
+  justify-content: center;
+}
+*/
+
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
