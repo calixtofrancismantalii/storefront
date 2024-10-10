@@ -2049,6 +2049,82 @@ input[type=radio], input[type=checkbox] {
   margin-right: 2em;
 }
 
+.care{
+  justify-content: center;
+  border: 2px solid #1977cc;
+  padding-top: 10px;
+  margin-left: 250px;
+  margin-right: 250px;
+}
+
+.location{
+  display: flex;
+}
+.location-1{
+  height: auto;
+  width: 50%;
+  justify-items: center;
+}
+
+.location-1 p{
+  text-align: center;
+  font-size: 16px;
+}
+
+.location-2{
+  height: auto;
+  width: 50%;
+  justify-items: center;
+}
+
+.location-2 a{
+  padding-left: 30%;
+  color: #444444;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px){
+  .location-2 a{
+    padding-left: 28%;
+    padding-bottom: 14px;
+  }
+  .location-1 p{
+    text-align: center;
+    font-size: 15px;
+  }
+  .care{
+    justify-content: center;
+    border: 2px solid #1977cc;
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .care{
+    justify-content: center;
+    border: 2px solid #1977cc;
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .location-2 a{
+    padding-left: 20%;
+    padding-bottom: 8px;
+    width: 30%;
+    font-size: 15px;
+  }
+  .location-1 p{
+    padding-top: 1px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 15px;
+    width: 110%;
+  }
+}
+
 /*----------BMI---------------
 #height_error{
   color: red;
