@@ -2138,14 +2138,21 @@ input[type=radio], input[type=checkbox] {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url('about.jpg') no-repeat;
-  background-size: cover;
+  background-image: url(/assets/img/about.jpg);
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  background-attachment: fixed ;
+  border-image-source: linear-gradient(hsl(208.5 78.2% 44.9% / .4), hsl(208.9 38.9% 28.2% / .4));
+  border-image-slice: fill 1;
 }
 
 .wrapper-2{
   width: 420px;
-  background: #1977cc;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
   color: #f1f7fc;
   border-radius: 10px;
   padding: 10px 30px;
@@ -2193,6 +2200,7 @@ input[type=radio], input[type=checkbox] {
   justify-content: space-between;
   font-size: 14.5px;
   margin: -15px 0 15px;
+  padding-left: 15px;
 }
 
 .remember-forgot label input{
@@ -2216,14 +2224,14 @@ input[type=radio], input[type=checkbox] {
   align-items: center;
   width: 25%;
   height: 40px;
-  background: #fff;
+  background: #1977cc;
   border: none;
   outline: none;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   font-size: 16px;
-  color: #1977cc;
+  color: #f1f7fc;
   font-weight: 600;
 }
 
