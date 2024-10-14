@@ -1121,7 +1121,9 @@ section,
   font-family: var(--heading-font);
   font-size: 16px;
 }
-
+.row {
+  justify-content: center;
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -1199,6 +1201,15 @@ section,
 .services .service-item:hover h3,
 .services .service-item:hover p {
   color: var(--contrast-color);
+}
+
+.services .service-item p a {
+  color: #252525;
+}
+
+.services .service-item:hover p a{
+  color: var(--contrast-color);
+  text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -2275,6 +2286,12 @@ input[type=radio], input[type=checkbox] {
   padding: 0 150px 0 150px;
 }
 
+@media screen and (max-width: 425px){
+  .section-head p{
+    text-align: center;
+    padding: 0 10px 0 10px;
+  }
+}
 /* Test */
 .test{
   padding: 100px 0;
