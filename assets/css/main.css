@@ -1204,7 +1204,7 @@ section,
 }
 
 .services .service-item p a {
-  color: #252525;
+  text-decoration: underline;
 }
 
 .services .service-item:hover p a{
