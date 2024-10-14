@@ -2257,7 +2257,7 @@ input[type=radio], input[type=checkbox] {
   padding: 0 15px;
 }
 
-/*/* Section Head 
+/* Section Head */
 .section-head {
   text-align: center;
   margin-bottom: 50px;
@@ -2267,11 +2267,15 @@ input[type=radio], input[type=checkbox] {
   font-size: 35px;
   font-weight: 600;
   text-transform: capitalize;
-  color: hsl(0, 0%, 100%);
   line-height: 1.2;
 }
 
-/* Test
+.section-head p{
+  text-align: center;
+  padding: 0 150px 0 150px;
+}
+
+/* Test */
 .test{
   padding: 100px 0;
 }
@@ -2281,6 +2285,7 @@ input[type=radio], input[type=checkbox] {
   padding: 30px;
   border-radius: 30px;
 }
+
 
 .test-item .infos{
   display: flex;
@@ -2307,11 +2312,84 @@ input[type=radio], input[type=checkbox] {
   color: hsl(0, 0%, 40%);
 }
 
-.test-item{
+.test-item p{
   margin-top: 20px;
   color: hsl(0, 0%, 40%);
+  font-style: italic;
+  margin: 15px auto 15px auto;
 }
-*/
+
+/*.test-item .rate{
+  font-size: 14px;
+  color: hsl(36, 88%, 66%);
+}*/
+
+.test .test-item .rate {
+  margin: 10px 0;
+}
+
+.test .test-item .rate i {
+  color: #ffc107;
+  margin: 0 1px;
+}
+
+.test-b span {
+  box-sizing: content-box;
+  min-height: 200px;
+  position: relative;
+  margin: 30px;
+}
+
+.test .test-item .quote-icon-left,
+.test .test-item .quote-icon-right {
+  color: color-mix(in srgb, var(--accent-color), transparent 60%);
+  font-size: 26px;
+  line-height: 0;
+}
+
+.test .test-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.test .test-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+  transform: scale(-1, -1);
+}
+
+.text-b h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+
+.text-b h4 {
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  font-size: 14px;
+  margin: 0;
+}
+
+.test .test-content .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.test .test-content .swiper-pagination .swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  opacity: 1;
+  border: none;
+}
+
+.test .test-content .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
+}
+
 /*----------BMI---------------
 #height_error{
   color: red;
@@ -2333,7 +2411,7 @@ button{
   align-content: center;
   justify-content: center;
 }
-*/
+
 
 /*--------------------------------------------------------------
 # Starter Section Section
