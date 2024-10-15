@@ -2409,6 +2409,14 @@ input[type=radio], input[type=checkbox] {
   background-color: var(--accent-color);
 }
 
+.container-table {
+  border: 1px solid #1977cc;
+}
+
+.container-table td a {
+  text-decoration: underline;
+}
+
 /*----------BMI---------------
 #height_error{
   color: red;
