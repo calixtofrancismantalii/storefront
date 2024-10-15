@@ -2417,6 +2417,104 @@ input[type=radio], input[type=checkbox] {
   text-decoration: underline;
 }
 
+.container-table tbody tr td i {
+  font-size: 25px;
+  color: #2c4964;
+  display: flex;
+  justify-content: center;
+}
+.table {
+  width: 100%;
+}
+
+.table .table_header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(240, 240, 240,);
+}
+
+.table_header p {
+  color: #000000;
+
+}
+
+button{
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+td button:nth-child(1){
+  background-color: #1977cc;
+  color: #f1f7fc;
+}
+
+td button:nth-child(2){
+  background-color: #1977cc;
+  color: #f1f7fc;
+}
+
+.table_header button{
+  background-color: #1977cc;
+  color: #f1f7fc;
+  padding: 10px 20px;
+}
+
+input{
+  padding: 10px 20px;
+  margin: 0 10px;
+  outline: none;
+  border: 1px solid #1977cc;
+  border-radius: 6px;
+  color: #1977cc;
+}
+
+.table-section {
+  height: 650px;
+  overflow: auto;
+}
+
+table{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+thead th {
+  position: sticky;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  background-color: #f1f7fc;
+  color: #8493a5;
+  font-size: 15px;
+}
+
+th, td {
+  border-top: 1px solid #1977cc;
+  border-bottom: 1px solid #1977cc;
+  padding: 10px 30px;
+  word-break: break-all;
+  text-align: center;
+}
+
+tr:hover td {
+  color: #1977cc;
+  cursor: pointer;
+  background-color: #f1f7fc;
+}
+
+::placeholder {
+  color: #1977cc;
+}
+
 /*----------BMI---------------
 #height_error{
   color: red;
