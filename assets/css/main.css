@@ -2423,9 +2423,6 @@ input[type=radio], input[type=checkbox] {
   display: flex;
   justify-content: center;
 }
-.table {
-  width: 100%;
-}
 
 .table .table_header {
   display: flex;
@@ -2474,7 +2471,6 @@ input{
 }
 
 .table-section {
-  height: 650px;
   overflow: auto;
 }
 
@@ -2498,8 +2494,7 @@ thead th {
 }
 
 th, td {
-  border-top: 1px solid #1977cc;
-  border-bottom: 1px solid #1977cc;
+  border: 1px solid #1977cc;
   padding: 10px 30px;
   word-break: break-all;
   text-align: center;
