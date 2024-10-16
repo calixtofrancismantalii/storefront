@@ -2470,8 +2470,21 @@ input{
   color: #1977cc;
 }
 
+.table {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  table-layout: fixed;
+  border-collapse: collapse;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 .table-section {
   overflow: auto;
+  display: flex;
+  justify-content: center;
 }
 
 table{
@@ -2495,7 +2508,7 @@ thead th {
 
 th, td {
   border: 1px solid #1977cc;
-  padding: 10px 30px;
+  padding: 15px 15px;
   word-break: break-all;
   text-align: center;
 }
@@ -2506,10 +2519,16 @@ tr:hover td {
   background-color: #f1f7fc;
 }
 
+.table-section tr h5 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 ::placeholder {
   color: #1977cc;
 }
-
+/*  Popup  */
 .modal, .modal2, .modal3, .modal4, .modal5, .modal6, .modal7  {
   background-color: rgba(0,0,0,0.3);
   opacity: 0;
@@ -2553,6 +2572,80 @@ tr:hover td {
 .modal-inner h2, .modal-inner2 h2, .modal-inner3 h2, .modal-inner4 h2, .modal-inner5 h2, .modal-inner6 h2, .modal-inner7 h2 {
   font-size: 25px;
 }
+
+/*Referral*/
+.ref{
+  width: 601px;
+}
+
+.ref p {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  font-size: 18px;
+}
+
+.refer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.title-name, .title-address, .title-contact, .title-ap, .title-list, .title-patient{
+  border: 1px solid #1977cc;
+  border-bottom: 0;
+  padding: 8px 8px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #1977cc;
+  margin-top: 35px;
+}
+
+.title-name h4, .title-address h4, .title-contact h4, .title-ap h4, .title-list h4, .title-patient h4 {
+  padding-top: 8px;
+  color: #f1f7fc;
+  font-size: 22px;
+}
+
+.refer .details-name tr , .title-address tr, .title-contact tr, .title-ap tr, .title-list tr{
+  border: 1px solid #1977cc;
+  padding: 8px;
+}
+
+.refer .details-name tr td {
+  padding-left: 81px;
+  padding-right: 81px;
+}
+
+.refer .details-address tr td {
+  padding-left: 45.1px;
+  padding-right: 45.1px;
+}
+
+.refer .details-contact tr td {
+  padding-left: 90.5px;
+  padding-right: 90.5px;
+}
+
+.refer .details-ap tr td {
+  padding-left: 242.3px;
+  padding-right: 242.3px;
+}
+
+.refer .details-list tr td {
+  padding-left: 27px;
+  padding-right: 27px;
+}
+
 
 /*----------BMI---------------
 #height_error{
