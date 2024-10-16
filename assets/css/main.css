@@ -2510,6 +2510,50 @@ tr:hover td {
   color: #1977cc;
 }
 
+.modal, .modal2, .modal3, .modal4, .modal5, .modal6, .modal7  {
+  background-color: rgba(0,0,0,0.3);
+  opacity: 0;
+  border-radius: 6px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.3s, ease-in-out;
+  z-index: -1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.open, .modal2.open2, .modal3.open3, .modal4.open4, .modal5.open5, .modal6.open6, .modal7.open7{
+  opacity: 1;
+  z-index: 999;
+}
+
+.modal-inner, .modal-inner2, .modal-inner3, .modal-inner4, .modal-inner5, .modal-inner6, .modal-inner7 {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  padding: 40px 50px;
+  text-align: center;
+  width: 380px;
+  height: 200px;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.modal-inner a, .modal-inner2 a, .modal-inner3 a, .modal-inner4 a, .modal-inner5 a, .modal-inner6 a, .modal-inner7 a{
+  margin-top: 50px;
+  padding: 8px;
+  border: 1px solid #1977cc;
+}
+
+.modal-inner h2, .modal-inner2 h2, .modal-inner3 h2, .modal-inner4 h2, .modal-inner5 h2, .modal-inner6 h2, .modal-inner7 h2 {
+  font-size: 25px;
+}
+
 /*----------BMI---------------
 #height_error{
   color: red;
