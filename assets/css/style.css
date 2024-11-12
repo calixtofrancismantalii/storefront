@@ -33,6 +33,7 @@ html,body{
 .wrapper .title-text{
   display: flex;
   width: 200%;
+  color: #1977cc;
 }
 .wrapper .title{
   width: 50%;
@@ -65,7 +66,7 @@ html,body{
   transition: all 0.6s ease;
 }
 .slide-controls label.signup{
-  color: #000;
+  color: #1977cc;
 }
 .slide-controls .slider-tab{
   position: absolute;
@@ -89,10 +90,10 @@ input[type="radio"]{
   user-select: none;
 }
 #signup:checked ~ label.login{
-  color: #000;
+  color: #1977cc;
 }
 #login:checked ~ label.signup{
-  color: #000;
+  color: #1977cc;
 }
 #login:checked ~ label.login{
   cursor: default;
@@ -143,6 +144,7 @@ form .field input:focus::placeholder{
 .form-inner form .signup-link{
   text-align: center;
   margin-top: 30px;
+  color: #4c4c4c;
 }
 .form-inner form .pass-link a,
 .form-inner form .signup-link a{
