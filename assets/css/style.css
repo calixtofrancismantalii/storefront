@@ -37,7 +37,7 @@ html,body{
 }
 .wrapper .title{
   width: 50%;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 600;
   text-align: center;
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
@@ -143,7 +143,7 @@ form .field input:focus::placeholder{
 }
 .form-inner form .signup-link{
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
   color: #4c4c4c;
 }
 .form-inner form .pass-link a,
