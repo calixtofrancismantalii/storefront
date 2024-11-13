@@ -2428,6 +2428,10 @@ input[type=radio], input[type=checkbox] {
     overflow: scroll;
   }
 }
+
+.t-head {
+  align-self: center;
+}
 /*----------BMI---------------
 #height_error{
   color: red;
