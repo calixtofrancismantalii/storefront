@@ -706,7 +706,7 @@ h6 {
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: var(--nav-hover-color);
 }
 
 .footer .footer-contact p {
