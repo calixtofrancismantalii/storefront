@@ -64,6 +64,12 @@
       border-left: 1px solid #a7a7ef;
       display: flex;
       padding: 20px !important;
+      align-items: flex-start;
+      font-family: var(--heading-font);
+      flex-direction: column;
+    }
+    .clinic-doctor2{
+      display: flex;
       align-content: center;
       align-items: center;
       font-family: var(--heading-font);
@@ -250,100 +256,108 @@
               const state = document.getElementById('state').value;
               const zipcode = document.getElementById('zipcode').value;
               let result = '';
-      if (state === 'Texas' && (zipcode === '79703' || zipcode === '77382' || zipcode === '77380' || zipcode === '75401' || zipcode === '75032' || zipcode === '')) {
-      if (zipcode === '79703' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Advanced Neuroscience Clinic and Sleep Center</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/ieXzYEyxZ58waCg39">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3400 Andrews Highway<br>Midland, TX 79703</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:+14322267331" class="call-button">Call (432) 226-7331</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                      <img src="assets/img/download" alt="Dr. Manoher Gurru" class="doctor-photo">
-                      <h3>Dr. Manoher Gurru</h3>
-                  </div>
-              </div>
-          </div>`
-          ;
-      }
-      if (zipcode === '77382' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Allergy & ENT Associates - Sterling Ridge</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/jPQfPa2ET7mbjnfn9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>10847 Kuykendahl Road, Suite 100<br>The Woodlands, TX 77382</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:+12819824332" class="call-button">Call (281) 982-4332</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                      <img src="assets/img/download (1)" alt="Dr. Traci Bailey" class="doctor-photo">
-                      <h3>Dr. Traci Bailey</h3>
-                  </div>
-              </div>
-          </div>`
-          ;
-      }
-      if (zipcode === '77380' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Allergy and ENT Associates - Town Center</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/Zd2xZecqFZPHWUYG9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>9301 Pinecroft Drive, Suite 100<br>Shenandoah, TX 77380</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:+17138819783" class="call-button">Call (713) 881-9783</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                      <img src="assets/img/download (1)" alt="Dr. Traci Bailey" class="doctor-photo">
-                      <h3>Dr. Traci Bailey</h3>
-                  </div>
-              </div>
-          </div>`
-          ;
-      }
-      if (zipcode === '75401' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Allergy ENT Clinic of Northeast Texas</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/CFBGK7tq4FZq1qXy5">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>4000 Medical Pkwy.<br>Greenville, TX 75401</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:+19034517895" class="call-button">Call (903) 451-7895</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                      <img src="assets/img/download (2)" alt="Dr. Wha-Joon Lee" class="doctor-photo">
-                      <h3>Dr. Wha-Joon Lee</h3>
-                  </div>
-              </div>
-          </div>`
-          ;
-      }
-      if (zipcode === '75032' || zipcode === '') {
+      if ((state === 'Texas' && (zipcode === '79703' || zipcode === '77382' || zipcode === '77380' || zipcode === '75401' || zipcode === '75032' || zipcode === ''))||((zipcode === '79703' || zipcode === '77382' || zipcode === '77380' || zipcode === '75401' || zipcode === '75032' ) && state === '')) {
+        if (zipcode === '79703' || zipcode === '') {
+            result += `
+            <div class="clinic-title">
+                <br>
+                <div class="clinic-name" style="padding-left: 10px">Advanced Neuroscience Clinic and Sleep Center</div>
+                <div class="clinic-card">
+                    <div class="clinic-info">
+                        <p><a href="https://maps.app.goo.gl/ieXzYEyxZ58waCg39">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3400 Andrews Highway<br>Midland, TX 79703</p>
+                    </div>
+                    <div class="clinic-appointment">
+                        <h3>Request an Appointment</h3>
+                        <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                        <a href="tel:+14322267331" class="call-button">Call (432) 226-7331</a><br>
+                        <a href="#" class="request-link">Request a call</a>
+                    </div>
+                    <div class="clinic-doctor">
+                      <div class="clinic-doctor2">
+                        <img src="assets/img/download" alt="Dr. Manoher Gurru" class="doctor-photo">
+                        <h3>Dr. Manoher Gurru</h3>
+                      </div>
+                    </div>
+                </div>
+            </div>`
+            ;
+        }
+        if (zipcode === '77382' || zipcode === '') {
+            result += `
+            <div class="clinic-title">
+                <br>
+                <div class="clinic-name" style="padding-left: 10px">Allergy & ENT Associates - Sterling Ridge</div>
+                <div class="clinic-card">
+                    <div class="clinic-info">
+                        <p><a href="https://maps.app.goo.gl/jPQfPa2ET7mbjnfn9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>10847 Kuykendahl Road, Suite 100<br>The Woodlands, TX 77382</p>
+                    </div>
+                    <div class="clinic-appointment">
+                        <h3>Request an Appointment</h3>
+                        <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                        <a href="tel:+12819824332" class="call-button">Call (281) 982-4332</a><br>
+                        <a href="#" class="request-link">Request a call</a>
+                    </div>
+                    <div class="clinic-doctor">
+                      <div class="clinic-doctor2">
+                        <img src="assets/img/download (1)" alt="Dr. Traci Bailey" class="doctor-photo">
+                        <h3>Dr. Traci Bailey</h3>
+                      </div>
+                    </div>
+                </div>
+            </div>`
+            ;
+        }
+        if (zipcode === '77380' || zipcode === '') {
+            result += `
+            <div class="clinic-title">
+                <br>
+                <div class="clinic-name" style="padding-left: 10px">Allergy and ENT Associates - Town Center</div>
+                <div class="clinic-card">
+                    <div class="clinic-info">
+                        <p><a href="https://maps.app.goo.gl/Zd2xZecqFZPHWUYG9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>9301 Pinecroft Drive, Suite 100<br>Shenandoah, TX 77380</p>
+                    </div>
+                    <div class="clinic-appointment">
+                        <h3>Request an Appointment</h3>
+                        <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                        <a href="tel:+17138819783" class="call-button">Call (713) 881-9783</a><br>
+                        <a href="#" class="request-link">Request a call</a>
+                    </div>
+                    <div class="clinic-doctor">
+                      <div class="clinic-doctor2">
+                        <img src="assets/img/download (1)" alt="Dr. Traci Bailey" class="doctor-photo">
+                        <h3>Dr. Traci Bailey</h3>
+                      </div>
+                    </div>
+                </div>
+            </div>`
+            ;
+        }
+        if (zipcode === '75401' || zipcode === '') {
+            result += `
+            <div class="clinic-title">
+                <br>
+                <div class="clinic-name" style="padding-left: 10px">Allergy ENT Clinic of Northeast Texas</div>
+                <div class="clinic-card">
+                    <div class="clinic-info">
+                        <p><a href="https://maps.app.goo.gl/CFBGK7tq4FZq1qXy5">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>4000 Medical Pkwy.<br>Greenville, TX 75401</p>
+                    </div>
+                    <div class="clinic-appointment">
+                        <h3>Request an Appointment</h3>
+                        <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                        <a href="tel:+19034517895" class="call-button">Call (903) 451-7895</a><br>
+                        <a href="#" class="request-link">Request a call</a>
+                    </div>
+                    <div class="clinic-doctor">
+                      <div class="clinic-doctor2">
+                        <img src="assets/img/download (2)" alt="Dr. Wha-Joon Lee" class="doctor-photo">
+                        <h3>Dr. Wha-Joon Lee</h3>
+                      </div>
+                    </div>
+                </div>
+            </div>`
+            ;
+        }
+        if (zipcode === '75032' || zipcode === '') {
           result += `
           <div class="clinic-title">
               <br>
@@ -359,17 +373,129 @@
                       <a href="#" class="request-link">Request a call</a>
                   </div>
                   <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
                       <img src="assets/img/download (2)" alt="Dr. Wha-Joon Lee" class="doctor-photo">
                       <h3>Dr. Wha-Joon Lee</h3>
+                    </div>
                   </div>
               </div>
           </div>`
           ;
       }
-  }
+      }
 
-          document.getElementById('result').innerHTML = result;
-          });
+      if ((state === 'Alabama' && (zipcode === '35801' || zipcode === '335058' || zipcode === ''))||((zipcode === '35801'|| zipcode === '335058' ) && state === '')) {
+        if (zipcode === '35801' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">Alabama Institute for Sleep Health</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/A3xwTNYfHhCj3w5R9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>333 Whitesport Dr., Suite 205<br>Huntsville, AL 35801</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:+12562928096" class="call-button">Call (256) 292-8096</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (3)" alt="Dr. G. Scott Warner" class="doctor-photo">
+                      <h3>Dr. G. Scott Warner</h3>
+                    </div>
+                    <br>
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (4)" alt="Brandi Greeson" class="doctor-photo">
+                      <h3>Brandi Greeson</h3>
+                    </div> 
+                  </div>
+              </div>
+          </div>`;
+        }
+        if (zipcode === '335058' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">Alabama Institute for Sleep Health</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/A3xwTNYfHhCj3w5R9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1803 Park View Drive NE<br>Cullman, AL 35058</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:+12562026994" class="call-button">Call (256) 202-6994</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (3)" alt="Dr. G. Scott Warner" class="doctor-photo">
+                      <h3>Dr. G. Scott Warner</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>`;
+        }
+      }
+      if ((state === 'Alaska' && (zipcode === '99503' || zipcode === '99654'|| zipcode === ''))||((zipcode === '99503' || zipcode === '99654') && state === '')) {
+        if (zipcode === '99503' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+                    <br>
+                    <div class="clinic-name" style="padding-left: 10px">Anchorage Sleep Center</div>
+                    <div class="clinic-card">
+                        <div class="clinic-info">
+                            <p><a href="#">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>510 W. Tudor Road, Suite 5<br>Anchorage, AK 99503</p>
+                        </div>
+                        <div class="clinic-appointment">
+                            <h3>Request an Appointment</h3>
+                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                            <a href="tel:+12369003332" class="call-button">Call (236) 900-3332</a><br>
+                            <a href="#" class="request-link">Request a call</a>
+                        </div>
+                        <div class="clinic-doctor">
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (5)" alt="Dr. Paul Raymond" class="doctor-photo">
+                            <h3>Dr. Paul Raymond</h3>
+                          </div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        if (zipcode === '99654' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">ENT Specialists of Alaska</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="#">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3750 E Country Field Circle, Ste B<br>Wasilla, AK 99654</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:3528553991" class="call-button">Call (352) 855-3991</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (6)" alt="Dr. Kevin Jensen" class="doctor-photo">
+                      <h3>Dr. Kevin Jensen</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>`;
+        }
+      }
+
+      if (result === '') {
+        result = '<p>No records found for the selected state or ZIP code.</p>';
+      }
+
+      document.getElementById('result').innerHTML = result;
+      });
       </script>
 
     </div>

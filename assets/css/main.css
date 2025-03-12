@@ -2569,7 +2569,7 @@ button{
 
 .geo-map button {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: #fe702c;
   font-size: 14px;
   padding: 8px 25px;
   margin: 0 0 0 30px;
