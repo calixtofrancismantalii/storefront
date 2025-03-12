@@ -79,6 +79,10 @@ a:hover {
   text-decoration: none;
 }
 
+header .org {
+  background-color: #fe702c !important;
+}
+
 h1,
 h2,
 h3,
