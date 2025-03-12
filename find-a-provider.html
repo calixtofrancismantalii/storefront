@@ -35,6 +35,83 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+  <style>
+    label, input, select { margin: 5px 0; }
+    button { margin-top: 10px; padding: 5px 15px; }
+    .clinic-title{
+        background-color: #f4f4ff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin-top: 20px;
+    }
+    .clinic-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+        padding: 0px 20px 20px 0px;
+        border-top: 1px solid #a7a7ef;
+    }
+    .clinic-name {
+        grid-column: 1 / -1;
+        margin-bottom: 10px;
+        color: #2c4964;
+        font-size: 1.5em;
+        font-weight: bold;
+        font-family: var(--heading-font);
+    }
+    .clinic-doctor{
+      border-left: 1px solid #a7a7ef;
+      display: flex;
+      padding: 20px !important;
+      align-content: center;
+      align-items: center;
+      font-family: var(--heading-font);
+    }
+
+    .clinic-doctor img{
+      margin-right: 10px;
+    }
+    .clinic-info, .clinic-appointment, .clinic-doctor {
+        padding: 10px;
+    }
+    .clinic-info h3, .clinic-appointment h3, .clinic-doctor h3 {
+        margin: 5px 0;
+        color: #2c4964;
+        font-family: var(--heading-font);
+    }
+    .call-button {
+      display: inline-block;
+      background: var(--accent-color);
+      color: white;
+      padding: 10px 20px;
+      margin: 10px 0;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .call-button:hover {
+      color: white;
+      background-color: #fe702c;
+    }
+    .doctor-photo {
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+    }
+    .request-link {
+      text-decoration: underline;
+    }
+    .clinic-info a{
+      font-size: 20px;
+      text-decoration: underline;
+      font-family: var(--heading-font);
+    }
+    .clinic-info a:hover{
+      color: #fe702c;
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -68,25 +145,28 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="index.html">Home<br></a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="our-programs.html">Our Program</a></li>
-            <li><a href="for-providers.html">For Providers</a></li>
-            <li><a href="doctors.html">Doctors</a></li>
-            <li class="dropdown"><a href="for-patients.html"class="active"><span>For Patients</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="#"><span>MyApneaPath</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
-                <li><a href="find-a-provider.html">Find a Provider</a></li>
-                <li><a href="schedule-your-pap-setup-call.html">Schedule your PAP setup Call</a></li>
-                <li><a href="pap-problem-and-solutions.html">PAP Problems and Solutions</a></li>
-                <li><a href="sleep-disorders.html">Sleep Disorders</a></li>
-                <li><a href="alternative-sleep-apnea-therapies.html">Alternative Sleep Apnea Therapies</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="sleep-apnea-care.html">Sleep Apnea Care</a></li>
               </ul>
             </li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown"><a href="#"><span>MyPath</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="im-a-patient.html">I'm A Patient</a></li>
+                <li><a href="im-a-provider.html">I'm A Provider</a></li>
+                <li><a href="new-login.html">My Portal</a></li>
+              </ul>
+            </li>
+            <li><a href="stories.html">Stories</a></li>
+            <li><a href="find-a-provider.html" class="active">Find a Provider</a></li>
+            <li><a href="register.html">Register</a></li>|<li><a href="new-login.html">Login</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="cta-btn d-none d-sm-block" href="appointment.html">Make an Appointment</a>
+        <a class="cta-btn d-none d-sm-block" href="contact.html">Contact Us</a>
 
       </div>
 
@@ -96,181 +176,204 @@
 
   <main class="main">
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <div class="container geo-map">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Find a Provider</h2>
-        <p>Find a Treatment Provider Near You</p>
-      </div><!-- End Section Title -->
-
-      <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
-        <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div><!-- End Google Maps -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Location</h3>
-                <p>A108 Adam Street, New York, NY 535022</p>
+      <br>
+      <h2>Search by State and ZIP Code</h2>
+      <form id="searchForm">
+          <label for="state">State:</label>
+          <select id="state" name="state">
+              <option value="">Select a State</option>
+              <option value="Alabama">Alabama</option>
+              <option value="Alaska">Alaska</option>
+              <option value="Arizona">Arizona</option>
+              <option value="Arkansas">Arkansas</option>
+              <option value="California">California</option>
+              <option value="Colorado">Colorado</option>
+              <option value="Connecticut">Connecticut</option>
+              <option value="Delaware">Delaware</option>
+              <option value="District Of Columbia">District Of Columbia</option>
+              <option value="Florida">Florida</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Hawaii">Hawaii</option>
+              <option value="Idaho">Idaho</option>
+              <option value="Illinois">Illinois</option>
+              <option value="Indiana">Indiana</option>
+              <option value="Iowa">Iowa</option>
+              <option value="Kansas">Kansas</option>
+              <option value="Kentucky">Kentucky</option>
+              <option value="Louisiana">Louisiana</option>
+              <option value="Maine">Maine</option>
+              <option value="Maryland">Maryland</option>
+              <option value="Massachusetts">Massachusetts</option>
+              <option value="Michigan">Michigan</option>
+              <option value="Minnesota">Minnesota</option>
+              <option value="Mississippi">Mississippi</option>
+              <option value="Missouri">Missouri</option>
+              <option value="Montana">Montana</option>
+              <option value="Nebraska">Nebraska</option>
+              <option value="Nevada">Nevada</option>
+              <option value="New Hampshire">New Hampshire</option>
+              <option value="New Jersey">New Jersey</option>
+              <option value="New Mexico">New Mexico</option>
+              <option value="New York">New York</option>
+              <option value="North Carolina">North Carolina</option>
+              <option value="North Dakota">North Dakota</option>
+              <option value="Ohio">Ohio</option>
+              <option value="Oklahoma">Oklahoma</option>
+              <option value="Oregon">Oregon</option>
+              <option value="Pennsylvania">Pennsylvania</option>
+              <option value="Rhode Island">Rhode Island</option>
+              <option value="South Carolina">South Carolina</option>
+              <option value="South Dakota">South Dakota</option>
+              <option value="Tennessee">Tennessee</option>
+              <option value="Texas">Texas</option>
+              <option value="Utah">Utah</option>
+              <option value="Vermont">Vermont</option>
+              <option value="Virginia">Virginia</option>
+              <option value="Washington">Washington</option>
+              <option value="West Virginia">West Virginia</option>
+              <option value="Wisconsin">Wisconsin</option>
+              <option value="Wyoming">Wyoming</option>
+          </select>
+          <br>
+          <label for="zipcode">ZIP Code:</label>
+          <input type="text" id="zipcode" name="zipcode" placeholder=" Enter ZIP Code">
+          <br>
+          <button type="submit">Search</button>
+      <div id="result" style="margin-top: 15px;"></div>
+      </form>
+      <script>
+          const form = document.getElementById('searchForm');
+          form.addEventListener('submit', function(event) {
+              event.preventDefault();
+              const state = document.getElementById('state').value;
+              const zipcode = document.getElementById('zipcode').value;
+              let result = '';
+      if (state === 'Texas' && (zipcode === '79703' || zipcode === '77382' || zipcode === '77380' || zipcode === '75401' || zipcode === '75032' || zipcode === '')) {
+      if (zipcode === '79703' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">Advanced Neuroscience Clinic and Sleep Center</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/ieXzYEyxZ58waCg39">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3400 Andrews Highway<br>Midland, TX 79703</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:+14322267331" class="call-button">Call (432) 226-7331</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                      <img src="assets/img/download" alt="Dr. Manoher Gurru" class="doctor-photo">
+                      <h3>Dr. Manoher Gurru</h3>
+                  </div>
               </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-telephone flex-shrink-0"></i>
-              <div>
-                <h3>Call Us</h3>
-                <p>+1 5589 55488 55</p>
+          </div>`
+          ;
+      }
+      if (zipcode === '77382' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">Allergy & ENT Associates - Sterling Ridge</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/jPQfPa2ET7mbjnfn9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>10847 Kuykendahl Road, Suite 100<br>The Woodlands, TX 77382</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:+12819824332" class="call-button">Call (281) 982-4332</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                      <img src="assets/img/download (1)" alt="Dr. Traci Bailey" class="doctor-photo">
+                      <h3>Dr. Traci Bailey</h3>
+                  </div>
               </div>
-            </div><!-- End Info Item -->
-
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email Us</h3>
-                <p>info@example.com</p>
+          </div>`
+          ;
+      }
+      if (zipcode === '77380' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">Allergy and ENT Associates - Town Center</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/Zd2xZecqFZPHWUYG9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>9301 Pinecroft Drive, Suite 100<br>Shenandoah, TX 77380</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:+17138819783" class="call-button">Call (713) 881-9783</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                      <img src="assets/img/download (1)" alt="Dr. Traci Bailey" class="doctor-photo">
+                      <h3>Dr. Traci Bailey</h3>
+                  </div>
               </div>
-            </div><!-- End Info Item -->
-
-          </div>
-
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
+          </div>`
+          ;
+      }
+      if (zipcode === '75401' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">Allergy ENT Clinic of Northeast Texas</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/CFBGK7tq4FZq1qXy5">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>4000 Medical Pkwy.<br>Greenville, TX 75401</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:+19034517895" class="call-button">Call (903) 451-7895</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                      <img src="assets/img/download (2)" alt="Dr. Wha-Joon Lee" class="doctor-photo">
+                      <h3>Dr. Wha-Joon Lee</h3>
+                  </div>
               </div>
-            </form>
-          </div><!-- End Contact Form -->
+          </div>`
+          ;
+      }
+      if (zipcode === '75032' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">Allergy, Ear, Nose & Throat Clinic of Northeast Texas, Rockwall</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/AWHGiQ9YghTVezaw5">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3000 Horizon Road<br>Rockwall, TX 75032</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:+14691838863" class="call-button">Call (469) 813-8863</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                      <img src="assets/img/download (2)" alt="Dr. Wha-Joon Lee" class="doctor-photo">
+                      <h3>Dr. Wha-Joon Lee</h3>
+                  </div>
+              </div>
+          </div>`
+          ;
+      }
+  }
 
-        </div>
+          document.getElementById('result').innerHTML = result;
+          });
+      </script>
 
-      </div>
-
-    </section><!-- /Contact Section -->
-
-        <!-- Services Section -->
-    <section id="services" class="services section">
-
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>For Patients</h2>
-          <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-        </div><!-- End Section Title -->
-  
-        <div class="container">
-  
-          <div class="row gy-4">
-  
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-              <div class="service-item  position-relative">
-                <div class="icon">
-                  <i class="fas fa-heartbeat"></i>
-                </div>
-                <a href="find-a-provider.html" class="stretched-link">
-                  <h3>Find a Provider</h3>
-                </a>
-                <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
-              </div>
-            </div><!-- End Service Item -->
-  
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="fas fa-pills"></i>
-                </div>
-                <a href="schedule-your-pap-setup-call.html" class="stretched-link">
-                  <h3>Schedule your PAP setup Call</h3>
-                </a>
-                <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
-              </div>
-            </div><!-- End Service Item -->
-  
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="fas fa-hospital-user"></i>
-                </div>
-                <a href="pap-problem-and-solutions.html" class="stretched-link">
-                  <h3>PAP Problems and Solutions</h3>
-                </a>
-                <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
-              </div>
-            </div><!-- End Service Item -->
-  
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="fas fa-dna"></i>
-                </div>
-                <a href="sleep-disorders.html" class="stretched-link">
-                  <h3>Sleep Disorders</h3>
-                </a>
-                <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-                <a href="sleep-disorders.html" class="stretched-link"></a>
-              </div>
-            </div><!-- End Service Item -->
-  
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="fas fa-wheelchair"></i>
-                </div>
-                <a href="alternative-sleep-apnea-therapies.html" class="stretched-link">
-                  <h3>Alternative Sleep Apnea Therapies</h3>
-                </a>
-                <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-                <a href="alternative-sleep-apnea-therapies.html" class="stretched-link"></a>
-              </div>
-            </div><!-- End Service Item -->
-  
-            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-              <div class="service-item position-relative">
-                <div class="icon">
-                  <i class="fas fa-notes-medical"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Dolori Architecto</h3>
-                </a>
-                <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-                <a href="#" class="stretched-link"></a>
-              </div>
-            </div><!-- End Service Item -->
-  
-          </div>
-  
-        </div>
-  
-    </section><!-- /Services Section -->
+    </div>
+    <br>
 
   </main>
 
