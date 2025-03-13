@@ -666,6 +666,113 @@
           </div>`;
         }
       }
+
+      if ((state === 'Colorado' && (zipcode === '81505' || zipcode === '80634'|| zipcode === ''))||((zipcode === '81505' || zipcode === '80634') && state === '')) {
+        if (zipcode === '81505' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+                    <br>
+                    <div class="clinic-name" style="padding-left: 10px">Advanced Pulmonary & Critical Care of the Grand Valley</div>
+                    <div class="clinic-card">
+                        <div class="clinic-info">
+                            <p><a href="https://maps.app.goo.gl/ZWuXwsbwgLamHWzp8">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>2351 G Road<br>Grand Junction, CO 81505</p>
+                        </div>
+                        <div class="clinic-appointment">
+                            <h3>Request an Appointment</h3>
+                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                            <a href="tel:9705140429" class="call-button">Call (970) 514-0429</a><br>
+                            <a href="#" class="request-link">Request a call</a>
+                        </div>
+                        <div class="clinic-doctor">
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (14)" alt="Dr. Omar Mctabi" class="doctor-photo">
+                            <h3>Dr. Omar Mctabi</h3>
+                          </div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        if (zipcode === '80634' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">Alpine ENT - Greeley</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/YsArc2tidtwa1ihy5">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>6500 West 29th St, Unit 106<br>Greeley, CO 80634</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:9704997869" class="call-button">Call (970) 499-7869</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (15)" alt="Dr. Eric Mason" class="doctor-photo">
+                      <h3>Dr. Eric Mason</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>`;
+        }
+      }
+
+      if ((state === 'Connecticut' && (zipcode === '06082' || zipcode === '06489'|| zipcode === ''))||((zipcode === '06082' || zipcode === '06489') && state === '')) {
+        if (zipcode === '06082' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+                    <br>
+                    <div class="clinic-name" style="padding-left: 10px">Connecticut Ear Nose and Throat Associates, Enfield</div>
+                    <div class="clinic-card">
+                        <div class="clinic-info">
+                            <p><a href="https://maps.app.goo.gl/vVS7XjbHaNzhdLfi7">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>15 Palomba Drive, Suite 12<br>Enfield, CT 06082</p>
+                        </div>
+                        <div class="clinic-appointment">
+                            <h3>Request an Appointment</h3>
+                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                            <a href="tel:8603858404" class="call-button">Call (860) 385-8404</a><br>
+                            <a href="#" class="request-link">Request a call</a>
+                        </div>
+                        <div class="clinic-doctor">
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (16)" alt="Dr. Timothy O'Brien" class="doctor-photo">
+                            <h3>Dr. Timothy O'Brien</h3>
+                          </div>
+                          <br>
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (17)" alt="Dr. Kyle Chambers" class="doctor-photo">
+                            <h3>Dr. Kyle Chambers</h3>
+                          </div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        if (zipcode === '06489' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">Connecticut Ear, Nose & Throat Associates - Southington</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/3V2EtNQuTxkJ7YDT6">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>300 Queen Street<br>Southington, CT 06489</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:8608463953" class="call-button">Call (860) 846-3953</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (18)" alt="Dr. Carl Moeller" class="doctor-photo">
+                      <h3>Dr. Carl Moeller</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>`;
+        }
+      }
       
       if (result === '') {
       result = '<div class="no-records">No records found for the selected state or ZIP code.</div>';
