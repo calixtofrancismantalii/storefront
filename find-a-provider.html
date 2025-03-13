@@ -38,7 +38,7 @@
 
   <style>
     label, input, select { margin: 5px 0; }
-    button { margin-top: 10px; padding: 5px 15px; }
+    /* button { margin-top: 10px; padding: 5px 15px; } */
     .clinic-title{
         background-color: #f4f4ff;
         border-radius: 15px;
@@ -183,10 +183,12 @@
   <main class="main">
 
     <div class="container geo-map">
-
+      <br>
+      <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.455416608134!2d-96.9658210255745!3d32.91071227714375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c284b289628a9%3A0x244f1004f68fd8a6!2s1215%20Kinwest%20Pkwy%20%23120%2C%20Irving%2C%20TX%2075063%2C%20USA!5e1!3m2!1sen!2sph!4v1741878064961!5m2!1sen!2sph" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <br>
       <h2>Search by State and ZIP Code</h2>
       <form id="searchForm">
+        <div class="boxthis">
           <label for="state">State:</label>
           <select id="state" name="state">
               <option value="">Select a State</option>
@@ -247,6 +249,7 @@
           <input type="text" id="zipcode" name="zipcode" placeholder=" Enter ZIP Code">
           <br>
           <button type="submit">Search</button>
+        </div>
       <div id="result" style="margin-top: 15px;"></div>
       </form>
       <script>
@@ -392,7 +395,7 @@
               <div class="clinic-name" style="padding-left: 10px">Alabama Institute for Sleep Health</div>
               <div class="clinic-card">
                   <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/A3xwTNYfHhCj3w5R9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>333 Whitesport Dr., Suite 205<br>Huntsville, AL 35801</p>
+                      <p><a href="https://maps.app.goo.gl/6VLZ3dCxPd9scZsA7">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>333 Whitesport Dr., Suite 205<br>Huntsville, AL 35801</p>
                   </div>
                   <div class="clinic-appointment">
                       <h3>Request an Appointment</h3>
@@ -421,7 +424,7 @@
               <div class="clinic-name" style="padding-left: 10px">Alabama Institute for Sleep Health</div>
               <div class="clinic-card">
                   <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/A3xwTNYfHhCj3w5R9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1803 Park View Drive NE<br>Cullman, AL 35058</p>
+                      <p><a href="https://maps.app.goo.gl/bCBw63K9ZXVK8YtX8">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1803 Park View Drive NE<br>Cullman, AL 35058</p>
                   </div>
                   <div class="clinic-appointment">
                       <h3>Request an Appointment</h3>
@@ -447,7 +450,7 @@
                     <div class="clinic-name" style="padding-left: 10px">Anchorage Sleep Center</div>
                     <div class="clinic-card">
                         <div class="clinic-info">
-                            <p><a href="#">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>510 W. Tudor Road, Suite 5<br>Anchorage, AK 99503</p>
+                            <p><a href="https://maps.app.goo.gl/VquDm4caa351YKPy9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>510 W. Tudor Road, Suite 5<br>Anchorage, AK 99503</p>
                         </div>
                         <div class="clinic-appointment">
                             <h3>Request an Appointment</h3>
@@ -471,7 +474,7 @@
               <div class="clinic-name" style="padding-left: 10px">ENT Specialists of Alaska</div>
               <div class="clinic-card">
                   <div class="clinic-info">
-                      <p><a href="#">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3750 E Country Field Circle, Ste B<br>Wasilla, AK 99654</p>
+                      <p><a href="https://maps.app.goo.gl/FEczxpFZgPfJCyrY9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3750 E Country Field Circle, Ste B<br>Wasilla, AK 99654</p>
                   </div>
                   <div class="clinic-appointment">
                       <h3>Request an Appointment</h3>
@@ -490,8 +493,161 @@
         }
       }
 
+      if ((state === 'Arizona' && (zipcode === '85306' || zipcode === '85297'|| zipcode === ''))||((zipcode === '85306' || zipcode === '85297') && state === '')) {
+        if (zipcode === '85306' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+                    <br>
+                    <div class="clinic-name" style="padding-left: 10px">AOC Physicians Group, Glendale</div>
+                    <div class="clinic-card">
+                        <div class="clinic-info">
+                            <p><a href="https://maps.app.goo.gl/UP2yANLAorf63bW19">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>5750 W Thunderbird Rd, Ste A-100<br>Glendale, AZ 85306</p>
+                        </div>
+                        <div class="clinic-appointment">
+                            <h3>Request an Appointment</h3>
+                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                            <a href="tel:6028549112" class="call-button">Call (602) 854-9112</a><br>
+                            <a href="#" class="request-link">Request a call</a>
+                        </div>
+                        <div class="clinic-doctor">
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (7)" alt="Dr. Chetan Gujrathi" class="doctor-photo">
+                            <h3>Dr. Chetan Gujrathi</h3>
+                          </div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        if (zipcode === '85297' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">Arizona Advanced Surgery</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/92aGhx4Vi4c2frgy7">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3367 Mercy Rd, Suite 210<br>Gilbert, AZ 85297</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:4806133016" class="call-button">Call (480) 613-3016</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (9)" alt="Dr. Sumeet Kadakia" class="doctor-photo">
+                      <h3>Dr. Sumeet Kadakia</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>`;
+        }
+      }
+
+      if ((state === 'Arkansas' && (zipcode === '72205' || zipcode === '71913'|| zipcode === ''))||((zipcode === '72205' || zipcode === '71913') && state === '')) {
+        if (zipcode === '72205' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+                    <br>
+                    <div class="clinic-name" style="padding-left: 10px">Baptist Health UAMS Ear Nose and Throat</div>
+                    <div class="clinic-card">
+                        <div class="clinic-info">
+                            <p><a href="https://maps.app.goo.gl/EbpwFcQJ3CAmUfJr5">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>9800 Baptist Health Dr., Suite 400<br>Little Rock, AR 72205</p>
+                        </div>
+                        <div class="clinic-appointment">
+                            <h3>Request an Appointment</h3>
+                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                            <a href="tel:5018427143" class="call-button">Call (501) 842-7143</a><br>
+                            <a href="#" class="request-link">Request a call</a>
+                        </div>
+                        <div class="clinic-doctor">
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (10)" alt="Dr. Anvesh Kompelli" class="doctor-photo">
+                            <h3>Dr. Anvesh Kompelli</h3>
+                          </div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        if (zipcode === '71913' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">CHI St. Vincent ENT Clinic - Hot Springs</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/qoZv8ez3DxGbsXRN8">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1 Mercy Lane, Suite 106<br>Hot Springs, AR 71913</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:5012009754" class="call-button">Call (501) 200-9754</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (11)" alt="Dr. Mariah O'Sullivan" class="doctor-photo">
+                      <h3>Dr. Mariah O'Sullivan</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>`;
+        }
+      }
+
+      if ((state === 'California' && (zipcode === '93309' || zipcode === '94598'|| zipcode === ''))||((zipcode === '93309' || zipcode === '94598') && state === '')) {
+        if (zipcode === '93309' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+                    <br>
+                    <div class="clinic-name" style="padding-left: 10px">Bakersfield Sinus Center</div>
+                    <div class="clinic-card">
+                        <div class="clinic-info">
+                            <p><a href="https://maps.app.goo.gl/DD8brCv5sK3QFYAi9">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>4100 Empire Drive, Suite 120<br>Bakersfield, CA 93309</p>
+                        </div>
+                        <div class="clinic-appointment">
+                            <h3>Request an Appointment</h3>
+                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                            <a href="tel:6617277809" class="call-button">Call (661) 727-7809</a><br>
+                            <a href="#" class="request-link">Request a call</a>
+                        </div>
+                        <div class="clinic-doctor">
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (12)" alt="Dr. Satish Vadapalli" class="doctor-photo">
+                            <h3>Dr. Satish Vadapalli</h3>
+                          </div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        if (zipcode === '94598' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">BASS Medical Group Walnut Creek</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/kgocEwLs3rtRscjj7">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>2161 Ygnacio Valley Road, Suite 100<br>HWalnut Creek, CA 94598</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:9252320520" class="call-button">Call (925) 232-0520</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (13)" alt="Dr. Julian Zaka" class="doctor-photo">
+                      <h3>Dr. Julian Zaka</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>`;
+        }
+      }
+      
       if (result === '') {
-        result = '<p>No records found for the selected state or ZIP code.</p>';
+      result = '<div class="no-records">No records found for the selected state or ZIP code.</div>';
       }
 
       document.getElementById('result').innerHTML = result;
