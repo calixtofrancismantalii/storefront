@@ -117,6 +117,10 @@
     .clinic-info a:hover{
       color: #fe702c;
     }
+    #map {
+      height: 60vh;
+      width: 100%;
+    }
   </style>
 </head>
 
@@ -181,11 +185,28 @@
   </header>
 
   <main class="main">
-
-    <div class="container geo-map">
       <br>
-      <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.455416608134!2d-96.9658210255745!3d32.91071227714375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c284b289628a9%3A0x244f1004f68fd8a6!2s1215%20Kinwest%20Pkwy%20%23120%2C%20Irving%2C%20TX%2075063%2C%20USA!5e1!3m2!1sen!2sph!4v1741878064961!5m2!1sen!2sph" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="container geo-map">
+        <div id="map"></div>
+      <script>
+          function initMap() {
+            var location = { lat: 31.9686, lng: -99.9018 }; // Centered on Texas
+              var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 6,
+                  center: location
+              });
+              // var marker = new google.maps.Marker({
+              //     position: location,
+              //     map: map
+              // });
+          }
+      </script>
+      <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDE6_ftVyOQf5VsXeVLsE9ULrJvMIpK61A&callback=initMap">
+      </script>
       <br>
+      <!-- <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.455416608134!2d-96.9658210255745!3d32.91071227714375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c284b289628a9%3A0x244f1004f68fd8a6!2s1215%20Kinwest%20Pkwy%20%23120%2C%20Irving%2C%20TX%2075063%2C%20USA!5e1!3m2!1sen!2sph!4v1741878064961!5m2!1sen!2sph" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <br> -->
       <h2>Search by State and ZIP Code</h2>
       <form id="searchForm">
         <div class="boxthis">
