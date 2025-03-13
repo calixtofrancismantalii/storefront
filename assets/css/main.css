@@ -2352,6 +2352,25 @@ input[type=radio], input[type=checkbox] {
   padding: 0 15px;
 }
 
+.log {
+  display: flex;
+  gap: 200px;
+}
+
+@media screen and (max-width: 425px){
+  .log {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+
+.log2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Section Head */
 .section-head {
   text-align: center;
