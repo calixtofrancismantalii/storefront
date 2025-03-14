@@ -883,6 +883,113 @@
           </div>`;
         }
       }
+
+      if ((state === 'District Of Columbia' && (zipcode === '20016' || zipcode === '20007'|| zipcode === ''))||((zipcode === '20016' || zipcode === '20007') && state === '')) {
+        if (zipcode === '20016' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+                    <br>
+                    <div class="clinic-name" style="padding-left: 10px">Chevy Chase Pulmonary Associates</div>
+                    <div class="clinic-card">
+                        <div class="clinic-info">
+                            <p><a href="https://maps.app.goo.gl/JcmDirjo5fcgJmfz8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>5215 Loughboro Road NW, Suite 400<br>Washington, DC 20016</p>
+                        </div>
+                        <div class="clinic-appointment">
+                            <h3>Request an Appointment</h3>
+                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                            <a href="tel:3016913574" class="call-button">Call (301) 691-3574</a><br>
+                            <a href="#" class="request-link">Request a call</a>
+                        </div>
+                        <div class="clinic-doctor">
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (22)" alt="Dr. Juan Abril" class="doctor-photo">
+                            <h3>Dr. Juan Abril</h3>
+                          </div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        if (zipcode === '20007' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">MedStar Health - Georgetown Sleep</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/cJk36KQmLFDRYigu5" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3800 Reservoir Rd NW, Main Building <br>5th Floor<br>Washington, DC 20007</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:2029468414" class="call-button">Call (202) 946-8414</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (23)" alt="Dr. Cristina Reichner" class="doctor-photo">
+                      <h3>Dr. Cristina Reichner</h3>
+                    </div>
+                    <br>
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (24)" alt="Dr. Dina KiaNoury" class="doctor-photo">
+                      <h3>Dr. Dina KiaNoury</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>`;
+        }
+      }
+
+      if ((state === 'Florida' && (zipcode === '32117' || zipcode === '33543'|| zipcode === ''))||((zipcode === '32117' || zipcode === '33543') && state === '')) {
+        if (zipcode === '32117' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+                    <br>
+                    <div class="clinic-name" style="padding-left: 10px">Advanced Sleep and Respiratory Institute</div>
+                    <div class="clinic-card">
+                        <div class="clinic-info">
+                            <p><a href="https://maps.app.goo.gl/ZTDNCk9ojRPtGTXA8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>305 Memorial Parkway, Suite 501<br>Daytona Beach, FL 32117</p>
+                        </div>
+                        <div class="clinic-appointment">
+                            <h3>Request an Appointment</h3>
+                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                            <a href="tel:3862703487" class="call-button">Call (386) 270-3487</a><br>
+                            <a href="#" class="request-link">Request a call</a>
+                        </div>
+                        <div class="clinic-doctor">
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (25)" alt="Dr. Dany Obeid" class="doctor-photo">
+                            <h3>Dr. Dany Obeid</h3>
+                          </div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        if (zipcode === '33543  ' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">AdventHealth Pulmonology & Critical Care, Wesley Chapel</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/1dTnGkkfYhkcLH9T8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>2700 Healing Way, Suite 112<br>Wesley Chapel, FL 33543</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:8135483650" class="call-button">Call (813) 548-3650</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (26)" alt="Dr. Daniella Goldenberg" class="doctor-photo">
+                      <h3>Dr. Daniella Goldenberg</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>`;
+        }
+      }
       
       if (result === '') {
       result = '<div class="no-records">No records found for the selected state or ZIP code.</div>';
