@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirrored Login Forms</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: gray;
+            background-image: url(/assets/img/Login\ Back);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed ;
+        }
+        .container {
+            display: flex;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+        }
+        .form {
+            padding: 30px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form h2{
+            text-align: center;
+        }
+
+        .form input {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form .button1 {
+            width: 45%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .form .button2 {
+            width: 45%;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: white;
+            color: #007bff;;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        .form .link1 {
+            text-align: left;
+            color: #007bff;
+            text-decoration: none;
+            margin-top: 5px;
+        }
+
+        .form .link2 {
+            text-align: left;
+            color: white;
+            text-decoration: none;
+            margin-top: 5px;
+        }
+        .form-1 {
+            background-color: #007bff;
+            color: white;
+        }
+        .form-2 {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form form-2">
+            <h2>Login Patient</h2>
+            <input type="email" placeholder="Your Email *">
+            <input type="password" placeholder="Your Password *">
+            <button class="button1">Login</button>
+            <a class="link1" href="#">Forget Password?</a>
+        </div>
+        <div class="form form-1">
+            <h2>Login Provider</h2>
+            <input type="email" placeholder="Your Email *">
+            <input type="password" placeholder="Your Password *">
+            <button class="button2">Login</button>
+            <a class="link2" href="#">Forget Password?</a>
+        </div>
+    </div>
+</body>
+</html>
