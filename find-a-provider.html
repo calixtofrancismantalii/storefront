@@ -190,20 +190,74 @@
         <div id="map"></div>
       <script>
           function initMap() {
-            var location = { lat: 31.9686, lng: -99.9018 }; // Centered on Texas
-              var map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 6,
-                  center: location
-              });
-              // var marker = new google.maps.Marker({
-              //     position: location,
-              //     map: map
-              // });
+            // First location: Huntsville, AL
+            var location1 = { lat: 34.7074, lng: -86.6314 };
+            // Second location: Cullman, AL
+            var location2 = { lat: 34.2226, lng: -86.8244 };
+            // Third location: Anchorage, AK
+            var location3 = { lat: 61.1826, lng: -149.8916 };
+            // Fourth location: Wasilla, AK
+            var location4 = { lat: 61.5814, lng: -149.4374 };
+            // Fifth location: Glendale, AZ
+            var location5 = { lat: 33.6082, lng: -112.1844 };
+            // Sixth location: Gilbert, AZ
+            var location6 = { lat: 33.2804, lng: -111.7437 };
+
+            // Create the map, centered approximately between the locations
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: { lat: 40.0, lng: -120.0 } // Midpoint between the locations
+            });
+
+            // Marker for Huntsville, AL
+            var marker1 = new google.maps.Marker({
+                position: location1,
+                map: map,
+                title: "333 Whitesport Dr., Suite 205, Huntsville, AL 35801"
+            });
+
+            // Marker for Cullman, AL
+            var marker2 = new google.maps.Marker({
+                position: location2,
+                map: map,
+                title: "1803 Park View Drive NE, Cullman, AL 35058"
+            });
+
+            // Marker for Anchorage, AK
+            var marker3 = new google.maps.Marker({
+                position: location3,
+                map: map,
+                title: "510 W. Tudor Road, Suite 5, Anchorage, AK 99503"
+            });
+
+            // Marker for Wasilla, AK
+            var marker4 = new google.maps.Marker({
+                position: location4,
+                map: map,
+                title: "3750 E Country Field Circle, Ste B, Wasilla, AK 99654"
+            });
+
+            // Marker for Glendale, AZ
+            var marker5 = new google.maps.Marker({
+                position: location5,
+                map: map,
+                title: "5750 W Thunderbird Rd, Ste A-100, Glendale, AZ 85306"
+            });
+
+            // Marker for Gilbert, AZ
+            var marker6 = new google.maps.Marker({
+                position: location6,
+                map: map,
+                title: "3367 Mercy Rd, Suite 210, Gilbert, AZ 85297"
+            });
           }
       </script>
       <script async defer
-          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDE6_ftVyOQf5VsXeVLsE9ULrJvMIpK61A&callback=initMap">
+          src="https://maps.gomaps.pro/maps/api/js?key=AlzaSy8jnD3lJ_rKEFLzsZTPI1oJvX5RhpW34Ta&callback=initMap">
       </script>
+      <!-- <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChM09gbI9F32wneHEA2vMpW3wuecNmV7Y&callback=initMap">
+      </script> -->
       <br>
       <!-- <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.455416608134!2d-96.9658210255745!3d32.91071227714375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c284b289628a9%3A0x244f1004f68fd8a6!2s1215%20Kinwest%20Pkwy%20%23120%2C%20Irving%2C%20TX%2075063%2C%20USA!5e1!3m2!1sen!2sph!4v1741878064961!5m2!1sen!2sph" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <br> -->
@@ -767,6 +821,62 @@
                     <div class="clinic-doctor2">
                       <img src="assets/img/download (18)" alt="Dr. Carl Moeller" class="doctor-photo">
                       <h3>Dr. Carl Moeller</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>`;
+        }
+      }
+
+      if ((state === 'Delaware' && (zipcode === '19713' || zipcode === '19805'|| zipcode === ''))||((zipcode === '19713' || zipcode === '19805') && state === '')) {
+        if (zipcode === '19713' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+                    <br>
+                    <div class="clinic-name" style="padding-left: 10px">ChristianaCare Sleep Wellness Center</div>
+                    <div class="clinic-card">
+                        <div class="clinic-info">
+                            <p><a href="https://maps.app.goo.gl/Pybuoj2bHbGtyayeA">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>4735 Ogletown Stanton Rd, #2210<br>Newark, DE 19713</p>
+                        </div>
+                        <div class="clinic-appointment">
+                            <h3>Request an Appointment</h3>
+                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                            <a href="tel:3024396868" class="call-button">Call (302) 439-6868</a><br>
+                            <a href="#" class="request-link">Request a call</a>
+                        </div>
+                        <div class="clinic-doctor">
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (19)" alt="Dr. Irene Swift" class="doctor-photo">
+                            <h3>Dr. Irene Swift</h3>
+                          </div>
+                          <br>
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (20)" alt="Dr. Shilpa Kauta" class="doctor-photo">
+                            <h3>Dr. Shilpa Kauta</h3>
+                          </div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        if (zipcode === '19805' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">ENT & Allergy of Delaware - Greenville</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/ogBDFQc5smoho4CD8">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1011 Centre Road, Suite 200<br>Wilmington, DE 19805</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:3023034084" class="call-button">Call (302) 303-4084</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (21)" alt="Dr. Lauren Bogdan" class="doctor-photo">
+                      <h3>Dr. Lauren Bogdan</h3>
                     </div>
                   </div>
               </div>
