@@ -1596,6 +1596,57 @@
           </div>`;
         }
       }
+
+      if ((state === 'Massachusetts' && (zipcode === '02026' || zipcode === '01803'|| zipcode === ''))||((zipcode === '02026' || zipcode === '01803') && state === '')) {
+        if (zipcode === '02026' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+                    <br>
+                    <div class="clinic-name" style="padding-left: 10px">Atrius Health - Dedham Medical Associates</div>
+                    <div class="clinic-card">
+                        <div class="clinic-info">
+                            <p><a href="https://maps.app.goo.gl/dsVRE1rUekjcyd7r7" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>One Lyons St<br>Dedham, MA 02026</p>
+                        </div>
+                        <div class="clinic-appointment">
+                            <h3>Request an Appointment</h3>
+                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                            <a href="tel:8572400982" class="call-button">Call (857) 240-0982</a><br>
+                            <a href="#" class="request-link">Request a call</a>
+                        </div>
+                        <div class="clinic-doctor">
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (58)" alt="Dr. Steven Micucci" class="doctor-photo">
+                            <h3>Dr. Steven Micucci</h3>
+                          </div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        if (zipcode === '01803' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">Atrius Health - Harvard Vanguard Burlington</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/BHWy1MARv7NNYghZ7" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>20 Wall Street<br>Burlington, MA 01803</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:8573757013" class="call-button">Call (857) 375-7013</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (58)" alt="Dr. Steven Micucci" class="doctor-photo">
+                      <h3>Dr. Steven Micucci</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>`;
+        }
+      }
       
       if (result === '') {
       result = '<div class="no-records">No records found for the selected state or ZIP code.</div>';
