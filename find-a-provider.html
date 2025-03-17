@@ -965,7 +965,7 @@
                     </div>
                 </div>`;
         }
-        if (zipcode === '33543  ' || zipcode === '') {
+        if (zipcode === '33543' || zipcode === '') {
           result += `
           <div class="clinic-title">
               <br>
@@ -984,6 +984,57 @@
                     <div class="clinic-doctor2">
                       <img src="assets/img/download (26)" alt="Dr. Daniella Goldenberg" class="doctor-photo">
                       <h3>Dr. Daniella Goldenberg</h3>
+                    </div>
+                  </div>
+              </div>
+          </div>`;
+        }
+      }
+
+      if ((state === 'Georgia' && (zipcode === '30701' || zipcode === '31721'|| zipcode === ''))||((zipcode === '30701' || zipcode === '31721') && state === '')) {
+        if (zipcode === '30701' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+                    <br>
+                    <div class="clinic-name" style="padding-left: 10px">Advent Health Gordon ENT</div>
+                    <div class="clinic-card">
+                        <div class="clinic-info">
+                            <p><a href="https://maps.app.goo.gl/ZLoKnW4zRF6qA7ZEA" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1035 Red Bud Rd<br>Calhoun, GA 30701</p>
+                        </div>
+                        <div class="clinic-appointment">
+                            <h3>Request an Appointment</h3>
+                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                            <a href="tel:7062875104" class="call-button">Call (706) 287-5104</a><br>
+                            <a href="#" class="request-link">Request a call</a>
+                        </div>
+                        <div class="clinic-doctor">
+                          <div class="clinic-doctor2">
+                            <img src="assets/img/download (27)" alt="Dr. Sally Smalley" class="doctor-photo">
+                            <h3>Dr. Sally Smalley</h3>
+                          </div>
+                        </div>
+                    </div>
+                </div>`;
+        }
+        if (zipcode === '31721' || zipcode === '') {
+          result += `
+          <div class="clinic-title">
+              <br>
+              <div class="clinic-name" style="padding-left: 10px">Albany ENT</div>
+              <div class="clinic-card">
+                  <div class="clinic-info">
+                      <p><a href="https://maps.app.goo.gl/1dTnGkkfYhkcLH9T8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>605 Pointe North Blvd<br>Albany, GA 31721</p>
+                  </div>
+                  <div class="clinic-appointment">
+                      <h3>Request an Appointment</h3>
+                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
+                      <a href="tel:2296581010" class="call-button">Call (229) 658-1010</a><br>
+                      <a href="#" class="request-link">Request a call</a>
+                  </div>
+                  <div class="clinic-doctor">
+                    <div class="clinic-doctor2">
+                      <img src="assets/img/download (28)" alt="Dr. Chris Mann" class="doctor-photo">
+                      <h3>Dr. Chris Mann</h3>
                     </div>
                   </div>
               </div>

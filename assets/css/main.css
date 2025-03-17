@@ -2173,7 +2173,7 @@ input[type=radio], input[type=checkbox] {
   text-align: center;
   min-height: 100vh;
   border-image-slice: fill 1;
-  background-image: url(/assets/img/Login\ Back);
+  background-image: url(/assets/img/Login-Back.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
