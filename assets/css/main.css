@@ -2571,7 +2571,7 @@ button{
   text-align: center;
   min-height: 100vh;
   border-image-slice: fill 1;
-  background-image: url(/assets/img/Login-Back.webp);
+  background-image: url(/assets/img/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2596,7 +2596,7 @@ button{
 
 .log {
   display: flex;
-  gap: 100px;
+  /* gap: 100px; */
   box-shadow: 0 0 10px rgba(0, 0, 0, .2);
   border-radius: 10px;
 }
@@ -2621,7 +2621,7 @@ button{
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #007bff;
+  background-color: #004078;
   border-radius: 10px;
 }
 
@@ -2646,8 +2646,8 @@ button{
 }
 
 .log2-2 .wrapper-3 .btn-2 {
-  background-color: white;
-  color: #007bff;
+  background-color: #1D4ED8;
+  color: white;
 }
 
 .log2-2 .remember-forgot label {
@@ -2665,7 +2665,7 @@ button{
 .wrapper-3{
   width: 420px;
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, .2);
+  /* border: 2px solid rgba(255, 255, 255, .2); */
   backdrop-filter: blur(20px);
   color: #f1f7fc;
   padding: 30px 20px;
@@ -2696,7 +2696,8 @@ button{
   align-items: center;
   width: 25%;
   height: 40px;
-  background: #007bff;
+  /* background: #007bff; */
+  background: #1D4ED8;
   border: none;
   outline: none;
   border-radius: 8px;
