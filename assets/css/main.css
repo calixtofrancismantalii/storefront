@@ -2569,7 +2569,7 @@ button{
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
+  min-height: 85vh;
   border-image-slice: fill 1;
   background-image: url(/assets/img/hero-bg.jpg);
   background-repeat: no-repeat;
