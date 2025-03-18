@@ -2165,33 +2165,6 @@ input[type=radio], input[type=checkbox] {
   border-image-slice: fill 1;
 }
 
-.enter2{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  border-image-slice: fill 1;
-  background-image: url(/assets/img/Login-Back.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed ;
-}
-
-/* .enter2::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, #fff 50%, #1977cc 50%);
-  filter: blur(8px);
-  z-index: -1;
-} */
-
 .enter3{
   display: flex;
   flex-direction: column;
@@ -2200,10 +2173,6 @@ input[type=radio], input[type=checkbox] {
   text-align: center;
   min-height: 100vh;
   border-image-slice: fill 1;
-}
-
-.enter2 .logo-1 {
-  width: 50%;
 }
 
 .enter3 .logo-1 {
@@ -2220,14 +2189,6 @@ input[type=radio], input[type=checkbox] {
   border-radius: 10px;
   padding: 10px 30px;
 }
-.wrapper-3{
-  width: 420px;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, .2);
-  backdrop-filter: blur(20px);
-  color: #f1f7fc;
-  padding: 30px 20px;
-}
 
 .wrapper-2 h1{
   font-size: 36px;
@@ -2235,19 +2196,7 @@ input[type=radio], input[type=checkbox] {
   color: #fff;
 }
 
-.wrapper-3 h1{
-  font-size: 36px;
-  text-align: center;
-  color: #fff;
-}
-
 .wrapper-2 .input-box {
-  width: 100%;
-  height: 50px;
-  margin: 30px 0;
-}
-
-.wrapper-3 .input-box {
   width: 100%;
   height: 50px;
   margin: 30px 0;
@@ -2270,18 +2219,6 @@ input[type=radio], input[type=checkbox] {
   padding: 20px 45px 20px 20px;
 }
 
-.log2-2 .input-box input {
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  /* border: 2px solid rgba(255, 255, 255, .2); */
-  font-size: 16px;
-  color: #fff;
-  padding: 20px 45px 20px 20px;
-}
-
 .input-box input::placeholder{
   color: #1f2937;
 }
@@ -2301,19 +2238,11 @@ input[type=radio], input[type=checkbox] {
   margin: -15px 0 15px;
   padding-left: 15px;
 }
-.wrapper-3 .remember-forgot{
-  display: flex;
-  justify-content: space-between;
-  font-size: 14.5px;
-  margin: -15px 0 15px;
-  padding-left: 15px;
-}
 
 .remember-forgot label{
   color: #1f2937;
   margin-right: 3px;
 }
-
 
 .remember-forgot label input{
   accent-color: #fff;
@@ -2349,28 +2278,7 @@ input[type=radio], input[type=checkbox] {
   font-weight: 600;
 }
 
-.wrapper-3 .btn-2 {
-  float: right;
-  align-items: center;
-  width: 25%;
-  height: 40px;
-  background: #007bff;
-  border: none;
-  outline: none;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  font-size: 16px;
-  color: #f1f7fc;
-  font-weight: 600;
-}
-
 .wrapper-2 .register-link {
-  font-size: 14.5px;
-  text-align: center;
-  margin-top: 20px 0 15px;
-}
-.wrapper-3 .register-link {
   font-size: 14.5px;
   text-align: center;
   margin-top: 20px 0 15px;
@@ -2392,61 +2300,6 @@ input[type=radio], input[type=checkbox] {
   padding: 0 15px;
 }
 
-.log {
-  display: flex;
-  gap: 100px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-  border-radius: 10px;
-}
-
-@media screen and (max-width: 425px){
-  .log {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-  }
-}
-
-.log2-1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 10px;
-}
-
-.log2-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #007bff;
-  border-radius: 10px;
-}
-
-.log2-2 .wrapper-3 form h4 {
-  color: white;
-}
-
-.log2-2 .input-box input::placeholder{
-  color: white;
-}
-
-.log2-2 .wrapper-3 .btn-2 {
-  background-color: white;
-  color: #007bff;
-}
-
-.log2-2 .remember-forgot label {
-  color: white;
-}
-
-.log2-2 .remember-forgot a {
-  color: white;
-  text-decoration: none;
-  padding-left: 25%;
-  padding-top: 10px;
-  text-decoration: underline;
-}
 /* Section Head */
 .section-head {
   text-align: center;
@@ -2706,4 +2559,156 @@ button{
 .geo-map .no-records {
   padding: 10px 0 10px 0;
   text-align: center;
+}
+
+/*-------------------------New Login ------------------------------*/
+
+.enter2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  border-image-slice: fill 1;
+  background-image: url(/assets/img/Login-Back.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed ;
+}
+
+/* .enter2::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #fff 50%, #1977cc 50%);
+  filter: blur(8px);
+  z-index: -1;
+} */
+
+.enter2 .logo-1 {
+  width: 50%;
+}
+
+.log {
+  display: flex;
+  gap: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 425px){
+  .log {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+
+.log2-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.log2-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+.log2-2 .input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  /* border: 2px solid rgba(255, 255, 255, .2); */
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.log2-2 .wrapper-3 form h4 {
+  color: white;
+}
+
+.log2-2 .input-box input::placeholder{
+  color: white;
+}
+
+.log2-2 .wrapper-3 .btn-2 {
+  background-color: white;
+  color: #007bff;
+}
+
+.log2-2 .remember-forgot label {
+  color: white;
+}
+
+.log2-2 .remember-forgot a {
+  color: white;
+  text-decoration: none;
+  padding-left: 25%;
+  padding-top: 10px;
+  text-decoration: underline;
+}
+
+.wrapper-3{
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(20px);
+  color: #f1f7fc;
+  padding: 30px 20px;
+}
+
+.wrapper-3 h1{
+  font-size: 36px;
+  text-align: center;
+  color: #fff;
+}
+
+.wrapper-3 .input-box {
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.wrapper-3 .remember-forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+  padding-left: 15px;
+}
+
+.wrapper-3 .btn-2 {
+  float: right;
+  align-items: center;
+  width: 25%;
+  height: 40px;
+  background: #007bff;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #f1f7fc;
+  font-weight: 600;
+}
+
+.wrapper-3 .register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin-top: 20px 0 15px;
 }
