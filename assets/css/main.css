@@ -2713,3 +2713,44 @@ button{
   text-align: center;
   margin-top: 20px 0 15px;
 }
+
+/*-------------------------Sleep Studies different ways------------------------------*/
+
+.sleep-studies-dw p{
+  font-family: Poppins;
+}
+
+.sleep-studies-dw .bt-dw {
+  font-family: Poppins;
+  font-size: 16px;
+  padding: 10px 23px;
+  border: none;
+  background-color: #1977cc;
+  color: white;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.sleep-studies-dw .bt-dw:hover {
+  background-color: #FF590c;
+}
+
+.sleep-studies-dw div {
+  margin-bottom: 30px;
+}
+
+.sleep-studies-dw .bt-hand-out {
+  text-decoration: underline;
+}
+
+.sleep-studies-dw .sleep-therapy-provider {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-family: Poppins;
+}
+
+.sleep-studies-dw .sleep-therapy-provider option {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-family: Poppins;
+}
