@@ -2769,3 +2769,9 @@ a.p-btn:hover {
   background-color: #FF590c;
   color: white;
 }
+
+.img-how-it-works {
+  width: 60%;
+  align-items: center;
+  height: auto;
+}
