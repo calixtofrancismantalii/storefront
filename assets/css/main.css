@@ -2822,6 +2822,7 @@ a.p-btn:hover {
   max-width: 70%;
   height: auto;
   border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Overlay Background */
