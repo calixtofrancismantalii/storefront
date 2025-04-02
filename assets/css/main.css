@@ -1028,8 +1028,8 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about .content h3 {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .about .content ul {
@@ -2006,12 +2006,16 @@ section,
 
 #accordion{
   margin: auto;
-  width: 600px;
+  width: auto;
+}
+
+#accordion {
+  padding-left: 0px !important;
 }
 
 #accordion li{
   list-style: none;
-  width: 100%;
+  width: 95%;
   margin-bottom: 10px;
   background: #fff;
   padding: 5px;
