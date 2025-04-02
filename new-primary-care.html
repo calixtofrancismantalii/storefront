@@ -192,8 +192,18 @@
             </div>
             <div>
                 <h5>Do you want your own turnkey sleep operation?</h5>
-                <p><a href="#" class="bt-hand-out">Hand-Out Home Sleep Test</a></p>
+                <p><a class="bt-hand-out" onclick="openPopup()">Hand-Out Home Sleep Test</a></p>
                 <a href="#" class="bt-dw">Get Started</a>
+            </div>
+            <!-- Popup Overlay (Initially Hidden) -->
+            <div class="popup-overlay" id="popupOverlay"></div>
+
+            <!-- Popup Container (Initially Hidden) -->
+            <div id="popup" class="popup">
+              <div class="popup-content">
+                  <span class="close" id="closePopup">&times;</span>
+                  <img src="assets/img/HST Program (2).png" alt="Home Sleep Test">
+              </div>
             </div>
             <div>
                 <h5>Order Sleep Specialist Consult</h5>
@@ -217,6 +227,24 @@
             </div>
         </div>
     </section>
+
+    <script>
+      function openPopup() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("popupOverlay").style.display = "block";
+      }
+
+      function closePopup() {
+          document.getElementById("popup").style.display = "none";
+          document.getElementById("popupOverlay").style.display = "none";
+      }
+
+      // Close popup when clicking outside the content
+      document.getElementById("popupOverlay").addEventListener("click", closePopup);
+
+      // Close popup when clicking the close button
+      document.getElementById("closePopup").addEventListener("click", closePopup);
+    </script>
 
     <!--Testimonial-->
     <!-- <section class="test">
