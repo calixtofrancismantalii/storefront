@@ -26,6 +26,7 @@
   --heading-color: #2c4964; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #1977cc; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --surface-color-2: #fe702c;
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
@@ -925,8 +926,8 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: calc(100vh - 112px);
-  padding: 80px 0;
+  /* min-height: calc(100vh - 112px); */
+  /* padding: 80px 0; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -968,6 +969,7 @@ section,
   background: var(--accent-color);
   padding: 30px;
   border-radius: 4px;
+  align-content: center;
 }
 
 .hero .content .why-box h3 {
@@ -1002,7 +1004,7 @@ section,
 .hero .content .icon-box {
   text-align: center;
   border-radius: 10px;
-  background: color-mix(in srgb, var(--surface-color), transparent 20%);
+  background: color-mix(in srgb, var(--surface-color-2), transparent 10%);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 40px 30px;
   width: 100%;
@@ -1010,18 +1012,19 @@ section,
 
 .hero .content .icon-box i {
   font-size: 40px;
-  color: var(--accent-color);
+  color: white;
 }
 
 .hero .content .icon-box h4 {
   font-size: 20px;
   font-weight: 700;
   margin: 10px 0 20px 0;
+  color: white;
 }
 
 .hero .content .icon-box p {
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, white, transparent 0%);
 }
 
 /*--------------------------------------------------------------
