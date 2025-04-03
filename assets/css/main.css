@@ -2841,3 +2841,10 @@ a.p-btn:hover {
 .popup-content img {
   cursor: zoom-in; /* Default cursor to zoom-in */
 }
+
+
+/*-------------------------Popup HST------------------------------*/
+
+#contact {
+  background-color: rgba(0, 0, 0, 0.05);
+}
