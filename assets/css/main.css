@@ -1012,7 +1012,7 @@ section,
 }
 
 .hero .content .icon-box i {
-  font-size: 40px;
+  font-size: 30px;
   color: white;
 }
 
@@ -1024,7 +1024,7 @@ section,
 }
 
 .hero .content .icon-box p {
-  font-size: 15px;
+  font-size: 16px;
   color: color-mix(in srgb, white, transparent 0%);
 }
 
@@ -2762,6 +2762,10 @@ button{
   font-size: 16px;
   margin-bottom: 20px;
   font-family: Poppins;
+}
+
+.sleep-studies-dw .hand-out h5{
+  align-items: center;
 }
 
 /*-------------------------For Providers Btn------------------------------*/
