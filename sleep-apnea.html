@@ -159,7 +159,138 @@
             <p>There are two types of sleep apnea namely obstructive and central. Obstructive sleep apnea (OSA) is a more common form of this condition wherein the muscles at the back of your throat relaxes causing a blockage in your airway. In Central sleep apnea, the brain fails to properly control breathing during sleep. Sleep apnea can be life-threatening. If you suspect sleep apnea, please visit a sleep specialist.</p>
           </div>
 
-          <article class="regular">
+          <div class="container quiz">
+            <div class="sleep-quiz">
+              <h1>Take the Sleep Quiz &mdash; STOP BANG Questionnaire</h1>
+              <p><em>(Chung F et al Anesthesiology 2008 and BJA 2012)</em></p>
+              <p>Answer the questions below to assess if you are at risk of sleep apnea.</p>
+      
+              <form id="stopBangForm">
+                  <div class="question">
+                      <label>1. Do you Snore loudly (louder than talking or loud enough to be heard through closed doors)?</label><br>
+                      <div style="display: flex; gap: 20px;">
+                          <input type="radio" name="q1" value="yes" onclick="evaluateRisk()"> Yes
+                          <input type="radio" name="q1" value="no" onclick="evaluateRisk()"> No
+                      </div>
+                  </div>
+      
+                  <div class="question">
+                      <label>2. Do you often feel Tired, fatigued, or sleepy during the day?</label><br>
+                      <div style="display: flex; gap: 20px;">
+                          <input type="radio" name="q2" value="yes" onclick="evaluateRisk()"> Yes
+                          <input type="radio" name="q2" value="no" onclick="evaluateRisk()"> No
+                      </div>
+                  </div>
+      
+                  <div class="question">
+                      <label>3. Has anyone Observed you to stop breathing during your sleep?</label><br>
+                      <div style="display: flex; gap: 20px;">
+                          <input type="radio" name="q3" value="yes" onclick="evaluateRisk()"> Yes
+                          <input type="radio" name="q3" value="no" onclick="evaluateRisk()"> No
+                      </div>
+                  </div>
+      
+                  <div class="question">
+                      <label>4. Do you have or are you being treated for high blood Pressure?</label><br>
+                      <div style="display: flex; gap: 20px;">
+                          <input type="radio" name="q4" value="yes" onclick="evaluateRisk()"> Yes
+                          <input type="radio" name="q4" value="no" onclick="evaluateRisk()"> No
+                      </div>
+                  </div>
+      
+                  <div class="question">
+                      <label>5. Body Mass Index (BMI) more than 35?</label><br>
+                      <div style="display: flex; gap: 20px;">
+                          <input type="radio" name="q5" value="yes" id="bmiYes" onclick="evaluateRisk()"> Yes
+                          <input type="radio" name="q5" value="no" id="bmiNo" onclick="evaluateRisk()"> No
+                      </div>
+                  </div>
+      
+                  <div class="bMI">
+                      <label>To calculate your BMI, enter your weight in pounds</label><br>
+                      <input type="number" id="weight" oninput="calculateBMI()">
+                      <label>Your Height in Inches</label>
+                      <input type="number" id="height" oninput="calculateBMI()">
+                      <p>Your BMI: <span id="bmiResult">0.000</span></p>
+                  </div>
+      
+                  <div class="question">
+                      <label>6. Age over 50 years old?</label><br>
+                      <div style="display: flex; gap: 20px;">
+                          <input type="radio" name="q6" value="yes" onclick="evaluateRisk()"> Yes
+                          <input type="radio" name="q6" value="no" onclick="evaluateRisk()"> No
+                      </div>
+                  </div>
+      
+                  <div class="question">
+                      <label>7. Neck circumference greater than 16 inches (40 cm)?</label><br>
+                      <div style="display: flex; gap: 20px;">
+                          <input type="radio" name="q7" value="yes" onclick="evaluateRisk()"> Yes
+                          <input type="radio" name="q7" value="no" onclick="evaluateRisk()"> No
+                      </div>
+                  </div>
+      
+                  <div class="question">
+                      <label>8. Gender = Male?</label><br>
+                      <div style="display: flex; gap: 20px;">
+                          <input type="radio" name="q8" value="yes" onclick="evaluateRisk()"> Yes
+                          <input type="radio" name="q8" value="no" onclick="evaluateRisk()"> No
+                      </div>
+                  </div>
+              </form>
+      
+              <div class="result" id="result" style="display: none;"></div>
+              
+            </div>
+  
+            <div class="sleep-quiz2">
+                <p>If you answered yes to 3 or more questions, we recommend contacting your primary care provider or see a Sleep Specialist for evaluation.</p>
+                <p>Click <a href="find-a-provider.html">here</a> for a directory of sleep specialists (TX residents at this time)</p>
+            </div>
+  
+            <script>
+                function calculateBMI() {
+                    const weight = document.getElementById('weight').value;
+                    const height = document.getElementById('height').value;
+                    if (weight && height) {
+                        const bmi = (weight / (height * height)) * 703;
+                        document.getElementById('bmiResult').innerText = bmi.toFixed(3);
+                        evaluateRisk();  // Automatically evaluate risk when BMI is calculated
+                    }
+                }
+        
+                function evaluateRisk() {
+                    let yesCount = 0;
+                    const form = document.getElementById('stopBangForm');
+                    const questions = ['q1', 'q2', 'q3', 'q4', 'q6', 'q7', 'q8'];
+        
+                    questions.forEach(q => {
+                        const answer = form.querySelector(`input[name="${q}"]:checked`);
+                        if (answer && answer.value === 'yes') {
+                            yesCount++;
+                        }
+                    });
+        
+                    const bmiResult = parseFloat(document.getElementById('bmiResult').innerText);
+                    if (bmiResult > 35) yesCount++;
+        
+                    const resultDiv = document.getElementById('result');
+                    resultDiv.style.display = 'block';
+    
+                    if (yesCount === 0) {
+                      resultDiv.innerHTML = '<p class="low-risk">You have a low risk of Sleep Apnea</p>';
+                    } else if (yesCount <= 2) {
+                        resultDiv.innerHTML = '<p class="low-risk">You have a low risk of Sleep Apnea</p>';
+                    } else if (yesCount <= 3) {
+                        resultDiv.innerHTML = '<p class="moderate-risk">You have a moderate risk of Sleep Apnea</p>';
+                    } else {
+                        resultDiv.innerHTML = '<p class="high-risk">You have a high risk of Sleep Apnea</p>';
+                    }
+                }
+            </script>
+          </div>
+
+          <!-- <article class="regular">
 
             <div class="title" data-aos="fade-up">
               <br>
@@ -170,35 +301,35 @@
             <br>
             <h6>1. Do you Snore loudly (louder than talking or loud enough to be heard through closed doors)?</h6>
             <label for="rad1">Yes</label>
-            <input type="radio" name="question" id="rad1" value="yes">
+            <input type="radio" name="question" id="rad1" value="yes-1">
             <label for="rad2">No</label>
-            <input type="radio" name="question" id="rad2" value="no">
+            <input type="radio" name="question" id="rad2" value="no-1">
             <br>
             <h6>2. Do you often feel Tired, fatigued, or sleepy during the day?</h6>
             <label for="rad1">Yes</label>
-            <input type="radio" name="question" id="rad1" value="yes">
+            <input type="radio" name="question" id="rad1" value="yes-2">
             <label for="rad2">No</label>
-            <input type="radio" name="question" id="rad2" value="no">
+            <input type="radio" name="question" id="rad2" value="no-2">
             <br>
             <h6>3. Has anyone Observed you to stop breathing during your sleep?</h6>
             <label for="rad1">Yes</label>
-            <input type="radio" name="question" id="rad1" value="yes">
+            <input type="radio" name="question" id="rad1" value="yes-3">
             <label for="rad2">No</label>
-            <input type="radio" name="question" id="rad2" value="no">
+            <input type="radio" name="question" id="rad2" value="no-3">
             <br>
             <h6>4. Do you have or are you being treated for high blood Pressure?</h6>
             <label for="rad1">Yes</label>
-            <input type="radio" name="question" id="rad1" value="yes">
+            <input type="radio" name="question" id="rad1" value="yes-4">
             <label for="rad2">No</label>
-            <input type="radio" name="question" id="rad2" value="no">
+            <input type="radio" name="question" id="rad2" value="no-4">
             <br>
             <h6>5. Body Mass Index (BMI) more than 35?</h6>
             <label for="rad1">Yes</label>
-            <input type="radio" name="question" id="rad1" value="yes">
+            <input type="radio" name="question" id="rad1" value="yes-5">
             <label for="rad2">No</label>
-            <input type="radio" name="question" id="rad2" value="no">
+            <input type="radio" name="question" id="rad2" value="no-5">
 
-            <!--<div class="wrapper">
+            <div class="wrapper">
               <p>Height in CM:
                   <input type="text" id="height"><br><span id="height_error"></span>
               </p>
@@ -209,35 +340,35 @@
       
               <button id="btn">Calculate</button>
               <p id="output"></p>
-            </div>-->
+            </div>
 
             <br>
             <h6>6. Age over 50 yr. old?</h6>
             <label for="rad1">Yes</label>
-            <input type="radio" name="question" id="rad1" value="yes">
+            <input type="radio" name="question" id="rad1" value="yes-6">
             <label for="rad2">No</label>
-            <input type="radio" name="question" id="rad2" value="no">
+            <input type="radio" name="question" id="rad2" value="no-6">
             <br>
             <h6>7. Neck circumference greater than 16 inches (40 cm)?</h6>
             <label for="rad1">Yes</label>
-            <input type="radio" name="question" id="rad1" value="yes">
+            <input type="radio" name="question" id="rad1" value="yes-7">
             <label for="rad2">No</label>
-            <input type="radio" name="question" id="rad2" value="no">
+            <input type="radio" name="question" id="rad2" value="no-7">
             <br>
             <h6>8. Gender = Male?</h6>
             <label for="rad1">Yes</label>
-            <input type="radio" name="question" id="rad1" value="yes">
+            <input type="radio" name="question" id="rad1" value="yes-8">
             <label for="rad2">No</label>
-            <input type="radio" name="question" id="rad2" value="no">
+            <input type="radio" name="question" id="rad2" value="no-8">
             
-          </article>
+          </article> -->
 
-          <div>
+          <!-- <div>
             <p style="font-size: 14px;">If you answered yes to 3 or more questions, we recommend contacting your primary care provider or see a Sleep Specialist for evaluation</p>
-          </div>
-          <div>
+          </div> -->
+          <!-- <div>
             <p style="font-size: 14px;">Click <a href="https://myapneapath.com/new-pages/find-a-provider/">here</a> for a directory of sleep specialists (TX residents at this time)</p>
-        </div>
+          </div> -->
 
         </div>
 

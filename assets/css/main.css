@@ -2843,8 +2843,210 @@ a.p-btn:hover {
 }
 
 
-/*-------------------------Popup HST------------------------------*/
+/*-------------------------Contact Background------------------------------*/
 
 #contact {
   background-color: rgba(0, 0, 0, 0.05);
+}
+
+/*--------------------------------------------------------------
+Sleep Apnea Quiz Cont
+--------------------------------------------------------------*/
+.quiz {
+  padding: 60px 20px 0px 20px;
+}
+
+.sleep-quiz h1 {
+  color: #2c4964;
+  font-size: 23px;
+}
+
+.sleep-quiz2 p {
+  color: #231F20;
+  font-size: 15px;
+  font-family: "Poppins";
+}
+
+.sleep-quiz2 p a {
+  font-size: 13px;
+  color: #004AAD;
+}
+
+.sleep-quiz{
+  padding-left: 10px;
+  padding-bottom: 40px;
+}
+
+.sleep-quiz2{
+  padding-left: 10px;
+  padding-bottom: 40px;
+}
+
+.question {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 21px;
+}
+
+.question input[type="radio"], input[type="checkbox"] {
+  margin-right: 0rem !important;
+}
+
+.question label {
+  color: #231F20;
+  font-size: 15px;
+  font-family: "Poppins";
+}
+
+.question  div{
+  color: #231F20;
+  font-size: 15px;
+  font-family: "Poppins";
+}
+
+.bMI{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.bMI label {
+  color: #231F20;
+  font-size: 15px;
+  font-family: "Poppins";
+}
+
+.bMI input{
+  color: #231F20;
+  font-size: 15px;
+  font-family: "Poppins";
+  height: 40px; 
+  width: 60px;
+}
+
+.bMI p{
+  color: #231F20;
+  font-size: 15px;
+  font-family: "Poppins";
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.bMI p span {
+  border:1px solid #767676; 
+  padding: 6px; 
+  margin-left: 10px
+}
+
+.bMI input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.low-risk,
+.moderate-risk,
+.high-risk {
+  color: #004AAD;
+}
+#stopBangForm {
+  width: 80%;
+}
+
+/* Breakpoint: 1024px */
+@media (max-width: 1024px) {
+  #stopBangForm {
+    width: 85%;
+  }
+  .question, .bMI {
+    gap: 10px;
+  }
+  .bMI input {
+    width: 55px;
+    height: 38px;
+  }
+  .question div {
+    width: 12%;
+  }
+}
+
+/* Breakpoint: 768px */
+@media (max-width: 768px) {
+  #stopBangForm {
+    width: 90%;
+  }
+  .sleep-quiz, .sleep-quiz2 {
+    padding-left: 5px;
+    padding-bottom: 30px;
+  }
+  .bMI input {
+    width: 50px;
+    height: 35px;
+  }
+  .question label, .bMI label {
+    font-size: 14px;
+  }
+  .result {
+    font-size: 15px;
+  }
+}
+
+/* Breakpoint: 480px */
+@media (max-width: 480px) {
+  #stopBangForm {
+    width: 95%;
+  }
+  .question, .bMI {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .bMI input {
+    width: 45px;
+    height: 32px;
+  }
+  .sleep-quiz2 p, .question label {
+    font-size: 13px;
+  }
+  .result {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+/* Breakpoint: 425px */
+@media (max-width: 425px) {
+  .sleep-quiz, .sleep-quiz2 {
+    padding-left: 3px;
+    padding-bottom: 20px;
+  }
+  .question, .bMI {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  .bMI input {
+    width: 100%;
+    height: 45px;
+  }
+  .result {
+    font-size: 13px;
+  }
+  .question div {
+    width: 100% !important;
+  }
 }
