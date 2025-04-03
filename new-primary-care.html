@@ -191,9 +191,9 @@
                 <p>Portable home sleep study with provider office set up and pick up.</p>
             </div>
             <div>
-                <h5>Do you want your own turnkey sleep operation?</h5>
-                <p><a class="bt-hand-out" onclick="openPopup()">Hand-Out Home Sleep Test</a></p>
-                <a href="#" class="bt-dw">Get Started</a>
+              <h5>Do you want your own turnkey sleep operation?</h5>
+              <p><a class="bt-hand-out" onclick="openPopup()">Hand-Out Home Sleep Test</a></p>
+              <a href="#" class="bt-dw">Get Started</a>
             </div>
             <!-- Popup Overlay (Initially Hidden) -->
             <div class="popup-overlay" id="popupOverlay"></div>
@@ -202,9 +202,10 @@
             <div id="popup" class="popup">
               <div class="popup-content">
                   <span class="close" id="closePopup">&times;</span>
-                  <img src="assets/img/HST Program (2).png" alt="Home Sleep Test">
+                  <img id="popupImage" src="assets/img/HST Program (2).png" alt="Home Sleep Test">
               </div>
             </div>
+
             <div>
                 <h5>Order Sleep Specialist Consult</h5>
                 <p>Described board certified sleep specialist</p>
@@ -229,21 +230,30 @@
     </section>
 
     <script>
-      function openPopup() {
-        document.getElementById("popup").style.display = "block";
-        document.getElementById("popupOverlay").style.display = "block";
-      }
+        function openPopup() {
+            document.getElementById("popup").style.display = "block";
+            document.getElementById("popupOverlay").style.display = "block";
+            document.getElementById("popup").setAttribute("aria-hidden", "false");
+        }
 
-      function closePopup() {
-          document.getElementById("popup").style.display = "none";
-          document.getElementById("popupOverlay").style.display = "none";
-      }
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("popupOverlay").style.display = "none";
+            document.getElementById("popup").setAttribute("aria-hidden", "true");
+        }
 
-      // Close popup when clicking outside the content
-      document.getElementById("popupOverlay").addEventListener("click", closePopup);
+        document.getElementById("popupOverlay").addEventListener("click", closePopup);
+        document.getElementById("closePopup").addEventListener("click", closePopup);
 
-      // Close popup when clicking the close button
-      document.getElementById("closePopup").addEventListener("click", closePopup);
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closePopup();
+            }
+        });
+
+        document.getElementById("popupImage").addEventListener("click", function () {
+            this.classList.toggle("zoomed");
+        });
     </script>
 
     <!--Testimonial-->

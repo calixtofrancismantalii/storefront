@@ -202,7 +202,7 @@
             <div id="popup" class="popup">
               <div class="popup-content">
                   <span class="close" id="closePopup">&times;</span>
-                  <img src="assets/img/HST Program (2).png" alt="Home Sleep Test">
+                  <img id="popupImage" src="assets/img/HST Program (2).png" alt="Home Sleep Test">
               </div>
             </div>
             <div>
@@ -228,20 +228,29 @@
 
     <script>
       function openPopup() {
-        document.getElementById("popup").style.display = "block";
-        document.getElementById("popupOverlay").style.display = "block";
+          document.getElementById("popup").style.display = "block";
+          document.getElementById("popupOverlay").style.display = "block";
+          document.getElementById("popup").setAttribute("aria-hidden", "false");
       }
 
       function closePopup() {
           document.getElementById("popup").style.display = "none";
           document.getElementById("popupOverlay").style.display = "none";
+          document.getElementById("popup").setAttribute("aria-hidden", "true");
       }
 
-      // Close popup when clicking outside the content
       document.getElementById("popupOverlay").addEventListener("click", closePopup);
-
-      // Close popup when clicking the close button
       document.getElementById("closePopup").addEventListener("click", closePopup);
+
+      document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") {
+              closePopup();
+          }
+      });
+
+      document.getElementById("popupImage").addEventListener("click", function () {
+          this.classList.toggle("zoomed");
+      });
     </script>
 
     <!--Testimonial-->

@@ -2783,49 +2783,45 @@ a.p-btn:hover {
 
 
 /*-------------------------Popup HST------------------------------*/
-/* Popup Background */
 .popup {
   display: none;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  /* background: white; */
-  padding: 20px;
-  /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
   border-radius: 10px;
   z-index: 1001;
+  max-width: 90%;
+  max-height: 90%;
 }
 
-/* Popup Content */
 .popup-content {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   position: relative;
+  max-height: 100%;
+  overflow: auto; /* Enables scrollbars */
 }
 
-/* Close Button */
 .close {
   color: white;
   position: absolute;
-  top: 15px;
-  right: 50px;
-  font-size: 35px;
+  top: 0px;
+  right: 100px;
+  font-size: 40px;
   cursor: pointer;
   z-index: 1002;
 }
 
-/* Image Styling */
 .popup-content img {
-  margin-top: 20px;
-  max-width: 70%;
-  height: auto;
+  max-width: 60%;
+  height: 100%;
   border-radius: 5px;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-/* Overlay Background */
 .popup-overlay {
   display: none;
   position: fixed;
@@ -2835,4 +2831,13 @@ a.p-btn:hover {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1000;
+}
+
+.zoomed {
+  transform: scale(1.5);
+  cursor: zoom-out; /* Change cursor to zoom-out */
+}
+
+.popup-content img {
+  cursor: zoom-in; /* Default cursor to zoom-in */
 }
