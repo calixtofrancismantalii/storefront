@@ -2764,8 +2764,21 @@ button{
   font-family: Poppins;
 }
 
-.sleep-studies-dw .hand-out h5{
-  align-items: center;
+.sleep-studies-dw .hand-out {
+  text-align: center;
+}
+
+.in-sleep-studies {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.in-sleep-studies div {
+  padding: 20px;
+  width: 100%;
+  border: 1px solid #1977cc;
+  border-radius: 25px;
 }
 
 /*-------------------------For Providers Btn------------------------------*/
