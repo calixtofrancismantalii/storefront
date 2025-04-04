@@ -2743,7 +2743,7 @@ button{
   background-color: #FF590c;
 }
 
-.sleep-studies-dw div {
+.sleep-studies-dw .hand-out {
   margin-bottom: 30px;
 }
 
@@ -2774,11 +2774,15 @@ button{
   margin-top: 20px;
 }
 
-.in-sleep-studies div {
+.in-sleep-studies .inner {
   padding: 20px;
   width: 100%;
   border: 1px solid #1977cc;
   border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
 }
 
 /*-------------------------For Providers Btn------------------------------*/
