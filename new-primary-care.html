@@ -68,12 +68,12 @@
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="index.html">Home<br></a></li>
-            <li class="dropdown"><a href="im-a-provider.html" class="active"><span>For Provider</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <li class="dropdown"><a href="im-a-provider.html" class="active"><span>For Providers</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <!-- <li><a href="about.html">About</a></li>
                 <li><a href="how-it-works.html">How It Works</a></li>
                 <li><a href="sleep-apnea-care.html">Sleep Apnea Care</a></li> -->
-                <li class="dropdown"><a href="#"><span>Provider Type</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <li class="dropdown"><a href="#"><span>Provider Types</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
                     <li><a href="new-primary-care.html">Primary Care</a></li>
                     <li><a href="new-dental-sleep-medicine.html">Dental Sleep Medicine</a></li>
@@ -82,7 +82,7 @@
                     <li><a href="new-durable-medical-equipment.html">Durable Medical Equipment</a></li>
                     <li><a href="new-weight-loss.html">Weight Loss</a></li>
                     <li><a href="new-sleep-specialist.html">Sleep Specialist</a></li>
-                    <li><a href="#">Sleep Study Provider</a></li>
+                    <li><a href="new-sleep-testing-facility.html">Sleep Testing Facility</a></li>
                   </ul>
                 </li>
                 <li class="dropdown"><a href="#"><span>Orders</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -93,14 +93,14 @@
                     <li><a href="#">PAP therapy</a></li>
                   </ul>
                 </li>
-                <li class="dropdown"><a href="#"><span>Referrals</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <li class="dropdown"><a href="new-login.html"><span>Referrals</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                   <ul>
-                    <li><a href="#">Sleep Specialist</a></li>
-                    <li><a href="#">DME</a></li>
-                    <li><a href="#">Dental Medicine</a></li>
-                    <li><a href="#">Neurostimulator Implant</a></li>
-                    <li><a href="#">Oronasal Surgery</a></li>
-                    <li><a href="#">Weight Loss</a></li>
+                    <li><a href="new-login.html">Sleep Specialist</a></li>
+                    <li><a href="new-login.html">DME</a></li>
+                    <li><a href="new-login.html">Dental Medicine</a></li>
+                    <li><a href="new-login.html">Neurostimulator Implant</a></li>
+                    <li><a href="new-login.html">Oronasal Surgery</a></li>
+                    <li><a href="new-login.html">Weight Loss</a></li>
                   </ul>
                 </li>
               </ul>
@@ -139,7 +139,9 @@
     <section id="about" class="about section">
           <!-- Section Title -->
             <div class="container section-title" data-aos="fade-in">
-              <h2>MyApneaPath</h2>
+              <h2>Primary Care</h2>
+              <br><br>
+              <h4>MyApneaPath</h4>
               <p>The Premier Coordinating Platform for Diagnosis & Treatment of Sleep Apnea</p>
             </div>
           <!-- End Section Title -->
@@ -206,8 +208,7 @@
 
             <div class="hand-out" style="margin-top: 80px;">
               <h5>Do you want your own turnkey sleep operation?</h5>
-              <p><a class="bt-hand-out" onclick="openPopup()">Hand-Out Home Sleep Test</a></p>
-              <a href="#" class="bt-dw">Get Started</a>
+              <a href="provider-office-based-home-sleep-study-program.html" class="bt-dw">Provider Office Based Home Sleep Study Program</a>
             </div>
             <!-- Popup Overlay (Initially Hidden) -->
             <div class="popup-overlay" id="popupOverlay"></div>
@@ -223,7 +224,7 @@
             <div class="hand-out">
                 <h5>Order Sleep Specialist Consult</h5>
                 <p>Described board certified sleep specialist</p>
-                <a href="#" class="bt-dw" style="font-size: 14px;">Request Login</a>
+                <a href="#" class="bt-dw">Request Login</a>
             </div>
             <div class="hand-out">
                 <h5>Order Sleep Therapy Provider</h5>
@@ -238,37 +239,10 @@
                     <option value="Durable Medical Equipment Company">Durable Medical Equipment Company</option>
                 </select>
                 <br>
-                <a href="#" class="bt-dw" style="font-size: 14px;">Request Login</a>
+                <a href="#" class="bt-dw">Request Login</a>
             </div>
         </div>
     </section>
-
-    <script>
-        function openPopup() {
-            document.getElementById("popup").style.display = "block";
-            document.getElementById("popupOverlay").style.display = "block";
-            document.getElementById("popup").setAttribute("aria-hidden", "false");
-        }
-
-        function closePopup() {
-            document.getElementById("popup").style.display = "none";
-            document.getElementById("popupOverlay").style.display = "none";
-            document.getElementById("popup").setAttribute("aria-hidden", "true");
-        }
-
-        document.getElementById("popupOverlay").addEventListener("click", closePopup);
-        document.getElementById("closePopup").addEventListener("click", closePopup);
-
-        document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape") {
-                closePopup();
-            }
-        });
-
-        document.getElementById("popupImage").addEventListener("click", function () {
-            this.classList.toggle("zoomed");
-        });
-    </script>
 
     <!--Testimonial-->
     <!-- <section class="test">
@@ -529,6 +503,126 @@
 
     </section> /Doctors Section -->
 
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>For Providers</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="clicked-service  position-relative">
+              <div class="icon">
+                <i class="fas fa-medkit"></i>
+              </div>
+              <a href="new-primary-care.html" class="stretched-link">
+                <h3>Primary Care</h3>
+              </a>
+              <p><a href="new-primary-care.html">Learn More</a></p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-tooth"></i>
+              </div>
+              <a href="new-dental-sleep-medicine.html" class="stretched-link">
+                <h3>Dental Sleep Medicine</h3>
+              </a>
+              <p><a href="new-dental-sleep-medicine.html">Learn More</a></p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-hospital-user"></i>
+              </div>
+              <a href="new-sleep-surgery.html" class="stretched-link">
+                <h3>Sleep Surgery</h3>
+              </a>
+              <p><a href="new-sleep-surgery.html">Learn More</a></p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <a href="new-neurostimulator-implant.html" class="stretched-link">
+                <h3>Neurostimulator Implant</h3>
+              </a>
+              <p><a href="new-neurostimulator-implant.html">Learn More</a></p>
+              <a href="new-neurostimulator-implant.html" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa fa-hospital"></i>
+              </div>
+              <a href="new-durable-medical-equipment.html" class="stretched-link">
+                <h3>Durable Medical Equipment</h3>
+              </a>
+              <p><a href="new-durable-medical-equipment.html">Learn More</a></p>
+              <a href="new-durable-medical-equipment.html" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-weight"></i>
+              </div>
+              <a href="new-weight-loss.html" class="stretched-link">
+                <h3>Weight Loss</h3>
+              </a>
+              <p><a href="new-weight-loss.html">Learn More</a></p>
+              <a href="new-weight-loss.html" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <a href="new-sleep-specialist.html" class="stretched-link">
+                <h3>Sleep Specialist</h3>
+              </a>
+              <p><a href="new-sleep-specialist.html">Learn More</a></p>
+              <a href="new-sleep-specialist.html" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <a href="new-sleep-testing-facility.html" class="stretched-link">
+                <h3>Sleep Testing Facility</h3>
+              </a>
+              <p><a href="new-sleep-testing-facility.html">Learn More</a></p>
+              <a href="new-sleep-testing-facility.html" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
     <!-- Contact Section -->
     <section id="contact" class="contact section">
 
@@ -670,7 +764,7 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Provider Type</h4>
+          <h4>For Providers</h4>
           <ul>
             <li><a href="new-primary-care.html">Primary Care</a></li>
             <li><a href="new-dental-sleep-medicine.html">Dental Sleep Medicine</a></li>
@@ -681,11 +775,11 @@
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Provider Type</h4>
+          <h4>For Providers</h4>
           <ul>
             <li><a href="new-weight-loss.html">Weight Loss</a></li>
             <li><a href="new-sleep-specialist.html">Sleep Specialist</a></li>
-            <li><a href="#">Sleep Study Provider</a></li>
+            <li><a href="new-sleep-testing-facility.html">Sleep Testing Facility</a></li>
           </ul>
         </div>
 

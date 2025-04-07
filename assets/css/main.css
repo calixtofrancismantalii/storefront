@@ -1031,6 +1031,7 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+
 .about .content h3 {
   font-size: 30px;
   font-weight: 600;
@@ -2726,17 +2727,17 @@ button{
 
 .sleep-studies-dw p{
   font-family: Poppins;
+  font-size: 15px;
 }
 
 .sleep-studies-dw .bt-dw {
   font-family: Poppins;
-  font-size: 16px;
-  padding: 10px 23px;
+  font-size: 15px;
+  padding: 6px 12px;
   border: none;
   background-color: #1977cc;
   color: white;
   border-radius: 25px;
-  margin-bottom: 10px;
 }
 
 .sleep-studies-dw .bt-dw:hover {
@@ -2770,12 +2771,12 @@ button{
 
 .in-sleep-studies {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   margin-top: 20px;
 }
 
 .in-sleep-studies .inner {
-  padding: 20px;
+  padding: 15px;
   width: 100%;
   border: 1px solid #1977cc;
   border-radius: 25px;
@@ -2783,6 +2784,10 @@ button{
   flex-direction: row;
   flex-wrap: wrap;
   align-content: space-between;
+}
+
+.in-sleep-studies .inner h5 {
+  font-size: 18px;
 }
 
 /*-------------------------For Providers Btn------------------------------*/
@@ -3074,4 +3079,175 @@ Sleep Apnea Quiz Cont
   .question div {
     width: 100% !important;
   }
+}
+
+/* Program ------------------------------*/
+
+.program-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.program-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.program-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.250);
+  max-width: 300px;
+  flex: 1 1 250px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.program-card h3 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.program-card:hover .icon {
+  background: #FF590c;
+}
+
+.program-card:hover .icon i {
+  color: white;
+}
+
+.program-card:hover .icon::before {
+  background: color-mix(in srgb, #FF590c, transparent 70%);
+}
+
+.program-card .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: var(--accent-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  transform-style: preserve-3d;
+}
+
+.program-card .icon i {
+  color: var(--contrast-color);
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+}
+
+.program-card .icon::before {
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: color-mix(in srgb, var(--accent-color), transparent 80%);
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+}
+
+/* Clicked Service ------------------------------*/
+
+.services .clicked-service {
+  background: var(--accent-color);
+  text-align: center;
+  border-color: var(--accent-color);
+  padding: 80px 20px;
+  transition: all ease-in-out 0.3s;
+  height: 100%;
+}
+
+.services .clicked-service .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: var(--surface-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  transform-style: preserve-3d;
+}
+
+.services .clicked-service .icon i {
+  color: var(--accent-color);
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+}
+
+.services .clicked-service .icon::before {
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: color-mix(in srgb, var(--accent-color), transparent 80%);
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+}
+
+.services .clicked-service h3 {
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+}
+
+.services .clicked-service p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .clicked-service .icon::before {
+  background: color-mix(in srgb, var(--background-color), transparent 70%);
+}
+
+.services .clicked-service h3,
+.services .clicked-service p {
+  color: var(--contrast-color);
+}
+
+.services .clicked-service p a{
+  color: var(--contrast-color);
+  text-decoration: underline;
+}
+
+/* Based Home Sleep Study ------------------------------*/
+
+.based-home-sleep-study-program {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.based-home-sleep-study-program a {
+  padding: 10px 23px;
+  background-color: #1977cc;
+  color: white;
+  font-family: "Poppins";
+  border-radius: 5px;
+}
+
+.based-home-sleep-study-program a:hover {
+  background-color: #FF590c;
+  color: white;
 }
