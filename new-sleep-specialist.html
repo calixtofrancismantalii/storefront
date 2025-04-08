@@ -704,6 +704,10 @@
                 </div>
 
                 <div class="col-md-12">
+                  <input type="text" class="form-control" id="contactNumber" maxlength="11" name="contact_number" placeholder="Contact Number" required>
+                </div>
+
+                <div class="col-md-12">
                   <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
                 </div>
 
@@ -722,6 +726,12 @@
               </div>
             </form>
           </div><!-- End Contact Form -->
+
+          <script>
+            document.getElementById('contactNumber').addEventListener('input', function () {
+              this.value = this.value.replace(/[^0-9]/g, '');
+            });
+          </script>
 
         </div>
 
