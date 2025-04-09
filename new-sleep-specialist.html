@@ -208,19 +208,20 @@
 
           <div class="hand-out" style="margin-top: 80px;">
             <h5>Do you want your own turnkey sleep operation?</h5>
-            <a href="provider-office-based-home-sleep-study-program.html" class="bt-dw">Provider Office Based Home Sleep Study Program</a>
+            <a onclick="openPopup()" class="bt-dw">Provider Office Based Home Sleep Study Program</a>
           </div>
-          <!-- Popup Overlay (Initially Hidden) 
+          <!-- Popup Overlay (Initially Hidden)  -->
           <div class="popup-overlay" id="popupOverlay"></div>
 
-          -- Popup Container (Initially Hidden) --
+          <!-- Popup Container (Initially Hidden) -->
           <div id="popup" class="popup">
             <div class="popup-content">
                 <span class="close" id="closePopup">&times;</span>
                 <img id="popupImage" src="assets/img/HST Program (2).png" alt="Home Sleep Test">
+                <a href="contact.html">Get Started</a>
             </div>
           </div>
-            <div class="hand-out">
+          <!-- <div class="hand-out">
                 <form action="">
                     <h5>Order Sleep Therapy Provider</h5>
                     <select class="sleep-therapy-provider">
@@ -236,7 +237,7 @@
                     <br>
                     <a href="#" class="bt-dw">Request Login</a>
                 </form>
-            </div>-->
+            </div> -->
         </div>
 
     </section>
@@ -247,24 +248,30 @@
           document.getElementById("popupOverlay").style.display = "block";
           document.getElementById("popup").setAttribute("aria-hidden", "false");
       }
-
+  
       function closePopup() {
           document.getElementById("popup").style.display = "none";
           document.getElementById("popupOverlay").style.display = "none";
           document.getElementById("popup").setAttribute("aria-hidden", "true");
       }
-
+  
       document.getElementById("popupOverlay").addEventListener("click", closePopup);
       document.getElementById("closePopup").addEventListener("click", closePopup);
-
+  
       document.addEventListener("keydown", function (event) {
           if (event.key === "Escape") {
               closePopup();
           }
       });
-
+  
       document.getElementById("popupImage").addEventListener("click", function () {
           this.classList.toggle("zoomed");
+          // Check if zoomed class is present and change cursor accordingly
+          if (this.classList.contains("zoomed")) {
+              this.style.cursor = "zoom-out"; // Show zoom-out cursor when image is zoomed
+          } else {
+              this.style.cursor = "zoom-in"; // Show zoom-in cursor when image is not zoomed
+          }
       });
     </script>
 
