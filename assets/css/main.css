@@ -1137,6 +1137,31 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+/* .services .service-item .icon {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+
+.services .service-item .icon img {
+  position: absolute;
+  height: fit-content;
+  width: 60%;
+  transition: opacity 0.3s ease;
+}
+
+.services .service-item .icon .icon-hover {
+  opacity: 0;
+}
+
+.services .service-item .icon:hover .icon-hover {
+  opacity: 1;
+}
+
+.services .service-item .icon:hover .icon-default {
+  opacity: 0;
+} */
+
 .services .service-item {
   background-color: var(--surface-color);
   text-align: center;
