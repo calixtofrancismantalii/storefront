@@ -1251,6 +1251,195 @@ section,
 }
 
 /*--------------------------------------------------------------
+Other Layout Service
+--------------------------------------------------------------*/
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-card .icon {
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  background: var(--accent-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  transform-style: preserve-3d;
+}
+
+.service-card .icon::before {
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: color-mix(in srgb, var(--accent-color), transparent 80%);
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+}
+
+.service-card .icon i {
+  color: var(--contrast-color);
+  font-size: 25px;
+  transition: ease-in-out 0.3s;
+}
+
+.service-card .stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+}
+
+.service-card p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.service-card p a {
+  text-decoration: underline;
+}
+
+.service-card a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.service-card h3 {
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+  font-size: 20px;
+}
+
+.service-card:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.service-card:hover .icon {
+  background: var(--surface-color);
+}
+
+.service-card:hover .icon i {
+  color: var(--accent-color);
+}
+
+.service-card:hover .icon::before {
+  background: color-mix(in srgb, var(--background-color), transparent 70%);
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+  color: var(--contrast-color);
+}
+
+.service-card:hover p a{
+  color: var(--contrast-color);
+  text-decoration: underline;
+}
+
+/* Clicked Service ------------------------------*/
+
+.services-container .clicked-service {
+  background-color: #1977cc;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-container .clicked-service .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: var(--surface-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  transform-style: preserve-3d;
+}
+
+.services-container .clicked-service .icon i {
+  color: var(--accent-color);
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+}
+
+.services-container .clicked-service .icon::before {
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: color-mix(in srgb, var(--accent-color), transparent 80%);
+  border-radius: 5px;
+  transition: all 0.3s ease-out 0s;
+  transform: translateZ(-1px);
+}
+
+.services-container .clicked-service h3 {
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+}
+
+.services-container .clicked-service p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services-container .clicked-service .icon::before {
+  background: color-mix(in srgb, var(--background-color), transparent 70%);
+}
+
+.services-container .clicked-service h3,
+.services-container .clicked-service p {
+  color: var(--contrast-color);
+}
+
+.services-container .clicked-service p a{
+  color: var(--contrast-color);
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
 # Appointment Section
 --------------------------------------------------------------*/
 .appointment .php-email-form {
@@ -3300,76 +3489,6 @@ Sleep Apnea Quiz Cont
   border-radius: 5px;
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
-}
-
-/* Clicked Service ------------------------------*/
-
-.services .clicked-service {
-  background: var(--accent-color);
-  text-align: center;
-  border-color: var(--accent-color);
-  padding: 80px 20px;
-  transition: all ease-in-out 0.3s;
-  height: 100%;
-}
-
-.services .clicked-service .icon {
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
-  background: var(--surface-color);
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  transition: 0.3s;
-  transform-style: preserve-3d;
-}
-
-.services .clicked-service .icon i {
-  color: var(--accent-color);
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-}
-
-.services .clicked-service .icon::before {
-  position: absolute;
-  content: "";
-  left: -8px;
-  top: -8px;
-  height: 100%;
-  width: 100%;
-  background: color-mix(in srgb, var(--accent-color), transparent 80%);
-  border-radius: 5px;
-  transition: all 0.3s ease-out 0s;
-  transform: translateZ(-1px);
-}
-
-.services .clicked-service h3 {
-  font-weight: 700;
-  margin: 10px 0 15px 0;
-  font-size: 22px;
-}
-
-.services .clicked-service p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .clicked-service .icon::before {
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
-}
-
-.services .clicked-service h3,
-.services .clicked-service p {
-  color: var(--contrast-color);
-}
-
-.services .clicked-service p a{
-  color: var(--contrast-color);
-  text-decoration: underline;
 }
 
 /* Based Home Sleep Study ------------------------------*/
