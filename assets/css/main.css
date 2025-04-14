@@ -1258,7 +1258,7 @@ Other Layout Service
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -1276,8 +1276,8 @@ Other Layout Service
 
 .service-card .icon {
   margin: 0 auto;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: var(--accent-color);
   border-radius: 4px;
   display: flex;
@@ -1318,7 +1318,7 @@ Other Layout Service
 }
 
 .service-card p {
-  line-height: 24px;
+  /* line-height: 24px; */
   font-size: 14px;
   margin-bottom: 0;
 }
@@ -1335,8 +1335,8 @@ Other Layout Service
 
 .service-card h3 {
   font-weight: 700;
-  margin: 10px 0 15px 0;
-  font-size: 20px;
+  margin: 10px 0 10px 0;
+  font-size: 18px;
 }
 
 .service-card:hover {
@@ -1382,8 +1382,8 @@ Other Layout Service
 
 .services-container .clicked-service .icon {
   margin: 0 auto;
-  width: 64px;
-  height: 64px;
+  width: 50px;
+  height: 50px;
   background: var(--surface-color);
   border-radius: 4px;
   display: flex;
@@ -1396,7 +1396,7 @@ Other Layout Service
 
 .services-container .clicked-service .icon i {
   color: var(--accent-color);
-  font-size: 28px;
+  font-size: 20px;
   transition: ease-in-out 0.3s;
 }
 
@@ -1416,7 +1416,7 @@ Other Layout Service
 .services-container .clicked-service h3 {
   font-weight: 700;
   margin: 10px 0 15px 0;
-  font-size: 22px;
+  font-size: 18px;
 }
 
 .services-container .clicked-service p {
@@ -3591,6 +3591,7 @@ Sleep Apnea Quiz Cont
   border-radius: 5px;
   width: 100%;
   text-align: center;
+  font-size: 17px;
 }
 .column.primary .step {
   background-color: #cfe9ff;
