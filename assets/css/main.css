@@ -3611,7 +3611,7 @@ Sleep Apnea Quiz Cont
   padding: 50px 0px;
 }
 .spaces {
-  padding: 170px 0px;
+  padding: 168px 0px;
 }
 
 .cross-arrow-1 {
@@ -3624,7 +3624,7 @@ Sleep Apnea Quiz Cont
 .cross-arrow-2 {
   /* left: 31%;
   top: 378px; Adjust this value based on actual vertical position */
-  margin-top: 50px;
+  margin-top: 75px;
   font-size: 30px;
 }
 
@@ -3638,7 +3638,7 @@ Sleep Apnea Quiz Cont
 .cross-arrow-4 {
   /* left: 62%;
   top: 375px; Adjust this value based on actual vertical position */
-  margin-top: 395px;
+  margin-top: 410px;
   font-size: 30px;
 }
 
@@ -3652,7 +3652,7 @@ Sleep Apnea Quiz Cont
 .cross-arrow-left-2 {
   /* left: 36%;
   top: 468px; Adjust this value based on actual vertical position */
-  margin-top: 65px;
+  margin-top: 78px;
   font-size: 30px;
 }
 
@@ -3664,7 +3664,7 @@ Sleep Apnea Quiz Cont
 }
 
 .cross-arrow-left-4 {
-  margin-top: 5px;
+  margin-top: 15px;
   /* left: 67%;
   top: 402px; Adjust this value based on actual vertical position */
   font-size: 30px;
