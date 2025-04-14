@@ -136,18 +136,80 @@
 
     <section id="home-sleep-study-program">
       <div class="container">
-        <div class="flow-container">
-          <div class="flow-box">
-              Screens patients for sleep apnea.<br>Is HST indicated?
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>Home Sleep Study Program</h2>
+          <p>(Provider Office Based HST Program)</p>
+        </div><!-- End Section Title -->
+
+        <div class="workflow">
+          <div class="column primary">
+            <h3>PRIMARY PROVIDER</h3>
+            <br>
+            <div class="step">Screens patients for sleep apnea. Is HST indicated?</div>
+            <div class="arrow">↓</div>
+            <div style="display: flex; justify-content: flex-end; gap: 10px; align-items: center;">
+              <div class="step">Sends HST order to MGR via platform</div>
+              <div class="cross-arrow-1">→</div>
+            </div>
+            <br>
+            <div class="step">Schedules patient for HST (HST setup and pick up at ordering facility)</div>
+            <div class="arrow">↓</div>
+            <div style="display: flex; justify-content: flex-end; gap: 10px; align-items: center;">
+              <div class="step">Equipment return and data download</div>
+              <div class="cross-arrow-2">→</div>
+            </div>
+            <div class="arrow">↓</div>
+            <div style="display: flex; justify-content: flex-end; gap: 10px; align-items: center;">
+              <div class="step">Discuss HST results and order appropriate treatment (weight loss, oral appliance, oronasal surgery, neuromodulator) <br><br><em>(may request MGR/Interpretation Service to explain preliminary report to patient)</em></div>
+              <div class="cross-arrow-3">→</div>
+            </div>
+            <div class="arrow">↓</div>
+            <div class="step">Primary Provider bills for the Global Fee</div>
           </div>
-          <div class="arrow">➡️</div>
-          <div class="flow-box">
-            If yes, order HST<br>and provide instructions.
+          
+          <div class="column mgr">
+            <h3>MGR HST PROGRAM</h3>
+            <div class="spacing"></div>
+            <div class="step">Verifies insurance and obtains prior authorization if needed</div>
+            <div class="arrow">↓</div>
+            <div style="display: flex; justify-content: flex-start; gap: 10px; align-items: center;">
+              <div class="cross-arrow-left-1">←</div>
+              <div class="step">Informs ordering facility on patient eligibility and coverage</div>
+            </div>
+            <br>
+            <div style="display: flex; justify-content: flex-end; gap: 10px; align-items: center;">
+              <div class="step">Retrieves raw data for scoring and sends overscored data to the sleep specialist</div>
+              <div class="cross-arrow-4">→</div>
+            </div>
+            <br>
+            <div style="display: flex; justify-content: flex-start; gap: 10px; align-items: center;">
+              <div class="cross-arrow-left-2">←</div>
+              <div class="step">Receives final HST report and sends a copy to the ordering facility</div>
+            </div>
+            <br>
+            <div class="step">Refer to DME service, Dental Sleep Medicine, Otolaryngology, Maxillofacial Surgery, Cardiology, Bariatric Surgery, Behavioral and Medical Weight Loss Program</div>
+            <br>
+            <div style="display: flex; justify-content: flex-start; gap: 10px; align-items: center;">
+              <div class="cross-arrow-left-3">←</div>
+              <div class="step">Bills Primary Provider for Interpretation Fee and Equipment Use/Technical Support Fee</div>
+            </div>
           </div>
-          <div class="arrow">➡️</div>
-          <div class="flow-box">
-            Follow up on HST results<br>and determine next steps.
+  
+          <div class="column specialist">
+            <h3>SLEEP SPECIALIST</h3>
+            <div class="spaces"></div>
+            <div style="display: flex; justify-content: flex-start; gap: 10px; align-items: center;">
+              <div class="cross-arrow-left-4">←</div>
+              <div class="step">HST data analysis and interpretation</div>
+            </div>
+            <div class="arrow">↓</div>
+            <div class="step">Manages treatment of sleep apnea <br><em>(if referred by Primary Provider)</em></div>
           </div>
+        </div>
+
+        <div class="hst-btn">
+          <a href="new-login.html">Login</a>
         </div>
       </div>
     </section>
