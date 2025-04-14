@@ -3544,8 +3544,20 @@ Sleep Apnea Quiz Cont
   background-color: white;
   border-radius: 5px;
   padding: 10px;
-  width: 30%;
+  width: 29%;
   min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.column2 {
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  width: 0%;
+  min-width: 27px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -3576,7 +3588,7 @@ Sleep Apnea Quiz Cont
   /* margin: 10px 0; */
   padding: 10px;
   border-radius: 5px;
-  width: 75%;
+  width: 100%;
   text-align: center;
 }
 .column.primary .step {
@@ -3594,63 +3606,67 @@ Sleep Apnea Quiz Cont
 .arrow {
   text-align: center;
   font-size: 30px;
-  margin-top: -10px;
 }
 .spacing {
-  padding: 65px 0px;
+  padding: 50px 0px;
 }
 .spaces {
-  padding: 190px 0px;
+  padding: 170px 0px;
 }
 
 .cross-arrow-1 {
-  left: 31%;
-  top: 198px; /* Adjust this value based on actual vertical position */
+  /* left: 31%;
+  top: 198px; Adjust this value based on actual vertical position */
+  margin-top: 188px;
   font-size: 30px;
 }
 
 .cross-arrow-2 {
-  left: 31%;
-  top: 378px; /* Adjust this value based on actual vertical position */
+  /* left: 31%;
+  top: 378px; Adjust this value based on actual vertical position */
+  margin-top: 50px;
   font-size: 30px;
 }
 
 .cross-arrow-3 {
-  left: 31%;
-  top: 540px; /* Adjust this value based on actual vertical position */
+  /* left: 31%;
+  top: 540px;  Adjust this value based on actual vertical position  */
   font-size: 30px;
-  margin-bottom: -50px;
+  margin-top: 58px;
 }
 
 .cross-arrow-4 {
-  left: 62%;
-  top: 375px; /* Adjust this value based on actual vertical position */
+  /* left: 62%;
+  top: 375px; Adjust this value based on actual vertical position */
+  margin-top: 395px;
   font-size: 30px;
 }
 
 .cross-arrow-left-1 {
-  left: 36%;
-  top: 297px; /* Adjust this value based on actual vertical position */
+  /* left: 36%;
+  top: 297px; Adjust this value based on actual vertical position */
+  margin-top: 55px;
   font-size: 30px;
 }
 
 .cross-arrow-left-2 {
-  left: 36%;
-  top: 468px; /* Adjust this value based on actual vertical position */
+  /* left: 36%;
+  top: 468px; Adjust this value based on actual vertical position */
+  margin-top: 65px;
   font-size: 30px;
 }
 
 .cross-arrow-left-3 {
-  left: 36%;
-  top: 650px; /* Adjust this value based on actual vertical position */
+  /* left: 36%;
+  top: 650px;  Adjust this value based on actual vertical position  */
   font-size: 30px;
-  margin-top: -65px;
+  margin-top: 98px;
 }
 
 .cross-arrow-left-4 {
-  margin-top: 45px;
-  left: 67%;
-  top: 402px; /* Adjust this value based on actual vertical position */
+  margin-top: 5px;
+  /* left: 67%;
+  top: 402px; Adjust this value based on actual vertical position */
   font-size: 30px;
   transform: rotate(-25deg); /* Rotate to point at the step */
   z-index: 10; /* Ensure it's above other elements */
