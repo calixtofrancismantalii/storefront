@@ -2743,11 +2743,12 @@ input[type=radio], input[type=checkbox] {
 .remember-forgot label{
   color: #1f2937;
   margin-right: 3px;
+  display: flex;
+  gap: 10px;
 }
 
 .remember-forgot label input{
   accent-color: #fff;
-  margin-right: 8px;
   margin-left: -11px;
 }
 
@@ -3184,6 +3185,31 @@ button{
   }
 }
 
+.log2-1 .new-account {
+  text-align: left;
+}
+
+.log2-2 .new-account {
+  text-align: left;
+}
+
+.log2-1 .new-account a {
+  font-size: 15px;
+  padding: 8px;
+  background-color: #004078;
+  color: white;
+  border-radius: 5px;
+}
+
+.log2-2 .new-account a {
+  font-size: 15px;
+  padding: 8px;
+  background-color: white;
+  color: #1f2937;
+  border-radius: 5px;
+}
+
+
 .log2-1 {
   display: flex;
   flex-direction: column;
@@ -3270,7 +3296,7 @@ button{
   float: right;
   align-items: center;
   width: 25%;
-  height: 40px;
+  /* height: 40px; */
   /* background: #007bff; */
   background: #1D4ED8;
   border: none;
