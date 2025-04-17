@@ -3979,3 +3979,111 @@ Sleep Apnea Quiz Cont
   background-color: #FF590c;
   color: white;
 }
+
+/*-------------------------Login For Patient and Provider------------------------------*/
+
+.for-patient-log {
+  display: flex;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.250);
+}
+
+form h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.for-patient-log .for-patient-log-form {
+  width: 80%;
+  padding: 50px 60px;
+}
+
+.for-patient-log .for-patient-log-img {
+  width: 100%;
+  background-image: url(/assets/img/Patients.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-image-source: linear-gradient(hsl(208.5 78.2% 44.9% / .4), hsl(208.9 38.9% 28.2% / .4));
+}
+
+.for-patient-log .for-provider-log-img {
+  width: 100%;
+  background-image: url(/assets/img/Doctors.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-image-source: linear-gradient(hsl(208.5 78.2% 44.9% / .4), hsl(208.9 38.9% 28.2% / .4));
+}
+
+.for-patient-log-group {
+  margin-bottom: 10px;
+}
+
+.for-patient-log-group input:focus {
+  border: 1px solid #1977cc !important;
+}
+
+.for-patient-log .for-patient-log-form .for-patient-log-group label {
+  width: 100%;
+  font-family: Poppins;
+  font-size: 16px;
+}
+
+.for-patient-log .for-patient-log-form .for-patient-log-group input {
+  width: 100%;
+  font-family: Poppins;
+  padding: 4px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  border: 1px solid gray;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.250);
+}
+
+.for-patient-log-group-checkbox {
+  display: flex;
+  padding-left: 2px;
+  gap: 8px;
+  align-items: center;
+}
+
+.for-patient-log-group-checkbox label {
+  font-family: Poppins;
+  font-size: 15px;
+}
+
+.for-patient-log-group-link {
+  display: flex;
+  justify-content: flex-end;
+  font-family: Poppins;
+  align-items: center;
+  gap: 10px;
+}
+
+.for-patient-log-group-link button {
+  padding: 5px 12px;
+  border-radius: 5px;
+  color: white;
+  background-color: #1977cc;
+  border: none;
+}
+
+.for-patient-log-group-link button:hover {
+  background-color: #fe702c;
+}
+
+.for-patient-log-group-link a:hover {
+  color: #fe702c;
+}
+
+.for-patient-log-group-create {
+  font-family: Poppins;
+  margin-top: 10px;
+}
+
+.for-patient-log-group-create span a {
+  text-decoration: underline;
+}
+
+.for-patient-log-group-create span a:hover {
+  color: #fe702c;
+}
