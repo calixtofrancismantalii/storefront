@@ -125,7 +125,7 @@
                   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
         
-                <a class="cta-btn d-none d-sm-block org" href="new-login.html">Login</a>
+                <a class="cta-btn d-none d-sm-block org" href="login.html">Login</a>
         
               </div>
         
@@ -138,16 +138,15 @@
                 <div class="container">
                     <div class="for-patient-log">
                         <div class="for-patient-log-form">
-                            <form action="">
+                            <form action="" class="log-form">
                                 <h3>For Provider</h3>
                                 <div class="for-patient-log-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" required>
+                                    <input type="email" class="form-control" placeholder="Email">
                                 </div>
                                 
-                                <div class="for-patient-log-group">
-                                    <label for="password">Password</label>
-                                    <input type="password" required>
+                                <div class="for-patient-log-group password-container">
+                                    <input type="password" id="password" class="form-control" placeholder="Password" required>
+                                    <i class="fa-solid fa-eye-slash" id="togglePassword"></i>
                                 </div>
                                 
                                 <div class="for-patient-log-group-checkbox">
@@ -168,6 +167,19 @@
                         <div class="for-provider-log-img">
                         </div>
                     </div>
+
+                    <script>
+                        const togglePassword = document.getElementById("togglePassword");
+                        const passwordInput = document.getElementById("password");
+                
+                        togglePassword.addEventListener("click", () => {
+                            const isPassword = passwordInput.type === "password";
+                            passwordInput.type = isPassword ? "text" : "password";
+                            togglePassword.classList.toggle("fa-eye");
+                            togglePassword.classList.toggle("fa-eye-slash");
+                        });
+                    </script>
+
                 </div>
             </section>
         </main>

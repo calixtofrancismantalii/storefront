@@ -12,6 +12,7 @@
         <link href="assets/img/Logo My.png" rel="icon">
         <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -125,7 +126,7 @@
                   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
         
-                <a class="cta-btn d-none d-sm-block org" href="new-login.html">Login</a>
+                <a class="cta-btn d-none d-sm-block org" href="login.html">Login</a>
         
               </div>
         
@@ -138,36 +139,48 @@
                 <div class="container">
                     <div class="for-patient-log">
                         <div class="for-patient-log-form">
-                            <form action="">
-                                <h3>For Patient</h3>
-                                <div class="for-patient-log-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" required>
-                                </div>
+                          <form action="" class="log-form">
+                            <h3>For Patient</h3>
+                            <div class="for-patient-log-group">
+                              <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                              
+                            <div class="for-patient-log-group password-container">
+                              <input type="password" id="password" class="form-control" placeholder="Password" required>
+                              <i class="fa-solid fa-eye-slash" id="togglePassword"></i>
+                            </div>
                                 
-                                <div class="for-patient-log-group">
-                                    <label for="password">Password</label>
-                                    <input type="password" required>
-                                </div>
-                                
-                                <div class="for-patient-log-group-checkbox">
-                                    <input type="checkbox">
-                                    <label>Remember Me</label>
-                                </div>
+                            <div class="for-patient-log-group-checkbox">
+                              <input type="checkbox">
+                              <label>Remember Me</label>
+                            </div>
     
-                                <div class="for-patient-log-group-link">
-                                    <a href="#">Forgot Password?</a>
-                                    <button type="submit">Login</button>
-                                </div>
+                            <div class="for-patient-log-group-link">
+                              <a href="#">Forgot Password?</a>
+                              <button type="submit">Login</button>
+                            </div>
     
-                                <div class="for-patient-log-group-create">
-                                    <p>Don't have an account? <span><a href="#">Sign Up</a></span></p>
-                                </div>
-                            </form>
+                            <div class="for-patient-log-group-create">
+                              <p>Don't have an account? <span><a href="#">Sign Up</a></span></p>
+                            </div>
+                          </form>
                         </div>
                         <div class="for-patient-log-img">
                         </div>
-                    </div>
+                    </div> 
+                    
+                    <script>
+                      const togglePassword = document.getElementById("togglePassword");
+                      const passwordInput = document.getElementById("password");
+              
+                      togglePassword.addEventListener("click", () => {
+                          const isPassword = passwordInput.type === "password";
+                          passwordInput.type = isPassword ? "text" : "password";
+                          togglePassword.classList.toggle("fa-eye");
+                          togglePassword.classList.toggle("fa-eye-slash");
+                      });
+                    </script>
+
                 </div>
             </section>
         </main>

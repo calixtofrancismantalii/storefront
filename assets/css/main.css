@@ -4016,27 +4016,47 @@ form h3 {
 }
 
 .for-patient-log-group {
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
-.for-patient-log-group input:focus {
-  border: 1px solid #1977cc !important;
-}
-
-.for-patient-log .for-patient-log-form .for-patient-log-group label {
-  width: 100%;
-  font-family: Poppins;
-  font-size: 16px;
-}
-
-.for-patient-log .for-patient-log-form .for-patient-log-group input {
+.for-patient-log .for-patient-log-form .for-patient-log-group input[type="email"] {
   width: 100%;
   font-family: Poppins;
   padding: 4px;
-  border-radius: 5px;
   margin-bottom: 5px;
-  border: 1px solid gray;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.250);
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.for-patient-log .for-patient-log-form .for-patient-log-group input[type="password"] {
+  width: 100%;
+  font-family: Poppins;
+  padding: 4px;
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+}
+
+.for-patient-log .for-patient-log-form .for-patient-log-group input[type="text"] {
+  width: 100%;
+  font-family: Poppins;
+  padding: 4px;
+  margin-bottom: 5px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: var(--default-color);
+  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
 .for-patient-log-group-checkbox {
@@ -4086,4 +4106,17 @@ form h3 {
 
 .for-patient-log-group-create span a:hover {
   color: #fe702c;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-container i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #777;
 }
