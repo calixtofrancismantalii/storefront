@@ -446,8 +446,28 @@ h6 {
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
   }
 
+  .navmenu .dropdown-2 ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 14px;
+    top: 130%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
   .navmenu .dropdown ul li {
     min-width: 250px;
+  }
+
+  .navmenu .dropdown-2 ul li {
+    min-width: 150px;
   }
 
   .navmenu .dropdown ul a {
@@ -457,7 +477,18 @@ h6 {
     color: var(--nav-dropdown-color);
   }
 
+  .navmenu .dropdown-2 ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--nav-dropdown-color);
+  }
+
   .navmenu .dropdown ul a i {
+    font-size: 12px;
+  }
+  
+  .navmenu .dropdown-2 ul a i {
     font-size: 12px;
   }
 
@@ -467,7 +498,19 @@ h6 {
     color: var(--nav-dropdown-hover-color);
   }
 
+  .navmenu .dropdown-2 ul a:hover,
+  .navmenu .dropdown-2 ul .active:hover,
+  .navmenu .dropdown-2 ul li:hover > a {
+    color: var(--nav-dropdown-hover-color);
+  }
+
   .navmenu .dropdown:hover > ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+
+  .navmenu .dropdown-2:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -479,7 +522,20 @@ h6 {
     visibility: hidden;
   }
 
+  .navmenu .dropdown-2 .dropdown-2 ul {
+    top: 0;
+    left: -90%;
+    visibility: hidden;
+  }
+
   .navmenu .dropdown .dropdown:hover > ul {
+    opacity: 1;
+    top: 0;
+    left: -100%;
+    visibility: visible;
+  }
+
+  .navmenu .dropdown-2 .dropdown-2:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -578,11 +634,30 @@ h6 {
     transition: all 0.5s ease-in-out;
   }
 
+  .navmenu .dropdown-2 ul {
+    position: static;
+    display: none;
+    z-index: 99;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: var(--nav-dropdown-background-color);
+    transition: all 0.5s ease-in-out;
+  }
+
   .navmenu .dropdown ul ul {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
+  .navmenu .dropdown-2 ul ul {
+    background-color: rgba(33, 37, 41, 0.1);
+  }
+
   .navmenu .dropdown > .dropdown-active {
+    display: block;
+    background-color: rgba(33, 37, 41, 0.03);
+  }
+
+  .navmenu .dropdown-2 > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -4119,4 +4194,10 @@ form h3 {
   transform: translateY(-50%);
   cursor: pointer;
   color: #777;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* adjust if needed */
 }
