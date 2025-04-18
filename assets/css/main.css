@@ -4043,11 +4043,13 @@ Sleep Apnea Quiz Cont
 }
 
 .hst-btn a{
-  padding: 10px 23px;
+  padding: 8px 23px;
   background-color: #1977cc;
   color: white;
   font-family: "Poppins";
   border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .hst-btn a:hover {
