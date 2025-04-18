@@ -3896,7 +3896,7 @@ Sleep Apnea Quiz Cont
 .workflow {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 5px;
   flex-wrap: wrap;
   /* overflow: hidden; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.250);
@@ -3951,7 +3951,7 @@ Sleep Apnea Quiz Cont
   /* margin: 10px 0; */
   padding: 10px;
   border-radius: 5px;
-  width: 100%;
+  width: 90%;
   text-align: center;
   font-size: 17px;
 }
@@ -3972,16 +3972,16 @@ Sleep Apnea Quiz Cont
   font-size: 30px;
 }
 .spacing {
-  padding: 50px 0px;
+  padding: 58px 0px;
 }
 .spaces {
-  padding: 168px 0px;
+  padding: 178px 0px;
 }
 
 .cross-arrow-1 {
   /* left: 31%;
   top: 198px; Adjust this value based on actual vertical position */
-  margin-top: 188px;
+  margin-top: 200px;
   font-size: 30px;
 }
 
@@ -3995,28 +3995,29 @@ Sleep Apnea Quiz Cont
 .cross-arrow-3 {
   /* left: 31%;
   top: 540px;  Adjust this value based on actual vertical position  */
+  z-index: 10; /* Ensure it's above other elements */
   font-size: 30px;
-  margin-top: 58px;
+  margin-top: 36px;
 }
 
 .cross-arrow-4 {
   /* left: 62%;
   top: 375px; Adjust this value based on actual vertical position */
-  margin-top: 410px;
+  margin-top: 432px;
   font-size: 30px;
 }
 
 .cross-arrow-left-1 {
   /* left: 36%;
   top: 297px; Adjust this value based on actual vertical position */
-  margin-top: 55px;
+  margin-top: 60px;
   font-size: 30px;
 }
 
 .cross-arrow-left-2 {
   /* left: 36%;
   top: 468px; Adjust this value based on actual vertical position */
-  margin-top: 78px;
+  margin-top: 110px;
   font-size: 30px;
 }
 
@@ -4024,15 +4025,14 @@ Sleep Apnea Quiz Cont
   /* left: 36%;
   top: 650px;  Adjust this value based on actual vertical position  */
   font-size: 30px;
-  margin-top: 98px;
+  margin-top: 125px;
 }
 
 .cross-arrow-left-4 {
-  margin-top: 15px;
+  margin-top: 28px;
   /* left: 67%;
   top: 402px; Adjust this value based on actual vertical position */
   font-size: 30px;
-  transform: rotate(-25deg); /* Rotate to point at the step */
   z-index: 10; /* Ensure it's above other elements */
 }
 .hst-btn {
