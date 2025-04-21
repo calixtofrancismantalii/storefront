@@ -94,6 +94,15 @@ h6 {
   font-family: var(--heading-font);
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  border-radius: 5px !important;
+}
+
 /* Pulsating Play Button
 ------------------------------*/
 .pulsating-play-btn {
