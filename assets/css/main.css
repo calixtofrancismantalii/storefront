@@ -3896,12 +3896,13 @@ Sleep Apnea Quiz Cont
 .workflow {
   display: flex;
   justify-content: center;
-  /* gap: 5px; */
+  gap: 15px;
   flex-wrap: wrap;
   /* overflow: hidden; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.250);
   border-radius: 10px;
   padding: 15px 10px;
+  position: relative;
 }
 .column {
   background-color: white;
@@ -3949,11 +3950,11 @@ Sleep Apnea Quiz Cont
   background-color: #d9f0ff;
   border: 1px solid #99d3ff;
   /* margin: 10px 0; */
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
-  width: 90%;
+  width: 100%;
   text-align: center;
-  font-size: 17px;
+  font-size: 16px;
 }
 .column.primary .step {
   background-color: #cfe9ff;
@@ -3975,63 +3976,63 @@ Sleep Apnea Quiz Cont
   padding: 58px 0px;
 }
 .spaces {
-  padding: 178px 0px;
+  padding: 148px 0px;
 }
 
 .cross-arrow-1 {
-  /* left: 31%;
-  top: 198px; Adjust this value based on actual vertical position */
-  margin-top: 200px;
+  left: 98%;
+  top: 195px; /*Adjust this value based on actual vertical position */
+  position: absolute;
   font-size: 20px;
 }
 
 .cross-arrow-2 {
-  /* left: 31%;
-  top: 378px; Adjust this value based on actual vertical position */
-  margin-top: 75px;
+  left: 98%;
+  top: 375px; /* Adjust this value based on actual vertical position */
+  position: absolute;
   font-size: 20px;
 }
 
 .cross-arrow-3 {
-  /* left: 31%;
-  top: 540px;  Adjust this value based on actual vertical position  */
+  left: 98%;
+  top: 555px;  /* Adjust this value based on actual vertical position */
   z-index: 10; /* Ensure it's above other elements */
+  position: absolute;
   font-size: 20px;
-  margin-top: 36px;
 }
 
 .cross-arrow-4 {
-  /* left: 62%;
-  top: 375px; Adjust this value based on actual vertical position */
-  margin-top: 432px;
+  right: 34%;
+  top: 390px; /* Adjust this value based on actual vertical position */
+  position: absolute;
   font-size: 20px;
 }
 
 .cross-arrow-left-1 {
-  /* left: 36%;
-  top: 297px; Adjust this value based on actual vertical position */
-  margin-top: 60px;
+  right: 64.5%;
+  top: 300px; /* Adjust this value based on actual vertical position */
+  position: absolute;
   font-size: 20px;
 }
 
 .cross-arrow-left-2 {
-  /* left: 36%;
-  top: 468px; Adjust this value based on actual vertical position */
-  margin-top: 110px;
+  right: 64.5%;
+  top: 478px; /* Adjust this value based on actual vertical position */
+  position: absolute;
   font-size: 20px;
 }
 
 .cross-arrow-left-3 {
-  /* left: 36%;
-  top: 650px;  Adjust this value based on actual vertical position  */
+  right: 64.5%;
+  top: 710px;  /* Adjust this value based on actual vertical position  */
+  position: absolute;
   font-size: 20px;
-  margin-top: 125px;
 }
 
 .cross-arrow-left-4 {
-  margin-top: 28px;
-  /* left: 67%;
-  top: 402px; Adjust this value based on actual vertical position */
+  left: 65.4%;
+  top: 432px; /* Adjust this value based on actual vertical position */
+  position: absolute;
   font-size: 20px;
   z-index: 10; /* Ensure it's above other elements */
 }
