@@ -3896,19 +3896,19 @@ Sleep Apnea Quiz Cont
 .workflow {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  /* gap: 5px; */
   flex-wrap: wrap;
   /* overflow: hidden; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.250);
   border-radius: 10px;
-  padding: 40px 20px;
+  padding: 15px 10px;
 }
 .column {
   background-color: white;
   border-radius: 5px;
   padding: 10px;
-  width: 29%;
-  min-width: 250px;
+  width: 30%;
+  min-width: 340px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -3917,10 +3917,9 @@ Sleep Apnea Quiz Cont
 
 .column2 {
   background-color: white;
-  border-radius: 5px;
-  padding: 10px;
+  /* padding: 10px; */
   width: 0%;
-  min-width: 27px;
+  min-width: 20px;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -3932,6 +3931,7 @@ Sleep Apnea Quiz Cont
   text-align: center;
   padding: 10px;
   color: white;
+  font-size: 25px;
 }
 
 .column.primary h3 {
@@ -3969,7 +3969,7 @@ Sleep Apnea Quiz Cont
 }
 .arrow {
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
 }
 .spacing {
   padding: 58px 0px;
@@ -3982,21 +3982,21 @@ Sleep Apnea Quiz Cont
   /* left: 31%;
   top: 198px; Adjust this value based on actual vertical position */
   margin-top: 200px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .cross-arrow-2 {
   /* left: 31%;
   top: 378px; Adjust this value based on actual vertical position */
   margin-top: 75px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .cross-arrow-3 {
   /* left: 31%;
   top: 540px;  Adjust this value based on actual vertical position  */
   z-index: 10; /* Ensure it's above other elements */
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 36px;
 }
 
@@ -4004,27 +4004,27 @@ Sleep Apnea Quiz Cont
   /* left: 62%;
   top: 375px; Adjust this value based on actual vertical position */
   margin-top: 432px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .cross-arrow-left-1 {
   /* left: 36%;
   top: 297px; Adjust this value based on actual vertical position */
   margin-top: 60px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .cross-arrow-left-2 {
   /* left: 36%;
   top: 468px; Adjust this value based on actual vertical position */
   margin-top: 110px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .cross-arrow-left-3 {
   /* left: 36%;
   top: 650px;  Adjust this value based on actual vertical position  */
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 125px;
 }
 
@@ -4032,7 +4032,7 @@ Sleep Apnea Quiz Cont
   margin-top: 28px;
   /* left: 67%;
   top: 402px; Adjust this value based on actual vertical position */
-  font-size: 30px;
+  font-size: 20px;
   z-index: 10; /* Ensure it's above other elements */
 }
 .hst-btn {
