@@ -703,7 +703,7 @@ img {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: rgba(174, 198, 207, 0.5);
   border-top: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
   font-size: 14px;
   position: relative;
@@ -792,6 +792,7 @@ img {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   display: inline-block;
   line-height: 1;
+  /* font-family: Poppins; */
 }
 
 .footer .footer-links ul a:hover {
