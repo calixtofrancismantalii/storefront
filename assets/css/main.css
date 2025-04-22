@@ -3417,7 +3417,7 @@ button{
 }
 
 .sleep-studies-dw .bt-dw:hover {
-  background-color: #FF590c;
+  background-color: #fe702c;
 }
 
 .sleep-studies-dw .hand-out {
@@ -3477,7 +3477,7 @@ a.p-btn {
 }
 
 a.p-btn:hover {
-  background-color: #FF590c;
+  background-color: #fe702c;
   color: white;
 }
 
@@ -3523,7 +3523,7 @@ a.p-btn:hover {
 }
 
 .popup-content a:hover {
-  background-color: #FF590c;
+  background-color: #fe702c;
   color: white;
 }
 
@@ -3818,7 +3818,7 @@ Sleep Apnea Quiz Cont
 }
 
 .program-card:hover .icon {
-  background: #FF590c;
+  background: #fe702c;
 }
 
 .program-card:hover .icon i {
@@ -3826,7 +3826,7 @@ Sleep Apnea Quiz Cont
 }
 
 .program-card:hover .icon::before {
-  background: color-mix(in srgb, #FF590c, transparent 70%);
+  background: color-mix(in srgb, #fe702c, transparent 70%);
 }
 
 .program-card .icon {
@@ -3880,7 +3880,7 @@ Sleep Apnea Quiz Cont
 }
 
 .based-home-sleep-study-program a:hover {
-  background-color: #FF590c;
+  background-color: #fe702c;
   color: white;
 }
 
@@ -3971,7 +3971,7 @@ Sleep Apnea Quiz Cont
 }
 .column.mgr .step {
   background-color: #ffd9b3;
-  border-color: #ffad33;
+  border-color: #fe702c;
 }
 .column.specialist .step {
   background-color: #b3e6ff;
@@ -4063,7 +4063,7 @@ Sleep Apnea Quiz Cont
 }
 
 .hst-btn a:hover {
-  background-color: #FF590c;
+  background-color: #fe702c;
   color: white;
 }
 
