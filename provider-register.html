@@ -111,7 +111,7 @@
                       <ul>
                         <!-- <li><a href="im-a-patient.html">I'm A Patient</a></li>
                         <li><a href="im-a-provider.html">I'm A Provider</a></li>
-                        <li><a href="login.html">My Portal</a></li> -->
+                        <li><a href="for-provider-login.html">My Portal</a></li> -->
                         <li><a href="find-a-provider.html">Find a Provider</a></li>
                         <li><a href="pap-problem-and-solutions.html">PAP Problems and Solutions</a></li>
                         <li><a href="sleep-disorders.html">Sleep Disorders</a></li>
@@ -121,13 +121,13 @@
                     <li><a href="stories.html">News</a></li>
                     <!-- <li><a href="find-a-provider.html">Find a Provider</a></li> -->
                     <li><a href="contact.html">Contact Us</a></li>
-                    <!-- <li><a href="register.html">Register</a></li>|<li><a href="login.html">Login</a></li> -->
+                    <!-- <li><a href="register.html">Register</a></li>|<li><a href="for-provider-login.html">Login</a></li> -->
 
                     <li class="dropdown-2"><a href="#"><span>Login</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                       <ul>
                         <!-- <li><a href="im-a-patient.html">I'm A Patient</a></li>
                         <li><a href="im-a-provider.html">I'm A Provider</a></li>
-                        <li><a href="login.html">My Portal</a></li> -->
+                        <li><a href="for-provider-login.html">My Portal</a></li> -->
                         <li><a href="for-patient-login.html">For Patient</a></li>
                         <li><a href="for-provider-login.html">For Provider</a></li>
                       </ul>
@@ -138,8 +138,8 @@
                         <!-- <li><a href="im-a-patient.html">I'm A Patient</a></li>
                         <li><a href="im-a-provider.html">I'm A Provider</a></li>
                         <li><a href="for-provider-login.html">My Portal</a></li> -->
-                        <li><a href="as-a-patient-register.html">As a Patient</a></li>
-                        <li><a href="as-a-provider-register.html">As a Provider</a></li>
+                        <li><a href="patient-register.html">As a Patient</a></li>
+                        <li><a href="provider-register.html">As a Provider</a></li>
                       </ul>
                     </li>
 
@@ -157,40 +157,38 @@
 
         <main class="main">
 
-            <!-- Hero Section -->
-            <section id="patient-register" class="hero section light-background">
-    
-                
-    
+            <section id="provider-register" class="hero section light-background">
                 <div class="container">
                     <div class="mt-2 mb-2">
                         <div class="row justify-content-center align-items-center h-100">
                             <div class="col-12 col-lg-12 col-xl-12">
                                 <div class="card shadow-2-strong card-registration" style="border-radius: 5px;">
                                     <div class="card-body p-4 p-md-5">
-    
-                                        <h3 class="text-center mb-4">Patient Registration</h3>
+                                        <h3 class="text-center mb-4">Provider Registration</h3>
 
-                                        <!-- <form id="patient-registration-form" method="POST"
-                                            action="https://staging.myapneapath.com/patient-register">
+                                        <!-- <form id="provider-registration-form" method="POST"
+                                            action="https://staging.myapneapath.com/provider-register">
                                             <input type="hidden" name="_token" value="N85mM1ImhgAOLF0Az4EFTuXFyuJhofGdzDxQqDM9" autocomplete="off"> -->
     
-                                        <form id="patient-registration-form">
+                                        <form id="provider-registration-form">
                                             
                                             <h5>Basic Information</h5>
                                             <div class="row mb-3">
-                                                <div class="col-md-6">
+                                                <div class="col-md-4">
+                                                    <label>Title</label>
+                                                    <input type="text" name="title" class="form-control" required>
+                                                </div>
+                                                <div class="col-md-4">
                                                     <label>First Name</label>
                                                     <input type="text" name="first_name" class="form-control"
                                                         required>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-4">
                                                     <label>Last Name</label>
                                                     <input type="text" name="last_name" class="form-control" required>
                                                 </div>
                                             </div>
     
-                                            
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <label>Gender</label>
@@ -209,24 +207,28 @@
                                             
                                             <h5 class="mt-5">Contact Information</h5>
                                             <div class="row mb-3">
-                                                <div class="col-md-6">
+                                                <div class="col-md-4">
+                                                    <label>Fax Number</label>
+                                                    <input type="text" name="fax_number" class="form-control">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label>Email Address</label>
+                                                    <input type="email" name="email" class="form-control" required>
+                                                </div>
+                                                <div class="col-md-4">
                                                     <label>Contact Number</label>
                                                     <input type="text" name="contact_number" class="form-control"
                                                         required>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <label>Email Address</label>
-                                                    <input type="email" name="email" class="form-control" required>
-                                                </div>
                                             </div>
+    
     
                                             
                                             <h5 class="mt-5">Address</h5>
                                             <div class="row mb-3">
                                                 <div class="col-md-6">
                                                     <label>Street Address</label>
-                                                    <input type="text" name="street_address" class="form-control"
-                                                        required>
+                                                    <input type="text" name="street" class="form-control" required>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label>City</label>
@@ -244,29 +246,34 @@
                                             </div>
     
                                             
-                                            <h5 class="mt-5">Insurance Information</h5>
-                                            <div class="mb-3">
+                                            <h5 class="mt-5">Healthcare Information</h5>
+                                            <div class="row mb-3">
                                                 <div class="col-md-6">
-                                                    <label>Insurance Provider</label>
-                                                    <input type="text" name="insurance_provider" class="form-control"
+                                                    <label>Specialization</label>
+                                                    <input type="text" name="specialization" class="form-control"
                                                         required>
                                                 </div>
-                                                
+                                                <div class="col-md-6">
+                                                    <label>Facility Name</label>
+                                                    <input type="text" name="facility_name" class="form-control"
+                                                        required>
+                                                </div>
                                             </div>
     
                                             <div class="text-center" id="formCardBody">
                                                 <button type="submit" class="btn btn-primary">Register as
-                                                    Patient</button>
+                                                    Provider</button>
                                             </div>
-    
                                         </form>
+    
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section><!-- /Hero Section -->
+            </section>
+    
         </main>
 
         </section>
@@ -352,7 +359,7 @@
                 <ul>
                   <li><a href="im-a-patient.html">I'm A Patient</a></li>
                   <li><a href="im-a-provider.html">I'm A Provider</a></li>
-                  <li><a href="login.html">My Portal</a></li>
+                  <li><a href="for-provider-login.html">My Portal</a></li>
                 </ul>
               </div> -->
       
