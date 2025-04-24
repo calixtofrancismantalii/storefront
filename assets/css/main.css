@@ -1308,8 +1308,8 @@ section,
 }
 
 .services .service-item:hover {
-  background: var(--accent-color);
-  border-color: var(--accent-color);
+  background: var(--surface-color-2);
+  border-color: var(--surface-color-2);
 }
 
 .services .service-item:hover .icon {
@@ -1317,7 +1317,7 @@ section,
 }
 
 .services .service-item:hover .icon i {
-  color: var(--accent-color);
+  color: var(--surface-color-2);
 }
 
 .services .service-item:hover .icon::before {
@@ -1428,8 +1428,8 @@ Other Layout Service
 }
 
 .service-card:hover {
-  background: var(--accent-color);
-  border-color: var(--accent-color);
+  background: var(--surface-color-2);
+  border-color: var(--surface-color-2);
 }
 
 .service-card:hover .icon {
@@ -1437,7 +1437,7 @@ Other Layout Service
 }
 
 .service-card:hover .icon i {
-  color: var(--accent-color);
+  color: var(--surface-color-2);
 }
 
 .service-card:hover .icon::before {
@@ -1493,7 +1493,7 @@ Other Layout Service
 /* Clicked Service ------------------------------*/
 
 .services-container .clicked-service {
-  background-color: #2D2B70;
+  background-color: #DC4F4B;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
@@ -1519,7 +1519,7 @@ Other Layout Service
 }
 
 .services-container .clicked-service .icon i {
-  color: var(--accent-color);
+  color: var(--surface-color-2);
   font-size: 20px;
   transition: ease-in-out 0.3s;
 }
