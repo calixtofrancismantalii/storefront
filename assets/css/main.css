@@ -3949,7 +3949,7 @@ Sleep Apnea Quiz Cont
 }
 
 .column.primary h3 {
-  background-color: #2D2B70;
+  background-color: #1977cc;
   border-radius: 5px;
 }
 
@@ -3959,7 +3959,7 @@ Sleep Apnea Quiz Cont
 }
 
 .column.specialist h3 {
-  background-color: #2D2B70;
+  background-color: #1977cc;
   border-radius: 5px;
 }
 .step {
@@ -3974,21 +3974,20 @@ Sleep Apnea Quiz Cont
   color: white;
 }
 .column.primary .step {
-  background-color: rgba(45, 43, 112, 0.75);
-  border-color: rgba(45, 43, 112, 0.75);
+  background-color: #1977cc;
+  border-color: #1977cc;
 }
 .column.mgr .step {
-  background-color: rgba(220, 79, 75, 0.75);
-  border-color: rgba(220, 79, 75, 0.75);
+  background-color: #DC4F4B;
+  border-color: #DC4F4B;
 }
 .column.specialist .step {
-  background-color: rgba(45, 43, 112, 0.75);
-  border-color: rgba(45, 43, 112, 0.75);
+  background-color: #1977cc;
+  border-color: #1977cc;
 }
 .arrow {
   text-align: center;
   font-size: 20px;
-  color: #2D2B70;
 }
 .spacing {
   padding: 58px 0px;
@@ -4002,7 +4001,6 @@ Sleep Apnea Quiz Cont
   top: 195px; /*Adjust this value based on actual vertical position */
   position: absolute;
   font-size: 20px;
-  color: #2D2B70;
 }
 
 .cross-arrow-2 {
@@ -4010,7 +4008,6 @@ Sleep Apnea Quiz Cont
   top: 375px; /* Adjust this value based on actual vertical position */
   position: absolute;
   font-size: 20px;
-  color: #2D2B70;
 }
 
 .cross-arrow-3 {
@@ -4019,7 +4016,6 @@ Sleep Apnea Quiz Cont
   z-index: 10; /* Ensure it's above other elements */
   position: absolute;
   font-size: 20px;
-  color: #2D2B70;
 }
 
 .cross-arrow-4 {
@@ -4027,7 +4023,6 @@ Sleep Apnea Quiz Cont
   top: 390px; /* Adjust this value based on actual vertical position */
   position: absolute;
   font-size: 20px;
-  color: #2D2B70;
 }
 
 .cross-arrow-left-1 {
@@ -4035,7 +4030,6 @@ Sleep Apnea Quiz Cont
   top: 300px; /* Adjust this value based on actual vertical position */
   position: absolute;
   font-size: 20px;
-  color: #2D2B70;
 }
 
 .cross-arrow-left-2 {
@@ -4043,7 +4037,6 @@ Sleep Apnea Quiz Cont
   top: 478px; /* Adjust this value based on actual vertical position */
   position: absolute;
   font-size: 20px;
-  color: #2D2B70;
 }
 
 .cross-arrow-left-3 {
@@ -4051,7 +4044,6 @@ Sleep Apnea Quiz Cont
   top: 710px;  /* Adjust this value based on actual vertical position  */
   position: absolute;
   font-size: 20px;
-  color: #2D2B70;
 }
 
 .cross-arrow-left-4 {
@@ -4060,7 +4052,6 @@ Sleep Apnea Quiz Cont
   position: absolute;
   font-size: 20px;
   z-index: 10; /* Ensure it's above other elements */
-  color: #2D2B70;
 }
 .hst-btn {
   display: flex;
