@@ -2172,7 +2172,7 @@ Other Layout Service
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: var( --surface-color-2);
 }
 /*--------------------------------------------------------------
  News
