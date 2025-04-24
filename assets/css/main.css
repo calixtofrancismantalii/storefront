@@ -23,9 +23,9 @@
 :root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #2D2B70; /* Color for headings, subheadings and title throughout the website */
+  --heading-color: #2c4964; /* Color for headings, subheadings and title throughout the website */
   /* --heading-color: #2D2B70; */
-  --accent-color: #2D2B70; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #1977cc; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   /* --accent-color: #2D2B70; */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --surface-color-2: #DC4F4B;
@@ -35,11 +35,11 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #2D2B70; /* The default color of the main navmenu links */
+  --nav-color: #2c4964; /* The default color of the main navmenu links */
   --nav-hover-color: #DC4F4B; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #2D2B70; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-color: #2c4964; /* Used for navigation links of the dropdown items in the navigation menu. */
   --nav-dropdown-hover-color: #DC4F4B; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
@@ -2310,7 +2310,7 @@ Other Layout Service
 .blog-text .blog-title {
   font-size: 1.3rem;
   font-weight: 500;
-  color: #2D2B70;
+  color: #2c4964;
   line-height: 1.5rem;
   text-transform: capitalize;
 }
@@ -2331,7 +2331,7 @@ Other Layout Service
 }
 
 .blog-text a:hover {
-  color: #2D2B70;
+  color: #1977cc;
   transition: all ease 0.3s;
 }
 
@@ -2390,7 +2390,7 @@ Other Layout Service
 
 .text-box {
   padding: 20px 30px;
-  border: 2px solid #2D2B70;
+  border: 2px solid #1977cc;
   position: relative;
   border-radius: 6px;
   font-size: 15px;
@@ -2408,11 +2408,11 @@ Other Layout Service
   position: absolute;
   width: 40px;
   border-radius: 50%;
-  border: 2px solid #2D2B70;
+  border: 2px solid #1977cc;
   right: -20px;
   top: 32px;
   z-index: 10;
-  background-color: #2D2B70;
+  background-color: #1977cc;
   object-fit: contain;
   padding: 5px;
 }
@@ -2426,7 +2426,7 @@ Other Layout Service
   position: absolute;
   width: 6px;
   height: 100%;
-  background: #2D2B70;
+  background: #1977cc;
   top: 0;
   left: 50%;
   margin-left: -3px;
@@ -2460,7 +2460,7 @@ Other Layout Service
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid #2D2B70;
+  border-left: 15px solid #1977cc;
   right: -15px;
 } 
 
@@ -2472,7 +2472,7 @@ Other Layout Service
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid #2D2B70;
+  border-right: 15px solid #1977cc;
   left: -15px;
 } 
 
@@ -2502,7 +2502,7 @@ Other Layout Service
     left: 10px;
   }
   .left-container-arrow, .right-container-arrow{
-    border-right: 15px solid #2D2B70;
+    border-right: 15px solid #1977cc;
     border-left: 0;
     left: -15px;
   }
@@ -2524,7 +2524,7 @@ Other Layout Service
   background: #fff;
   padding: 5px;
   border-radius: 4px;
-  border: 2px solid #2D2B70;
+  border: 2px solid #1977cc;
 }
 
 #accordion li label{
@@ -2535,13 +2535,13 @@ Other Layout Service
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
-  color: #2D2B70;
+  color: #2c4964;
 }
 
 #accordion li label span{
   transform: rotate(90deg);
   font-size: 22px;
-  color: #2D2B70;
+  color: #1977cc;
 }
 
 #accordion label + input[type="radio"]{
@@ -2660,7 +2660,7 @@ input[type=radio], input[type=checkbox] {
 
 .care{
   justify-content: center;
-  border: 2px solid #2D2B70;
+  border: 2px solid #1977cc;
   padding-top: 10px;
   margin-left: 250px;
   margin-right: 250px;
@@ -2704,7 +2704,7 @@ input[type=radio], input[type=checkbox] {
   }
   .care{
     justify-content: center;
-    border: 2px solid #2D2B70;
+    border: 2px solid #1977cc;
     padding-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
@@ -2714,7 +2714,7 @@ input[type=radio], input[type=checkbox] {
 @media screen and (max-width: 425px) {
   .care{
     justify-content: center;
-    border: 2px solid #2D2B70;
+    border: 2px solid #1977cc;
     padding-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -2857,7 +2857,7 @@ input[type=radio], input[type=checkbox] {
   align-items: center;
   width: 25%;
   height: 40px;
-  background: #2D2B70;
+  background: #1977cc;
   border: none;
   outline: none;
   border-radius: 8px;
@@ -3030,7 +3030,7 @@ input[type=radio], input[type=checkbox] {
 }
 
 .container-table {
-  border: 1px solid #2D2B70;
+  border: 1px solid #1977cc;
 }
 
 .container-table td a {
@@ -3044,7 +3044,7 @@ input[type=radio], input[type=checkbox] {
 
 @media screen and (max-width: 425px) {
   .container-table {
-    border: 1px solid #2D2B70;
+    border: 1px solid #1977cc;
     overflow: scroll;
   }
 }
@@ -3415,7 +3415,7 @@ button{
   font-size: 15px;
   padding: 6px 12px;
   border: none;
-  background-color: #2D2B70;
+  background-color: #1977cc;
   color: white;
   border-radius: 25px;
 }
@@ -3458,7 +3458,7 @@ button{
 .in-sleep-studies .inner {
   padding: 15px;
   width: 100%;
-  border: 1px solid #2D2B70;
+  border: 1px solid #1977cc;
   border-radius: 25px;
   display: flex;
   flex-direction: row;
@@ -3473,7 +3473,7 @@ button{
 /*-------------------------For Providers Btn------------------------------*/
 
 a.p-btn {
-  background-color: #2D2B70;
+  background-color: #1977cc;
   color: white;
   padding: 10px 20px;
   width: fit-content;
@@ -3520,7 +3520,7 @@ a.p-btn:hover {
 
 .popup-content a{
   padding: 10px 23px;
-  background-color: #2D2B70;
+  background-color: #1977cc;
   color: white;
   font-family: "Poppins";
   border-radius: 5px;
@@ -3589,7 +3589,7 @@ Sleep Apnea Quiz Cont
 }
 
 .sleep-quiz h1 {
-  color: #2D2B70;
+  color: #2c4964;
   font-size: 23px;
 }
 
@@ -3877,7 +3877,7 @@ Sleep Apnea Quiz Cont
 
 .based-home-sleep-study-program a {
   padding: 10px 23px;
-  background-color: #2D2B70;
+  background-color: #1977cc;
   color: white;
   font-family: "Poppins";
   border-radius: 5px;
@@ -4071,7 +4071,7 @@ Sleep Apnea Quiz Cont
 
 .hst-btn a{
   padding: 8px 23px;
-  background-color: #2D2B70;
+  background-color: #1977cc;
   color: white;
   font-family: "Poppins";
   border-radius: 5px;
@@ -4187,7 +4187,7 @@ form h3 {
   padding: 5px 12px;
   border-radius: 5px;
   color: white;
-  background-color: #2D2B70;
+  background-color: #1977cc;
   border: none;
 }
 
