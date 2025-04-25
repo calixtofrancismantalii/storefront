@@ -4224,8 +4224,9 @@ form h3 {
 
 /*-------------------------Needs------------------------------*/
 
-/* .needs-myapneapath {
+.needs-myapneapath {
   display: flex;
+  gap: 20px;
 }
 
 .needs {
@@ -4239,4 +4240,4 @@ form h3 {
 .needs h3 {
   font-weight: 500;
   font-size: 20px;
-} */
+}
