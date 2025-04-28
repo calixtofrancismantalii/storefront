@@ -796,6 +796,8 @@ img {
   display: inline-block;
   line-height: 1;
   /* font-family: Poppins; */
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .footer .footer-links ul a:hover {
