@@ -2527,25 +2527,24 @@ Other Layout Service
   width: 95%;
   margin-bottom: 10px;
   background: #fff;
-  padding: 5px;
   border-radius: 4px;
   border: 2px solid #1977cc;
 }
 
 #accordion li label{
-  padding: 10px;
+  padding: 6px 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 400;
   cursor: pointer;
   color: #2c4964;
 }
 
 #accordion li label span{
   transform: rotate(90deg);
-  font-size: 22px;
+  font-size: 18px;
   color: #1977cc;
 }
 
@@ -2554,11 +2553,16 @@ Other Layout Service
 }
 
 #accordion .content{
-  padding: 0px 10px;
+  padding: 0px 5px;
   line-height: 1.3rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s;
+}
+
+#accordion .content p {
+  font-size: 15px;
+  margin-bottom: 5px;
 }
 
 #accordion label + input[type="radio"]:checked + .content{
