@@ -79,7 +79,7 @@ a {
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, var(--surface-color-2), transparent 25%);
   text-decoration: none;
 }
 
@@ -754,8 +754,8 @@ img {
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: var(--surface-color-2);
+  border-color: var(--surface-color-2);
 }
 
 .footer h4 {
@@ -1645,12 +1645,12 @@ Other Layout Service
 }
 
 .departments .nav-link:hover {
-  color: var(--accent-color);
+  color: var(--surface-color-2);
 }
 
 .departments .nav-link.active {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: var(--surface-color-2);
+  border-color: var(--surface-color-2);
   background-color: var(--background-color);
 }
 
@@ -2214,6 +2214,10 @@ Other Layout Service
   font-size: 15px;
 }
 
+.newslink a:hover {
+  color: var(--surface-color-2);
+}
+
 /* ---------------- Other New Options ---------------- */
 
 .other-blog {
@@ -2332,7 +2336,7 @@ Other Layout Service
 }
 
 .blog-text a:hover {
-  color: #1977cc;
+  color: var(--surface-color-2);
   transition: all ease 0.3s;
 }
 
