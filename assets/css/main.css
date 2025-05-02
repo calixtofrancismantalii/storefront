@@ -4335,3 +4335,70 @@ form h3 {
   height: 60vh;
   width: 100%;
 }
+
+
+/* --------------------Certified------------------ */
+
+#stateFilter {
+  width: 300px;
+  padding: 8px;
+  margin: 0 12px 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#specialtyFilter {
+  width: 300px;
+  padding: 8px;
+  margin: 0 12px 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#physicianTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+#tablehead th, #tableBody td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #ddd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#tablehead th:nth-child(1), #tableBody td:nth-child(1) { width: 250px; }
+#tablehead th:nth-child(2), #tableBody td:nth-child(2) { width: 150px; }
+#tablehead th:nth-child(3), #tableBody td:nth-child(3) { width: 100px; }
+#tablehead th:nth-child(4), #tableBody td:nth-child(4) { width: 200px; }
+#tablehead th:nth-child(5), #tableBody td:nth-child(5) { width: 150px; }
+
+th {
+  background-color: #003049;
+  color: white;
+}
+#tableBody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.page button {
+  margin: 10px 2px 2px 2px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page button.active {
+  background-color: #003049;
+  color: white;
+  font-weight: bold;
+}
+
+.certified {
+  font-size: 30px !important;
+  text-align: center;
+}
+
+.filters {
+  text-align: center;
+}

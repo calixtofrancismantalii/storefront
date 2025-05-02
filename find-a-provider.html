@@ -163,7 +163,7 @@
       <br>
       <div class="container geo-map">
         <div id="map"></div>
-      <script>
+        <script>
           function initMap() {
             // First location: Huntsville, AL
             var location1 = { lat: 34.7074, lng: -86.6314 };
@@ -226,1410 +226,1850 @@
                 title: "3367 Mercy Rd, Suite 210, Gilbert, AZ 85297"
             });
           }
-      </script>
-      <!-- <script async defer
-          src="https://maps.gomaps.pro/maps/api/js?key=AlzaSy8jnD3lJ_rKEFLzsZTPI1oJvX5RhpW34Ta&callback=initMap">
-      </script> -->
-      <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChM09gbI9F32wneHEA2vMpW3wuecNmV7Y&callback=initMap">
-      </script>
-      <br>
-      <h2>Search by State and ZIP Code</h2>
-      <form id="searchForm">
-        <div class="boxthis">
-          <label for="state">State:</label>
-          <select id="state" name="state">
-              <option value="">Select a State</option>
-              <option value="Alabama">Alabama</option>
-              <option value="Alaska">Alaska</option>
-              <option value="Arizona">Arizona</option>
-              <option value="Arkansas">Arkansas</option>
-              <option value="California">California</option>
-              <option value="Colorado">Colorado</option>
-              <option value="Connecticut">Connecticut</option>
-              <option value="Delaware">Delaware</option>
-              <option value="District Of Columbia">District Of Columbia</option>
-              <option value="Florida">Florida</option>
-              <option value="Georgia">Georgia</option>
-              <option value="Hawaii">Hawaii</option>
-              <option value="Idaho">Idaho</option>
-              <option value="Illinois">Illinois</option>
-              <option value="Indiana">Indiana</option>
-              <option value="Iowa">Iowa</option>
-              <option value="Kansas">Kansas</option>
-              <option value="Kentucky">Kentucky</option>
-              <option value="Louisiana">Louisiana</option>
-              <option value="Maine">Maine</option>
-              <option value="Maryland">Maryland</option>
-              <option value="Massachusetts">Massachusetts</option>
-              <option value="Michigan">Michigan</option>
-              <option value="Minnesota">Minnesota</option>
-              <option value="Mississippi">Mississippi</option>
-              <option value="Missouri">Missouri</option>
-              <option value="Montana">Montana</option>
-              <option value="Nebraska">Nebraska</option>
-              <option value="Nevada">Nevada</option>
-              <option value="New Hampshire">New Hampshire</option>
-              <option value="New Jersey">New Jersey</option>
-              <option value="New Mexico">New Mexico</option>
-              <option value="New York">New York</option>
-              <option value="North Carolina">North Carolina</option>
-              <option value="North Dakota">North Dakota</option>
-              <option value="Ohio">Ohio</option>
-              <option value="Oklahoma">Oklahoma</option>
-              <option value="Oregon">Oregon</option>
-              <option value="Pennsylvania">Pennsylvania</option>
-              <option value="Rhode Island">Rhode Island</option>
-              <option value="South Carolina">South Carolina</option>
-              <option value="South Dakota">South Dakota</option>
-              <option value="Tennessee">Tennessee</option>
-              <option value="Texas">Texas</option>
-              <option value="Utah">Utah</option>
-              <option value="Vermont">Vermont</option>
-              <option value="Virginia">Virginia</option>
-              <option value="Washington">Washington</option>
-              <option value="West Virginia">West Virginia</option>
-              <option value="Wisconsin">Wisconsin</option>
-              <option value="Wyoming">Wyoming</option>
-          </select>
-          <br>
-          <label for="zipcode">ZIP Code:</label>
-          <input type="text" id="zipcode" name="zipcode" placeholder=" Enter ZIP Code">
-          <br>
-          <button type="submit">Search</button>
+        </script>
+        <!-- <script async defer
+            src="https://maps.gomaps.pro/maps/api/js?key=AlzaSy8jnD3lJ_rKEFLzsZTPI1oJvX5RhpW34Ta&callback=initMap">
+        </script> -->
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChM09gbI9F32wneHEA2vMpW3wuecNmV7Y&callback=initMap">
+        </script>
+        <br>
+        <div class="container">
+          <h3 class="certified">Physician Certified</h3>
+          <div class="filters">
+            <input type="text" id="stateFilter" placeholder="Search by state (e.g., Michigan, Texas)...">
+            <input type="text" id="specialtyFilter" placeholder="Search by specialty (e.g., Pulmonology)...">
+          </div>
+          
+          <div style="overflow-x: auto;">
+            <table id="physicianTable">
+              <thead id="tablehead">
+                <tr>
+                  <th>Name</th>
+                  <th>City</th>
+                  <th>State</th>
+                  <th>Specialty</th>
+                  <th>Certified Date</th>
+                </tr>
+              </thead>
+              <tbody id="tableBody">
+                <tr>
+                  <td>Robert Mark Aaronson, M.D.</td>
+                  <td>Tuscon</td>
+                  <td>Arizona</td>
+                  <td>Pulmonology</td>
+                  <td>4/16/2003</td>
+                </tr>
+                <tr>
+                  <td>Joshua N. Aaron, M.D.</td>
+                  <td>Elkton</td>
+                  <td>Maryland</td>
+                  <td>Pulmonology</td>
+                  <td>4/8/1998</td>
+                </tr>
+                <tr>
+                  <td>Vivien Cynthia Abad, M.D.</td>
+                  <td>Los Altos</td>
+                  <td>California</td>
+                  <td>Neurology</td>
+                  <td>3/24/2004</td>
+                </tr>
+                <tr>
+                  <td>Arshad A. Abbasi, M.D.</td>
+                  <td>Okemos</td>
+                  <td>Michigan</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>Fariha Abbasi-Feinberg, M.D.</td>
+                  <td>Gastonia</td>
+                  <td>North Carolina</td>
+                  <td>Neurology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Nail S. Abdel Fatah, M.D.</td>
+                  <td>Kinnelon</td>
+                  <td>New Jersey</td>
+                  <td>Pulmonology</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Asem Abdeljalil Abdeljalil, M.D.</td>
+                  <td>Martinsville</td>
+                  <td>Indiana</td>
+                  <td>Pulmonology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Tariq Hasan Abdelkarim, M.D.</td>
+                  <td>Hillsdale</td>
+                  <td>Michigan</td>
+                  <td>Pulmonology</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Ibrahim Farag Abdulhamid, M.D.</td>
+                  <td>Farmington Hills</td>
+                  <td>Michigan</td>
+                  <td>Pediatric Pulmonology</td>
+                  <td>4/15/2003</td>
+                </tr>
+                <tr>
+                  <td>Mamdouh Abdulrazzak, M.D.</td>
+                  <td>West Bloomfield</td>
+                  <td>Michigan</td>
+                  <td>Neurology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Walid A. Baaklini, M.D.</td>
+                  <td>Raonoke Rapids</td>
+                  <td>North Carolina</td>
+                  <td>Pulmonology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Sardar Ijlal Babar, M.D.</td>
+                  <td>Ocean Springs</td>
+                  <td>Mississippi</td>
+                  <td>Pulmonology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Vance Daniel Bachelder, M.D.</td>
+                  <td>Duluth</td>
+                  <td>Minnesota</td>
+                  <td>Pulmonology</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>David L. Bachman, M.D.</td>
+                  <td>Charleston</td>
+                  <td>South Carolina</td>
+                  <td>Neurology</td>
+                  <td>4/25/1994</td>
+                </tr>
+                <tr>
+                  <td>Ross N. Bacon, M.D.</td>
+                  <td>Sioux City</td>
+                  <td>South Dakota</td>
+                  <td>Pulmonology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Tehmina A. Badar, M.D.</td>
+                  <td>Houston</td>
+                  <td>Texas</td>
+                  <td>Pulmonology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Shadi Badin, M.D.</td>
+                  <td>Huntington</td>
+                  <td>West Virginia</td>
+                  <td>Pulmonology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>M. Safwan Badr, M.D.</td>
+                  <td>Detroit</td>
+                  <td>Michigan</td>
+                  <td>Pulmonology</td>
+                  <td>4/29/1991</td>
+                </tr>
+                <tr>
+                  <td>Charles Joonghie Bae, M.D.</td>
+                  <td>University Heights</td>
+                  <td>Ohio</td>
+                  <td>Neurology</td>
+                  <td>9/20/2005</td>
+                </tr>
+                <tr>
+                  <td>Erin Kathleen Baehr, Ph.D.</td>
+                  <td>Woodridge</td>
+                  <td>Illinois</td>
+                  <td>Clinical Psychology</td>
+                  <td>4/14/2003</td>
+                </tr>
+                <tr>
+                  <td>Joseph A. Cable, D.O.</td>
+                  <td>Pottsville</td>
+                  <td>Pennsylvania</td>
+                  <td>Pulmonology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Clement Cahan, M.D.</td>
+                  <td>Jerusalem</td>
+                  <td>Israel</td>
+                  <td>Pulmonology</td>
+                  <td>4/22/1996</td>
+                </tr>
+                <tr>
+                  <td>E. Tomas Calderon, M.D.</td>
+                  <td>Toledo</td>
+                  <td>Ohio</td>
+                  <td>Neurology</td>
+                  <td>4/6/1992</td>
+                </tr>
+                <tr>
+                  <td>J. Lynn Caldwell, Ph.D.</td>
+                  <td>Fort Rucker</td>
+                  <td>Alabama</td>
+                  <td>Psychology</td>
+                  <td>4/6/1998</td>
+                </tr>
+                <tr>
+                  <td>William F. Cale, M.D.</td>
+                  <td>Harrisonburg</td>
+                  <td>Virginia</td>
+                  <td>Pulmonology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Daniel Francis Callahan, M.D.</td>
+                  <td>Alpharetta</td>
+                  <td>Georgia</td>
+                  <td>Pulmonology</td>
+                  <td>4/14/2003</td>
+                </tr>
+                <tr>
+                  <td>John P. Callan, M.D.</td>
+                  <td>Honolulu</td>
+                  <td>Hawaii</td>
+                  <td>Pulmonology</td>
+                  <td>4/14/2003</td>
+                </tr>
+                <tr>
+                  <td>Sue Killion Cammarata, M.D.</td>
+                  <td>Portage</td>
+                  <td>Michigan</td>
+                  <td>Pulmonology</td>
+                  <td>4/19/1993</td>
+                </tr>
+                <tr>
+                  <td>Mark A. Camp, M.D.</td>
+                  <td>Norman</td>
+                  <td>Oklahoma</td>
+                  <td>Pulmonology</td>
+                  <td>4/15/2003</td>
+                </tr>
+                <tr>
+                  <td>Lisa M. Cannon, M.D.</td>
+                  <td>Wychoff</td>
+                  <td>New Jersey</td>
+                  <td>Pulmonology</td>
+                  <td>9/20/2005</td>
+                </tr>
+                <tr>
+                  <td>Ousama Dabbagh, M.D.</td>
+                  <td>Columbia</td>
+                  <td>Missouri</td>
+                  <td>Pulmonology</td>
+                  <td>3/24/2004</td>
+                </tr>
+                <tr>
+                  <td>Harinathrao R. Dacha, M.D.</td>
+                  <td>Elyria</td>
+                  <td>Ohio</td>
+                  <td>Pulmonology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Rajesh D. Dagli, M.D.</td>
+                  <td>Kalamazoo</td>
+                  <td>Michigan</td>
+                  <td>Neurology</td>
+                  <td>4/24/1989</td>
+                </tr>
+                <tr>
+                  <td>Houman Dahi, M.D.</td>
+                  <td>Metairie</td>
+                  <td>Louisiana</td>
+                  <td>Pulmonology</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Ronald E. Dahl, M.D.</td>
+                  <td>Pittsburgh</td>
+                  <td>Pennsylvania</td>
+                  <td>Pediatrics/Psychiatry</td>
+                  <td>4/24/1989</td>
+                </tr>
+                <tr>
+                  <td>Manojpal S. Dahuja, M.D.</td>
+                  <td>Silver Spring</td>
+                  <td>Maryland</td>
+                  <td>Pulmonology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Firas Dairi, M.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Pulmonology</td>
+                  <td>4/11/1999</td>
+                </tr>
+                <tr>
+                  <td>Jeff M. Daiter, M.D.</td>
+                  <td>Richmond Hill</td>
+                  <td>Ontario</td>
+                  <td>Family Medicine</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Riad Dakheel, M.D.</td>
+                  <td>Bowie</td>
+                  <td>Maryland</td>
+                  <td>Pulmonology</td>
+                  <td>4/6/1998</td>
+                </tr>
+                <tr>
+                  <td>Wheeler John Dale, M.D.</td>
+                  <td>Lexington</td>
+                  <td>Kentucky</td>
+                  <td>Pulmonology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Babu M. Eapen, M.D.</td>
+                  <td>Middleburg Heights</td>
+                  <td>Ohio</td>
+                  <td>Pulmonology</td>
+                  <td>4/28/1997</td>
+                </tr>
+                <tr>
+                  <td>Christopher J. Earley, M.D., Ph.D.</td>
+                  <td>Baltimore</td>
+                  <td>Maryland</td>
+                  <td>Neurology</td>
+                  <td>4/28/1997</td>
+                </tr>
+                <tr>
+                  <td>Norman John East, M.D.</td>
+                  <td>Eagle</td>
+                  <td>Idaho</td>
+                  <td>Pulmonology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Paul A. Easton, M.D.</td>
+                  <td>Calgary</td>
+                  <td>Alberta</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>Royal J. Eaton, M.D.</td>
+                  <td>St. Louis</td>
+                  <td>Missouri</td>
+                  <td>Pulmonology</td>
+                  <td>4/6/1992</td>
+                </tr>
+                <tr>
+                  <td>Matthew Richard Ebben, Ph.D.</td>
+                  <td>Forest Hills</td>
+                  <td>New York</td>
+                  <td>Psychology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Celso Taburnal Ebeo, M.D.</td>
+                  <td>Pikeville</td>
+                  <td>Kentucky</td>
+                  <td>Pulmonology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Lewis B. Eberly, M.D.</td>
+                  <td>Alexandria</td>
+                  <td>Virginia</td>
+                  <td>Neurology</td>
+                  <td>4/16/2003</td>
+                </tr>
+                <tr>
+                  <td>Srinivasa Edara, M.B., B.S.</td>
+                  <td>Colts Neck</td>
+                  <td>New Jersey</td>
+                  <td>Pulmonology</td>
+                  <td>9/20/2005</td>
+                </tr>
+                <tr>
+                  <td>Pierre Y. Khoury Edde, M.D.</td>
+                  <td>Beirut</td>
+                  <td>Lebanon</td>
+                  <td>Pulmonology</td>
+                  <td>4/11/1999</td>
+                </tr>
+                <tr>
+                  <td>Delano Soriano Fabro Jr., D.O.</td>
+                  <td>San Antonio</td>
+                  <td>Texas</td>
+                  <td>Internal Medicine</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Ahmed A. Fadil, M.D.</td>
+                  <td>Houston</td>
+                  <td>Texas</td>
+                  <td>Pulmonology</td>
+                  <td>9/20/2005</td>
+                </tr>
+                <tr>
+                  <td>Kevin J. Fagan, M.D.</td>
+                  <td>Harvey</td>
+                  <td>Illinois</td>
+                  <td>Neurology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Samir Awadalla Fahmy, M.D.</td>
+                  <td>Brooklyn</td>
+                  <td>New York</td>
+                  <td>Pulmonology</td>
+                  <td>4/11/1999</td>
+                </tr>
+                <tr>
+                  <td>Ilja Faibussowitsch, M.D.</td>
+                  <td>Chicago</td>
+                  <td>Illinois</td>
+                  <td>Pulmonology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Walter Raymond Fairfax, M.D.</td>
+                  <td>Billings</td>
+                  <td>Montana</td>
+                  <td>Pulmonology</td>
+                  <td>3/24/2004</td>
+                </tr>
+                <tr>
+                  <td>Fawaz A. Faisal, M.D.</td>
+                  <td>Burbank</td>
+                  <td>California</td>
+                  <td>Neurology</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Hany N. Falestiny, M.D.</td>
+                  <td>Ocala</td>
+                  <td>Florida</td>
+                  <td>Pulmonology</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Jeremy Abram Falk, M.D.</td>
+                  <td>Pasadena</td>
+                  <td>California</td>
+                  <td>Pulmonology</td>
+                  <td>9/20/2005</td>
+                </tr>
+                <tr>
+                  <td>Gregory C. Fanaras, M.D.</td>
+                  <td>Bedford</td>
+                  <td>New Hampshire</td>
+                  <td>Pulmonology</td>
+                  <td>4/11/1999</td>
+                </tr>
+                <tr>
+                  <td>Mark T. Gabr, M.D.</td>
+                  <td>Salem</td>
+                  <td>Oregon</td>
+                  <td>Neurology</td>
+                  <td>4/24/1989</td>
+                </tr>
+                <tr>
+                  <td>Kevin Clifford Gaffney, M.D.</td>
+                  <td>The Woodlands</td>
+                  <td>Texas</td>
+                  <td>Neurology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>James M. Gaither, M.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Pulmonology</td>
+                  <td>4/6/1992</td>
+                </tr>
+                <tr>
+                  <td>Robert C. Galbraith, M.D.</td>
+                  <td>Little Rock</td>
+                  <td>Arkansas</td>
+                  <td>Neurology</td>
+                  <td>6/16/1986</td>
+                </tr>
+                <tr>
+                  <td>Joanna E. Galezowska, M.D.</td>
+                  <td>Milwaukee</td>
+                  <td>Wisconsin</td>
+                  <td>Neurology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>John P. Galgon, M.D.</td>
+                  <td>Allentown</td>
+                  <td>Pennsylvania</td>
+                  <td>Pulmonology</td>
+                  <td>4/29/1991</td>
+                </tr>
+                <tr>
+                  <td>Ralph C. Gallo, M.D.</td>
+                  <td>Wynnewood</td>
+                  <td>Pennsylvania</td>
+                  <td>Pediatrics</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Charlene Edie Gamaldo, M.D.</td>
+                  <td>Clarksville</td>
+                  <td>Maryland</td>
+                  <td>Neurology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>John P. Gambin, M.D.</td>
+                  <td>Eureka</td>
+                  <td>California</td>
+                  <td>Neurology</td>
+                  <td>4/28/1997</td>
+                </tr>
+                <tr>
+                  <td>Michael N. Gamiao, M.D.</td>
+                  <td>Livonia</td>
+                  <td>Michigan</td>
+                  <td>Pulmonology</td>
+                  <td>4/6/1998</td>
+                </tr>
+                <tr>
+                  <td>Helmut Haas, M.D.</td>
+                  <td>Portland</td>
+                  <td>Oregon</td>
+                  <td>Pulmonology</td>
+                  <td>4/6/1992</td>
+                </tr>
+                <tr>
+                  <td>Jamie Thomas Haas, M.D.</td>
+                  <td>Washington</td>
+                  <td>Missouri</td>
+                  <td>Neurology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Alfred M. Habel, M.D.</td>
+                  <td>Kenosha</td>
+                  <td>Wisconsin</td>
+                  <td>Pulmonology</td>
+                  <td>4/11/1999</td>
+                </tr>
+                <tr>
+                  <td>Alan David Haber, M.D.</td>
+                  <td>Merion Station</td>
+                  <td>Pennsylvania</td>
+                  <td>Pulmonology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Paul B. Haberman, M.D.</td>
+                  <td>Santa Monica</td>
+                  <td>California</td>
+                  <td>Pulmonology</td>
+                  <td>4/24/1995</td>
+                </tr>
+                <tr>
+                  <td>Isam Hasan Habib, M.B., B.S.</td>
+                  <td>Fond Du Lac</td>
+                  <td>Wisconsin</td>
+                  <td>Pulmonology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Antoine George Habre, M.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Pulmonology</td>
+                  <td>9/20/2005</td>
+                </tr>
+                <tr>
+                  <td>Basem Haddad, M.D.</td>
+                  <td>Westlake</td>
+                  <td>Ohio</td>
+                  <td>Internal Medicine</td>
+                  <td>9/20/2005</td>
+                </tr>
+                <tr>
+                  <td>Hany W. Haddad, M.D.</td>
+                  <td>Indianapolis</td>
+                  <td>Indiana</td>
+                  <td>Pulmonology</td>
+                  <td>4/24/1989</td>
+                </tr>
+                <tr>
+                  <td>Martha H. Hagaman, M.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>Aristidis Iatridis, M.D.</td>
+                  <td>Smyrna</td>
+                  <td>Georgia</td>
+                  <td>Pulmonology</td>
+                  <td>4/24/1995</td>
+                </tr>
+                <tr>
+                  <td>Ossama Ikladios, M.D.</td>
+                  <td>Hackensack</td>
+                  <td>New Jersey</td>
+                  <td>Pulmonology</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Angelo Illuzzi, D.O.</td>
+                  <td>DuBois</td>
+                  <td>Pennsylvania</td>
+                  <td>Pulmonology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Daniel Vassilev Iltchev, M.D.</td>
+                  <td>Norfolk</td>
+                  <td>Nebraska</td>
+                  <td>Pulmonology</td>
+                  <td>9/20/2005</td>
+                </tr>
+                <tr>
+                  <td>Stephen Seonbin Im, M.D.</td>
+                  <td>San Antonio</td>
+                  <td>Texas</td>
+                  <td>Pulmonology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Virginia A. Imadojemu, M.D.</td>
+                  <td>Harrisburg</td>
+                  <td>Pennsylvania</td>
+                  <td>Pulmonology</td>
+                  <td>9/20/2005</td>
+                </tr>
+                <tr>
+                  <td>Robert H. Ingham, M.D.</td>
+                  <td>Palo Alto</td>
+                  <td>California</td>
+                  <td>Neurology</td>
+                  <td>6/26/1987</td>
+                </tr>
+                <tr>
+                  <td>Paul T. Ingmundson, Ph.D.</td>
+                  <td>San Antonio</td>
+                  <td>Texas</td>
+                  <td>Clinical Psychology</td>
+                  <td>4/29/1991</td>
+                </tr>
+                <tr>
+                  <td>Theodore S. Ingrassia, III, M.D.</td>
+                  <td>Rockford</td>
+                  <td>Illinois</td>
+                  <td>Pulmonology</td>
+                  <td>4/19/1993</td>
+                </tr>
+                <tr>
+                  <td>Neil H. Inhaber, M.D.</td>
+                  <td>Delmar</td>
+                  <td>New York</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>Cary V. Jackson, M.D.</td>
+                  <td>Pocatello</td>
+                  <td>Idaho</td>
+                  <td>Pulmonology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Joe A. Jackson, M.D.</td>
+                  <td>Saucier</td>
+                  <td>Mississippi</td>
+                  <td>Neurology</td>
+                  <td>6/16/1986</td>
+                </tr>
+                <tr>
+                  <td>Tad Jackson, M.D.</td>
+                  <td>Lihue, Kauai</td>
+                  <td>Hawaii</td>
+                  <td>Pulmonology</td>
+                  <td>4/22/1996</td>
+                </tr>
+                <tr>
+                  <td>Michael V. Jackson, M.D.</td>
+                  <td>Reno</td>
+                  <td>Nevada</td>
+                  <td>Pulmonology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Elizabeth Jackson, M.D.</td>
+                  <td>Columbus</td>
+                  <td>Ohio</td>
+                  <td>Psychiatry</td>
+                  <td>10/30/1981</td>
+                </tr>
+                <tr>
+                  <td>Anthony H. Jackson, M.D.</td>
+                  <td>Springfield</td>
+                  <td>Massachusetts</td>
+                  <td>Neurology</td>
+                  <td>4/19/1993</td>
+                </tr>
+                <tr>
+                  <td>Sheila V. Jacob, M.D.</td>
+                  <td>Westmount</td>
+                  <td>Quebec</td>
+                  <td>Pediatric Pulmonology</td>
+                  <td>4/6/1998</td>
+                </tr>
+                <tr>
+                  <td>Marianne Bernadette Jacobs, D.O.</td>
+                  <td>Berthoud</td>
+                  <td>Colorado</td>
+                  <td>Neurology</td>
+                  <td>9/20/2005</td>
+                </tr>
+                <tr>
+                  <td>John H. Jacobsen, Ph.D., M.D.</td>
+                  <td>Oak Park</td>
+                  <td>Illinois</td>
+                  <td>Neurology</td>
+                  <td>4/23/1990</td>
+                </tr>
+                <tr>
+                  <td>Julie Ann Jacques, D.O.</td>
+                  <td>Morristown</td>
+                  <td>Tennessee</td>
+                  <td>Neurology</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Sabieli Kabeli, M.D.</td>
+                  <td>Plattsburg</td>
+                  <td>New York</td>
+                  <td>Pulmonology</td>
+                  <td>4/14/2003</td>
+                </tr>
+                <tr>
+                  <td>Saiful Kabir, M.D.</td>
+                  <td>Anderson</td>
+                  <td>Indiana</td>
+                  <td>Pulmonology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Humayun M. Kabir, M.B.,B.S.</td>
+                  <td>Jellico</td>
+                  <td>Tennessee</td>
+                  <td>Pulmonology</td>
+                  <td>3/25/2004</td>
+                </tr>
+                <tr>
+                  <td>Aran Kadar, M.D., MPH, TM</td>
+                  <td>Needham</td>
+                  <td>Massachusetts</td>
+                  <td>Pulmonology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Gihan A. Kader, M.D.</td>
+                  <td>Chesterfield</td>
+                  <td>Missouri</td>
+                  <td>Neurology</td>
+                  <td>4/24/1989</td>
+                </tr>
+                <tr>
+                  <td>Tareck Alec Kadrie, M.D.</td>
+                  <td>Chattanooga</td>
+                  <td>Tennessee</td>
+                  <td>Clinical Neurophysiology</td>
+                  <td>3/25/2004</td>
+                </tr>
+                <tr>
+                  <td>Thomas D. Kaelin Jr., D.O.</td>
+                  <td>Summerville</td>
+                  <td>South Carolina</td>
+                  <td>Pulmonology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Abdallah Ibrahim Kafrouni, M.D.</td>
+                  <td>Louisville</td>
+                  <td>Kentucky</td>
+                  <td>Internal Medicine</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Vadim Kagramanov, M.D.</td>
+                  <td>Grand Rapids</td>
+                  <td>Michigan</td>
+                  <td>Pulmonology</td>
+                  <td>9/20/2005</td>
+                </tr>
+                <tr>
+                  <td>Mohammad Waseem Kagzi, M.B., B.S.</td>
+                  <td>Gurnee</td>
+                  <td>Illinois</td>
+                  <td>Internal Medicine</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Michael J. Labanowski, M.D.</td>
+                  <td>Dothan</td>
+                  <td>New Mexico</td>
+                  <td>Neurology</td>
+                  <td>4/19/1993</td>
+                </tr>
+                <tr>
+                  <td>Dennis Michael Lacey, M.D.</td>
+                  <td>Atlanta</td>
+                  <td>Georgia</td>
+                  <td>Neurology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>William O. Lacy, M.D.</td>
+                  <td>Louisville</td>
+                  <td>Kentucky</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>Robert Arne Lada, M.D.</td>
+                  <td>Hudson</td>
+                  <td>Ohio</td>
+                  <td>Neurology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Franco Laghi, M.D.</td>
+                  <td>Burr Ridge</td>
+                  <td>Illinois</td>
+                  <td>Pulmonology</td>
+                  <td>4/16/2003</td>
+                </tr>
+                <tr>
+                  <td>Henry Lahmeyer, M.D.</td>
+                  <td>Chicago</td>
+                  <td>Illinois</td>
+                  <td>Psychiatry</td>
+                  <td>3/31/1984</td>
+                </tr>
+                <tr>
+                  <td>Laura Elaine Lajos, Ph.D.</td>
+                  <td>Baton Rouge</td>
+                  <td>Louisiana</td>
+                  <td>Clinical Psychology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Robert C. Lakin, M.D.</td>
+                  <td>Wichita</td>
+                  <td>Kansas</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>Salvadeeswaran Lakshmi-Narayanan, M.B., B.S.</td>
+                  <td>Santa Fe</td>
+                  <td>New Mexico</td>
+                  <td>Pulmonology</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Chitra Lal, M.D.</td>
+                  <td>Machias</td>
+                  <td>Maine</td>
+                  <td>Pulmonology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Carlos E. Maas Herken, M.D.</td>
+                  <td>Punta Gorda</td>
+                  <td>Florida</td>
+                  <td>Pulmonology</td>
+                  <td>4/23/1990</td>
+                </tr>
+                <tr>
+                  <td>Lawrence L. MacDonald, M.D.</td>
+                  <td>Detroit</td>
+                  <td>Michigan</td>
+                  <td>Pulmonology</td>
+                  <td>4/6/1998</td>
+                </tr>
+                <tr>
+                  <td>James G. MacFarlane, Ph.D.</td>
+                  <td>Toronto</td>
+                  <td>Ontario</td>
+                  <td>Medical Science</td>
+                  <td>4/29/1991</td>
+                </tr>
+                <tr>
+                  <td>Timothy Donald Macon, D.O.</td>
+                  <td>West Branch</td>
+                  <td>Michigan</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2003</td>
+                </tr>
+                <tr>
+                  <td>Marta Maczaj, M.D.</td>
+                  <td>Stony Brook</td>
+                  <td>New York</td>
+                  <td>Psychiatry</td>
+                  <td>4/29/1991</td>
+                </tr>
+                <tr>
+                  <td>Mohammad Hossein Madantschi, M.D.</td>
+                  <td>Tamuning</td>
+                  <td>Guam</td>
+                  <td>Pulmonology</td>
+                  <td>9/21/2005</td>
+                </tr>
+                <tr>
+                  <td>Edward Claro Mader, Jr., M.D.</td>
+                  <td>River Ridge</td>
+                  <td>Louisiana</td>
+                  <td>Neurology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Hari Gopal Madichetty, M.B., B.S.</td>
+                  <td>McDonough</td>
+                  <td>Georgia</td>
+                  <td>Internal Medicine</td>
+                  <td>9/21/2005</td>
+                </tr>
+                <tr>
+                  <td>Susan M. Madison, M.D.</td>
+                  <td>Scottsdale</td>
+                  <td>Arizona</td>
+                  <td>Pulmonology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>M. Jeffery Mador, M.D.</td>
+                  <td>Kenmore</td>
+                  <td>New York</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>Gracia Louis Nabhane, M.D.</td>
+                  <td>Jefferson City</td>
+                  <td>Missouri</td>
+                  <td>Pulmonology</td>
+                  <td>9/21/2005</td>
+                </tr>
+                <tr>
+                  <td>Frederick J. Nachtwey, M.D.</td>
+                  <td>San Pablo</td>
+                  <td>California</td>
+                  <td>Pulmonology</td>
+                  <td>4/28/1997</td>
+                </tr>
+                <tr>
+                  <td>Daya Nadarajah, M.D.</td>
+                  <td>Mountain Lakes</td>
+                  <td>New Jersey</td>
+                  <td>Pulmonology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Rashid Nadeem, M.B., B.S.</td>
+                  <td>Johnston</td>
+                  <td>Pennsylvania</td>
+                  <td>Pulmonology</td>
+                  <td>4/16/2003</td>
+                </tr>
+                <tr>
+                  <td>Mangala A. Nadkarni, M.D.</td>
+                  <td>Edison</td>
+                  <td>New Jersey</td>
+                  <td>Neurophysiology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>Benjamin J. Nager, M.D.</td>
+                  <td>Crystal Lake</td>
+                  <td>Illinois</td>
+                  <td>Neurology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>Keith J. Nagle, M.D.</td>
+                  <td>Burlington</td>
+                  <td>Vermont</td>
+                  <td>Neurology</td>
+                  <td>4/11/1999</td>
+                </tr>
+                <tr>
+                  <td>Anas Nahhas, M.D.</td>
+                  <td>Blue Island</td>
+                  <td>Illinois</td>
+                  <td>Pulmonology</td>
+                  <td>4/22/1996</td>
+                </tr>
+                <tr>
+                  <td>Jeffrey Nahmias, M.D.</td>
+                  <td>Newark</td>
+                  <td>New Jersey</td>
+                  <td>Pulmonology</td>
+                  <td>6/26/1987</td>
+                </tr>
+                <tr>
+                  <td>Karen H. Naifeh, Ph.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Physiology</td>
+                  <td>6/26/1987</td>
+                </tr>
+                <tr>
+                  <td>John M. O'Bannon, M.D.</td>
+                  <td>Richmond</td>
+                  <td>Virginia</td>
+                  <td>Neurology</td>
+                  <td>4/18/1988</td>
+                </tr>
+                <tr>
+                  <td>Michael D. Ober, M.D.</td>
+                  <td>Indianapolis</td>
+                  <td>Indiana</td>
+                  <td>Pulmonology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>James Kilty O'Brien, M.D.</td>
+                  <td>Seattle</td>
+                  <td>Washington</td>
+                  <td>Pulmonology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>James C. O'Brien, M.D.</td>
+                  <td>Milton</td>
+                  <td>Massachusetts</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2003</td>
+                </tr>
+                <tr>
+                  <td>Richard F. O'Brien, M.D.</td>
+                  <td>Denver</td>
+                  <td>Colorado</td>
+                  <td>Pulmonology</td>
+                  <td>4/28/1997</td>
+                </tr>
+                <tr>
+                  <td>Charles F. O'Cain, M.D.</td>
+                  <td>Asheville</td>
+                  <td>North Carolina</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>James J. O'Connor, III, M.D.</td>
+                  <td>Somer's Point</td>
+                  <td>New Jersey</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>Timothy David O'Connor, M.D.</td>
+                  <td>Mill Creek</td>
+                  <td>Washington</td>
+                  <td>Pulmonology</td>
+                  <td>4/15/2003</td>
+                </tr>
+                <tr>
+                  <td>Anne E. O'Donnell, M.D.</td>
+                  <td>Washington</td>
+                  <td>District of Columbia</td>
+                  <td>Pulmonology</td>
+                  <td>4/19/1993</td>
+                </tr>
+                <tr>
+                  <td>Janat E. O'Donnell, M.D.</td>
+                  <td>Boise</td>
+                  <td>Idaho</td>
+                  <td>Pulmonology</td>
+                  <td>4/22/1996</td>
+                </tr>
+                <tr>
+                  <td>Bradley H. Paddock, M.D.</td>
+                  <td>Gloversville</td>
+                  <td>New York</td>
+                  <td>Otolaryngology</td>
+                  <td>9/21/2005</td>
+                </tr>
+                <tr>
+                  <td>Vivek A. Padegal, M.D.</td>
+                  <td>Dallas</td>
+                  <td>Texas</td>
+                  <td>Pulmonology</td>
+                  <td>4/15/2003</td>
+                </tr>
+                <tr>
+                  <td>Stuart J. Padove, M.D.</td>
+                  <td>Birmingham</td>
+                  <td>Alabama</td>
+                  <td>Pulmonology</td>
+                  <td>4/19/1993</td>
+                </tr>
+                <tr>
+                  <td>James F. Pagel, Jr., M.D.</td>
+                  <td>Pueblo</td>
+                  <td>Colorado</td>
+                  <td>Family Practice</td>
+                  <td>4/25/1994</td>
+                </tr>
+                <tr>
+                  <td>Vosudesh Karkala Pai, M.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Internal Medicine</td>
+                  <td>9/21/2005</td>
+                </tr>
+                <tr>
+                  <td>Guhapriya Palaniswamy, M.D.</td>
+                  <td>Monmouth Jct</td>
+                  <td>New Jersey</td>
+                  <td>Pulmonology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Howard William Palay, M.D.</td>
+                  <td>Clyde</td>
+                  <td>North Carolina</td>
+                  <td>Neurology</td>
+                  <td>4/17/2003</td>
+                </tr>
+                <tr>
+                  <td>Ralph Palumbo, M.D.</td>
+                  <td>Boca Raton</td>
+                  <td>Florida</td>
+                  <td>Pulmonology</td>
+                  <td>3/25/2004</td>
+                </tr>
+                <tr>
+                  <td>Jean Panagakos, M.D.</td>
+                  <td>Bethesda</td>
+                  <td>Maryland</td>
+                  <td>Neurology</td>
+                  <td>4/29/1991</td>
+                </tr>
+                <tr>
+                  <td>Kuldeep R. Pandit, M.D.</td>
+                  <td>Henderson</td>
+                  <td>Kentucky</td>
+                  <td>Pulmonology</td>
+                  <td>4/6/1998</td>
+                </tr>
+                <tr>
+                  <td>Mahmoud M. Qadoom, M.B., B.S.</td>
+                  <td>Louisville</td>
+                  <td>Kentucky</td>
+                  <td>Internal Medicine</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Azmat Qayyum, M.B., B.S.</td>
+                  <td>Monroeville</td>
+                  <td>Pennsylvania</td>
+                  <td>Pulmonology</td>
+                  <td>9/21/2005</td>
+                </tr>
+                <tr>
+                  <td>Syed A. Quadri, M.B., B.S.</td>
+                  <td>DECEASED</td>
+                  <td></td>
+                  <td>Pulmonology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Mustafa Quadri, M.D.</td>
+                  <td>Dayton</td>
+                  <td>Ohio</td>
+                  <td>Pulmonology</td>
+                  <td>4/24/1995</td>
+                </tr>
+                <tr>
+                  <td>Stuart F. Quan, M.D.</td>
+                  <td>Tucson</td>
+                  <td>Arizona</td>
+                  <td>Pulmonology</td>
+                  <td>6/26/1987</td>
+                </tr>
+                <tr>
+                  <td>Anthony J. Quaranta, M.D.</td>
+                  <td>Norfolk</td>
+                  <td>Virginia</td>
+                  <td>Pulmonology</td>
+                  <td>4/6/1998</td>
+                </tr>
+                <tr>
+                  <td>Rebecca Jean Quattrucci, Ph.D.</td>
+                  <td>New York</td>
+                  <td>New York</td>
+                  <td>Psychology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Amir Quefatieh, M.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Pulmonology</td>
+                  <td>3/26/2004</td>
+                </tr>
+                <tr>
+                  <td>M. Antonia Quera-Salva, M.D.</td>
+                  <td>France</td>
+                  <td>France</td>
+                  <td>Neurology</td>
+                  <td>6/16/1986</td>
+                </tr>
+                <tr>
+                  <td>David Quimby, M.D.</td>
+                  <td>Grand Rapids</td>
+                  <td>Michigan</td>
+                  <td>Pulmonology</td>
+                  <td>4/25/1994</td>
+                </tr>
+                <tr>
+                  <td>Rana Imam Rab, M.D.</td>
+                  <td>Atlanta</td>
+                  <td>Georgia</td>
+                  <td>Pulmonology</td>
+                  <td>4/16/2003</td>
+                </tr>
+                <tr>
+                  <td>Michael John Rack, M.D.</td>
+                  <td>Jackson</td>
+                  <td>Mississippi</td>
+                  <td>Internal Medicine</td>
+                  <td>3/26/2004</td>
+                </tr>
+                <tr>
+                  <td>Rodney A. Radtke, M.D.</td>
+                  <td>Durham</td>
+                  <td>North Carolina</td>
+                  <td>Neurology</td>
+                  <td>6/16/1986</td>
+                </tr>
+                <tr>
+                  <td>Olimpia A. Radu, M.D.</td>
+                  <td>Norwich</td>
+                  <td>Connecticut</td>
+                  <td>Pulmonology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Muhammad Raees, M.D.</td>
+                  <td>New Hartford</td>
+                  <td>New York</td>
+                  <td>Pulmonology</td>
+                  <td>9/21/2005</td>
+                </tr>
+                <tr>
+                  <td>Sylvia Lee Rael, M.D.</td>
+                  <td>Omaha</td>
+                  <td>Nebraska</td>
+                  <td>Pulmonology</td>
+                  <td>9/21/2005</td>
+                </tr>
+                <tr>
+                  <td>Albert L. Rafanan, M.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Pulmonology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Jose C. Rafecas, M.D.</td>
+                  <td>Green</td>
+                  <td>Ohio</td>
+                  <td>Neurology</td>
+                  <td>4/23/1990</td>
+                </tr>
+                <tr>
+                  <td>Krishnan Raghavan, M.B., B.S.</td>
+                  <td>Amsterdam</td>
+                  <td>New York</td>
+                  <td>Pulmonology</td>
+                  <td>9/21/2005</td>
+                </tr>
+                <tr>
+                  <td>Perwaiz H. Rahim, M.B.,B.S.</td>
+                  <td>Brandon</td>
+                  <td>Florida</td>
+                  <td>Internal Medicine</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Fadi-Jean Saad, M.D.</td>
+                  <td>Royal Oak</td>
+                  <td>Michigan</td>
+                  <td>Pulmonology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Mohamed A. Saad, M.D.</td>
+                  <td>Louisville</td>
+                  <td>Kentucky</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2003</td>
+                </tr>
+                <tr>
+                  <td>Lebnan Sabah Saad, M.D.</td>
+                  <td>Prospect</td>
+                  <td>Kentucky</td>
+                  <td>Internal Medicine</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Zahra Saad Ayub, M.D.</td>
+                  <td>Southborough</td>
+                  <td>Massachusetts</td>
+                  <td>Neurology</td>
+                  <td>3/24/2004</td>
+                </tr>
+                <tr>
+                  <td>Joel S. Sabangan, M.D.</td>
+                  <td>Ardmore</td>
+                  <td>Oklahoma</td>
+                  <td>Pulmonology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Mazen Sabbaq, M.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Pulmonology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Asif Ali Saberi, M.D.</td>
+                  <td>Atlanta</td>
+                  <td>Georgia</td>
+                  <td>Pulmonology</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Robert L. Sack, M.D.</td>
+                  <td>Portland</td>
+                  <td>Oregon</td>
+                  <td>Psychiatry</td>
+                  <td>4/23/1990</td>
+                </tr>
+                <tr>
+                  <td>Prabhasadanam G. Sadhujan, M.D.</td>
+                  <td>Chesterton</td>
+                  <td>Indiana</td>
+                  <td>Internal Medicine</td>
+                  <td>4/17/2003</td>
+                </tr>
+                <tr>
+                  <td>Bijan Sadrnoori, M.D.</td>
+                  <td>Methuen</td>
+                  <td>Massachusetts</td>
+                  <td>Pulmonology</td>
+                  <td>4/29/1991</td>
+                </tr>
+                <tr>
+                  <td>Jeremy I. Tabak, M.D.</td>
+                  <td>South Miami</td>
+                  <td>Florida</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>Mohan Venkataratna Tadikonda, M.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Neurology</td>
+                  <td>3/26/2004</td>
+                </tr>
+                <tr>
+                  <td>Lakshminarayana Tadimeti, M.D.</td>
+                  <td>Anaheim</td>
+                  <td>California</td>
+                  <td>Pulmonology</td>
+                  <td>4/11/1999</td>
+                </tr>
+                <tr>
+                  <td>Muhammad Talib, M.B., B.S.</td>
+                  <td>London</td>
+                  <td>Kentucky</td>
+                  <td>Pulmonology</td>
+                  <td>9/21/2005</td>
+                </tr>
+                <tr>
+                  <td>Fouad S. Tamimi, M.D.</td>
+                  <td>Khoban</td>
+                  <td></td>
+                  <td>Pulmonology</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Bruce R. Tammelin, M.D.</td>
+                  <td>San Clemente</td>
+                  <td>California</td>
+                  <td>Pulmonology</td>
+                  <td>4/15/2003</td>
+                </tr>
+                <tr>
+                  <td>Ehrlich Cu Tan, M.D.</td>
+                  <td>Charlotte</td>
+                  <td>North Carolina</td>
+                  <td>Neurology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Jessela D. Tan, M.D.</td>
+                  <td>Dallas</td>
+                  <td>Texas</td>
+                  <td>Family Medicine</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Maged Aziz Tanios, M.D.</td>
+                  <td>Long Beach</td>
+                  <td>California</td>
+                  <td>Pulmonology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Sasidharan Taravath, M.D.</td>
+                  <td>South Charleston</td>
+                  <td>West Virginia</td>
+                  <td>Pediatric Neurology</td>
+                  <td>4/6/1998</td>
+                </tr>
+                <tr>
+                  <td>Mustafa Orhan Ucer, M.D.</td>
+                  <td>Roseville</td>
+                  <td>Minnesota</td>
+                  <td>Neurology</td>
+                  <td>3/26/2004</td>
+                </tr>
+                <tr>
+                  <td>Nidhi Samir Undevia, M.D.</td>
+                  <td>Naperville</td>
+                  <td>Illinois</td>
+                  <td>Pulmonology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Kenneth M. Unger, M.D.</td>
+                  <td>Webster</td>
+                  <td>Texas</td>
+                  <td>Pulmonology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Jaime R. Ungo, M.D.</td>
+                  <td>Houlka</td>
+                  <td>Mississippi</td>
+                  <td>Pulmonology</td>
+                  <td>4/17/2000</td>
+                </tr>
+                <tr>
+                  <td>Elizabeth Chan Uong, M.D.</td>
+                  <td>Valley Park</td>
+                  <td>Missouri</td>
+                  <td>Pediatrics</td>
+                  <td>4/8/2002</td>
+                </tr>
+                <tr>
+                  <td>Naresh Upadhyay, M.D.</td>
+                  <td>Orland Park</td>
+                  <td>Illinois</td>
+                  <td>Pulmonology</td>
+                  <td>4/28/1997</td>
+                </tr>
+                <tr>
+                  <td>Anupama Upadya, M.B., B.S.</td>
+                  <td>Fairfield</td>
+                  <td>Connecticut</td>
+                  <td>Internal Medicine</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Jose Antonio Urdaneta-Jaimes, M.D.</td>
+                  <td>Marianna</td>
+                  <td>Florida</td>
+                  <td>Pulmonology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Oscar Urrea, M.D.</td>
+                  <td>McMurray</td>
+                  <td>Pennsylvania</td>
+                  <td>Psychiatry</td>
+                  <td>4/24/1989</td>
+                </tr>
+                <tr>
+                  <td>Najma Jabeen Usmani, M.B.,B.S.</td>
+                  <td>Kirksville</td>
+                  <td>Missouri</td>
+                  <td>Pulmonology</td>
+                  <td>3/26/2004</td>
+                </tr>
+                <tr>
+                  <td>Sanjay Virji Vadgama, M.B., B.S.</td>
+                  <td>Los Angeles</td>
+                  <td>California</td>
+                  <td>Internal Medicine</td>
+                  <td>9/21/2005</td>
+                </tr>
+                <tr>
+                  <td>Ravi Vaela, M.D.</td>
+                  <td>Fort Wayne</td>
+                  <td>Indiana</td>
+                  <td>Pulmonology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Sunil J. Vaidya, M.D.</td>
+                  <td>Mansfield</td>
+                  <td>Ohio</td>
+                  <td>Pulmonology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Prakash Vaishnav, M.D.</td>
+                  <td>Blue Island</td>
+                  <td>Illinois</td>
+                  <td>Pulmonology</td>
+                  <td>4/29/1991</td>
+                </tr>
+                <tr>
+                  <td>Roxanne Marie Valentino, M.D.</td>
+                  <td>Cleveland Heights</td>
+                  <td>Ohio</td>
+                  <td>Neurology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Suneel S. Valla, M.B.,Ch.B.</td>
+                  <td>Easton</td>
+                  <td>Pennsylvania</td>
+                  <td>Family Practice</td>
+                  <td>4/16/2003</td>
+                </tr>
+                <tr>
+                  <td>Michael J. Valle, D.O.</td>
+                  <td>Centerville</td>
+                  <td>Ohio</td>
+                  <td>Neurology</td>
+                  <td>4/23/2001</td>
+                </tr>
+                <tr>
+                  <td>Michael Wesley Van de Kieft, M.D.</td>
+                  <td>San Antonio</td>
+                  <td>Texas</td>
+                  <td>Pulmonology</td>
+                  <td>3/26/2004</td>
+                </tr>
+                <tr>
+                  <td>Johanna Van Den Hoed, M.D.</td>
+                  <td></td>
+                  <td>Netherlands</td>
+                  <td>Psychiatry</td>
+                  <td>10/25/1979</td>
+                </tr>
+                <tr>
+                  <td>Ralf Willem Van der Sluis, M.D.</td>
+                  <td>Secaucus</td>
+                  <td>New Jersey</td>
+                  <td>Neurology</td>
+                  <td>3/26/2004</td>
+                </tr>
+                <tr>
+                  <td>John F. Wade, M.D.</td>
+                  <td>Pensacola Beach</td>
+                  <td>Florida</td>
+                  <td>Pulmonology</td>
+                  <td>4/6/1998</td>
+                </tr>
+                <tr>
+                  <td>Joyce Deanette Wade-Hamme, M.D.</td>
+                  <td>Ridgeland</td>
+                  <td>Mississippi</td>
+                  <td>Pulmonology</td>
+                  <td>4/15/2003</td>
+                </tr>
+                <tr>
+                  <td>Frazer Anthony Wadenstorer, M.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Pulmonology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Nand K. Wadhwa, M.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Nephrology</td>
+                  <td>4/22/1996</td>
+                </tr>
+                <tr>
+                  <td>Daniel R. Wagner, M.D.</td>
+                  <td>White Plains</td>
+                  <td>New York</td>
+                  <td>Neurology</td>
+                  <td>3/25/1983</td>
+                </tr>
+                <tr>
+                  <td>Mary Hipskind Wagner, M.D.</td>
+                  <td>Newberry</td>
+                  <td>Florida</td>
+                  <td>Pediatric Pulmonology</td>
+                  <td>4/15/2003</td>
+                </tr>
+                <tr>
+                  <td>Wahba W. Wahba, M.D.</td>
+                  <td>Daytona Beach</td>
+                  <td>Florida</td>
+                  <td>Pulmonology</td>
+                  <td>4/28/1997</td>
+                </tr>
+                <tr>
+                  <td>Ronald J. Wainz, M.D.</td>
+                  <td>Toledo</td>
+                  <td>Ohio</td>
+                  <td>Pulmonology</td>
+                  <td>4/22/1996</td>
+                </tr>
+                <tr>
+                  <td>Thaddeus Walczak, M.D.</td>
+                  <td></td>
+                  <td></td>
+                  <td>Neurology</td>
+                  <td>4/18/1988</td>
+                </tr>
+                <tr>
+                  <td>Richard E. Waldhorn, M.D.</td>
+                  <td>Washington</td>
+                  <td>District of Columbia</td>
+                  <td>Pulmonology</td>
+                  <td>4/24/1989</td>
+                </tr>
+                <tr>
+                  <td>Georges S. Yacoub, M.D.</td>
+                  <td>Troy</td>
+                  <td>Michigan</td>
+                  <td>Pulmonology</td>
+                  <td>4/11/1999</td>
+                </tr>
+                <tr>
+                  <td>Henry Klar Yaggi, M.D.</td>
+                  <td>Hamden</td>
+                  <td>Connecticut</td>
+                  <td>Internal Medicine</td>
+                  <td>3/26/2004</td>
+                </tr>
+                <tr>
+                  <td>Thoru Yamada, M.D.</td>
+                  <td>Iowa City</td>
+                  <td>Iowa</td>
+                  <td>Neurology</td>
+                  <td>4/6/1992</td>
+                </tr>
+                <tr>
+                  <td>James Yan, M.D.</td>
+                  <td>Potomac</td>
+                  <td>Maryland</td>
+                  <td>Neurology</td>
+                  <td>4/24/1995</td>
+                </tr>
+                <tr>
+                  <td>Karl L. Yang, M.D.</td>
+                  <td>Indianapolis</td>
+                  <td>Indiana</td>
+                  <td>Pulmonology</td>
+                  <td>4/19/1993</td>
+                </tr>
+                <tr>
+                  <td>Chang-Kook Yang, M.D., Ph.D.</td>
+                  <td>Pusan</td>
+                  <td>Korea</td>
+                  <td>Psychiatry</td>
+                  <td>4/28/1997</td>
+                </tr>
+                <tr>
+                  <td>Frisca L. Yan-Go, M.D.</td>
+                  <td>Los Angeles</td>
+                  <td>California</td>
+                  <td>Neurology/Pediatrics</td>
+                  <td>4/6/1992</td>
+                </tr>
+                <tr>
+                  <td>Yanko A. Yankov, M.D.</td>
+                  <td>San Antonio</td>
+                  <td>Texas</td>
+                  <td>Neurology</td>
+                  <td>3/23/2005</td>
+                </tr>
+                <tr>
+                  <td>Jose Carlos Yataco, M.D.</td>
+                  <td>Memphis</td>
+                  <td>Tennessee</td>
+                  <td>Pulmonology</td>
+                  <td>9/21/2005</td>
+                </tr>
+                <tr>
+                  <td>Inchel Yeam, M.D.</td>
+                  <td>San Clemente</td>
+                  <td>California</td>
+                  <td>Pulmonology</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Theodossis Zacharis, M.D.</td>
+                  <td>Port Orange</td>
+                  <td>Florida</td>
+                  <td>Pulmonology</td>
+                  <td>9/19/2006</td>
+                </tr>
+                <tr>
+                  <td>Hubert M. Zachary, Ph.D.</td>
+                  <td>Jacksonville</td>
+                  <td>Florida</td>
+                  <td>Psychology</td>
+                  <td>4/6/1998</td>
+                </tr>
+                <tr>
+                  <td>Michael J. Zachek, M.D.</td>
+                  <td>Bowling Green</td>
+                  <td>Kentucky</td>
+                  <td>Pulmonology</td>
+                  <td>4/6/1992</td>
+                </tr>
+                <tr>
+                  <td>Subooha Zafar, M.D.</td>
+                  <td>Kingston</td>
+                  <td>New York</td>
+                  <td>Pulmonology</td>
+                  <td>3/22/2005</td>
+                </tr>
+                <tr>
+                  <td>Muhammad Asif Ali Zaidi, M.D.</td>
+                  <td>Sioux Falls</td>
+                  <td>South Dakota</td>
+                  <td>Neurology</td>
+                  <td>4/16/2003</td>
+                </tr>
+                <tr>
+                  <td>Rochelle Schiffman Zak, M.D.</td>
+                  <td>White Plains</td>
+                  <td>New York</td>
+                  <td>Neurology</td>
+                  <td>4/11/1999</td>
+                </tr>
+                <tr>
+                  <td>Nasser Zakieh, M.D.</td>
+                  <td>Hinsdale</td>
+                  <td>Illinois</td>
+                  <td>Pulmonology</td>
+                  <td>4/16/2003</td>
+                </tr>
+                <tr>
+                  <td>Mohamed M. Zakkar, M.D.</td>
+                  <td>Beavercreek</td>
+                  <td>Ohio</td>
+                  <td>Pulmonology</td>
+                  <td>4/16/2003</td>
+                </tr>
+                <tr>
+                  <td>George L. Zaldivar, M.D.</td>
+                  <td>Charleston</td>
+                  <td>West Virginia</td>
+                  <td>Pulmonology</td>
+                  <td>4/24/1989</td>
+                </tr>
+                <tr>
+                  <td>Sarah Nath Zallek, M.D.</td>
+                  <td>Peoria</td>
+                  <td>Illinois</td>
+                  <td>Neurology</td>
+                  <td>4/6/1998</td>
+                </tr>                                                                                                                                               
+              </tbody>
+            </table>
+          </div>
+
+          <div class="page" id="paginationControls"></div>
+
+          <script>
+            const stateFilter = document.getElementById('stateFilter');
+            const specialtyFilter = document.getElementById('specialtyFilter');
+            const tableBody = document.getElementById('tableBody');
+            const paginationControls = document.getElementById('paginationControls');
+
+            const rows = Array.from(tableBody.getElementsByTagName('tr'));
+            let filteredRows = rows;
+            const rowsPerPage = 15;
+            let currentPage = 1;
+
+            function renderTable() {
+              tableBody.innerHTML = '';
+              const start = (currentPage - 1) * rowsPerPage;
+              const end = start + rowsPerPage;
+              const rowsToShow = filteredRows.slice(start, end);
+              rowsToShow.forEach(row => tableBody.appendChild(row));
+              renderPagination();
+            }
+
+            function renderPagination() {
+              paginationControls.innerHTML = '';
+              const totalPages = Math.ceil(filteredRows.length / rowsPerPage);
+
+              for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement('button');
+                btn.textContent = i;
+                if (i === currentPage) btn.classList.add('active');
+                btn.addEventListener('click', () => {
+                  currentPage = i;
+                  renderTable();
+                });
+                paginationControls.appendChild(btn);
+              }
+            }
+
+            function applyFilters() {
+              const stateVal = stateFilter.value.toLowerCase().trim();
+              const specialtyVal = specialtyFilter.value.toLowerCase().trim();
+
+              filteredRows = rows.filter(row => {
+                const stateCell = row.getElementsByTagName('td')[2];
+                const specialtyCell = row.getElementsByTagName('td')[3];
+
+                const stateMatch = stateCell && stateCell.textContent.toLowerCase().includes(stateVal);
+                const specialtyMatch = specialtyCell && specialtyCell.textContent.toLowerCase().includes(specialtyVal);
+
+                return stateMatch && specialtyMatch;
+              });
+
+              currentPage = 1;
+              renderTable();
+            }
+
+            stateFilter.addEventListener('keyup', applyFilters);
+            specialtyFilter.addEventListener('keyup', applyFilters);
+
+            renderTable();
+          </script>
         </div>
-      <div id="result" style="margin-top: 15px;"></div>
-      </form>
-      <script>
-          const form = document.getElementById('searchForm');
-          form.addEventListener('submit', function(event) {
-              event.preventDefault();
-              const state = document.getElementById('state').value;
-              const zipcode = document.getElementById('zipcode').value;
-              let result = '';
-      if ((state === 'Texas' && (zipcode === '79703' || zipcode === '77382' || zipcode === '77380' || zipcode === '75401' || zipcode === '75032' || zipcode === ''))||((zipcode === '79703' || zipcode === '77382' || zipcode === '77380' || zipcode === '75401' || zipcode === '75032' ) && state === '')) {
-        if (zipcode === '79703' || zipcode === '') {
-            result += `
-            <div class="clinic-title">
-                <br>
-                <div class="clinic-name" style="padding-left: 10px">Advanced Neuroscience Clinic and Sleep Center</div>
-                <div class="clinic-card">
-                    <div class="clinic-info">
-                        <p><a href="https://maps.app.goo.gl/ieXzYEyxZ58waCg39" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3400 Andrews Highway<br>Midland, TX 79703</p>
-                    </div>
-                    <div class="clinic-appointment">
-                        <h3>Request an Appointment</h3>
-                        <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                        <a href="tel:+14322267331" class="call-button">Call (432) 226-7331</a><br>
-                        <a href="#" class="request-link">Request a call</a>
-                    </div>
-                    <div class="clinic-doctor">
-                      <div class="clinic-doctor2">
-                        <img src="assets/img/doctors/download" alt="Dr. Manoher Gurru" class="doctor-photo">
-                        <h3>Dr. Manoher Gurru</h3>
-                      </div>
-                    </div>
-                </div>
-            </div>`
-            ;
-        }
-        if (zipcode === '77382' || zipcode === '') {
-            result += `
-            <div class="clinic-title">
-                <br>
-                <div class="clinic-name" style="padding-left: 10px">Allergy & ENT Associates - Sterling Ridge</div>
-                <div class="clinic-card">
-                    <div class="clinic-info">
-                        <p><a href="https://maps.app.goo.gl/jPQfPa2ET7mbjnfn9" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>10847 Kuykendahl Road, Suite 100<br>The Woodlands, TX 77382</p>
-                    </div>
-                    <div class="clinic-appointment">
-                        <h3>Request an Appointment</h3>
-                        <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                        <a href="tel:+12819824332" class="call-button">Call (281) 982-4332</a><br>
-                        <a href="#" class="request-link">Request a call</a>
-                    </div>
-                    <div class="clinic-doctor">
-                      <div class="clinic-doctor2">
-                        <img src="assets/img/doctors/download (1)" alt="Dr. Traci Bailey" class="doctor-photo">
-                        <h3>Dr. Traci Bailey</h3>
-                      </div>
-                    </div>
-                </div>
-            </div>`
-            ;
-        }
-        if (zipcode === '77380' || zipcode === '') {
-            result += `
-            <div class="clinic-title">
-                <br>
-                <div class="clinic-name" style="padding-left: 10px">Allergy and ENT Associates - Town Center</div>
-                <div class="clinic-card">
-                    <div class="clinic-info">
-                        <p><a href="https://maps.app.goo.gl/Zd2xZecqFZPHWUYG9" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>9301 Pinecroft Drive, Suite 100<br>Shenandoah, TX 77380</p>
-                    </div>
-                    <div class="clinic-appointment">
-                        <h3>Request an Appointment</h3>
-                        <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                        <a href="tel:+17138819783" class="call-button">Call (713) 881-9783</a><br>
-                        <a href="#" class="request-link">Request a call</a>
-                    </div>
-                    <div class="clinic-doctor">
-                      <div class="clinic-doctor2">
-                        <img src="assets/img/doctors/download (1)" alt="Dr. Traci Bailey" class="doctor-photo">
-                        <h3>Dr. Traci Bailey</h3>
-                      </div>
-                    </div>
-                </div>
-            </div>`
-            ;
-        }
-        if (zipcode === '75401' || zipcode === '') {
-            result += `
-            <div class="clinic-title">
-                <br>
-                <div class="clinic-name" style="padding-left: 10px">Allergy ENT Clinic of Northeast Texas</div>
-                <div class="clinic-card">
-                    <div class="clinic-info">
-                        <p><a href="https://maps.app.goo.gl/CFBGK7tq4FZq1qXy5" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>4000 Medical Pkwy.<br>Greenville, TX 75401</p>
-                    </div>
-                    <div class="clinic-appointment">
-                        <h3>Request an Appointment</h3>
-                        <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                        <a href="tel:+19034517895" class="call-button">Call (903) 451-7895</a><br>
-                        <a href="#" class="request-link">Request a call</a>
-                    </div>
-                    <div class="clinic-doctor">
-                      <div class="clinic-doctor2">
-                        <img src="assets/img/doctors/download (2)" alt="Dr. Wha-Joon Lee" class="doctor-photo">
-                        <h3>Dr. Wha-Joon Lee</h3>
-                      </div>
-                    </div>
-                </div>
-            </div>`
-            ;
-        }
-        if (zipcode === '75032' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Allergy, Ear, Nose & Throat Clinic of Northeast Texas, Rockwall</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/AWHGiQ9YghTVezaw5" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3000 Horizon Road<br>Rockwall, TX 75032</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:+14691838863" class="call-button">Call (469) 813-8863</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (2)" alt="Dr. Wha-Joon Lee" class="doctor-photo">
-                      <h3>Dr. Wha-Joon Lee</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`
-          ;
-      }
-      }
-
-      if ((state === 'Alabama' && (zipcode === '35801' || zipcode === '335058' || zipcode === ''))||((zipcode === '35801'|| zipcode === '335058' ) && state === '')) {
-        if (zipcode === '35801' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Alabama Institute for Sleep Health</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/6VLZ3dCxPd9scZsA7" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>333 Whitesport Dr., Suite 205<br>Huntsville, AL 35801</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:+12562928096" class="call-button">Call (256) 292-8096</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (3)" alt="Dr. G. Scott Warner" class="doctor-photo">
-                      <h3>Dr. G. Scott Warner</h3>
-                    </div>
-                    <br>
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (4)" alt="Brandi Greeson" class="doctor-photo">
-                      <h3>Brandi Greeson</h3>
-                    </div> 
-                  </div>
-              </div>
-          </div>`;
-        }
-        if (zipcode === '335058' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Alabama Institute for Sleep Health</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/bCBw63K9ZXVK8YtX8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1803 Park View Drive NE<br>Cullman, AL 35058</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:+12562026994" class="call-button">Call (256) 202-6994</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (3)" alt="Dr. G. Scott Warner" class="doctor-photo">
-                      <h3>Dr. G. Scott Warner</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-      if ((state === 'Alaska' && (zipcode === '99503' || zipcode === '99654'|| zipcode === ''))||((zipcode === '99503' || zipcode === '99654') && state === '')) {
-        if (zipcode === '99503' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Anchorage Sleep Center</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/VquDm4caa351YKPy9" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>510 W. Tudor Road, Suite 5<br>Anchorage, AK 99503</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:+12369003332" class="call-button">Call (236) 900-3332</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src=assets/img/doctors/download (5)" alt="Dr. Paul Raymond" class="doctor-photo">
-                            <h3>Dr. Paul Raymond</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '99654' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">ENT Specialists of Alaska</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/FEczxpFZgPfJCyrY9" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3750 E Country Field Circle, Ste B<br>Wasilla, AK 99654</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:3528553991" class="call-button">Call (352) 855-3991</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (6)" alt="Dr. Kevin Jensen" class="doctor-photo">
-                      <h3>Dr. Kevin Jensen</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Arizona' && (zipcode === '85306' || zipcode === '85297'|| zipcode === ''))||((zipcode === '85306' || zipcode === '85297') && state === '')) {
-        if (zipcode === '85306' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">AOC Physicians Group, Glendale</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/UP2yANLAorf63bW19" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>5750 W Thunderbird Rd, Ste A-100<br>Glendale, AZ 85306</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:6028549112" class="call-button">Call (602) 854-9112</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (7)" alt="Dr. Chetan Gujrathi" class="doctor-photo">
-                            <h3>Dr. Chetan Gujrathi</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '85297' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Arizona Advanced Surgery</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/92aGhx4Vi4c2frgy7" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3367 Mercy Rd, Suite 210<br>Gilbert, AZ 85297</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:4806133016" class="call-button">Call (480) 613-3016</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (9)" alt="Dr. Sumeet Kadakia" class="doctor-photo">
-                      <h3>Dr. Sumeet Kadakia</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Arkansas' && (zipcode === '72205' || zipcode === '71913'|| zipcode === ''))||((zipcode === '72205' || zipcode === '71913') && state === '')) {
-        if (zipcode === '72205' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Baptist Health UAMS Ear Nose and Throat</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/EbpwFcQJ3CAmUfJr5" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>9800 Baptist Health Dr., Suite 400<br>Little Rock, AR 72205</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:5018427143" class="call-button">Call (501) 842-7143</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (10)" alt="Dr. Anvesh Kompelli" class="doctor-photo">
-                            <h3>Dr. Anvesh Kompelli</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '71913' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">CHI St. Vincent ENT Clinic - Hot Springs</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/qoZv8ez3DxGbsXRN8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1 Mercy Lane, Suite 106<br>Hot Springs, AR 71913</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:5012009754" class="call-button">Call (501) 200-9754</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (11)" alt="Dr. Mariah O'Sullivan" class="doctor-photo">
-                      <h3>Dr. Mariah O'Sullivan</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'California' && (zipcode === '93309' || zipcode === '94598'|| zipcode === ''))||((zipcode === '93309' || zipcode === '94598') && state === '')) {
-        if (zipcode === '93309' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Bakersfield Sinus Center</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/DD8brCv5sK3QFYAi9" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>4100 Empire Drive, Suite 120<br>Bakersfield, CA 93309</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:6617277809" class="call-button">Call (661) 727-7809</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (12)" alt="Dr. Satish Vadapalli" class="doctor-photo">
-                            <h3>Dr. Satish Vadapalli</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '94598' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">BASS Medical Group Walnut Creek</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/kgocEwLs3rtRscjj7" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>2161 Ygnacio Valley Road, Suite 100<br>HWalnut Creek, CA 94598</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:9252320520" class="call-button">Call (925) 232-0520</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (13)" alt="Dr. Julian Zaka" class="doctor-photo">
-                      <h3>Dr. Julian Zaka</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Colorado' && (zipcode === '81505' || zipcode === '80634'|| zipcode === ''))||((zipcode === '81505' || zipcode === '80634') && state === '')) {
-        if (zipcode === '81505' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Advanced Pulmonary & Critical Care of the Grand Valley</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/ZWuXwsbwgLamHWzp8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>2351 G Road<br>Grand Junction, CO 81505</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:9705140429" class="call-button">Call (970) 514-0429</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (14)" alt="Dr. Omar Mctabi" class="doctor-photo">
-                            <h3>Dr. Omar Mctabi</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '80634' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Alpine ENT - Greeley</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/YsArc2tidtwa1ihy5" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>6500 West 29th St, Unit 106<br>Greeley, CO 80634</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:9704997869" class="call-button">Call (970) 499-7869</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (15)" alt="Dr. Eric Mason" class="doctor-photo">
-                      <h3>Dr. Eric Mason</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Connecticut' && (zipcode === '06082' || zipcode === '06489'|| zipcode === ''))||((zipcode === '06082' || zipcode === '06489') && state === '')) {
-        if (zipcode === '06082' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Connecticut Ear Nose and Throat Associates, Enfield</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/vVS7XjbHaNzhdLfi7" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>15 Palomba Drive, Suite 12<br>Enfield, CT 06082</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:8603858404" class="call-button">Call (860) 385-8404</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (16)" alt="Dr. Timothy O'Brien" class="doctor-photo">
-                            <h3>Dr. Timothy O'Brien</h3>
-                          </div>
-                          <br>
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (17)" alt="Dr. Kyle Chambers" class="doctor-photo">
-                            <h3>Dr. Kyle Chambers</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '06489' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Connecticut Ear, Nose & Throat Associates - Southington</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/3V2EtNQuTxkJ7YDT6" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>300 Queen Street<br>Southington, CT 06489</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:8608463953" class="call-button">Call (860) 846-3953</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (18)" alt="Dr. Carl Moeller" class="doctor-photo">
-                      <h3>Dr. Carl Moeller</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Delaware' && (zipcode === '19713' || zipcode === '19805'|| zipcode === ''))||((zipcode === '19713' || zipcode === '19805') && state === '')) {
-        if (zipcode === '19713' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">ChristianaCare Sleep Wellness Center</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/Pybuoj2bHbGtyayeA" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>4735 Ogletown Stanton Rd, #2210<br>Newark, DE 19713</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:3024396868" class="call-button">Call (302) 439-6868</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (19)" alt="Dr. Irene Swift" class="doctor-photo">
-                            <h3>Dr. Irene Swift</h3>
-                          </div>
-                          <br>
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (20)" alt="Dr. Shilpa Kauta" class="doctor-photo">
-                            <h3>Dr. Shilpa Kauta</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '19805' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">ENT & Allergy of Delaware - Greenville</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/ogBDFQc5smoho4CD8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1011 Centre Road, Suite 200<br>Wilmington, DE 19805</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:3023034084" class="call-button">Call (302) 303-4084</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (21)" alt="Dr. Lauren Bogdan" class="doctor-photo">
-                      <h3>Dr. Lauren Bogdan</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'District Of Columbia' && (zipcode === '20016' || zipcode === '20007'|| zipcode === ''))||((zipcode === '20016' || zipcode === '20007') && state === '')) {
-        if (zipcode === '20016' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Chevy Chase Pulmonary Associates</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/JcmDirjo5fcgJmfz8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>5215 Loughboro Road NW, Suite 400<br>Washington, DC 20016</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:3016913574" class="call-button">Call (301) 691-3574</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (22)" alt="Dr. Juan Abril" class="doctor-photo">
-                            <h3>Dr. Juan Abril</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '20007' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">MedStar Health - Georgetown Sleep</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/cJk36KQmLFDRYigu5" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>3800 Reservoir Rd NW, Main Building <br>5th Floor<br>Washington, DC 20007</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:2029468414" class="call-button">Call (202) 946-8414</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (23)" alt="Dr. Cristina Reichner" class="doctor-photo">
-                      <h3>Dr. Cristina Reichner</h3>
-                    </div>
-                    <br>
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (24)" alt="Dr. Dina KiaNoury" class="doctor-photo">
-                      <h3>Dr. Dina KiaNoury</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Florida' && (zipcode === '32117' || zipcode === '33543'|| zipcode === ''))||((zipcode === '32117' || zipcode === '33543') && state === '')) {
-        if (zipcode === '32117' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Advanced Sleep and Respiratory Institute</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/ZTDNCk9ojRPtGTXA8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>305 Memorial Parkway, Suite 501<br>Daytona Beach, FL 32117</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:3862703487" class="call-button">Call (386) 270-3487</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (25)" alt="Dr. Dany Obeid" class="doctor-photo">
-                            <h3>Dr. Dany Obeid</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '33543' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">AdventHealth Pulmonology & Critical Care, Wesley Chapel</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/1dTnGkkfYhkcLH9T8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>2700 Healing Way, Suite 112<br>Wesley Chapel, FL 33543</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:8135483650" class="call-button">Call (813) 548-3650</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (26)" alt="Dr. Daniella Goldenberg" class="doctor-photo">
-                      <h3>Dr. Daniella Goldenberg</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Georgia' && (zipcode === '30701' || zipcode === '31721'|| zipcode === ''))||((zipcode === '30701' || zipcode === '31721') && state === '')) {
-        if (zipcode === '30701' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Advent Health Gordon ENT</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/ZLoKnW4zRF6qA7ZEA" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1035 Red Bud Rd<br>Calhoun, GA 30701</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:7062875104" class="call-button">Call (706) 287-5104</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (27)" alt="Dr. Sally Smalley" class="doctor-photo">
-                            <h3>Dr. Sally Smalley</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '31721' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Albany ENT</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/1dTnGkkfYhkcLH9T8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>605 Pointe North Blvd<br>Albany, GA 31721</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:2296581010" class="call-button">Call (229) 658-1010</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (28)" alt="Dr. Chris Mann" class="doctor-photo">
-                      <h3>Dr. Chris Mann</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Hawaii' && (zipcode === '96817' || zipcode === '96813'|| zipcode === ''))||((zipcode === '96817' || zipcode === '96813') && state === '')) {
-        if (zipcode === '96817' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Hawaii Pacific Neuroscience</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/H56KXVpdkwWU5FPh6" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>2230 Liliha St #104, St. Francis Liliha,<br>Sullivan Wing<br>Honolulu, HI 96817</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:8087467060" class="call-button">Call (808) 746-7060</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (29)" alt="Dr. Nicholas Anderson" class="doctor-photo">
-                            <h3>Dr. Nicholas Anderson</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '96813' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Straub Lung Center</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/tQYw1UiiwQnC68ia6" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>888 S King St, Strode Building<br>Honolulu, HI 96813</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:8084931547" class="call-button">Call (808) 493-1547</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (30)" alt="Czamira "Maya" Nordstrom, NP" class="doctor-photo">
-                      <h3>Czamira "Maya" Nordstrom, NP</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Idaho' && (zipcode === '83201' || zipcode === '83301'|| zipcode === ''))||((zipcode === '83201' || zipcode === '83301') && state === '')) {
-        if (zipcode === '83201' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Bingham Healthcare Specialty Clinic</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/bN9yaJiogNjntixbA" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1151 Hospital Way, Bldg. D<br>Pocatello, ID 83201</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:9862101468" class="call-button">Call (986) 210-1468</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (31)" alt="Dr. Lauren Anderson" class="doctor-photo">
-                            <h3>Dr. Lauren Anderson</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '83301' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Gem State ENT</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/obMG3JGSiqDcinja9" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>2102 Canyon Plaza Dr<br>Twin Falls, ID 83301</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:2088455866" class="call-button">Call (208) 845-5866</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (32)" alt="Dr. Russell Mayes" class="doctor-photo">
-                      <h3>Dr. Russell Mayes</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Illinois' && (zipcode === '60010' || zipcode === '60123'|| zipcode === ''))||((zipcode === '60010' || zipcode === '60123') && state === '')) {
-        if (zipcode === '60010' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Advocate Good Shepherd Sleep Center</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/n4SdMhfn5qkfpR6x7" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>27790 W. Highway 22<br>Barrington, IL 60010</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:7085402949" class="call-button">Call (708) 540-2949</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (33)" alt="Brenna Molik, APN" class="doctor-photo">
-                            <h3>Brenna Molik, APN</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '60123' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Advocate Medical Group - Pulmonary Sleep Elgin</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/1G8xkVK8hGLRrxgL6" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1710 North Randall Road<br>Elgin, IL 60123</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:8475123856" class="call-button">Call (847) 512-3856</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (34)" alt="Dr. Ashby Jordan" class="doctor-photo">
-                      <h3>Dr. Ashby Jordan</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Indiana' && (zipcode === '47714' || zipcode === '47150'|| zipcode === ''))||((zipcode === '47714' || zipcode === '47150') && state === '')) {
-        if (zipcode === '47714' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Ascension Medical Group Sleep</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/gxWEp6Motxunns7b7" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>901 St. Marys Drive, Suite 200<br>Evansville, IN 47714</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:8124154169" class="call-button">Call (812) 415-4169</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (35)" alt="Amy Hancock" class="doctor-photo">
-                            <h3>Amy Hancock</h3>
-                          </div>
-                          <br>
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (36)" alt="Jill Hurley" class="doctor-photo">
-                            <h3>Jill Hurley</h3>
-                          </div>
-                          <br>
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (37)" alt="Dr. John Rodrigues" class="doctor-photo">
-                            <h3>Dr. John Rodrigues</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '47150' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Baptist Health Floyd Sleep Center</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/qepVe8vgcy8CjSRM8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1919 State Street, 3rd Floor<br>New Albany, IN 47150</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:8124584018" class="call-button">Call (812) 458-4018</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (38)" alt="Dr. Juhee Mian" class="doctor-photo">
-                      <h3>Dr. Ashby Jordan</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Iowa' && (zipcode === '52655' || zipcode === '51555'|| zipcode === ''))||((zipcode === '52655' || zipcode === '51555') && state === '')) {
-        if (zipcode === '52655' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Burlington Neurology and Sleep Clinic</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/FXShKDguMYbg49X26" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1225 South Gear Avenue, Mercy Plaza<br>Suite 153<br>West Burlington, IA 52655</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:3197278503" class="call-button">Call (319) 727-8503</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (39)" alt="Dr. Anil Dhuna" class="doctor-photo">
-                            <h3>Dr. Anil Dhuna</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '51555' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">CHI Health Missouri Valley Clinic - Ear, Nose, Throat and Audiology</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/qepVe8vgcy8CjSRM8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>631 North 8th St.<br>Missouri Valley, IA 51555</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:4027519928" class="call-button">Call (402) 751-9928</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (40)" alt="Dr. Adam Pleas" class="doctor-photo">
-                      <h3>Dr. Adam Pleas</h3>
-                    </div>
-                    <br>
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (41)" alt="Dr. Daniel O'Brien" class="doctor-photo">
-                      <h3>Dr. Daniel O'Brien</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Kansas' && (zipcode === '67206' || zipcode === '67502'|| zipcode === ''))||((zipcode === '67206' || zipcode === '67502') && state === '')) {
-        if (zipcode === '67206' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Ascension Via Christi - ENT Clinic</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/AM3KdCcEnumds9hE6" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1947 North Founders Circle<br>Suite 153<br>Wichita, KS 67206</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:3165318927" class="call-button">Call (316) 531-8927</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (42)" alt="Dr. Randall Regehr" class="doctor-photo">
-                            <h3>Dr. Randall Regehr</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '67502' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Hutchinson Pulmonology Associates</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/fWQSPDKQGR8Uft9i9" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1701 E. 23rd Ave.<br>Hutchinson, KS 67502</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:6203048131" class="call-button">Call (620) 304-8131</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (43)" alt="Dr. Mohammed Al-Halawani" class="doctor-photo">
-                      <h3>Dr. Mohammed Al-Halawani</h3>
-                    </div>
-                    <br>
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (44)" alt="Jorge Simental, APRN" class="doctor-photo">
-                      <h3>Jorge Simental, APRN</h3>
-                    </div>
-                    <br>
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (45)" alt="Nicole Bade, APRN" class="doctor-photo">
-                      <h3>Nicole Bade, APRN</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Kentucky' && (zipcode === '42431' || zipcode === '40031'|| zipcode === ''))||((zipcode === '42431' || zipcode === '40031') && state === '')) {
-        if (zipcode === '42431' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Baptist Health Deaconess Medical Group Sleep Medicine</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/TtPzsLpcdD7D4KrL8" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>900 Hospital Drive<br>Madisonville, KY 42431</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:2703837903" class="call-button">Call (270) 383-7903</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (46)" alt="Sydney Caron" class="doctor-photo">
-                            <h3>Sydney Caron</h3>
-                          </div>
-                          <br>
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (47)" alt="Ashleigh Hickerson" class="doctor-photo">
-                            <h3>Ashleigh Hickerson</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '40031' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Baptist Health LaGrange Sleep Center</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/Um567yWp9yty1VG27" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>1025 New Moody Lane<br>La Grange, KY 40031</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:5022891531" class="call-button">Call (502) 289-1531</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (48)" alt="Dr. Subin Jain" class="doctor-photo">
-                      <h3>Dr. Subin Jain</h3>
-                    </div>
-                    <br>
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (49)" alt="Anna Zelichenok" class="doctor-photo">
-                      <h3>Anna Zelichenok</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Louisiana' && (zipcode === '70433' || zipcode === '71105'|| zipcode === ''))||((zipcode === '70433' || zipcode === '71105') && state === '')) {
-        if (zipcode === '70433' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">ENT & Plastic Surgery Specialists of Louisiana</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/rJtwXaZTLxeoiYQ89" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>350 Lakeview Ct, Suite A<br>Covington, LA 70433</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:9854743452" class="call-button">Call (985) 474-3452</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (50)" alt="Dr. Britton Beatrous" class="doctor-photo">
-                            <h3>Dr. Britton Beatrous</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '71105' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Sleep Care Clinic</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/6qTfe4Q3gXmr7Ysx6" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>7600 Fern Ave, Ste 700<br>Shreveport, LA 71105</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:3182178698" class="call-button">Call (318) 217-8698</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (51)" alt="Dr. Samreena Sara" class="doctor-photo">
-                      <h3>Dr. Samreena Sara</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Maine' && (zipcode === '03904' || zipcode === '04401'|| zipcode === ''))||((zipcode === '03904' || zipcode === '04401') && state === '')) {
-        if (zipcode === '03904' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Family Ear, Nose and Throat, LLC</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/rJtwXaZTLxeoiYQ89" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>35 Walker Street, Suite 200<br>Kittery, ME 03904</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:2072306305" class="call-button">Call (207) 230-6305</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (52)" alt="Dr. Taraneh Azar" class="doctor-photo">
-                            <h3>Dr. Taraneh Azar</h3>
-                          </div>
-                          <br>
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (53)" alt="Dr. Christopher Sarno" class="doctor-photo">
-                            <h3>Dr. Christopher Sarno</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '04401' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Northern Light Eastern Maine Medical Center</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/rYyLV7u67x2ZGWE68" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>885 Union St, Suite 145<br>Bangor, ME 04401</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:2079025635" class="call-button">Call (207) 902-5635</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (54)" alt="Dr. Mark Szewczyk" class="doctor-photo">
-                      <h3>Dr. Mark Szewczyk</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Maryland' && (zipcode === '21401' || zipcode === '21237'|| zipcode === ''))||((zipcode === '21401' || zipcode === '21237') && state === '')) {
-        if (zipcode === '21401' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Annapolis Asthma Pulmonary & Sleep Specialists</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/sU4EvRfF8pN7jaTG7" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>116 Defense Hwy, Suite 500<br>Annapolis, MD 21401</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:4439935048" class="call-button">Call (443) 993-5048</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (55)" alt="Dr. Ira Weinstein" class="doctor-photo">
-                            <h3>Dr. Ira Weinstein</h3>
-                          </div>
-                          <br>
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (56)" alt="Dr. Steven Resnick" class="doctor-photo">
-                            <h3>Dr. Steven Resnick</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '21237' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Baltimore Sleep and Wellness Center</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/BHWy1MARv7NNYghZ7" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>6830 Hospital Dr.<br>Baltimore, MD 21237</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:4103768547" class="call-button">Call (410) 376-8547</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (57)" alt="Dr. Kiumarce Kashi" class="doctor-photo">
-                      <h3>Dr. Kiumarce Kashi</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-
-      if ((state === 'Massachusetts' && (zipcode === '02026' || zipcode === '01803'|| zipcode === ''))||((zipcode === '02026' || zipcode === '01803') && state === '')) {
-        if (zipcode === '02026' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-                    <br>
-                    <div class="clinic-name" style="padding-left: 10px">Atrius Health - Dedham Medical Associates</div>
-                    <div class="clinic-card">
-                        <div class="clinic-info">
-                            <p><a href="https://maps.app.goo.gl/dsVRE1rUekjcyd7r7" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>One Lyons St<br>Dedham, MA 02026</p>
-                        </div>
-                        <div class="clinic-appointment">
-                            <h3>Request an Appointment</h3>
-                            <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                            <a href="tel:8572400982" class="call-button">Call (857) 240-0982</a><br>
-                            <a href="#" class="request-link">Request a call</a>
-                        </div>
-                        <div class="clinic-doctor">
-                          <div class="clinic-doctor2">
-                            <img src="assets/img/doctors/download (58)" alt="Dr. Steven Micucci" class="doctor-photo">
-                            <h3>Dr. Steven Micucci</h3>
-                          </div>
-                        </div>
-                    </div>
-                </div>`;
-        }
-        if (zipcode === '01803' || zipcode === '') {
-          result += `
-          <div class="clinic-title">
-              <br>
-              <div class="clinic-name" style="padding-left: 10px">Atrius Health - Harvard Vanguard Burlington</div>
-              <div class="clinic-card">
-                  <div class="clinic-info">
-                      <p><a href="https://maps.app.goo.gl/BHWy1MARv7NNYghZ7" target="_blank">Address <i style='font-size:18px' class='fas'>&#xf061;</i></a><br>20 Wall Street<br>Burlington, MA 01803</p>
-                  </div>
-                  <div class="clinic-appointment">
-                      <h3>Request an Appointment</h3>
-                      <p>An <strong>Inspire Advisor</strong> will answer and assist you</p>
-                      <a href="tel:8573757013" class="call-button">Call (857) 375-7013</a><br>
-                      <a href="#" class="request-link">Request a call</a>
-                  </div>
-                  <div class="clinic-doctor">
-                    <div class="clinic-doctor2">
-                      <img src="assets/img/doctors/download (58)" alt="Dr. Steven Micucci" class="doctor-photo">
-                      <h3>Dr. Steven Micucci</h3>
-                    </div>
-                  </div>
-              </div>
-          </div>`;
-        }
-      }
-      
-      if (result === '') {
-      result = '<div class="no-records">No records found for the selected state or ZIP code.</div>';
-      }
-
-      document.getElementById('result').innerHTML = result;
-      });
-      </script>
-
-    </div>
+      </div>
     <br>
 
   </main>
