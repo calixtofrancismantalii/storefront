@@ -4373,7 +4373,7 @@ form h3 {
 #tablehead th:nth-child(5), #tableBody td:nth-child(5) { width: 150px; }
 
 th {
-  background-color: #003049;
+  background-color: #1977cc;
   color: white;
 }
 #tableBody tr:nth-child(even) {
@@ -4389,7 +4389,7 @@ th {
 }
 
 .page button.active {
-  background-color: #003049;
+  background-color: #DC4F4B;
   color: white;
   font-weight: bold;
 }
