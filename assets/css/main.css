@@ -4370,7 +4370,6 @@ form h3 {
 #tablehead th:nth-child(2), #tableBody td:nth-child(2) { width: 150px; }
 #tablehead th:nth-child(3), #tableBody td:nth-child(3) { width: 100px; }
 #tablehead th:nth-child(4), #tableBody td:nth-child(4) { width: 200px; }
-#tablehead th:nth-child(5), #tableBody td:nth-child(5) { width: 150px; }
 
 th {
   background-color: #1977cc;
