@@ -35,12 +35,6 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-
-  <style>
-    label, input, select { margin: 5px 0; }
-    /* button { margin-top: 10px; padding: 5px 15px; } */
-    
-  </style>
 </head>
 
 <body class="index-page">
@@ -50,1679 +44,179 @@
   <special-header></special-headers>
 
   <main class="main">
-      <br>
-      <div class="container geo-map">
-        <div id="map"></div>
-        <script>
-          function initMap() {
-            // First location: Huntsville, AL
-            var location1 = { lat: 34.7074, lng: -86.6314 };
-            // Second location: Cullman, AL
-            var location2 = { lat: 34.2226, lng: -86.8244 };
-            // Third location: Anchorage, AK
-            var location3 = { lat: 61.1826, lng: -149.8916 };
-            // Fourth location: Wasilla, AK
-            var location4 = { lat: 61.5814, lng: -149.4374 };
-            // Fifth location: Glendale, AZ
-            var location5 = { lat: 33.6082, lng: -112.1844 };
-            // Sixth location: Gilbert, AZ
-            var location6 = { lat: 33.2804, lng: -111.7437 };
-
-            // Create the map, centered approximately between the locations
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: { lat: 40.0, lng: -120.0 } // Midpoint between the locations
-            });
-
-            // Marker for Huntsville, AL
-            var marker1 = new google.maps.Marker({
-                position: location1,
-                map: map,
-                title: "333 Whitesport Dr., Suite 205, Huntsville, AL 35801"
-            });
-
-            // Marker for Cullman, AL
-            var marker2 = new google.maps.Marker({
-                position: location2,
-                map: map,
-                title: "1803 Park View Drive NE, Cullman, AL 35058"
-            });
-
-            // Marker for Anchorage, AK
-            var marker3 = new google.maps.Marker({
-                position: location3,
-                map: map,
-                title: "510 W. Tudor Road, Suite 5, Anchorage, AK 99503"
-            });
-
-            // Marker for Wasilla, AK
-            var marker4 = new google.maps.Marker({
-                position: location4,
-                map: map,
-                title: "3750 E Country Field Circle, Ste B, Wasilla, AK 99654"
-            });
-
-            // Marker for Glendale, AZ
-            var marker5 = new google.maps.Marker({
-                position: location5,
-                map: map,
-                title: "5750 W Thunderbird Rd, Ste A-100, Glendale, AZ 85306"
-            });
-
-            // Marker for Gilbert, AZ
-            var marker6 = new google.maps.Marker({
-                position: location6,
-                map: map,
-                title: "3367 Mercy Rd, Suite 210, Gilbert, AZ 85297"
-            });
-          }
-        </script>
-        <!-- <script async defer
-            src="https://maps.gomaps.pro/maps/api/js?key=AlzaSy8jnD3lJ_rKEFLzsZTPI1oJvX5RhpW34Ta&callback=initMap">
-        </script> -->
-        <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChM09gbI9F32wneHEA2vMpW3wuecNmV7Y&callback=initMap">
-        </script>
-        <br>
-        <div class="container">
-          <h3 class="certified">Certified Providers</h3>
-          <div class="filters">
-            <input type="text" id="stateFilter" placeholder="Search by state (e.g., Michigan, Texas)...">
-            <input type="text" id="specialtyFilter" placeholder="Search by specialty (e.g., Pulmonology)...">
-          </div>
-          
-          <div style="overflow-x: auto;">
-            <table id="physicianTable">
-              <thead id="tablehead">
-                <tr>
-                  <th>State</th>
-                  <th>City</th>
-                  <th>Specialty</th>
-                  <th>Name</th>
-                </tr>
-              </thead>
-              <tbody id="tableBody">
-                <tr>
-                  <td>Texas</td>
-                  <td>Irving</td>
-                  <td>Neurology & Sleep</td>
-                  <td>Henry Raroque, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Texas</td>
-                  <td>Houston</td>
-                  <td>Pulmonology</td>
-                  <td>Tehmina A. Badar, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Texas</td>
-                  <td>San Antonio</td>
-                  <td>Internal Medicine</td>
-                  <td>Delano Soriano Fabro Jr., D.O.</td>
-                </tr>
-                <tr>
-                  <td>Texas</td>
-                  <td>Houston</td>
-                  <td>Pulmonology</td>
-                  <td>Ahmed A. Fadil, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Texas</td>
-                  <td>Kingwood</td>
-                  <td>Pulmonology</td>
-                  <td>Alexander L. Tiu, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Texas</td>
-                  <td>The Woodlands</td>
-                  <td>Neurology</td>
-                  <td>Kevin Clifford Gaffney, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Texas</td>
-                  <td>San Antonio</td>
-                  <td>Pulmonology</td>
-                  <td>Stephen Seonbin Im, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Texas</td>
-                  <td>San Antonio</td>
-                  <td>Clinical Psychology</td>
-                  <td>Paul T. Ingmundson, Ph.D.</td>
-                </tr>
-                <tr>
-                  <td>Texas</td>
-                  <td>Dallas</td>
-                  <td>Pulmonology</td>
-                  <td>Vivek A. Padegal, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Texas</td>
-                  <td>Dallas</td>
-                  <td>Family Medicine</td>
-                  <td>Jessela D. Tan, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Texas</td>
-                  <td>Webster</td>
-                  <td>Pulmonology</td>
-                  <td>Kenneth M. Unger, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Texas</td>
-                  <td>San Antonio</td>
-                  <td>Pulmonology</td>
-                  <td>Michael Wesley Van de Kieft, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Texas</td>
-                  <td>San Antonio</td>
-                  <td>Neurology</td>
-                  <td>Yanko A. Yankov, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Arizona</td>
-                  <td>Tuscon</td>
-                  <td>Pulmonology</td>
-                  <td>Robert Mark Aaronson, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Maryland</td>
-                  <td>Elkton</td>
-                  <td>Pulmonology</td>
-                  <td>Joshua N. Aaron, M.D.</td>
-                </tr>
-                <tr>
-                  <td>California</td>
-                  <td>Los Altos</td>
-                  <td>Neurology</td>
-                  <td>Vivien Cynthia Abad, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Michigan</td>
-                  <td>Okemos</td>
-                  <td>Pulmonology</td>
-                  <td>Arshad A. Abbasi, M.D.</td>
-                </tr>
-                <tr>
-                  <td>North Carolina</td>
-                  <td>Gastonia</td>
-                  <td>Neurology</td>
-                  <td>Fariha Abbasi-Feinberg, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New Jersey</td>
-                  <td>Kinnelon</td>
-                  <td>Pulmonology</td>
-                  <td>Nail S. Abdel Fatah, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Indiana</td>
-                  <td>Martinsville</td>
-                  <td>Pulmonology</td>
-                  <td>Asem Abdeljalil Abdeljalil, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Michigan</td>
-                  <td>Hillsdale</td>
-                  <td>Pulmonology</td>
-                  <td>Tariq Hasan Abdelkarim, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Michigan</td>
-                  <td>Farmington Hills</td>
-                  <td>Pediatric Pulmonology</td>
-                  <td>Ibrahim Farag Abdulhamid, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Michigan</td>
-                  <td>West Bloomfield</td>
-                  <td>Neurology</td>
-                  <td>Mamdouh Abdulrazzak, M.D.</td>
-                </tr>
-                <tr>
-                  <td>North Carolina</td>
-                  <td>Raonoke Rapids</td>
-                  <td>Pulmonology</td>
-                  <td>Walid A. Baaklini, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Mississippi</td>
-                  <td>Ocean Springs</td>
-                  <td>Pulmonology</td>
-                  <td>Sardar Ijlal Babar, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Minnesota</td>
-                  <td>Duluth</td>
-                  <td>Pulmonology</td>
-                  <td>Vance Daniel Bachelder, M.D.</td>
-                </tr>
-                <tr>
-                  <td>South Carolina</td>
-                  <td>Charleston</td>
-                  <td>Neurology</td>
-                  <td>David L. Bachman, M.D.</td>
-                </tr>
-                <tr>
-                  <td>South Dakota</td>
-                  <td>Sioux City</td>
-                  <td>Pulmonology</td>
-                  <td>Ross N. Bacon, M.D.</td>
-                </tr>
-                <tr>
-                  <td>West Virginia</td>
-                  <td>Huntington</td>
-                  <td>Pulmonology</td>
-                  <td>Shadi Badin, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Michigan</td>
-                  <td>Detroit</td>
-                  <td>Pulmonology</td>
-                  <td>M. Safwan Badr, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Ohio</td>
-                  <td>University Heights</td>
-                  <td>Neurology</td>
-                  <td>Charles Joonghie Bae, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Illinois</td>
-                  <td>Woodridge</td>
-                  <td>Clinical Psychology</td>
-                  <td>Erin Kathleen Baehr, Ph.D.</td>
-                </tr>
-                <tr>
-                  <td>Pennsylvania</td>
-                  <td>Pottsville</td>
-                  <td>Pulmonology</td>
-                  <td>Joseph A. Cable, D.O.</td>
-                </tr>
-                <tr>
-                  <td>Israel</td>
-                  <td>Jerusalem</td>
-                  <td>Pulmonology</td>
-                  <td>Clement Cahan, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Ohio</td>
-                  <td>Toledo</td>
-                  <td>Neurology</td>
-                  <td>E. Tomas Calderon, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Alabama</td>
-                  <td>Fort Rucker</td>
-                  <td>Psychology</td>
-                  <td>J. Lynn Caldwell, Ph.D.</td>
-                </tr>
-                <tr>
-                  <td>Virginia</td>
-                  <td>Harrisonburg</td>
-                  <td>Pulmonology</td>
-                  <td>William F. Cale, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Georgia</td>
-                  <td>Alpharetta</td>
-                  <td>Pulmonology</td>
-                  <td>Daniel Francis Callahan, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Hawaii</td>
-                  <td>Honolulu</td>
-                  <td>Pulmonology</td>
-                  <td>John P. Callan, M.D.</td>
-                </tr>                
-                <tr>
-                  <td>Portage</td>
-                  <td>Michigan</td>
-                  <td>Pulmonology</td>
-                  <td>Sue Killion Cammarata, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Norman</td>
-                  <td>Oklahoma</td>
-                  <td>Pulmonology</td>
-                  <td>Mark A. Camp, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Wychoff</td>
-                  <td>New Jersey</td>
-                  <td>Pulmonology</td>
-                  <td>Lisa M. Cannon, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Columbia</td>
-                  <td>Missouri</td>
-                  <td>Pulmonology</td>
-                  <td>Ousama Dabbagh, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Elyria</td>
-                  <td>Ohio</td>
-                  <td>Pulmonology</td>
-                  <td>Harinathrao R. Dacha, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Kalamazoo</td>
-                  <td>Michigan</td>
-                  <td>Neurology</td>
-                  <td>Rajesh D. Dagli, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Metairie</td>
-                  <td>Louisiana</td>
-                  <td>Pulmonology</td>
-                  <td>Houman Dahi, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Pittsburgh</td>
-                  <td>Pennsylvania</td>
-                  <td>Pediatrics/Psychiatry</td>
-                  <td>Ronald E. Dahl, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Silver Spring</td>
-                  <td>Maryland</td>
-                  <td>Pulmonology</td>
-                  <td>Manojpal S. Dahuja, M.D.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Pulmonology</td>
-                  <td>Firas Dairi, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Richmond Hill</td>
-                  <td>Ontario</td>
-                  <td>Family Medicine</td>
-                  <td>Jeff M. Daiter, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Bowie</td>
-                  <td>Maryland</td>
-                  <td>Pulmonology</td>
-                  <td>Riad Dakheel, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Lexington</td>
-                  <td>Kentucky</td>
-                  <td>Pulmonology</td>
-                  <td>Wheeler John Dale, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Middleburg Heights</td>
-                  <td>Ohio</td>
-                  <td>Pulmonology</td>
-                  <td>Babu M. Eapen, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Baltimore</td>
-                  <td>Maryland</td>
-                  <td>Neurology</td>
-                  <td>Christopher J. Earley, M.D., Ph.D.</td>
-                </tr>
-                <tr>
-                  <td>Eagle</td>
-                  <td>Idaho</td>
-                  <td>Pulmonology</td>
-                  <td>Norman John East, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Calgary</td>
-                  <td>Alberta</td>
-                  <td>Pulmonology</td>
-                  <td>Paul A. Easton, M.D.</td>
-                </tr>
-                <tr>
-                  <td>St. Louis</td>
-                  <td>Missouri</td>
-                  <td>Pulmonology</td>
-                  <td>Royal J. Eaton, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Forest Hills</td>
-                  <td>New York</td>
-                  <td>Psychology</td>
-                  <td>Matthew Richard Ebben, Ph.D.</td>
-                </tr>
-                <tr>
-                  <td>Pikeville</td>
-                  <td>Kentucky</td>
-                  <td>Pulmonology</td>
-                  <td>Celso Taburnal Ebeo, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Alexandria</td>
-                  <td>Virginia</td>
-                  <td>Neurology</td>
-                  <td>Lewis B. Eberly, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Colts Neck</td>
-                  <td>New Jersey</td>
-                  <td>Pulmonology</td>
-                  <td>Srinivasa Edara, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td>Beirut</td>
-                  <td>Lebanon</td>
-                  <td>Pulmonology</td>
-                  <td>Pierre Y. Khoury Edde, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Harvey</td>
-                  <td>Illinois</td>
-                  <td>Neurology</td>
-                  <td>Kevin J. Fagan, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Brooklyn</td>
-                  <td>New York</td>
-                  <td>Pulmonology</td>
-                  <td>Samir Awadalla Fahmy, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Chicago</td>
-                  <td>Illinois</td>
-                  <td>Pulmonology</td>
-                  <td>Ilja Faibussowitsch, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Billings</td>
-                  <td>Montana</td>
-                  <td>Pulmonology</td>
-                  <td>Walter Raymond Fairfax, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Burbank</td>
-                  <td>California</td>
-                  <td>Neurology</td>
-                  <td>Fawaz A. Faisal, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Ocala</td>
-                  <td>Florida</td>
-                  <td>Pulmonology</td>
-                  <td>Hany N. Falestiny, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Pasadena</td>
-                  <td>California</td>
-                  <td>Pulmonology</td>
-                  <td>Jeremy Abram Falk, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Bedford</td>
-                  <td>New Hampshire</td>
-                  <td>Pulmonology</td>
-                  <td>Gregory C. Fanaras, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Salem</td>
-                  <td>Oregon</td>
-                  <td>Neurology</td>
-                  <td>Mark T. Gabr, M.D.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Pulmonology</td>
-                  <td>James M. Gaither, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Little Rock</td>
-                  <td>Arkansas</td>
-                  <td>Neurology</td>
-                  <td>Robert C. Galbraith, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Milwaukee</td>
-                  <td>Wisconsin</td>
-                  <td>Neurology</td>
-                  <td>Joanna E. Galezowska, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Allentown</td>
-                  <td>Pennsylvania</td>
-                  <td>Pulmonology</td>
-                  <td>John P. Galgon, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Wynnewood</td>
-                  <td>Pennsylvania</td>
-                  <td>Pediatrics</td>
-                  <td>Ralph C. Gallo, M.D.</td>
-                </tr>                
-                <tr>
-                  <td>Maryland</td>
-                  <td>Clarksville</td>
-                  <td>Neurology</td>
-                  <td>Charlene Edie Gamaldo, M.D.</td>
-                </tr>
-                <tr>
-                  <td>California</td>
-                  <td>Eureka</td>
-                  <td>Neurology</td>
-                  <td>John P. Gambin, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Michigan</td>
-                  <td>Livonia</td>
-                  <td>Pulmonology</td>
-                  <td>Michael N. Gamiao, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Oregon</td>
-                  <td>Portland</td>
-                  <td>Pulmonology</td>
-                  <td>Helmut Haas, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Missouri</td>
-                  <td>Washington</td>
-                  <td>Neurology</td>
-                  <td>Jamie Thomas Haas, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Wisconsin</td>
-                  <td>Kenosha</td>
-                  <td>Pulmonology</td>
-                  <td>Alfred M. Habel, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Pennsylvania</td>
-                  <td>Merion Station</td>
-                  <td>Pulmonology</td>
-                  <td>Alan David Haber, M.D.</td>
-                </tr>
-                <tr>
-                  <td>California</td>
-                  <td>Santa Monica</td>
-                  <td>Pulmonology</td>
-                  <td>Paul B. Haberman, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Wisconsin</td>
-                  <td>Fond Du Lac</td>
-                  <td>Pulmonology</td>
-                  <td>Isam Hasan Habib, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Pulmonology</td>
-                  <td>Antoine George Habre, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Ohio</td>
-                  <td>Westlake</td>
-                  <td>Internal Medicine</td>
-                  <td>Basem Haddad, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Indiana</td>
-                  <td>Indianapolis</td>
-                  <td>Pulmonology</td>
-                  <td>Hany W. Haddad, M.D.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Pulmonology</td>
-                  <td>Martha H. Hagaman, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Georgia</td>
-                  <td>Smyrna</td>
-                  <td>Pulmonology</td>
-                  <td>Aristidis Iatridis, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New Jersey</td>
-                  <td>Hackensack</td>
-                  <td>Pulmonology</td>
-                  <td>Ossama Ikladios, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Pennsylvania</td>
-                  <td>DuBois</td>
-                  <td>Pulmonology</td>
-                  <td>Angelo Illuzzi, D.O.</td>
-                </tr>
-                <tr>
-                  <td>Nebraska</td>
-                  <td>Norfolk</td>
-                  <td>Pulmonology</td>
-                  <td>Daniel Vassilev Iltchev, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Pennsylvania</td>
-                  <td>Harrisburg</td>
-                  <td>Pulmonology</td>
-                  <td>Virginia A. Imadojemu, M.D.</td>
-                </tr>
-                <tr>
-                  <td>California</td>
-                  <td>Palo Alto</td>
-                  <td>Neurology</td>
-                  <td>Robert H. Ingham, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Illinois</td>
-                  <td>Rockford</td>
-                  <td>Pulmonology</td>
-                  <td>Theodore S. Ingrassia, III, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New York</td>
-                  <td>Delmar</td>
-                  <td>Pulmonology</td>
-                  <td>Neil H. Inhaber, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Idaho</td>
-                  <td>Pocatello</td>
-                  <td>Pulmonology</td>
-                  <td>Cary V. Jackson, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Mississippi</td>
-                  <td>Saucier</td>
-                  <td>Neurology</td>
-                  <td>Joe A. Jackson, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Hawaii</td>
-                  <td>Lihue, Kauai</td>
-                  <td>Pulmonology</td>
-                  <td>Tad Jackson, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Nevada</td>
-                  <td>Reno</td>
-                  <td>Pulmonology</td>
-                  <td>Michael V. Jackson, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Ohio</td>
-                  <td>Columbus</td>
-                  <td>Psychiatry</td>
-                  <td>Elizabeth Jackson, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Massachusetts</td>
-                  <td>Springfield</td>
-                  <td>Neurology</td>
-                  <td>Anthony H. Jackson, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Quebec</td>
-                  <td>Westmount</td>
-                  <td>Pediatric Pulmonology</td>
-                  <td>Sheila V. Jacob, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Colorado</td>
-                  <td>Berthoud</td>
-                  <td>Neurology</td>
-                  <td>Marianne Bernadette Jacobs, D.O.</td>
-                </tr>
-                <tr>
-                  <td>Illinois</td>
-                  <td>Oak Park</td>
-                  <td>Neurology</td>
-                  <td>John H. Jacobsen, Ph.D., M.D.</td>
-                </tr>
-                <tr>
-                  <td>Tennessee</td>
-                  <td>Morristown</td>
-                  <td>Neurology</td>
-                  <td>Julie Ann Jacques, D.O.</td>
-                </tr>
-                <tr>
-                  <td>New York</td>
-                  <td>Plattsburg</td>
-                  <td>Pulmonology</td>
-                  <td>Sabieli Kabeli, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Indiana</td>
-                  <td>Anderson</td>
-                  <td>Pulmonology</td>
-                  <td>Saiful Kabir, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Tennessee</td>
-                  <td>Jellico</td>
-                  <td>Pulmonology</td>
-                  <td>Humayun M. Kabir, M.B.,B.S.</td>
-                </tr>
-                <tr>
-                  <td>Massachusetts</td>
-                  <td>Needham</td>
-                  <td>Pulmonology</td>
-                  <td>Aran Kadar, M.D., MPH, TM</td>
-                </tr>
-                <tr>
-                  <td>Missouri</td>
-                  <td>Chesterfield</td>
-                  <td>Neurology</td>
-                  <td>Gihan A. Kader, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Tennessee</td>
-                  <td>Chattanooga</td>
-                  <td>Clinical Neurophysiology</td>
-                  <td>Tareck Alec Kadrie, M.D.</td>
-                </tr>
-                <tr>
-                  <td>South Carolina</td>
-                  <td>Summerville</td>
-                  <td>Pulmonology</td>
-                  <td>Thomas D. Kaelin Jr., D.O.</td>
-                </tr>
-                <tr>
-                  <td>Kentucky</td>
-                  <td>Louisville</td>
-                  <td>Internal Medicine</td>
-                  <td>Abdallah Ibrahim Kafrouni, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Michigan</td>
-                  <td>Grand Rapids</td>
-                  <td>Pulmonology</td>
-                  <td>Vadim Kagramanov, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Illinois</td>
-                  <td>Gurnee</td>
-                  <td>Internal Medicine</td>
-                  <td>Mohammad Waseem Kagzi, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td>New Mexico</td>
-                  <td>Dothan</td>
-                  <td>Neurology</td>
-                  <td>Michael J. Labanowski, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Georgia</td>
-                  <td>Atlanta</td>
-                  <td>Neurology</td>
-                  <td>Dennis Michael Lacey, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Kentucky</td>
-                  <td>Louisville</td>
-                  <td>Pulmonology</td>
-                  <td>William O. Lacy, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Ohio</td>
-                  <td>Hudson</td>
-                  <td>Neurology</td>
-                  <td>Robert Arne Lada, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Illinois</td>
-                  <td>Burr Ridge</td>
-                  <td>Pulmonology</td>
-                  <td>Franco Laghi, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Illinois</td>
-                  <td>Chicago</td>
-                  <td>Psychiatry</td>
-                  <td>Henry Lahmeyer, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Louisiana</td>
-                  <td>Baton Rouge</td>
-                  <td>Clinical Psychology</td>
-                  <td>Laura Elaine Lajos, Ph.D.</td>
-                </tr>
-                <tr>
-                  <td>Kansas</td>
-                  <td>Wichita</td>
-                  <td>Pulmonology</td>
-                  <td>Robert C. Lakin, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New Mexico</td>
-                  <td>Santa Fe</td>
-                  <td>Pulmonology</td>
-                  <td>Salvadeeswaran Lakshmi-Narayanan, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td>Maine</td>
-                  <td>Machias</td>
-                  <td>Pulmonology</td>
-                  <td>Chitra Lal, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Florida</td>
-                  <td>Punta Gorda</td>
-                  <td>Pulmonology</td>
-                  <td>Carlos E. Maas Herken, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Michigan</td>
-                  <td>Detroit</td>
-                  <td>Pulmonology</td>
-                  <td>Lawrence L. MacDonald, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Ontario</td>
-                  <td>Toronto</td>
-                  <td>Medical Science</td>
-                  <td>James G. MacFarlane, Ph.D.</td>
-                </tr>
-                <tr>
-                  <td>Michigan</td>
-                  <td>West Branch</td>
-                  <td>Pulmonology</td>
-                  <td>Timothy Donald Macon, D.O.</td>
-                </tr>
-                <tr>
-                  <td>New York</td>
-                  <td>Stony Brook</td>
-                  <td>Psychiatry</td>
-                  <td>Marta Maczaj, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Guam</td>
-                  <td>Tamuning</td>
-                  <td>Pulmonology</td>
-                  <td>Mohammad Hossein Madantschi, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Louisiana</td>
-                  <td>River Ridge</td>
-                  <td>Neurology</td>
-                  <td>Edward Claro Mader, Jr., M.D.</td>
-                </tr>
-                <tr>
-                  <td>Georgia</td>
-                  <td>McDonough</td>
-                  <td>Internal Medicine</td>
-                  <td>Hari Gopal Madichetty, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td>Arizona</td>
-                  <td>Scottsdale</td>
-                  <td>Pulmonology</td>
-                  <td>Susan M. Madison, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New York</td>
-                  <td>Kenmore</td>
-                  <td>Pulmonology</td>
-                  <td>M. Jeffery Mador, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Missouri</td>
-                  <td>Jefferson City</td>
-                  <td>Pulmonology</td>
-                  <td>Gracia Louis Nabhane, M.D.</td>
-                </tr>
-                <tr>
-                  <td>California</td>
-                  <td>San Pablo</td>
-                  <td>Pulmonology</td>
-                  <td>Frederick J. Nachtwey, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New Jersey</td>
-                  <td>Mountain Lakes</td>
-                  <td>Pulmonology</td>
-                  <td>Daya Nadarajah, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Pennsylvania</td>
-                  <td>Johnston</td>
-                  <td>Pulmonology</td>
-                  <td>Rashid Nadeem, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td>New Jersey</td>
-                  <td>Edison</td>
-                  <td>Neurophysiology</td>
-                  <td>Mangala A. Nadkarni, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Illinois</td>
-                  <td>Crystal Lake</td>
-                  <td>Neurology</td>
-                  <td>Benjamin J. Nager, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Vermont</td>
-                  <td>Burlington</td>
-                  <td>Neurology</td>
-                  <td>Keith J. Nagle, M.D.</td>
-                </tr>                
-                <tr>
-                  <td>Illinois</td>
-                  <td>Blue Island</td>
-                  <td>Pulmonology</td>
-                  <td>Anas Nahhas, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New Jersey</td>
-                  <td>Newark</td>
-                  <td>Pulmonology</td>
-                  <td>Jeffrey Nahmias, M.D.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Physiology</td>
-                  <td>Karen H. Naifeh, Ph.D.</td>
-                </tr>
-                <tr>
-                  <td>Virginia</td>
-                  <td>Richmond</td>
-                  <td>Neurology</td>
-                  <td>John M. O'Bannon, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Indiana</td>
-                  <td>Indianapolis</td>
-                  <td>Pulmonology</td>
-                  <td>Michael D. Ober, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Washington</td>
-                  <td>Seattle</td>
-                  <td>Pulmonology</td>
-                  <td>James Kilty O'Brien, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Massachusetts</td>
-                  <td>Milton</td>
-                  <td>Pulmonology</td>
-                  <td>James C. O'Brien, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Colorado</td>
-                  <td>Denver</td>
-                  <td>Pulmonology</td>
-                  <td>Richard F. O'Brien, M.D.</td>
-                </tr>
-                <tr>
-                  <td>North Carolina</td>
-                  <td>Asheville</td>
-                  <td>Pulmonology</td>
-                  <td>Charles F. O'Cain, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New Jersey</td>
-                  <td>Somer's Point</td>
-                  <td>Pulmonology</td>
-                  <td>James J. O'Connor, III, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Washington</td>
-                  <td>Mill Creek</td>
-                  <td>Pulmonology</td>
-                  <td>Timothy David O'Connor, M.D.</td>
-                </tr>
-                <tr>
-                  <td>District of Columbia</td>
-                  <td>Washington</td>
-                  <td>Pulmonology</td>
-                  <td>Anne E. O'Donnell, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Idaho</td>
-                  <td>Boise</td>
-                  <td>Pulmonology</td>
-                  <td>Janat E. O'Donnell, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New York</td>
-                  <td>Gloversville</td>
-                  <td>Otolaryngology</td>
-                  <td>Bradley H. Paddock, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Alabama</td>
-                  <td>Birmingham</td>
-                  <td>Pulmonology</td>
-                  <td>Stuart J. Padove, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Colorado</td>
-                  <td>Pueblo</td>
-                  <td>Family Practice</td>
-                  <td>James F. Pagel, Jr., M.D.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Internal Medicine</td>
-                  <td>Vosudesh Karkala Pai, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New Jersey</td>
-                  <td>Monmouth Jct</td>
-                  <td>Pulmonology</td>
-                  <td>Guhapriya Palaniswamy, M.D.</td>
-                </tr>
-                <tr>
-                  <td>North Carolina</td>
-                  <td>Clyde</td>
-                  <td>Neurology</td>
-                  <td>Howard William Palay, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Florida</td>
-                  <td>Boca Raton</td>
-                  <td>Pulmonology</td>
-                  <td>Ralph Palumbo, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Maryland</td>
-                  <td>Bethesda</td>
-                  <td>Neurology</td>
-                  <td>Jean Panagakos, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Kentucky</td>
-                  <td>Henderson</td>
-                  <td>Pulmonology</td>
-                  <td>Kuldeep R. Pandit, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Kentucky</td>
-                  <td>Louisville</td>
-                  <td>Internal Medicine</td>
-                  <td>Mahmoud M. Qadoom, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td>Pennsylvania</td>
-                  <td>Monroeville</td>
-                  <td>Pulmonology</td>
-                  <td>Azmat Qayyum, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>DECEASED</td>
-                  <td>Pulmonology</td>
-                  <td>Syed A. Quadri, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td>Ohio</td>
-                  <td>Dayton</td>
-                  <td>Pulmonology</td>
-                  <td>Mustafa Quadri, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Arizona</td>
-                  <td>Tucson</td>
-                  <td>Pulmonology</td>
-                  <td>Stuart F. Quan, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Virginia</td>
-                  <td>Norfolk</td>
-                  <td>Pulmonology</td>
-                  <td>Anthony J. Quaranta, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New York</td>
-                  <td>New York</td>
-                  <td>Psychology</td>
-                  <td>Rebecca Jean Quattrucci, Ph.D.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Pulmonology</td>
-                  <td>Amir Quefatieh, M.D.</td>
-                </tr>
-                <tr>
-                  <td>France</td>
-                  <td>France</td>
-                  <td>Neurology</td>
-                  <td>M. Antonia Quera-Salva, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Michigan</td>
-                  <td>Grand Rapids</td>
-                  <td>Pulmonology</td>
-                  <td>David Quimby, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Georgia</td>
-                  <td>Atlanta</td>
-                  <td>Pulmonology</td>
-                  <td>Rana Imam Rab, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Mississippi</td>
-                  <td>Jackson</td>
-                  <td>Internal Medicine</td>
-                  <td>Michael John Rack, M.D.</td>
-                </tr>
-                <tr>
-                  <td>North Carolina</td>
-                  <td>Durham</td>
-                  <td>Neurology</td>
-                  <td>Rodney A. Radtke, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Connecticut</td>
-                  <td>Norwich</td>
-                  <td>Pulmonology</td>
-                  <td>Olimpia A. Radu, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New York</td>
-                  <td>New Hartford</td>
-                  <td>Pulmonology</td>
-                  <td>Muhammad Raees, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Nebraska</td>
-                  <td>Omaha</td>
-                  <td>Pulmonology</td>
-                  <td>Sylvia Lee Rael, M.D.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Pulmonology</td>
-                  <td>Albert L. Rafanan, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Ohio</td>
-                  <td>Green</td>
-                  <td>Neurology</td>
-                  <td>Jose C. Rafecas, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New York</td>
-                  <td>Amsterdam</td>
-                  <td>Pulmonology</td>
-                  <td>Krishnan Raghavan, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td>Florida</td>
-                  <td>Brandon</td>
-                  <td>Internal Medicine</td>
-                  <td>Perwaiz H. Rahim, M.B., B.S.</td>
-                </tr>                
-                <tr>
-                  <td>Michigan</td>
-                  <td>Royal Oak</td>
-                  <td>Pulmonology</td>
-                  <td>Fadi-Jean Saad, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Kentucky</td>
-                  <td>Louisville</td>
-                  <td>Pulmonology</td>
-                  <td>Mohamed A. Saad, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Kentucky</td>
-                  <td>Prospect</td>
-                  <td>Internal Medicine</td>
-                  <td>Lebnan Sabah Saad, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Massachusetts</td>
-                  <td>Southborough</td>
-                  <td>Neurology</td>
-                  <td>Zahra Saad Ayub, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Oklahoma</td>
-                  <td>Ardmore</td>
-                  <td>Pulmonology</td>
-                  <td>Joel S. Sabangan, M.D.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Pulmonology</td>
-                  <td>Mazen Sabbaq, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Georgia</td>
-                  <td>Atlanta</td>
-                  <td>Pulmonology</td>
-                  <td>Asif Ali Saberi, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Oregon</td>
-                  <td>Portland</td>
-                  <td>Psychiatry</td>
-                  <td>Robert L. Sack, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Indiana</td>
-                  <td>Chesterton</td>
-                  <td>Internal Medicine</td>
-                  <td>Prabhasadanam G. Sadhujan, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Massachusetts</td>
-                  <td>Methuen</td>
-                  <td>Pulmonology</td>
-                  <td>Bijan Sadrnoori, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Florida</td>
-                  <td>South Miami</td>
-                  <td>Pulmonology</td>
-                  <td>Jeremy I. Tabak, M.D.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Neurology</td>
-                  <td>Mohan Venkataratna Tadikonda, M.D.</td>
-                </tr>
-                <tr>
-                  <td>California</td>
-                  <td>Anaheim</td>
-                  <td>Pulmonology</td>
-                  <td>Lakshminarayana Tadimeti, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Kentucky</td>
-                  <td>London</td>
-                  <td>Pulmonology</td>
-                  <td>Muhammad Talib, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td>Khoban</td>
-                  <td>Pulmonology</td>
-                  <td>Fouad S. Tamimi, M.D.</td>
-                </tr>
-                <tr>
-                  <td>California</td>
-                  <td>San Clemente</td>
-                  <td>Pulmonology</td>
-                  <td>Bruce R. Tammelin, M.D.</td>
-                </tr>
-                <tr>
-                  <td>North Carolina</td>
-                  <td>Charlotte</td>
-                  <td>Neurology</td>
-                  <td>Ehrlich Cu Tan, M.D.</td>
-                </tr>
-                <tr>
-                  <td>California</td>
-                  <td>Long Beach</td>
-                  <td>Pulmonology</td>
-                  <td>Maged Aziz Tanios, M.D.</td>
-                </tr>
-                <tr>
-                  <td>West Virginia</td>
-                  <td>South Charleston</td>
-                  <td>Pediatric Neurology</td>
-                  <td>Sasidharan Taravath, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Minnesota</td>
-                  <td>Roseville</td>
-                  <td>Neurology</td>
-                  <td>Mustafa Orhan Ucer, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Illinois</td>
-                  <td>Naperville</td>
-                  <td>Pulmonology</td>
-                  <td>Nidhi Samir Undevia, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Mississippi</td>
-                  <td>Houlka</td>
-                  <td>Pulmonology</td>
-                  <td>Jaime R. Ungo, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Missouri</td>
-                  <td>Valley Park</td>
-                  <td>Pediatrics</td>
-                  <td>Elizabeth Chan Uong, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Illinois</td>
-                  <td>Orland Park</td>
-                  <td>Pulmonology</td>
-                  <td>Naresh Upadhyay, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Connecticut</td>
-                  <td>Fairfield</td>
-                  <td>Internal Medicine</td>
-                  <td>Anupama Upadya, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td>Florida</td>
-                  <td>Marianna</td>
-                  <td>Pulmonology</td>
-                  <td>Jose Antonio Urdaneta-Jaimes, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Pennsylvania</td>
-                  <td>McMurray</td>
-                  <td>Psychiatry</td>
-                  <td>Oscar Urrea, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Missouri</td>
-                  <td>Kirksville</td>
-                  <td>Pulmonology</td>
-                  <td>Najma Jabeen Usmani, M.B.,B.S.</td>
-                </tr>
-                <tr>
-                  <td>California</td>
-                  <td>Los Angeles</td>
-                  <td>Internal Medicine</td>
-                  <td>Sanjay Virji Vadgama, M.B., B.S.</td>
-                </tr>
-                <tr>
-                  <td>Indiana</td>
-                  <td>Fort Wayne</td>
-                  <td>Pulmonology</td>
-                  <td>Ravi Vaela, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Ohio</td>
-                  <td>Mansfield</td>
-                  <td>Pulmonology</td>
-                  <td>Sunil J. Vaidya, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Illinois</td>
-                  <td>Blue Island</td>
-                  <td>Pulmonology</td>
-                  <td>Prakash Vaishnav, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Ohio</td>
-                  <td>Cleveland Heights</td>
-                  <td>Neurology</td>
-                  <td>Roxanne Marie Valentino, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Pennsylvania</td>
-                  <td>Easton</td>
-                  <td>Family Practice</td>
-                  <td>Suneel S. Valla, M.B.,Ch.B.</td>
-                </tr>
-                <tr>
-                  <td>Ohio</td>
-                  <td>Centerville</td>
-                  <td>Neurology</td>
-                  <td>Michael J. Valle, D.O.</td>
-                </tr>
-                <tr>
-                  <td>Netherlands</td>
-                  <td></td>
-                  <td>Psychiatry</td>
-                  <td>Johanna Van Den Hoed, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New Jersey</td>
-                  <td>Secaucus</td>
-                  <td>Neurology</td>
-                  <td>Ralf Willem Van der Sluis, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Florida</td>
-                  <td>Pensacola Beach</td>
-                  <td>Pulmonology</td>
-                  <td>John F. Wade, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Mississippi</td>
-                  <td>Ridgeland</td>
-                  <td>Pulmonology</td>
-                  <td>Joyce Deanette Wade-Hamme, M.D.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Pulmonology</td>
-                  <td>Frazer Anthony Wadenstorer, M.D.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Nephrology</td>
-                  <td>Nand K. Wadhwa, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New York</td>
-                  <td>White Plains</td>
-                  <td>Neurology</td>
-                  <td>Daniel R. Wagner, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Florida</td>
-                  <td>Newberry</td>
-                  <td>Pediatric Pulmonology</td>
-                  <td>Mary Hipskind Wagner, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Florida</td>
-                  <td>Daytona Beach</td>
-                  <td>Pulmonology</td>
-                  <td>Wahba W. Wahba, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Ohio</td>
-                  <td>Toledo</td>
-                  <td>Pulmonology</td>
-                  <td>Ronald J. Wainz, M.D.</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td>Neurology</td>
-                  <td>Thaddeus Walczak, M.D.</td>
-                </tr>
-                <tr>
-                  <td>District of Columbia</td>
-                  <td>Washington</td>
-                  <td>Pulmonology</td>
-                  <td>Richard E. Waldhorn, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Michigan</td>
-                  <td>Troy</td>
-                  <td>Pulmonology</td>
-                  <td>Georges S. Yacoub, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Connecticut</td>
-                  <td>Hamden</td>
-                  <td>Internal Medicine</td>
-                  <td>Henry Klar Yaggi, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Iowa</td>
-                  <td>Iowa City</td>
-                  <td>Neurology</td>
-                  <td>Thoru Yamada, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Maryland</td>
-                  <td>Potomac</td>
-                  <td>Neurology</td>
-                  <td>James Yan, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Indiana</td>
-                  <td>Indianapolis</td>
-                  <td>Pulmonology</td>
-                  <td>Karl L. Yang, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Korea</td>
-                  <td>Pusan</td>
-                  <td>Psychiatry</td>
-                  <td>Chang-Kook Yang, M.D., Ph.D.</td>
-                </tr>
-                <tr>
-                  <td>California</td>
-                  <td>Los Angeles</td>
-                  <td>Neurology/Pediatrics</td>
-                  <td>Frisca L. Yan-Go, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Tennessee</td>
-                  <td>Memphis</td>
-                  <td>Pulmonology</td>
-                  <td>Jose Carlos Yataco, M.D.</td>
-                </tr>
-                <tr>
-                  <td>California</td>
-                  <td>San Clemente</td>
-                  <td>Pulmonology</td>
-                  <td>Inchel Yeam, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Florida</td>
-                  <td>Port Orange</td>
-                  <td>Pulmonology</td>
-                  <td>Theodossis Zacharis, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Florida</td>
-                  <td>Jacksonville</td>
-                  <td>Psychology</td>
-                  <td>Hubert M. Zachary, Ph.D.</td>
-                </tr>
-                <tr>
-                  <td>Kentucky</td>
-                  <td>Bowling Green</td>
-                  <td>Pulmonology</td>
-                  <td>Michael J. Zachek, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New York</td>
-                  <td>Kingston</td>
-                  <td>Pulmonology</td>
-                  <td>Subooha Zafar, M.D.</td>
-                </tr>
-                <tr>
-                  <td>South Dakota</td>
-                  <td>Sioux Falls</td>
-                  <td>Neurology</td>
-                  <td>Muhammad Asif Ali Zaidi, M.D.</td>
-                </tr>
-                <tr>
-                  <td>New York</td>
-                  <td>White Plains</td>
-                  <td>Neurology</td>
-                  <td>Rochelle Schiffman Zak, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Illinois</td>
-                  <td>Hinsdale</td>
-                  <td>Pulmonology</td>
-                  <td>Nasser Zakieh, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Ohio</td>
-                  <td>Beavercreek</td>
-                  <td>Pulmonology</td>
-                  <td>Mohamed M. Zakkar, M.D.</td>
-                </tr>
-                <tr>
-                  <td>West Virginia</td>
-                  <td>Charleston</td>
-                  <td>Pulmonology</td>
-                  <td>George L. Zaldivar, M.D.</td>
-                </tr>
-                <tr>
-                  <td>Illinois</td>
-                  <td>Peoria</td>
-                  <td>Neurology</td>
-                  <td>Sarah Nath Zallek, M.D.</td>
-                </tr>                                                                                                                                                                             
-              </tbody>
-            </table>
-          </div>
-
-          <div class="page" id="paginationControls"></div>
-
-          <script>
-            const stateFilter = document.getElementById('stateFilter');
-            const specialtyFilter = document.getElementById('specialtyFilter');
-            const tableBody = document.getElementById('tableBody');
-            const paginationControls = document.getElementById('paginationControls');
-
-            const rows = Array.from(tableBody.getElementsByTagName('tr'));
-            let filteredRows = rows;
-            const rowsPerPage = 15;
-            let currentPage = 1;
-
-            function renderTable() {
-              tableBody.innerHTML = '';
-              const start = (currentPage - 1) * rowsPerPage;
-              const end = start + rowsPerPage;
-              const rowsToShow = filteredRows.slice(start, end);
-              rowsToShow.forEach(row => tableBody.appendChild(row));
-              renderPagination();
-            }
-
-            function renderPagination() {
-              paginationControls.innerHTML = '';
-              const totalPages = Math.ceil(filteredRows.length / rowsPerPage);
-
-              for (let i = 1; i <= totalPages; i++) {
-                const btn = document.createElement('button');
-                btn.textContent = i;
-                if (i === currentPage) btn.classList.add('active');
-                btn.addEventListener('click', () => {
-                  currentPage = i;
-                  renderTable();
-                });
-                paginationControls.appendChild(btn);
-              }
-            }
-
-            function applyFilters() {
-              const stateVal = stateFilter.value.toLowerCase().trim();
-              const specialtyVal = specialtyFilter.value.toLowerCase().trim();
-
-              filteredRows = rows.filter(row => {
-                const stateCell = row.getElementsByTagName('td')[2];
-                const specialtyCell = row.getElementsByTagName('td')[3];
-
-                const stateMatch = stateCell && stateCell.textContent.toLowerCase().includes(stateVal);
-                const specialtyMatch = specialtyCell && specialtyCell.textContent.toLowerCase().includes(specialtyVal);
-
-                return stateMatch && specialtyMatch;
-              });
-
-              currentPage = 1;
-              renderTable();
-            }
-
-            stateFilter.addEventListener('keyup', applyFilters);
-            specialtyFilter.addEventListener('keyup', applyFilters);
-
-            renderTable();
-          </script>
+    <section class="container">
+      <div class="find-prov">
+        <div class="prov-h">
+          <h2>Find a Provider</h2>
         </div>
       </div>
-    <br>
-
+    
+      <div class="find-prov">
+        <!-- Left Column: Doctor Search -->
+        <div class="search-section">
+            <form class="search-form">
+                <input type="text" id="searchInput" placeholder="Enter Zipcode">
+            </form>
+    
+          <div class="doctor-list" id="doctorList">
+            <!-- Cards will be inserted by JavaScript -->
+          </div>
+        </div>
+    
+        <!-- Right Column: Map Placeholder -->
+        <div class="map-section" id="mapSection">
+          <div id="map" style="width: 100%; height: 100%"></div>
+        </div>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChM09gbI9F32wneHEA2vMpW3wuecNmV7Y&callback=initMap">
+          </script>
+      </div>
+    
+      <script>
+        const doctors = [
+            {
+                name: "Dr. Henry G. Raroque",  // Added new doctor
+                specialty: "SNI Neurology & Sleep",
+                address: "1215 Kinwest Parkway, #120 Irving, TX 75063",
+                phone: "+11111111111",
+                zipcode: "75063"  // Added zipcode for location-based filtering
+            },
+            {
+                name: "Dr. Bradley Evans",  // Added new doctor
+                specialty: "Asscociates of Ear, Nose & Throat Sugery - Lewisville",
+                address: "324 West Main Street, Suite 100 Lewisville, TX 75057",
+                phone: "+11111111111",
+                zipcode: "75057"  // Added zipcode for location-based filtering
+            },
+            {
+                name: "Dr. Ellen Ko-Keeney",  // Added new doctor
+                specialty: "Texas Ear, Nose & Throat Specialists, LLP - Bedford",
+                address: "1615 Hospital Parkway, Suite 210 Bedford, TX 76022",
+                phone: "+11111111111",
+                zipcode: "76022"  // Added zipcode for location-based filtering
+            },
+            {
+                name: "Dr. Kareem Haroun",  // Added new doctor
+                specialty: "Texas Ear, Nose and Throat Specialists, LLC-Flower Mound, TX",
+                address: "4320 Windsor Centre Trail, Suite 200 Flower Mound, TX 75028",
+                phone: "+11111111111",
+                zipcode: "75028"  // Added zipcode for location-based filtering
+            },
+            {
+                name: "Dr. Srirekha Maddukuri",  // Added new doctor
+                specialty: "Kane Hall Barry Neurology",
+                address: "1305 Airport Fwy., Suite 205 Bedford, TX 76021",
+                phone: "+11111111111",
+                zipcode: "76021"  // Added zipcode for location-based filtering
+            },
+            {
+                name: "Dr. Asher Imam",  // Added new doctor
+                specialty: "Southlake Neurology & Sleep Wellness Clinic",
+                address: "175 Stonebridge Lane, Ste 100 Southlake, TX 76092",
+                phone: "+11111111111",
+                zipcode: "76092"  // Added zipcode for location-based filtering
+            },
+            {
+                name: "Dr. Kareem Haroun",  // Added new doctor
+                specialty: "Texas Ear, Nose and Throat Specialists-West Southlake Blvd",
+                address: "2813 W. Southlake Blvd., Ste 150 Southlake, TX 76092",
+                phone: "+11111111111",
+                zipcode: "76092"  // Added zipcode for location-based filtering
+            },
+            {
+                name: "Dr. Thomas Hung",  // Added new doctor
+                specialty: "Dallas ENT Group",
+                address: "12720 Hillcrest Road, Suite 900 Dallas, TX 75230",
+                phone: "+11111111111",
+                zipcode: "75230"  // Added zipcode for location-based filtering
+            }
+        ];
+    
+        let map;
+    
+        const searchInput = document.getElementById('searchInput');
+        const doctorList = document.getElementById('doctorList');
+        const mapSection = document.getElementById('mapSection');
+    
+        function initMap() {
+          map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 37.7749, lng: -122.4194 }, // Default location: San Francisco
+            zoom: 10,
+          });
+        }
+    
+        function displayDoctors(filteredDoctors) {
+          doctorList.innerHTML = '';
+    
+          if (filteredDoctors.length === 0) {
+            doctorList.innerHTML = '<p style="padding: 1rem;">No doctors found.</p>';
+            return;
+          }
+    
+          filteredDoctors.forEach(doc => {
+            doctorList.innerHTML += `
+              <div class="doctor-card">
+                <div class="doctor-info">
+                  <img src="https://via.placeholder.com/80" alt="Doctor Photo">
+                  <div class="doctor-details">
+                    <h3>${doc.name}</h3>
+                    <p>${doc.specialty}</p>
+                    <p>${doc.address}</p>
+                    <p>${doc.phone}</p>
+                  </div>
+                </div>
+              </div>
+            `;
+          });
+        }
+    
+        function filterDoctors() {
+          const zipcode = searchInput.value.trim();
+    
+          const filtered = doctors.filter(doc => {
+            const matchesZipcode = zipcode === "" || doc.zipcode.includes(zipcode);  // Filter by zipcode
+            return matchesZipcode;
+          });
+    
+          displayDoctors(filtered);
+          updateMap(zipcode); // Update the map section whenever filtering happens
+        }
+    
+        // function updateMap(zipcode) {
+        //   // Geocode the zipcode to get the coordinates (For the demo, using fixed values)
+        //   const geocoder = new google.maps.Geocoder();
+    
+        //   geocoder.geocode({ 'address': zipcode }, function(results, status) {
+        //     if (status === 'OK') {
+        //       const location = results[0].geometry.location;
+        //       map.setCenter(location);
+        //       map.setZoom(12);
+        //       new google.maps.Marker({
+        //         map: map,
+        //         position: location,
+        //       });
+        //     } else {
+        //       map.setCenter({ lat: 37.7749, lng: -122.4194 }); // Default if geocode fails
+        //       map.setZoom(10);
+        //       alert('Geocode was not successful for the following reason: ' + status);
+        //     }
+        //   });
+        // }
+    
+        // Set default zipcode to 75063
+        window.onload = function () {
+            searchInput.value = '75063'; // Set default zipcode to 75063
+            filterDoctors(); // Trigger filter on page load
+        };
+    
+        // Attach events
+        searchInput.addEventListener('input', filterDoctors);
+    
+        // Initial render
+        displayDoctors(doctors);
+        initMap(); // Initialize the map on page load
+      </script>
+    </section>
   </main>
 
   <special-footer></special-footer>

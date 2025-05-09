@@ -4401,3 +4401,104 @@ th {
 .filters {
   text-align: center;
 }
+
+
+/* --------------------New Find------------------ */
+
+.find-prov {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.find-prov .prov-h{
+  display: flex;
+  padding: 0px 20px 30px 20px;
+}
+
+.find-prov .prov-h h2{
+  text-align: center;
+}
+
+.find-prov .search-section {
+  flex: 1;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.find-prov .search-section input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1 1 200px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.find-prov .doctor-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 10px;
+    max-height: 325px; /* Set a max height for the list */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.find-prov .doctor-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.find-prov .doctor-card img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.find-prov .doctor-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.find-prov .doctor-details {
+  flex: 1;
+}
+
+.find-prov .doctor-details h3 {
+  font-size: 20px;
+}
+
+.find-prov .doctor-details p {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.find-prov .book-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+.find-prov .map-section {
+  flex: 1;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 400px; /* Placeholder height for the map */
+}
+
+.find-prov .search-form {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
