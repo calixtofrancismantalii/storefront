@@ -82,7 +82,8 @@
                 address: "1215 Kinwest Parkway, #120 Irving, TX 75063",
                 phone: "+4694366109",
                 zipcode: "75063",  // Added zipcode for location-based filtering
-                state: "Texas"
+                state: "Texas",
+                image: "assets/img/download (59)"
             },
             {
                 name: "Dr. Bradley Evans",  // Added new doctor
@@ -477,12 +478,12 @@
             doctorList.innerHTML += `
               <div class="doctor-card">
                 <div class="doctor-info">
-                  <img src="https://via.placeholder.com/80" alt="Doctor Photo">
+                  <img src="${doc.image}" alt="Doctor Photo">
                   <div class="doctor-details">
                     <h3>${doc.name}</h3>
                     <p>${doc.specialty}</p>
-                    <p>${doc.address}</p>
-                    <p>${doc.phone}</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/search/${encodeURIComponent(doc.address)}" target="_blank">${doc.address}</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:${doc.phone}">${doc.phone}</a></p>
                   </div>
                 </div>
               </div>

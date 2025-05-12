@@ -4454,14 +4454,15 @@ th {
 }
 
 .find-prov .doctor-card img {
-  width: 80px;
-  border-radius: 50%;
+  border-radius: 50% !important;
+  width: 70px;
+  height: auto;
 }
 
 .find-prov .doctor-info {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 .find-prov .doctor-details {
@@ -4470,11 +4471,13 @@ th {
 
 .find-prov .doctor-details h3 {
   font-size: 18px;
+  margin-bottom: 3px;
 }
 
 .find-prov .doctor-details p {
-  margin-bottom: 2px;
-  font-size: 15px;
+  margin-bottom: 4px;
+  font-family: Poppins;
+  font-size: 14px;
 }
 
 .find-prov .book-btn {
