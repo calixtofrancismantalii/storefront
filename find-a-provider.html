@@ -55,7 +55,8 @@
         <!-- Left Column: Doctor Search -->
         <div class="search-section">
             <form class="search-form">
-                <input type="text" id="searchInput" placeholder="Enter Zipcode">
+              <label>Search by Zipcode or State</label>
+              <input type="text" id="searchInput" placeholder="Enter Zipcode or State">
             </form>
     
           <div class="doctor-list" id="doctorList">
@@ -79,56 +80,64 @@
                 specialty: "SNI Neurology & Sleep",
                 address: "1215 Kinwest Parkway, #120 Irving, TX 75063",
                 phone: "+11111111111",
-                zipcode: "75063"  // Added zipcode for location-based filtering
+                zipcode: "75063",  // Added zipcode for location-based filtering
+                state: "Texas"
             },
             {
                 name: "Dr. Bradley Evans",  // Added new doctor
                 specialty: "Asscociates of Ear, Nose & Throat Sugery - Lewisville",
                 address: "324 West Main Street, Suite 100 Lewisville, TX 75057",
                 phone: "+11111111111",
-                zipcode: "75057"  // Added zipcode for location-based filtering
+                zipcode: "75057",  // Added zipcode for location-based filtering
+                state: "Texas"
             },
             {
                 name: "Dr. Ellen Ko-Keeney",  // Added new doctor
                 specialty: "Texas Ear, Nose & Throat Specialists, LLP - Bedford",
                 address: "1615 Hospital Parkway, Suite 210 Bedford, TX 76022",
                 phone: "+11111111111",
-                zipcode: "76022"  // Added zipcode for location-based filtering
+                zipcode: "76022",  // Added zipcode for location-based filtering
+                state: "Texas"
             },
             {
                 name: "Dr. Kareem Haroun",  // Added new doctor
                 specialty: "Texas Ear, Nose and Throat Specialists, LLC-Flower Mound, TX",
                 address: "4320 Windsor Centre Trail, Suite 200 Flower Mound, TX 75028",
                 phone: "+11111111111",
-                zipcode: "75028"  // Added zipcode for location-based filtering
+                zipcode: "75028",  // Added zipcode for location-based filtering
+                state: "Texas"
             },
             {
                 name: "Dr. Srirekha Maddukuri",  // Added new doctor
                 specialty: "Kane Hall Barry Neurology",
                 address: "1305 Airport Fwy., Suite 205 Bedford, TX 76021",
                 phone: "+11111111111",
-                zipcode: "76021"  // Added zipcode for location-based filtering
+                zipcode: "76021",  // Added zipcode for location-based filtering
+                state: "Texas"
             },
             {
                 name: "Dr. Asher Imam",  // Added new doctor
                 specialty: "Southlake Neurology & Sleep Wellness Clinic",
                 address: "175 Stonebridge Lane, Ste 100 Southlake, TX 76092",
                 phone: "+11111111111",
-                zipcode: "76092"  // Added zipcode for location-based filtering
+                zipcode: "76092",  // Added zipcode for location-based filtering
+                state: "Texas"
             },
             {
                 name: "Dr. Kareem Haroun",  // Added new doctor
                 specialty: "Texas Ear, Nose and Throat Specialists-West Southlake Blvd",
                 address: "2813 W. Southlake Blvd., Ste 150 Southlake, TX 76092",
                 phone: "+11111111111",
-                zipcode: "76092"  // Added zipcode for location-based filtering
+                zipcode: "76092",  // Added zipcode for location-based filtering
+                state: "Texas"
             },
             {
                 name: "Dr. Thomas Hung",  // Added new doctor
                 specialty: "Dallas ENT Group",
                 address: "12720 Hillcrest Road, Suite 900 Dallas, TX 75230",
                 phone: "+11111111111",
-                zipcode: "75230"  // Added zipcode for location-based filtering
+                zipcode: "75230",  // Added zipcode for location-based filtering
+                state: "Texas"
             }
         ];
     
@@ -171,15 +180,17 @@
         }
     
         function filterDoctors() {
-          const zipcode = searchInput.value.trim();
-    
+          const query = searchInput.value.trim().toLowerCase();
+
           const filtered = doctors.filter(doc => {
-            const matchesZipcode = zipcode === "" || doc.zipcode.includes(zipcode);  // Filter by zipcode
-            return matchesZipcode;
+            return (
+              query === "" ||
+              doc.zipcode.includes(query) ||
+              doc.state.toLowerCase().includes(query)
+            );
           });
-    
+
           displayDoctors(filtered);
-          updateMap(zipcode); // Update the map section whenever filtering happens
         }
     
         // function updateMap(zipcode) {

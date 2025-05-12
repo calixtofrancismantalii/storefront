@@ -4497,8 +4497,10 @@ th {
 }
 
 .find-prov .search-form {
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-start;
   align-items: center;
+}
+
+.find-prov .search-form label {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
