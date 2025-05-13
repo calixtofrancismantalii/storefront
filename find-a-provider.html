@@ -76,996 +76,996 @@
     
       <script>
         const doctors = [
-            {
-                name: "Dr. Henry G. Raroque",  // Added new doctor
-                specialty: "SNI Neurology & Sleep",
-                address: "1215 Kinwest Parkway, #120 Irving, TX 75063",
-                phone: "+14697653073",
-                zipcode: "75063",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Henry Raroque"
-            },
-            {
-                name: "Dr. Manoher Gurru",  // Added new doctor
-                specialty: "Sleep Medicine and Neurology",
-                address: "3400 Andrews Highway Midland, TX 79703",
-                phone: "+14322267334",
-                zipcode: "79703",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Manoher Gurru"
-            },
-            {
-                name: "Dr. Traci Bailey",  // Added new doctor
-                specialty: "Allergy & ENT Associates - Sterling Ridge",
-                address: "10847 Kuykendahl Road, Suite 100 The Woodlands, TX 77382",
-                phone: "+12815453116",
-                zipcode: "77382",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Traci Bailey"
-            },
-            {
-                name: "Dr. Traci Bailey",  // Added new doctor
-                specialty: "Allergy and ENT Associates - Town Center",
-                address: "9301 Pinecroft Drive, Suite 100 Shenandoah, TX 77380",
-                phone: "+17138819783",
-                zipcode: "77380",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Traci Bailey"
-            },
-            {
-                name: "Dr. Mahmood Dweik",  // Added new doctor
-                specialty: "American Sleep Medicine",
-                address: "1046A Hercules Ave Houston, TX 77058",
-                phone: "+17137664668",
-                zipcode: "77058",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Mahmood Dweik"
-            },
-            {
-                name: "Dr. Bradley Evans",  // Added new doctor
-                specialty: "Associates of Ear, Nose & Throat Surgery - Lewisville",
-                address: "324 West Main Street, Suite 100 Lewisville, TX 75057",
-                phone: "+19729451403",
-                zipcode: "75057",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Bradley Evans"
-            },
-            {
-                name: "Dr. Joseph Leary",  // Added new doctor
-                specialty: "Austin Regional Clinic - Far West",
-                address: "6811 Austin Center Boulevard, Suite 300 Austin, TX 78731",
-                phone: "+15126015474",
-                zipcode: "78731",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Joseph Leary"
-            },
-            {
-                name: "Dr. Andrew Huang",  // Added new doctor
-                specialty: "Baylor College of Medicine - ENT | Texas Medical Center",
-                address: "1977 Butler Boulevard, Suite E5.200 Houston, TX 77030",
-                phone: "+12819184698",
-                zipcode: "77030",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Andrew Huang"
-            },
-            {
-                name: "Dr. Naren Venkatesan",  // Added new doctor
-                specialty: "Baylor Scott & White ENT Consultants of North Texas - Dallas",
-                address: "3600 Gaston Avenue, Suite 502 Dallas, TX 75246",
-                phone: "+14697471485",
-                zipcode: "75246",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Naren Venkatesan"
-            },
-            {
-                name: "Mrs. Jacqueline Hanson",  // Added new doctor
-                specialty: "Baylor Scott & White Sleep and Pulmonary - Round Rock",
-                address: "302 University Blvd Round Rock, TX 78665",
-                phone: "+15122652535",
-                zipcode: "78665",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Mrs. Jacqueline Hanson"
-            },
-            {
-                name: "Dr. Tuyet Pham",  // Added new doctor
-                specialty: "Baylor Scott and White MedProvider - Sleep",
-                address: "3417 Gaston Ave, Suite 900 Dallas, TX 75246",
-                phone: "+14695157370",
-                zipcode: "75246",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Tuyet Pham"
-            },
-            {
-                name: "Dr. Whitney Hall",  // Added new doctor
-                specialty: "Baylor Scott and White Specialty Clinic",
-                address: "2405 S. Clear Creek Rd. Killeen, TX 76549",
-                phone: "+12543313242",
-                zipcode: "76549",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Whitney Hall"
-            },
-            {
-                name: "Kyla Beedy",  // Added new provider
-                specialty: "Beedy Sleep Clinic, PLLC",
-                address: "1301 S Coulter St, STE 413 Amarillo, TX 79106",
-                phone: "+18065572906",
-                zipcode: "79106",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Kyla Beedy.svg"
-            },
-            {
-                name: "Dr. Luis Chug",  // Added new doctor
-                specialty: "BreatheSleepMD",
-                address: "1631 North Loop West, Suite 640 Houston, TX 77008",
-                phone: "+18325366457",
-                zipcode: "77008",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Luis Chug"
-            },
-            {
-                name: "Dr. Raymond Brown",  // Added new doctor
-                specialty: "Capital ENT - Lakeway",
-                address: "4 Lakeway Centre Court, Unit B Lakeway, TX 78734",
-                phone: "+17372575073",
-                zipcode: "78734",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Raymond Brown"
-            },
-            {
-                name: "Dr. Tyler Scoresby",  // Added new doctor
-                specialty: "Central Park ENT - Desoto",
-                address: "1005 York Drive Desoto, TX 75115",
-                phone: "+19728486959",
-                zipcode: "75115",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Tyler Scoresby.svg"
-            },
-            {
-                name: "Dr. Mahmood Dweik",  // Added new doctor
-                specialty: "CLS Health",
-                address: "500 N Kobayashi Rd, ste a, Webster, TX 77598",
-                phone: "+12818539697",
-                zipcode: "77598",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Mahmood Dweik"
-            },
-            {
-                name: "Dr. Tony Peter",  // Added new doctor
-                specialty: "Collin County Ear Nose and Throat",
-                address: "8380 Warren Pkwy, Suite 504 Frisco, TX 75034",
-                phone: "+19726197552",
-                zipcode: "75034",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Tony Peter"
-            },
-            {
-                name: "Dr. Tony Peter",  // Added new doctor
-                specialty: "Collin County Ear, Nose, and Throat - Plano",
-                address: "8080 Independence Pkwy, Suite 255 Plano, TX 75025",
-                phone: "+19729755595",
-                zipcode: "75025",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Tony Peter"
-            },
-            {
-                name: "Dr. Malcolm Smith",  // Added new doctor
-                specialty: "Collom and Carney Clinic Pulmonology Texarkana",
-                address: "5002 Cowhorn Creek Rd Texarkana, TX 75503",
-                phone: "+19033643956",
-                zipcode: "75503",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Malcolm Smith"
-            },
-            {
-                name: "Emily Leib",  // Added new provider
-                specialty: "Coryell Health Medical Clinic Moody",
-                address: "404 Avenue E. Moody, TX 76557",
-                phone: "+12542684629",
-                zipcode: "76557",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Emily Leib"
-            },
-            {
-                name: "Dr. Thomas Hung",  // Added new doctor
-                specialty: "Dallas ENT Group",
-                address: "12720 Hillcrest Road, Suite 900 Dallas, TX 75230",
-                phone: "+19729143360",
-                zipcode: "75230",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Thomas Hung"
-            },
-            {
-                name: "Dr. Christopher Rose",  // Added new doctor
-                specialty: "Dr. Christopher Rose",
-                address: "3709 22nd Pl, Suite A Lubbock, TX 79410",
-                phone: "+18064547280",
-                zipcode: "79410",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Christopher Rose"
-            },
-            {
-                name: "Dr. David Michalak",  // Added new doctor
-                specialty: "Dr. David Michalak, MD - Family Medicine",
-                address: "4840 W Panther Creek, Suite 101 The Woodlands, TX 77381",
-                phone: "+12818014742",
-                zipcode: "77381",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. David Michalak"
-            },
-            {
-                name: "Dr. Vikas Jain",  // Added new doctor
-                specialty: "Dream Sleep Medicine",
-                address: "4645 Avon Lane, Suite 340 Frisco, TX 75033",
-                phone: "+12144286809",
-                zipcode: "75033",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Vikas Jain"
-            },
-            {
-                name: "Dr. Hunter Skoog",  // Added new doctor
-                specialty: "East Texas ENT",
-                address: "912 Walnut Hill Dr Longview, TX 75605",
-                phone: "+19033213540",
-                zipcode: "75605",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Hunter Skoog"
-            },
-            {
-                name: "Dr. Benjamin Westbrook",  // Added new doctor
-                specialty: "El Paso Head and Neck Surgery",
-                address: "1500 N. Mesa St. El Paso, TX 79902",
-                phone: "+19153483788",
-                zipcode: "79902",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Benjamin Westbrook"
-            },
-            {
-                name: "Dr. Gonzalo Diaz",  // Added new doctor
-                specialty: "El Paso Sleep Center",
-                address: "4305 North Mesa Street El Paso, TX 79902",
-                phone: "+19152301687",
-                zipcode: "79902",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Gonzalo Diaz"
-            },
-            {
-                name: "Dr. Gonzalo Diaz",  // Added new doctor
-                specialty: "El Paso Sleep Center - East Side",
-                address: "3030 Joe Battle El Paso, TX 79938",
-                phone: "+19152337057",
-                zipcode: "79938",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Gonzalo Diaz"
-            },
-            {
-                name: "Dr. Jennifer Dang",  // Added new doctor
-                specialty: "ENT & Allergy Centers of North Texas - Plano",
-                address: "4001 W 15th Street, Suite 225 Plano, TX 75093",
-                phone: "+19452036201",
-                zipcode: "75093",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Jennifer Dang"
-            },
-            {
-                name: "Dr. Richard Thrasher",  // Added new doctor
-                specialty: "ENT & Allergy Centers of Texas - Celina",
-                address: "1060 S Preston Rd, Unit 106 Celina, TX 75009",
-                phone: "+19729941624",
-                zipcode: "75009",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Richard Thrasher"
-            },
-            {
-                name: "Dr. Brian Langford",  // Added new doctor
-                specialty: "ENT Associates of East Texas - Longview",
-                address: "323 East Hawkins Pkwy, Suite F Longview, TX 75605",
-                phone: "+19035686661",
-                zipcode: "75605",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Brian Langford"
-            },
-            {
-                name: "Dr. Brian Langford",  // Added new doctor
-                specialty: "ENT Associates of East Texas - Tyler",
-                address: "1136 E. Grande Boulevard Tyler, TX 75703",
-                phone: "+19035641336",
-                zipcode: "75703",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Brian Langford"
-            },
-            {
-                name: "Dr. Alex McKinlay",  // Added new doctor
-                specialty: "Gold Standard Sleep",
-                address: "21134 Market Ridge, Suite 102 San Antonio, TX 78258",
-                phone: "+12109726522",
-                zipcode: "78258",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Alex McKinlay"
-            },
-            {
-                name: "Dr. Jose Melendez",  // Added new doctor
-                specialty: "Greater Heights Pulmonary & Sleep",
-                address: "1631 North Loop West, Suite 600 Houston, TX 77008",
-                phone: "+17139032079",
-                zipcode: "77008",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Jose Melendez"
-            },
-            {
-                name: "Dr. Mohan Philip",  // Added new doctor
-                specialty: "Greenville Pulmonary Associates",
-                address: "4221 Ridgecrest, Suite 107 Greenville, TX 75402",
-                phone: "+19032825377",
-                zipcode: "75402",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Mohan Philip"
-            },
-            {
-                name: "Dr. Terrell Bibb",  // Added new doctor
-                specialty: "Head and Neck Surgical Associates - Wichita Falls",
-                address: "1 Burnside Dr. Wichita Falls, TX 76310",
-                phone: "+19403744319",
-                zipcode: "76310",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Terrell Bibb"
-            },
-            {
-                name: "Dr. Nader Ewaida",  // Added new doctor
-                specialty: "Hope Sleep Clinic",
-                address: "7801 Mid Cities Blvd North Richland Hills, TX 76182",
-                phone: "+18172426014",
-                zipcode: "76182",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Nader Ewaida"
-            },
-            {
-                name: "Dr. Michael Underbrink",  // Added new doctor
-                specialty: "Houston ENT - Katy - Houston Methodist West",
-                address: "18300 Katy Freeway, Medical Office Building 2, Suite 605 Katy, TX 77094",
-                phone: "+12819573193",
-                zipcode: "77094",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Michael Underbrink"
-            },
-            {
-                name: "Dr. John Edwards",  // Added new doctor
-                specialty: "Houston ENT - Kingwood",
-                address: "22999 US-59, Building B, Suite 400 Kingwood, TX 77339",
-                phone: "+12818018729",
-                zipcode: "77339",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. John Edwards"
-            },
-            {
-                name: "Dr. Michael Underbrink",  // Added new doctor
-                specialty: "Houston ENT - Memorial City",
-                address: "915 Gessner, Suite 280 Houston, TX 77024",
-                phone: "+17133602189",
-                zipcode: "77024",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Michael Underbrink"
-            },
-            {
-                name: "Dr. Kathleen Mcdonald",  // Added new doctor
-                specialty: "Houston ENT & Allergy",
-                address: "13009 Gulf Commerce Dr., Suite 101 Houston, TX 77034",
-                phone: "+12819416550",
-                zipcode: "77034",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Kathleen Mcdonald"
-            },
-            {
-                name: "Dr. Atif Qureshi",  // Added new doctor
-                specialty: "Houston Methodist Academic Medicine Associates - Pulmonology",
-                address: "4201 Garth Rd, Plaza 1 Baytown, TX 77521",
-                phone: "+17139992294",
-                zipcode: "77521",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Atif Qureshi"
-            },
-            {
-                name: "Dr. Gavin LeNobel",  // Added new doctor
-                specialty: "Houston Methodist ENT - Willowbrook",
-                address: "13300 Hargrave Road, Suite #205 Houston, TX 77070",
-                phone: "+12815196905",
-                zipcode: "77070",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Gavin LeNobel"
-            },
-            {
-                name: "Dr. Eric Powitzky",  // Added new doctor
-                specialty: "Houston Methodist ENT Specialists - Bellaire",
-                address: "4191 Bellaire Boulevard, Suite 200 Houston, TX 77025",
-                phone: "+17137157835",
-                zipcode: "77025",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Eric Powitzky"
-            },
-            {
-                name: "Whitney Montgomery",  // Added new doctor
-                specialty: "Houston Methodist Neurology & Sleep Medicine Clinic",
-                address: "17189 Interstate 45 S, Medical Office Building 2, Suite 675 The Woodlands, TX 77385",
-                phone: "+19362158647",
-                zipcode: "77385",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Whitney Montgomery"
-            },
-            {
-                name: "Dr. Gunjan Narwani",  // Added new doctor
-                specialty: "Houston Methodist Pulmonary Specialists",
-                address: "18123 Upper Bay Rd, Ste 400 Houston, TX 77058",
-                phone: "+13462487684",
-                zipcode: "77058",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Gunjan Narwani"
-            },
-            {
-                name: "Dr. Kenneth VanOwen",  // Added new doctor
-                specialty: "Houston Neurological Institute - Pearland",
-                address: "10905 Memorial Hermann Dr., Ste 115 Pearland, TX 77584",
-                phone: "+12818433173",
-                zipcode: "77584",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Kenneth VanOwen"
-            },
-            {
-                name: "Dr. Srirekha Maddukuri",  // Added new doctor
-                specialty: "Kane Hall Barry Neurology",
-                address: "1305 Airport Freeway, Suite 205 Bedford, TX 76021",
-                phone: "+18172424384",
-                zipcode: "76021",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Srirekha Maddukuri"
-            },
-            {
-                name: "Dr. Chen Wu",  // Added new doctor
-                specialty: "Kane Hall Barry Neurology – Mansfield",
-                address: "1021 Matlock Rd, Suite 101 Mansfield, TX 76063",
-                phone: "+18176011260",
-                zipcode: "76063",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Chen Wu"
-            },
-            {
-                name: "Dr. Akinyinka Ajelabi",  // Added new doctor
-                specialty: "Kingwood Pulmonary",
-                address: "201 Kingwood Medical Dr., Suite B-100 Kingwood, TX 77339",
-                phone: "+13466832069",
-                zipcode: "77339",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Akinyinka Ajelabi"
-            },
-            {
-                name: "Dr. Sanjay Aggarwal",  // Added new doctor
-                specialty: "Lake Jackson Pulmonary",
-                address: "215 Oak Drive South Lake Jackson, TX 77566",
-                phone: "+19794067396",
-                zipcode: "77566",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Sanjay Aggarwal"
-            },
-            {
-                name: "Dr. Kenny Iloabachie",  // Added new doctor
-                specialty: "Lakeside Allergy ENT - Forney",
-                address: "763 East Highway 80, Suite 230 Forney, TX 75216",
-                phone: "+19729457116",
-                zipcode: "75216",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Kenny Iloabachie"
-            },
-            {
-                name: "Dr. Kenny Iloabachie",  // Added new doctor
-                specialty: "Lakeside Allergy ENT - Rockwall",
-                address: "1320 Summer Lee Drive, Suite 107 Rockwall, TX 75032",
-                phone: "+19729458969",
-                zipcode: "75032",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Kenny Iloabachie"
-            },
-            {
-                name: "Dr. Sidra Saeed",  // Added new doctor
-                specialty: "Lone Star Pulmonary and Sleep Specialists",
-                address: "3200 Colorado Blvd., Ste 200 Denton, TX 76210",
-                phone: "+19402022073",
-                zipcode: "76210",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Sidra Saeed"
-            },
-            {
-                name: "Dr. Ghassan Noureddine",  // Added new doctor
-                specialty: "Lung & Asthma Clinic",
-                address: "6550 Fannin Street, #2321 Houston, TX 77030",
-                phone: "+12813698752",
-                zipcode: "77030",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Ghassan Noureddine"
-            },
-            {
-                name: "Dr. Olusegun Oseni",  // Added new doctor
-                specialty: "Lung and Sleep Specialists of North Texas",
-                address: "1200 Clear Lake Road Weatherford, TX 76086",
-                phone: "+18174098412",
-                zipcode: "76086",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Olusegun Oseni"
-            },
-            {
-                name: "Dr. Andy Chung",  // Added new doctor
-                specialty: "Medical Associates of Navarro County - ENT",
-                address: "400 Hospital Drive, Suite100 Corsicana, TX 75110-2489",
-                phone: "+19032012637",
-                zipcode: "75110-2489",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Andy Chung"
-            },
-            {
-                name: "Dr. Qi-ming Zhu",  // Added new doctor
-                specialty: "Medical Colleagues of Texas",
-                address: "21700 Kingsland Blvd, Suite 201 and 202 Katy, TX 77450",
-                phone: "+12816265368",
-                zipcode: "77450",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Qi-ming Zhu"
-            },
-            {
-                name: "Dr. Naishadh Brahmbhatt",  // Added new doctor
-                specialty: "Medical Sleep Solutions",
-                address: "1001 Robbie Mince Way Desoto, TX 75115",
-                phone: "+19724760416",
-                zipcode: "75115",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Naishadh Brahmbhatt.svg"
-            },
-            {
-                name: "Dr. Humberto Sasieta",  // Added new doctor
-                specialty: "Millennium Physicians Pulmonary & Sleep Medicine",
-                address: "27700 Northwest Fwy, Ste. 580 Cypress, TX 77433",
-                phone: "+13462482923",
-                zipcode: "77433",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Humberto Sasieta"
-            },
-            {
-                name: "Dr. David Ostransky",  // Added new doctor
-                specialty: "North Texas Lung and Sleep Clinic",
-                address: "2801 S. Hulen St., Suite 600 Fort Worth, TX 76109",
-                phone: "+18179188072",
-                zipcode: "76109",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. David Ostransky"
-            },
-            {
-                name: "Dr. Adrian Santamaria",  // Added new doctor
-                specialty: "Northwest Houston Neurology & Comprehensive Sleep Medicine Center",
-                address: "455 School St, Suite 20 Tomball, TX 77375",
-                phone: "+12819573013",
-                zipcode: "77375",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Adrian Santamaria"
-            },
-            {
-                name: "Dr. Jason Seiden",  // Added new doctor
-                specialty: "NTX Lung & Sleep",
-                address: "11803 S. Fwy, Suite 205 Burleson, TX 76028",
-                phone: "+18174776828",
-                zipcode: "76028",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Jason Seiden"
-            },
-            {
-                name: "Dr. Rafay Soleja",  // Added new doctor
-                specialty: "Oprex Medical Group - Museum District",
-                address: "1213 Hermann Drive, Suite 610 Houston, TX 77004",
-                phone: "+12813361102",
-                zipcode: "77004",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Rafay Soleja"
-            },
-            {
-                name: "Dr. Rafay Soleja",  // Added new doctor
-                specialty: "Oprex Medical Group - West Houston",
-                address: "12121 Richmond Ave, Ste 104 Houston, TX 77098",
-                phone: "+12818015278",
-                zipcode: "77098",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Rafay Soleja"
-            },
-            {
-                name: "Dr. Rafay Soleja",  // Added new doctor
-                specialty: "Oprex Medical Group- Bellaire",
-                address: "6699 Chimney Rock Rd, Ste 202 Houston, TX 77081",
-                phone: "+12812385177",
-                zipcode: "77081",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Rafay Soleja"
-            },
-            {
-                name: "Dr. Rafay Soleja",  // Added new doctor
-                specialty: "Pasha Sinus & Snoring",
-                address: "2615 SW Fwy, Ste 290 Houston, TX 77098",
-                phone: "+17135976357",
-                zipcode: "77098",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Rafay Soleja"
-            },
-            {
-                name: "Dr. Khanh Truong",  // Added new doctor
-                specialty: "Plano Family Clinic",
-                address: "6513 Chase Oaks Blvd, Ste A Plano, TX 75023",
-                phone: "+19727848337",
-                zipcode: "75023",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Khanh Truong"
-            },
-            {
-                name: "Dr. David Marks",  // Added new doctor
-                specialty: "Pulmonary & Sleep Institute PA",
-                address: "115 Gallery Circle, Ste 102 San Antonio, TX 78258",
-                phone: "+12109858241",
-                zipcode: "78258",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. David Marks"
-            },
-            {
-                name: "Dr. Leonard Chow",  // Added new doctor
-                specialty: "Pulmonary Critical Care & Sleep Medicine Consultants (PCCS)",
-                address: "6560 Fannin Street, Suite 1632 Houston, TX 77030",
-                phone: "+17138047359",
-                zipcode: "77030",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Leonard Chow"
-            },
-            {
-                name: "Dr. Syed Rizvi",  // Added new doctor
-                specialty: "Pulmonary Sleep & Critical Care Specialist Of North Texas",
-                address: "902 Preskitt Rd., Ste. 500 Decatur, TX 76234",
-                phone: "+19403265285",
-                zipcode: "76234",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Syed Rizvi"
-            },
-            {
-                name: "Dr. Humberto Sasieta",  // Added new doctor
-                specialty: "Respiratory and Sleep Disorders Specialists, Tomball",
-                address: "13426 Medical Complex Dr, Suite 175 Tomball, TX 77375",
-                phone: "+13467072486",
-                zipcode: "77375",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Humberto Sasieta"
-            },
-            {
-                name: "Dr. Esther Cheung-Phillips",  // Added new doctor
-                specialty: "River ENT",
-                address: "6611 River Place Blvd., Suite 301 Austin, TX 78730",
-                phone: "+15129574350",
-                zipcode: "78730",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Esther Cheung-Phillips"
-            },
-            {
-                name: "Dr. Kathleen Sarber",  // Added new doctor
-                specialty: "San Antonio Military Medical Center *FOR PATIENTS WITH MILITARY BENEFITS ONLY*",
-                address: "3551 Roger Brooke Drive Fort Sam Houston, TX 78234",
-                phone: "+12109536874",
-                zipcode: "78234 ",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Kathleen Sarber"
-            },
-            {
-                name: "Dr. Archana Rao",  // Added new doctor
-                specialty: "Shannon Clinic - Sleep",
-                address: "120 E Beaugard Ave San Angelo, TX 76903",
-                phone: "+13253084370",
-                zipcode: "76903",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Archana Rao"
-            },
-            {
-                name: "Dr. Tracy Byerly",  // Added new doctor
-                specialty: "Sinus & ENT Center of Texas",
-                address: "205 W. Windcrest Street, Suite 210 Fredericksburg, TX 78624",
-                phone: "+18302516873",
-                zipcode: "78624",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Tracy Byerly"
-            },
-            {
-                name: "Dr. Tracy Byerly",  // Added new doctor
-                specialty: "Sinus & ENT Center of Texas - Kerrville",
-                address: "500 Thompson Dr Kerrville, TX 78028",
-                phone: "+18302516886",
-                zipcode: "78028",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Tracy Byerly"
-            },
-            {
-                name: "Dr. Jennifer Hopkins",  // Added new doctor
-                specialty: "Sleep Health Clinic of the Woodlands",
-                address: "8505 Technology Forest Place, Suite 1002 The Woodlands, TX 77381",
-                phone: "+12816126648",
-                zipcode: "77381",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Jennifer Hopkins"
-            },
-            {
-                name: "Dr. Asher Imam",  // Added new doctor
-                specialty: "Southlake Neurology & Sleep Wellness Clinic",
-                address: "175 Stonebridge Lane, Ste 100 Southlake, TX 76092",
-                phone: "+18174427810",
-                zipcode: "76092",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Asher Imam"
-            },
-            {
-                name: "Dr. Kevin Bright",  // Added new doctor
-                specialty: "Southwest ENT Consultants",
-                address: "1600 Medical Center Dr., Suite 101 El Paso , TX 79902",
-                phone: "+19158007679",
-                zipcode: "79902",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Kevin Bright"
-            },
-            {
-                name: "Dr. Munir Hazbun",  // Added new doctor
-                specialty: "Southwest Pulmonary Associates",
-                address: "8220 Walnut Hill Ln, POB II, Suite 408 Dallas, TX 75231",
-                phone: "+14698403561",
-                zipcode: "75231",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Munir Hazbun"
-            },
-            {
-                name: "Dr. Sylvester Ramirez",  // Added new doctor
-                specialty: "Sylvester G. Ramirez, PLLC",
-                address: "1001 Water Street, Suite H, Kerrville, TX 78028",
-                phone: "+18302171797",
-                zipcode: "78028",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Sylvester Ramirez"
-            },
-            {
-                name: "Dr. Tahir Ali",  // Added new doctor
-                specialty: "Tahir S. Ali, MD",
-                address: "4920 Overton Commons Court, Fort Worth, TX 76132",
-                phone: "+18177671745",
-                zipcode: "76132",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Tahir Ali"
-            },
-            {
-                name: "Dr. Kareem Haroun",  // Added new doctor
-                specialty: "Texas Ear, Nose and Throat Specialists - West Southlake Blvd",
-                address: "2813 W. Southlake Blvd., Ste 150, Southlake, TX 76092",
-                phone: "+18179526066",
-                zipcode: "76092",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Kareem Haroun"
-            },
-            {
-                name: "Dr. Kareem Haroun",  // Added new doctor (second location)
-                specialty: "Texas Ear, Nose and Throat Specialists, LLC - Flower Mound, TX",
-                address: "4320 Windsor Centre Trail, Suite 200, Flower Mound, TX 75028",
-                phone: "+18178358233",
-                zipcode: "75028",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Kareem Haroun"
-            },
-            {
-                name: "Dr. Jose Ting",  // Added new doctor
-                specialty: "Texas ENT and Allergy",
-                address: "1730 Birmingham Rd, College Station, TX 77845",
-                phone: "+19793104101",
-                zipcode: "77845",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Jose Ting"
-            },
-            {
-                name: "Abigayle Neel, PA",  // Added new provider
-                specialty: "Texas ENT Center",
-                address: "4601 Heritage Trace Pkwy, Fort Worth, TX 76244",
-                phone: "+18178597745",
-                zipcode: "76244",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Abigayle Neel, PA"
-            },
-            {
-                name: "Abigayle Neel, PA",  // Added new provider (second location)
-                specialty: "Texas ENT Center - Northlake",
-                address: "1680 FM 407, Ste 120, Northlake, TX 76247",
-                phone: "+18176468734",
-                zipcode: "76247",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Abigayle Neel, PA"
-            },
-            {
-                name: "Dr. Donald Newland",  // Added new doctor
-                specialty: "Texas ENT Specialists - Woodlands Pinecroft",
-                address: "9301 Pinecroft Drive, Suite 150, Shenandoah, TX 77380",
-                phone: "+12813770814",
-                zipcode: "77380",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Donald Newland"
-            },
-            {
-                name: "Dr. David Haynes",  // Added new doctor
-                specialty: "Texas ENT Specialists - Katy Memorial",
-                address: "23920 Katy Freeway, Suite 430, Katy, TX 77494",
-                phone: "+12819573128",
-                zipcode: "77494",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. David Haynes"
-            },
-            {
-                name: "Dr. Brett Jensen",  // Added new doctor
-                specialty: "Texas ENT Specialists - Sugar Land",
-                address: "17520 W. Grand Parkway South, Suite 440, Sugar Land, TX 77479",
-                phone: "+18328414294",
-                zipcode: "77479",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Brett Jensen"
-            },
-            {
-                name: "Dr. Indu Mayakrishnan",  // Added new doctor
-                specialty: "Texas Institute for Neurological Disorders - Denison",
-                address: "2201 S. Austin Ave, Denison, TX 75020",
-                phone: "+19032061571",
-                zipcode: "75020",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Indu Mayakrishnan"
-            },
-            {
-                name: "Dr. Indu Mayakrishnan",  // Added new doctor (second location)
-                specialty: "Texas Institute for Neurological Disorders - McKinney",
-                address: "2517 W. Virginia Parkway, Suite 102, McKinney, TX 75071",
-                phone: "+19724722480",
-                zipcode: "75071",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Indu Mayakrishnan"
-            },
-            {
-                name: "Dr. Misha Peter",  // Added new doctor
-                specialty: "Texas IPS - Medical Center",
-                address: "4458 Medical Drive, Suite 505, San Antonio, TX 78229",
-                phone: "+12162846316",
-                zipcode: "78229",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Misha Peter"
-            },
-            {
-                name: "Dr. Harneet Singh",  // Added new doctor
-                specialty: "Texas Multispecialty Group - Tomball",
-                address: "155 School St., Suite 260, Tomball, TX 77375",
-                phone: "+12815099691",
-                zipcode: "77375",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Harneet Singh"
-            },
-            {
-                name: "Dr. Roozbeh Sharif",  // Added new doctor
-                specialty: "Texas Pulmonary Institute",
-                address: "2300 FM 365, Suite 150, Nederland, TX 77627",
-                phone: "+14095096799",
-                zipcode: "77627",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Roozbeh Sharif"
-            },
-            {
-                name: "Dr. Benjamin Cilento",  // Added new doctor
-                specialty: "Texas Sinus and Snoring",
-                address: "2940 FM 2920, Suite 100, Spring, TX 77388",
-                phone: "+12819096093",
-                zipcode: "77388",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Benjamin Cilento"
-            },
-            {
-                name: "Dr. William Burkes",  // Added new doctor
-                specialty: "Texas Sleep Clinic",
-                address: "810 Hospital Dr, Suite 235, Beaumont, TX 77701",
-                phone: "+14095096956",
-                zipcode: "77701",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. William Burkes.svg"
-            },
-            {
-                name: "Dr. Ashwin Gowda",  // Added new doctor
-                specialty: "Texas Sleep Medicine",
-                address: "1221 West Ben White Boulevard, Suite A 100, Austin, TX 78704",
-                phone: "+15123097501",
-                zipcode: "78704",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Ashwin Gowda"
-            },
-            {
-                name: "Dr. Manish Patel",  // Added new doctor
-                specialty: "Texas Tech Physicians Internal Medicine",
-                address: "1400 S. Coulter Street, Amarillo, TX 79106",
-                phone: "+18062166243",
-                zipcode: "79106",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Manish Patel"
-            },
-            {
-                name: "Dr. Wesley Dennis",  // Added new doctor
-                specialty: "The Arlington Sleep Disorder Center",
-                address: "6518 S Cooper Street, Arlington, TX 76001",
-                phone: "+18175878567",
-                zipcode: "76001",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Wesley Dennis"
-            },
-            {
-                name: "Dr. Frank Glatz",  // Added new doctor
-                specialty: "The Glatz Group",
-                address: "400 E Dove Ave, McAllen, TX 78504",
-                phone: "+19566730250",
-                zipcode: "78504",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Frank Glatz"
-            },
-            {
-                name: "Dr. Yasmeen Jalal",  // Added new doctor
-                specialty: "Town Center ENT - Sugar Land",
-                address: "3521 Town Center Blvd South, Unit B, Sugar Land, TX 77479",
-                phone: "+12813777097",
-                zipcode: "77479",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Yasmeen Jalal"
-            },
-            {
-                name: "Dr. Aparajitha Verma",  // Added new doctor
-                specialty: "UT Health Neurosciences Texas Medical Center",
-                address: "6400 Fannin St, Suite 2800, Houston, TX 77030",
-                phone: "+17135813974",
-                zipcode: "77030",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Aparajitha Verma"
-            },
-            {
-                name: "Dr. Taylor Teague",  // Added new doctor
-                specialty: "UT Health Tyler Pulm/Sleep Clinic",
-                address: "912 Fleishel Ave, Tyler, TX 75701",
-                phone: "+14302593283",
-                zipcode: "75701",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Taylor Teague"
-            },
-            {
-                name: "Dr. Xiaoyang Hua",  // Added new doctor
-                specialty: "UT Physicians ENT - Texas Medical Center",
-                address: "6400 Fannin St, Suite 2700, Houston, TX 77030",
-                phone: "+17139999261",
-                zipcode: "77030",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Xiaoyang Hua"
-            },
-            {
-                name: "Dr. Henri Tannas",  // Added new doctor
-                specialty: "Walnut Hill ENT",
-                address: "8210 Walnut Hill Ln, Building 1, Suite 408, Dallas, TX 75231",
-                phone: "+14698401802",
-                zipcode: "75231",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Henri Tannas"
-            },
-            {
-                name: "Dr. Evan Longfield",  // Added new doctor
-                specialty: "Wellstone ENT",
-                address: "800 West Central Texas Expressway, Ste 205, Harker Heights, TX 76548",
-                phone: "+12542820249",
-                zipcode: "76548",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Evan Longfield"
-            },
-            {
-                name: "Dr. Jennifer Jordan",  // Added new doctor
-                specialty: "White Rock ENT",
-                address: "1130 Beachview Street, Suite 240, Dallas, TX 75218",
-                phone: "+12149723180",
-                zipcode: "75218",  // Added zipcode for location-based filtering
-                state: "Texas",
-                image: "assets/img/new-doctors/Dr. Jennifer Jordan"
-            },
+          {
+            name: "Dr. Henry G. Raroque",  // Added new doctor
+            specialty: "SNI Neurology & Sleep",
+            address: "1215 Kinwest Parkway, #120 Irving, TX 75063",
+            phone: "+14697653073",
+            zipcode: "75063",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Henry Raroque"
+          },
+          {
+            name: "Dr. Manoher Gurru",  // Added new doctor
+            specialty: "Sleep Medicine and Neurology",
+            address: "3400 Andrews Highway Midland, TX 79703",
+            phone: "+14322267334",
+            zipcode: "79703",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Manoher Gurru"
+          },
+          {
+            name: "Dr. Traci Bailey",  // Added new doctor
+            specialty: "Allergy & ENT Associates - Sterling Ridge",
+            address: "10847 Kuykendahl Road, Suite 100 The Woodlands, TX 77382",
+            phone: "+12815453116",
+            zipcode: "77382",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Traci Bailey"
+          },
+          {
+            name: "Dr. Traci Bailey",  // Added new doctor
+            specialty: "Allergy and ENT Associates - Town Center",
+            address: "9301 Pinecroft Drive, Suite 100 Shenandoah, TX 77380",
+            phone: "+17138819783",
+            zipcode: "77380",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Traci Bailey"
+          },
+          {
+            name: "Dr. Mahmood Dweik",  // Added new doctor
+            specialty: "American Sleep Medicine",
+            address: "1046A Hercules Ave Houston, TX 77058",
+            phone: "+17137664668",
+            zipcode: "77058",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Mahmood Dweik"
+          },
+          {
+            name: "Dr. Bradley Evans",  // Added new doctor
+            specialty: "Associates of Ear, Nose & Throat Surgery - Lewisville",
+            address: "324 West Main Street, Suite 100 Lewisville, TX 75057",
+            phone: "+19729451403",
+            zipcode: "75057",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Bradley Evans"
+          },
+          {
+            name: "Dr. Joseph Leary",  // Added new doctor
+            specialty: "Austin Regional Clinic - Far West",
+            address: "6811 Austin Center Boulevard, Suite 300 Austin, TX 78731",
+            phone: "+15126015474",
+            zipcode: "78731",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Joseph Leary"
+          },
+          {
+            name: "Dr. Andrew Huang",  // Added new doctor
+            specialty: "Baylor College of Medicine - ENT | Texas Medical Center",
+            address: "1977 Butler Boulevard, Suite E5.200 Houston, TX 77030",
+            phone: "+12819184698",
+            zipcode: "77030",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Andrew Huang"
+          },
+          {
+            name: "Dr. Naren Venkatesan",  // Added new doctor
+            specialty: "Baylor Scott & White ENT Consultants of North Texas - Dallas",
+            address: "3600 Gaston Avenue, Suite 502 Dallas, TX 75246",
+            phone: "+14697471485",
+            zipcode: "75246",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Naren Venkatesan"
+          },
+          {
+            name: "Mrs. Jacqueline Hanson",  // Added new doctor
+            specialty: "Baylor Scott & White Sleep and Pulmonary - Round Rock",
+            address: "302 University Blvd Round Rock, TX 78665",
+            phone: "+15122652535",
+            zipcode: "78665",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Mrs. Jacqueline Hanson"
+          },
+          {
+            name: "Dr. Tuyet Pham",  // Added new doctor
+            specialty: "Baylor Scott and White MedProvider - Sleep",
+            address: "3417 Gaston Ave, Suite 900 Dallas, TX 75246",
+            phone: "+14695157370",
+            zipcode: "75246",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Tuyet Pham"
+          },
+          {
+            name: "Dr. Whitney Hall",  // Added new doctor
+            specialty: "Baylor Scott and White Specialty Clinic",
+            address: "2405 S. Clear Creek Rd. Killeen, TX 76549",
+            phone: "+12543313242",
+            zipcode: "76549",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Whitney Hall"
+          },
+          {
+            name: "Kyla Beedy",  // Added new provider
+            specialty: "Beedy Sleep Clinic, PLLC",
+            address: "1301 S Coulter St, STE 413 Amarillo, TX 79106",
+            phone: "+18065572906",
+            zipcode: "79106",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Kyla Beedy.svg"
+          },
+          {
+            name: "Dr. Luis Chug",  // Added new doctor
+            specialty: "BreatheSleepMD",
+            address: "1631 North Loop West, Suite 640 Houston, TX 77008",
+            phone: "+18325366457",
+            zipcode: "77008",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Luis Chug"
+          },
+          {
+            name: "Dr. Raymond Brown",  // Added new doctor
+            specialty: "Capital ENT - Lakeway",
+            address: "4 Lakeway Centre Court, Unit B Lakeway, TX 78734",
+            phone: "+17372575073",
+            zipcode: "78734",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Raymond Brown"
+          },
+          {
+            name: "Dr. Tyler Scoresby",  // Added new doctor
+            specialty: "Central Park ENT - Desoto",
+            address: "1005 York Drive Desoto, TX 75115",
+            phone: "+19728486959",
+            zipcode: "75115",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Tyler Scoresby.svg"
+          },
+          {
+            name: "Dr. Mahmood Dweik",  // Added new doctor
+            specialty: "CLS Health",
+            address: "500 N Kobayashi Rd, ste a, Webster, TX 77598",
+            phone: "+12818539697",
+            zipcode: "77598",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Mahmood Dweik"
+          },
+          {
+            name: "Dr. Tony Peter",  // Added new doctor
+            specialty: "Collin County Ear Nose and Throat",
+            address: "8380 Warren Pkwy, Suite 504 Frisco, TX 75034",
+            phone: "+19726197552",
+            zipcode: "75034",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Tony Peter"
+          },
+          {
+            name: "Dr. Tony Peter",  // Added new doctor
+            specialty: "Collin County Ear, Nose, and Throat - Plano",
+            address: "8080 Independence Pkwy, Suite 255 Plano, TX 75025",
+            phone: "+19729755595",
+            zipcode: "75025",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Tony Peter"
+          },
+          {
+            name: "Dr. Malcolm Smith",  // Added new doctor
+            specialty: "Collom and Carney Clinic Pulmonology Texarkana",
+            address: "5002 Cowhorn Creek Rd Texarkana, TX 75503",
+            phone: "+19033643956",
+            zipcode: "75503",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Malcolm Smith"
+          },
+          {
+            name: "Emily Leib",  // Added new provider
+            specialty: "Coryell Health Medical Clinic Moody",
+            address: "404 Avenue E. Moody, TX 76557",
+            phone: "+12542684629",
+            zipcode: "76557",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Emily Leib"
+          },
+          {
+            name: "Dr. Thomas Hung",  // Added new doctor
+            specialty: "Dallas ENT Group",
+            address: "12720 Hillcrest Road, Suite 900 Dallas, TX 75230",
+            phone: "+19729143360",
+            zipcode: "75230",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Thomas Hung"
+          },
+          {
+            name: "Dr. Christopher Rose",  // Added new doctor
+            specialty: "Dr. Christopher Rose",
+            address: "3709 22nd Pl, Suite A Lubbock, TX 79410",
+            phone: "+18064547280",
+            zipcode: "79410",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Christopher Rose"
+          },
+          {
+            name: "Dr. David Michalak",  // Added new doctor
+            specialty: "Dr. David Michalak, MD - Family Medicine",
+            address: "4840 W Panther Creek, Suite 101 The Woodlands, TX 77381",
+            phone: "+12818014742",
+            zipcode: "77381",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. David Michalak"
+          },
+          {
+            name: "Dr. Vikas Jain",  // Added new doctor
+            specialty: "Dream Sleep Medicine",
+            address: "4645 Avon Lane, Suite 340 Frisco, TX 75033",
+            phone: "+12144286809",
+            zipcode: "75033",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Vikas Jain"
+          },
+          {
+            name: "Dr. Hunter Skoog",  // Added new doctor
+            specialty: "East Texas ENT",
+            address: "912 Walnut Hill Dr Longview, TX 75605",
+            phone: "+19033213540",
+            zipcode: "75605",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Hunter Skoog"
+          },
+          {
+            name: "Dr. Benjamin Westbrook",  // Added new doctor
+            specialty: "El Paso Head and Neck Surgery",
+            address: "1500 N. Mesa St. El Paso, TX 79902",
+            phone: "+19153483788",
+            zipcode: "79902",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Benjamin Westbrook"
+          },
+          {
+            name: "Dr. Gonzalo Diaz",  // Added new doctor
+            specialty: "El Paso Sleep Center",
+            address: "4305 North Mesa Street El Paso, TX 79902",
+            phone: "+19152301687",
+            zipcode: "79902",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Gonzalo Diaz"
+          },
+          {
+            name: "Dr. Gonzalo Diaz",  // Added new doctor
+            specialty: "El Paso Sleep Center - East Side",
+            address: "3030 Joe Battle El Paso, TX 79938",
+            phone: "+19152337057",
+            zipcode: "79938",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Gonzalo Diaz"
+          },
+          {
+            name: "Dr. Jennifer Dang",  // Added new doctor
+            specialty: "ENT & Allergy Centers of North Texas - Plano",
+            address: "4001 W 15th Street, Suite 225 Plano, TX 75093",
+            phone: "+19452036201",
+            zipcode: "75093",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Jennifer Dang"
+          },
+          {
+            name: "Dr. Richard Thrasher",  // Added new doctor
+            specialty: "ENT & Allergy Centers of Texas - Celina",
+            address: "1060 S Preston Rd, Unit 106 Celina, TX 75009",
+            phone: "+19729941624",
+            zipcode: "75009",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Richard Thrasher"
+          },
+          {
+            name: "Dr. Brian Langford",  // Added new doctor
+            specialty: "ENT Associates of East Texas - Longview",
+            address: "323 East Hawkins Pkwy, Suite F Longview, TX 75605",
+            phone: "+19035686661",
+            zipcode: "75605",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Brian Langford"
+          },
+          {
+            name: "Dr. Brian Langford",  // Added new doctor
+            specialty: "ENT Associates of East Texas - Tyler",
+            address: "1136 E. Grande Boulevard Tyler, TX 75703",
+            phone: "+19035641336",
+            zipcode: "75703",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Brian Langford"
+          },
+          {
+            name: "Dr. Alex McKinlay",  // Added new doctor
+            specialty: "Gold Standard Sleep",
+            address: "21134 Market Ridge, Suite 102 San Antonio, TX 78258",
+            phone: "+12109726522",
+            zipcode: "78258",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Alex McKinlay"
+          },
+          {
+            name: "Dr. Jose Melendez",  // Added new doctor
+            specialty: "Greater Heights Pulmonary & Sleep",
+            address: "1631 North Loop West, Suite 600 Houston, TX 77008",
+            phone: "+17139032079",
+            zipcode: "77008",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Jose Melendez"
+          },
+          {
+            name: "Dr. Mohan Philip",  // Added new doctor
+            specialty: "Greenville Pulmonary Associates",
+            address: "4221 Ridgecrest, Suite 107 Greenville, TX 75402",
+            phone: "+19032825377",
+            zipcode: "75402",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Mohan Philip"
+          },
+          {
+            name: "Dr. Terrell Bibb",  // Added new doctor
+            specialty: "Head and Neck Surgical Associates - Wichita Falls",
+            address: "1 Burnside Dr. Wichita Falls, TX 76310",
+            phone: "+19403744319",
+            zipcode: "76310",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Terrell Bibb"
+          },
+          {
+            name: "Dr. Nader Ewaida",  // Added new doctor
+            specialty: "Hope Sleep Clinic",
+            address: "7801 Mid Cities Blvd North Richland Hills, TX 76182",
+            phone: "+18172426014",
+            zipcode: "76182",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Nader Ewaida"
+          },
+          {
+            name: "Dr. Michael Underbrink",  // Added new doctor
+            specialty: "Houston ENT - Katy - Houston Methodist West",
+            address: "18300 Katy Freeway, Medical Office Building 2, Suite 605 Katy, TX 77094",
+            phone: "+12819573193",
+            zipcode: "77094",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Michael Underbrink"
+          },
+          {
+            name: "Dr. John Edwards",  // Added new doctor
+            specialty: "Houston ENT - Kingwood",
+            address: "22999 US-59, Building B, Suite 400 Kingwood, TX 77339",
+            phone: "+12818018729",
+            zipcode: "77339",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. John Edwards"
+          },
+          {
+            name: "Dr. Michael Underbrink",  // Added new doctor
+            specialty: "Houston ENT - Memorial City",
+            address: "915 Gessner, Suite 280 Houston, TX 77024",
+            phone: "+17133602189",
+            zipcode: "77024",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Michael Underbrink"
+          },
+          {
+            name: "Dr. Kathleen Mcdonald",  // Added new doctor
+            specialty: "Houston ENT & Allergy",
+            address: "13009 Gulf Commerce Dr., Suite 101 Houston, TX 77034",
+            phone: "+12819416550",
+            zipcode: "77034",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Kathleen Mcdonald"
+          },
+          {
+            name: "Dr. Atif Qureshi",  // Added new doctor
+            specialty: "Houston Methodist Academic Medicine Associates - Pulmonology",
+            address: "4201 Garth Rd, Plaza 1 Baytown, TX 77521",
+            phone: "+17139992294",
+            zipcode: "77521",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Atif Qureshi"
+          },
+          {
+            name: "Dr. Gavin LeNobel",  // Added new doctor
+            specialty: "Houston Methodist ENT - Willowbrook",
+            address: "13300 Hargrave Road, Suite #205 Houston, TX 77070",
+            phone: "+12815196905",
+            zipcode: "77070",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Gavin LeNobel"
+          },
+          {
+            name: "Dr. Eric Powitzky",  // Added new doctor
+            specialty: "Houston Methodist ENT Specialists - Bellaire",
+            address: "4191 Bellaire Boulevard, Suite 200 Houston, TX 77025",
+            phone: "+17137157835",
+            zipcode: "77025",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Eric Powitzky"
+          },
+          {
+            name: "Whitney Montgomery",  // Added new doctor
+            specialty: "Houston Methodist Neurology & Sleep Medicine Clinic",
+            address: "17189 Interstate 45 S, Medical Office Building 2, Suite 675 The Woodlands, TX 77385",
+            phone: "+19362158647",
+            zipcode: "77385",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Whitney Montgomery"
+          },
+          {
+            name: "Dr. Gunjan Narwani",  // Added new doctor
+            specialty: "Houston Methodist Pulmonary Specialists",
+            address: "18123 Upper Bay Rd, Ste 400 Houston, TX 77058",
+            phone: "+13462487684",
+            zipcode: "77058",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Gunjan Narwani"
+          },
+          {
+            name: "Dr. Kenneth VanOwen",  // Added new doctor
+            specialty: "Houston Neurological Institute - Pearland",
+            address: "10905 Memorial Hermann Dr., Ste 115 Pearland, TX 77584",
+            phone: "+12818433173",
+            zipcode: "77584",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Kenneth VanOwen"
+          },
+          {
+            name: "Dr. Srirekha Maddukuri",  // Added new doctor
+            specialty: "Kane Hall Barry Neurology",
+            address: "1305 Airport Freeway, Suite 205 Bedford, TX 76021",
+            phone: "+18172424384",
+            zipcode: "76021",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Srirekha Maddukuri"
+          },
+          {
+            name: "Dr. Chen Wu",  // Added new doctor
+            specialty: "Kane Hall Barry Neurology – Mansfield",
+            address: "1021 Matlock Rd, Suite 101 Mansfield, TX 76063",
+            phone: "+18176011260",
+            zipcode: "76063",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Chen Wu"
+          },
+          {
+            name: "Dr. Akinyinka Ajelabi",  // Added new doctor
+            specialty: "Kingwood Pulmonary",
+            address: "201 Kingwood Medical Dr., Suite B-100 Kingwood, TX 77339",
+            phone: "+13466832069",
+            zipcode: "77339",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Akinyinka Ajelabi"
+          },
+          {
+            name: "Dr. Sanjay Aggarwal",  // Added new doctor
+            specialty: "Lake Jackson Pulmonary",
+            address: "215 Oak Drive South Lake Jackson, TX 77566",
+            phone: "+19794067396",
+            zipcode: "77566",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Sanjay Aggarwal"
+          },
+          {
+            name: "Dr. Kenny Iloabachie",  // Added new doctor
+            specialty: "Lakeside Allergy ENT - Forney",
+            address: "763 East Highway 80, Suite 230 Forney, TX 75216",
+            phone: "+19729457116",
+            zipcode: "75216",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Kenny Iloabachie"
+          },
+          {
+            name: "Dr. Kenny Iloabachie",  // Added new doctor
+            specialty: "Lakeside Allergy ENT - Rockwall",
+            address: "1320 Summer Lee Drive, Suite 107 Rockwall, TX 75032",
+            phone: "+19729458969",
+            zipcode: "75032",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Kenny Iloabachie"
+          },
+          {
+            name: "Dr. Sidra Saeed",  // Added new doctor
+            specialty: "Lone Star Pulmonary and Sleep Specialists",
+            address: "3200 Colorado Blvd., Ste 200 Denton, TX 76210",
+            phone: "+19402022073",
+            zipcode: "76210",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Sidra Saeed"
+          },
+          {
+            name: "Dr. Ghassan Noureddine",  // Added new doctor
+            specialty: "Lung & Asthma Clinic",
+            address: "6550 Fannin Street, #2321 Houston, TX 77030",
+            phone: "+12813698752",
+            zipcode: "77030",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Ghassan Noureddine"
+          },
+          {
+            name: "Dr. Olusegun Oseni",  // Added new doctor
+            specialty: "Lung and Sleep Specialists of North Texas",
+            address: "1200 Clear Lake Road Weatherford, TX 76086",
+            phone: "+18174098412",
+            zipcode: "76086",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Olusegun Oseni"
+          },
+          {
+            name: "Dr. Andy Chung",  // Added new doctor
+            specialty: "Medical Associates of Navarro County - ENT",
+            address: "400 Hospital Drive, Suite100 Corsicana, TX 75110-2489",
+            phone: "+19032012637",
+            zipcode: "75110-2489",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Andy Chung"
+          },
+          {
+            name: "Dr. Qi-ming Zhu",  // Added new doctor
+            specialty: "Medical Colleagues of Texas",
+            address: "21700 Kingsland Blvd, Suite 201 and 202 Katy, TX 77450",
+            phone: "+12816265368",
+            zipcode: "77450",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Qi-ming Zhu"
+          },
+          {
+            name: "Dr. Naishadh Brahmbhatt",  // Added new doctor
+            specialty: "Medical Sleep Solutions",
+            address: "1001 Robbie Mince Way Desoto, TX 75115",
+            phone: "+19724760416",
+            zipcode: "75115",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Naishadh Brahmbhatt.svg"
+          },
+          {
+            name: "Dr. Humberto Sasieta",  // Added new doctor
+            specialty: "Millennium Physicians Pulmonary & Sleep Medicine",
+            address: "27700 Northwest Fwy, Ste. 580 Cypress, TX 77433",
+            phone: "+13462482923",
+            zipcode: "77433",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Humberto Sasieta"
+          },
+          {
+            name: "Dr. David Ostransky",  // Added new doctor
+            specialty: "North Texas Lung and Sleep Clinic",
+            address: "2801 S. Hulen St., Suite 600 Fort Worth, TX 76109",
+            phone: "+18179188072",
+            zipcode: "76109",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. David Ostransky"
+          },
+          {
+            name: "Dr. Adrian Santamaria",  // Added new doctor
+            specialty: "Northwest Houston Neurology & Comprehensive Sleep Medicine Center",
+            address: "455 School St, Suite 20 Tomball, TX 77375",
+            phone: "+12819573013",
+            zipcode: "77375",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Adrian Santamaria"
+          },
+          {
+            name: "Dr. Jason Seiden",  // Added new doctor
+            specialty: "NTX Lung & Sleep",
+            address: "11803 S. Fwy, Suite 205 Burleson, TX 76028",
+            phone: "+18174776828",
+            zipcode: "76028",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Jason Seiden"
+          },
+          {
+            name: "Dr. Rafay Soleja",  // Added new doctor
+            specialty: "Oprex Medical Group - Museum District",
+            address: "1213 Hermann Drive, Suite 610 Houston, TX 77004",
+            phone: "+12813361102",
+            zipcode: "77004",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Rafay Soleja"
+          },
+          {
+            name: "Dr. Rafay Soleja",  // Added new doctor
+            specialty: "Oprex Medical Group - West Houston",
+            address: "12121 Richmond Ave, Ste 104 Houston, TX 77098",
+            phone: "+12818015278",
+            zipcode: "77098",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Rafay Soleja"
+          },
+          {
+            name: "Dr. Rafay Soleja",  // Added new doctor
+            specialty: "Oprex Medical Group- Bellaire",
+            address: "6699 Chimney Rock Rd, Ste 202 Houston, TX 77081",
+            phone: "+12812385177",
+            zipcode: "77081",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Rafay Soleja"
+          },
+          {
+            name: "Dr. Rafay Soleja",  // Added new doctor
+            specialty: "Pasha Sinus & Snoring",
+            address: "2615 SW Fwy, Ste 290 Houston, TX 77098",
+            phone: "+17135976357",
+            zipcode: "77098",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Rafay Soleja"
+          },
+          {
+            name: "Dr. Khanh Truong",  // Added new doctor
+            specialty: "Plano Family Clinic",
+            address: "6513 Chase Oaks Blvd, Ste A Plano, TX 75023",
+            phone: "+19727848337",
+            zipcode: "75023",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Khanh Truong"
+          },
+          {
+            name: "Dr. David Marks",  // Added new doctor
+            specialty: "Pulmonary & Sleep Institute PA",
+            address: "115 Gallery Circle, Ste 102 San Antonio, TX 78258",
+            phone: "+12109858241",
+            zipcode: "78258",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. David Marks"
+          },
+          {
+            name: "Dr. Leonard Chow",  // Added new doctor
+            specialty: "Pulmonary Critical Care & Sleep Medicine Consultants (PCCS)",
+            address: "6560 Fannin Street, Suite 1632 Houston, TX 77030",
+            phone: "+17138047359",
+            zipcode: "77030",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Leonard Chow"
+          },
+          {
+            name: "Dr. Syed Rizvi",  // Added new doctor
+            specialty: "Pulmonary Sleep & Critical Care Specialist Of North Texas",
+            address: "902 Preskitt Rd., Ste. 500 Decatur, TX 76234",
+            phone: "+19403265285",
+            zipcode: "76234",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Syed Rizvi"
+          },
+          {
+            name: "Dr. Humberto Sasieta",  // Added new doctor
+            specialty: "Respiratory and Sleep Disorders Specialists, Tomball",
+            address: "13426 Medical Complex Dr, Suite 175 Tomball, TX 77375",
+            phone: "+13467072486",
+            zipcode: "77375",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Humberto Sasieta"
+          },
+          {
+            name: "Dr. Esther Cheung-Phillips",  // Added new doctor
+            specialty: "River ENT",
+            address: "6611 River Place Blvd., Suite 301 Austin, TX 78730",
+            phone: "+15129574350",
+            zipcode: "78730",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Esther Cheung-Phillips"
+          },
+          {
+            name: "Dr. Kathleen Sarber",  // Added new doctor
+            specialty: "San Antonio Military Medical Center *FOR PATIENTS WITH MILITARY BENEFITS ONLY*",
+            address: "3551 Roger Brooke Drive Fort Sam Houston, TX 78234",
+            phone: "+12109536874",
+            zipcode: "78234 ",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Kathleen Sarber"
+          },
+          {
+            name: "Dr. Archana Rao",  // Added new doctor
+            specialty: "Shannon Clinic - Sleep",
+            address: "120 E Beaugard Ave San Angelo, TX 76903",
+            phone: "+13253084370",
+            zipcode: "76903",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Archana Rao"
+          },
+          {
+            name: "Dr. Tracy Byerly",  // Added new doctor
+            specialty: "Sinus & ENT Center of Texas",
+            address: "205 W. Windcrest Street, Suite 210 Fredericksburg, TX 78624",
+            phone: "+18302516873",
+            zipcode: "78624",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Tracy Byerly"
+          },
+          {
+            name: "Dr. Tracy Byerly",  // Added new doctor
+            specialty: "Sinus & ENT Center of Texas - Kerrville",
+            address: "500 Thompson Dr Kerrville, TX 78028",
+            phone: "+18302516886",
+            zipcode: "78028",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Tracy Byerly"
+          },
+          {
+            name: "Dr. Jennifer Hopkins",  // Added new doctor
+            specialty: "Sleep Health Clinic of the Woodlands",
+            address: "8505 Technology Forest Place, Suite 1002 The Woodlands, TX 77381",
+            phone: "+12816126648",
+            zipcode: "77381",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Jennifer Hopkins"
+          },
+          {
+            name: "Dr. Asher Imam",  // Added new doctor
+            specialty: "Southlake Neurology & Sleep Wellness Clinic",
+            address: "175 Stonebridge Lane, Ste 100 Southlake, TX 76092",
+            phone: "+18174427810",
+            zipcode: "76092",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Asher Imam"
+          },
+          {
+            name: "Dr. Kevin Bright",  // Added new doctor
+            specialty: "Southwest ENT Consultants",
+            address: "1600 Medical Center Dr., Suite 101 El Paso , TX 79902",
+            phone: "+19158007679",
+            zipcode: "79902",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Kevin Bright"
+          },
+          {
+            name: "Dr. Munir Hazbun",  // Added new doctor
+            specialty: "Southwest Pulmonary Associates",
+            address: "8220 Walnut Hill Ln, POB II, Suite 408 Dallas, TX 75231",
+            phone: "+14698403561",
+            zipcode: "75231",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Munir Hazbun"
+          },
+          {
+            name: "Dr. Sylvester Ramirez",  // Added new doctor
+            specialty: "Sylvester G. Ramirez, PLLC",
+            address: "1001 Water Street, Suite H, Kerrville, TX 78028",
+            phone: "+18302171797",
+            zipcode: "78028",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Sylvester Ramirez"
+          },
+          {
+            name: "Dr. Tahir Ali",  // Added new doctor
+            specialty: "Tahir S. Ali, MD",
+            address: "4920 Overton Commons Court, Fort Worth, TX 76132",
+            phone: "+18177671745",
+            zipcode: "76132",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Tahir Ali"
+          },
+          {
+            name: "Dr. Kareem Haroun",  // Added new doctor
+            specialty: "Texas Ear, Nose and Throat Specialists - West Southlake Blvd",
+            address: "2813 W. Southlake Blvd., Ste 150, Southlake, TX 76092",
+            phone: "+18179526066",
+            zipcode: "76092",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Kareem Haroun"
+          },
+          {
+            name: "Dr. Kareem Haroun",  // Added new doctor (second location)
+            specialty: "Texas Ear, Nose and Throat Specialists, LLC - Flower Mound, TX",
+            address: "4320 Windsor Centre Trail, Suite 200, Flower Mound, TX 75028",
+            phone: "+18178358233",
+            zipcode: "75028",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Kareem Haroun"
+          },
+          {
+            name: "Dr. Jose Ting",  // Added new doctor
+            specialty: "Texas ENT and Allergy",
+            address: "1730 Birmingham Rd, College Station, TX 77845",
+            phone: "+19793104101",
+            zipcode: "77845",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Jose Ting"
+          },
+          {
+            name: "Abigayle Neel, PA",  // Added new provider
+            specialty: "Texas ENT Center",
+            address: "4601 Heritage Trace Pkwy, Fort Worth, TX 76244",
+            phone: "+18178597745",
+            zipcode: "76244",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Abigayle Neel, PA"
+          },
+          {
+            name: "Abigayle Neel, PA",  // Added new provider (second location)
+            specialty: "Texas ENT Center - Northlake",
+            address: "1680 FM 407, Ste 120, Northlake, TX 76247",
+            phone: "+18176468734",
+            zipcode: "76247",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Abigayle Neel, PA"
+          },
+          {
+            name: "Dr. Donald Newland",  // Added new doctor
+            specialty: "Texas ENT Specialists - Woodlands Pinecroft",
+            address: "9301 Pinecroft Drive, Suite 150, Shenandoah, TX 77380",
+            phone: "+12813770814",
+            zipcode: "77380",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Donald Newland"
+          },
+          {
+            name: "Dr. David Haynes",  // Added new doctor
+            specialty: "Texas ENT Specialists - Katy Memorial",
+            address: "23920 Katy Freeway, Suite 430, Katy, TX 77494",
+            phone: "+12819573128",
+            zipcode: "77494",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. David Haynes"
+          },
+          {
+            name: "Dr. Brett Jensen",  // Added new doctor
+            specialty: "Texas ENT Specialists - Sugar Land",
+            address: "17520 W. Grand Parkway South, Suite 440, Sugar Land, TX 77479",
+            phone: "+18328414294",
+            zipcode: "77479",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Brett Jensen"
+          },
+          {
+            name: "Dr. Indu Mayakrishnan",  // Added new doctor
+            specialty: "Texas Institute for Neurological Disorders - Denison",
+            address: "2201 S. Austin Ave, Denison, TX 75020",
+            phone: "+19032061571",
+            zipcode: "75020",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Indu Mayakrishnan"
+          },
+          {
+            name: "Dr. Indu Mayakrishnan",  // Added new doctor (second location)
+            specialty: "Texas Institute for Neurological Disorders - McKinney",
+            address: "2517 W. Virginia Parkway, Suite 102, McKinney, TX 75071",
+            phone: "+19724722480",
+            zipcode: "75071",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Indu Mayakrishnan"
+          },
+          {
+            name: "Dr. Misha Peter",  // Added new doctor
+            specialty: "Texas IPS - Medical Center",
+            address: "4458 Medical Drive, Suite 505, San Antonio, TX 78229",
+            phone: "+12162846316",
+            zipcode: "78229",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Misha Peter"
+          },
+          {
+            name: "Dr. Harneet Singh",  // Added new doctor
+            specialty: "Texas Multispecialty Group - Tomball",
+            address: "155 School St., Suite 260, Tomball, TX 77375",
+            phone: "+12815099691",
+            zipcode: "77375",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Harneet Singh"
+          },
+          {
+            name: "Dr. Roozbeh Sharif",  // Added new doctor
+            specialty: "Texas Pulmonary Institute",
+            address: "2300 FM 365, Suite 150, Nederland, TX 77627",
+            phone: "+14095096799",
+            zipcode: "77627",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Roozbeh Sharif"
+          },
+          {
+            name: "Dr. Benjamin Cilento",  // Added new doctor
+            specialty: "Texas Sinus and Snoring",
+            address: "2940 FM 2920, Suite 100, Spring, TX 77388",
+            phone: "+12819096093",
+            zipcode: "77388",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Benjamin Cilento"
+          },
+          {
+            name: "Dr. William Burkes",  // Added new doctor
+            specialty: "Texas Sleep Clinic",
+            address: "810 Hospital Dr, Suite 235, Beaumont, TX 77701",
+            phone: "+14095096956",
+            zipcode: "77701",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. William Burkes.svg"
+          },
+          {
+            name: "Dr. Ashwin Gowda",  // Added new doctor
+            specialty: "Texas Sleep Medicine",
+            address: "1221 West Ben White Boulevard, Suite A 100, Austin, TX 78704",
+            phone: "+15123097501",
+            zipcode: "78704",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Ashwin Gowda"
+          },
+          {
+            name: "Dr. Manish Patel",  // Added new doctor
+            specialty: "Texas Tech Physicians Internal Medicine",
+            address: "1400 S. Coulter Street, Amarillo, TX 79106",
+            phone: "+18062166243",
+            zipcode: "79106",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Manish Patel"
+          },
+          {
+            name: "Dr. Wesley Dennis",  // Added new doctor
+            specialty: "The Arlington Sleep Disorder Center",
+            address: "6518 S Cooper Street, Arlington, TX 76001",
+            phone: "+18175878567",
+            zipcode: "76001",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Wesley Dennis"
+          },
+          {
+            name: "Dr. Frank Glatz",  // Added new doctor
+            specialty: "The Glatz Group",
+            address: "400 E Dove Ave, McAllen, TX 78504",
+            phone: "+19566730250",
+            zipcode: "78504",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Frank Glatz"
+          },
+          {
+            name: "Dr. Yasmeen Jalal",  // Added new doctor
+            specialty: "Town Center ENT - Sugar Land",
+            address: "3521 Town Center Blvd South, Unit B, Sugar Land, TX 77479",
+            phone: "+12813777097",
+            zipcode: "77479",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Yasmeen Jalal"
+          },
+          {
+            name: "Dr. Aparajitha Verma",  // Added new doctor
+            specialty: "UT Health Neurosciences Texas Medical Center",
+            address: "6400 Fannin St, Suite 2800, Houston, TX 77030",
+            phone: "+17135813974",
+            zipcode: "77030",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Aparajitha Verma"
+          },
+          {
+            name: "Dr. Taylor Teague",  // Added new doctor
+            specialty: "UT Health Tyler Pulm/Sleep Clinic",
+            address: "912 Fleishel Ave, Tyler, TX 75701",
+            phone: "+14302593283",
+            zipcode: "75701",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Taylor Teague"
+          },
+          {
+            name: "Dr. Xiaoyang Hua",  // Added new doctor
+            specialty: "UT Physicians ENT - Texas Medical Center",
+            address: "6400 Fannin St, Suite 2700, Houston, TX 77030",
+            phone: "+17139999261",
+            zipcode: "77030",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Xiaoyang Hua"
+          },
+          {
+            name: "Dr. Henri Tannas",  // Added new doctor
+            specialty: "Walnut Hill ENT",
+            address: "8210 Walnut Hill Ln, Building 1, Suite 408, Dallas, TX 75231",
+            phone: "+14698401802",
+            zipcode: "75231",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Henri Tannas"
+          },
+          {
+            name: "Dr. Evan Longfield",  // Added new doctor
+            specialty: "Wellstone ENT",
+            address: "800 West Central Texas Expressway, Ste 205, Harker Heights, TX 76548",
+            phone: "+12542820249",
+            zipcode: "76548",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Evan Longfield"
+          },
+          {
+            name: "Dr. Jennifer Jordan",  // Added new doctor
+            specialty: "White Rock ENT",
+            address: "1130 Beachview Street, Suite 240, Dallas, TX 75218",
+            phone: "+12149723180",
+            zipcode: "75218",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Jennifer Jordan"
+          }
         ];
     
         let map;
