@@ -1087,7 +1087,7 @@
 
           if (filteredDoctors.length === 0) {
             doctorList.innerHTML = '<p style="padding: 1rem;">No doctors found.</p>';
-            resultCount.textContent = '0 Inspire-trained provider locations found.';
+            resultCount.textContent = '0 Provider locations found.';
             return;
           }
 
@@ -1101,7 +1101,7 @@
             locationType = ''; // Will default to blank
           }
 
-          resultCount.textContent = `${filteredDoctors.length} Inspire-trained provider location${filteredDoctors.length > 1 ? 's' : ''} ${locationType}`.trim();
+          resultCount.textContent = `${filteredDoctors.length} Provider location${filteredDoctors.length > 1 ? 's' : ''} ${locationType}`.trim();
 
           filteredDoctors.forEach(doc => {
             doctorList.innerHTML += `
