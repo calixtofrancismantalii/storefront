@@ -2412,7 +2412,7 @@ Other Layout Service
 .container-timeline img{
   position: absolute;
   width: 40px;
-  border-radius: 50%;
+  border-radius: 50% !important;
   border: 2px solid #1977cc;
   right: -20px;
   top: 32px;
