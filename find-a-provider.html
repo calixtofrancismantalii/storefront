@@ -1154,16 +1154,17 @@
         // }
     
         // Set default zipcode to 75063
-        window.onload = function () {
-            searchInput.value = '75063'; // Set default zipcode to 75063
-            filterDoctors(); // Trigger filter on page load
-        };
+        // window.onload = function () {
+        //     // searchInput.value = '75063'; // Set default zipcode to 75063
+        //     filterDoctors(); // Trigger filter on page load
+        // };
     
         // Attach events
         searchInput.addEventListener('input', filterDoctors);
     
         // Initial render
         displayDoctors(doctors);
+        searchInput.value = '75063';
         initMap(); // Initialize the map on page load
       </script>
     </section>
