@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>MyApneaPath</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/Logo My 2.1.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Medilab
+  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <script src="assets/js/headerFooter.js"></script>
+
+  <special-header></special-headers>
+
+  <main class="main">
+    <section class="container">
+      <div class="find-prov">
+        <div class="prov-h">
+          <h2>Find a Provider</h2>
+        </div>
+      </div>
+    
+      <div class="find-prov">
+        <!-- Left Column: Doctor Search -->
+        <div class="search-section">
+          <form class="search-form">
+            <label>Search by Zipcode or State</label>
+            <input type="text" id="searchInput" placeholder="Enter Zipcode or State">
+
+            <div class="check-it">
+              <label><input type="checkbox" id="inspiredFilter" /> Inspire Doctors</label><br />
+              <label><input type="checkbox" id="boardCertifiedFilter" /> Board Certified Sleep Doctors</label>
+              <button type="button" id="clearFiltersBtn">Clear Filters</button>
+            </div>
+            <p id="resultCount" style="font-family: 'Poppins';"></p>
+          </form>
+    
+          <div class="doctor-list" id="doctorList">
+            <!-- Cards will be inserted by JavaScript -->
+          </div>
+        </div>
+    
+        <!-- Right Column: Map Placeholder -->
+        <div class="map-section" id="mapSection">
+          <div id="map" style="width: 100%; height: 100%"></div>
+        </div>
+        <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChM09gbI9F32wneHEA2vMpW3wuecNmV7Y&callback=initMap">
+          </script>
+      </div>
+    
+      <script>
+        const doctors = [
+          {
+            name: "Dr. Henry G. Raroque",
+            specialty: "SNI Neurology & Sleep",
+            address: "1215 Kinwest Parkway, #120 Irving, TX 75063",
+            phone: "+1 469-765-3073",
+            zipcode: "75063",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Henry Raroque",
+            inspiredTrained: true,
+            boardCertified: true,
+          },
+          {
+            name: "Dr. Manoher Gurru",
+            specialty: "Advanced Neuroscience Clinic and Sleep Center",
+            address: "3400 Andrews Highway Midland, TX 79703",
+            phone: "+1 432-226-7334",
+            zipcode: "79703",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Manoher Gurru"
+          },
+          {
+            name: "Dr. Traci Bailey",
+            specialty: "Allergy & ENT Associates - Sterling Ridge",
+            address: "10847 Kuykendahl Road, Suite 100 The Woodlands, TX 77382",
+            phone: "+1 281-545-3116",
+            zipcode: "77382",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Traci Bailey",
+            inspiredTrained: true,
+            boardCertified: false,
+          },
+          {
+            name: "Dr. Traci Bailey",
+            specialty: "Allergy and ENT Associates - Town Center",
+            address: "9301 Pinecroft Drive, Suite 100 Shenandoah, TX 77380",
+            phone: "+1 713-881-9783",
+            zipcode: "77380",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Traci Bailey",
+            inspiredTrained: false,
+            boardCertified: false,
+          },
+          {
+            name: "Dr. Wha-Joon Lee",
+            specialty: "Allergy ENT Clinic of Northeast Texas",
+            address: "4000 Medical Pkwy. Greenville, TX 75401",
+            phone: "+1 903-451-7895",
+            zipcode: "75401",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Wha-Joon Lee",
+          },
+          {
+            name: "Dr. Wha-Joon Lee",
+            specialty: "Allergy, Ear, Nose & Throat Clinic of Northeast Texas, Rockwall",
+            address: "3000 Horizon Road Rockwall, TX 75032",
+            phone: "+1 469-707-8331",
+            zipcode: "75032",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Wha-Joon Lee",
+          },
+          {
+            name: "Dr. Mahmood Dweik",
+            specialty: "American Sleep Medicine",
+            address: "1046A Hercules Ave Houston, TX 77058",
+            phone: "+1 713-766-4668",
+            zipcode: "77058",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Mahmood Dweik",
+            inspiredTrained: true,
+            boardCertified: true,
+          },
+          {
+            name: "Dori Sims, PA",
+            specialty: "AMG Providence Sleep Clinic",
+            address: "601 W. Hwy 6, Suite 106 Waco, TX 76710",
+            phone: "+1 254-613-9745",
+            zipcode: "76710",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dori Sims, PA",
+          },
+          {
+            name: "Dr. Robert Chris Matlock",
+            specialty: "AMG Providence Sleep Clinic",
+            address: "601 W. Hwy 6, Suite 106 Waco, TX 76710",
+            phone: "+1 254-613-9745",
+            zipcode: "76710",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Robert Chris Matlock",
+          },
+          {
+            name: "Dr. Benjamin Hull",
+            specialty: "Associates of Ear, Nose & Throat Surgery - Flower Mound",
+            address: "4401 Long Prairie Road, Suite 100 Flower Mound, TX 75028",
+            phone: "+1 972-945-1522",
+            zipcode: "75028",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Benjamin Hull",
+          },
+          {
+            name: "Dr. Bradley Evans",
+            specialty: "Associates of Ear, Nose & Throat Surgery - Flower Mound",
+            address: "4401 Long Prairie Road, Suite 100 Flower Mound, TX 75028",
+            phone: "+1 972-945-1522",
+            zipcode: "75028",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Bradley Evans",
+          },
+          {
+            name: "Dr. Taylor Shepard",
+            specialty: "Austin Ear Nose & Throat Clinic - South Austin",
+            address: "6503 Menchaca Rd Austin, TX 78745",
+            phone: "+1 817-910-6210",
+            zipcode: "78745",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Taylor Shepard",
+          },
+          {
+            name: "Dr. Ryan Boerner",
+            specialty: "Austin Ear, Nose & Throat Clinic - Seton Center Parkway",
+            address: "4515 Seton Center Parkway, Suite 100 Austin, TX 78759",
+            phone: "+1 512-645-2608",
+            zipcode: "78759",
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Ryan Boerner",
+          },
+        ];
+    
+        let map;
+    
+        const searchInput = document.getElementById('searchInput');
+        const doctorList = document.getElementById('doctorList');
+        const mapSection = document.getElementById('mapSection');
+    
+        function initMap() {
+          map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: 37.7749, lng: -122.4194 }, // Default location: San Francisco
+            zoom: 10,
+          });
+        }
+    
+        function displayDoctors(filteredDoctors, searchValue) {
+          const resultCount = document.getElementById('resultCount');
+          doctorList.innerHTML = '';
+
+          if (filteredDoctors.length === 0) {
+            doctorList.innerHTML = '<p style="padding: 1rem;">No doctors found.</p>';
+            resultCount.textContent = '0 Provider locations found.';
+            return;
+          }
+
+          // Try to infer the location type from the search value
+          let locationType = '';
+          if (/^\d+$/.test(searchValue)) {
+            locationType = `within ZIP code ${searchValue}`;
+          } else if (searchValue) {
+            locationType = `within ${searchValue.toUpperCase()}`;
+          } else {
+            locationType = ''; // Will default to blank
+          }
+
+          resultCount.textContent = `${filteredDoctors.length} Provider location${filteredDoctors.length > 1 ? 's' : ''} ${locationType}`.trim();
+
+          filteredDoctors.forEach(doc => {
+            doctorList.innerHTML += `
+              <div class="doctor-card">
+                <div class="doctor-info">
+                  <img src="${doc.image}" alt="Doctor Photo">
+                  <div class="doctor-details">
+                    <h3>${doc.name}</h3>
+                    <p>${doc.specialty}</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <a href="https://www.google.com/maps/search/${encodeURIComponent(doc.address)}" target="_blank">${doc.address}</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:${doc.phone}">${doc.phone}</a></p>
+                  </div>
+                </div>
+              </div>
+            `;
+          });
+        }
+    
+        function filterDoctors() {
+        const searchValue = searchInput.value.trim().toLowerCase();
+        const inspiredChecked = document.getElementById("inspiredFilter").checked;
+        const boardChecked = document.getElementById("boardCertifiedFilter").checked;
+
+        const filtered = doctors.filter(doc => {
+            const matchesZipcode = doc.zipcode.toLowerCase().includes(searchValue);
+            const matchesState = doc.state.toLowerCase().includes(searchValue);
+            const matchesSearch = searchValue === '' || matchesZipcode || matchesState;
+
+            const matchesInspired = inspiredChecked ? doc.inspiredTrained === true : true;
+            const matchesBoard = boardChecked ? doc.boardCertified === true : true;
+
+            return matchesSearch && matchesInspired && matchesBoard;
+        });
+
+        displayDoctors(filtered, searchValue);
+        }
+
+        const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+
+        clearFiltersBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        document.getElementById('inspiredFilter').checked = false;
+        document.getElementById('boardCertifiedFilter').checked = false;
+
+        filterDoctors();
+        });
+    
+        // function updateMap(zipcode) {
+        //   // Geocode the zipcode to get the coordinates (For the demo, using fixed values)
+        //   const geocoder = new google.maps.Geocoder();
+    
+        //   geocoder.geocode({ 'address': zipcode }, function(results, status) {
+        //     if (status === 'OK') {
+        //       const location = results[0].geometry.location;
+        //       map.setCenter(location);
+        //       map.setZoom(12);
+        //       new google.maps.Marker({
+        //         map: map,
+        //         position: location,
+        //       });
+        //     } else {
+        //       map.setCenter({ lat: 37.7749, lng: -122.4194 }); // Default if geocode fails
+        //       map.setZoom(10);
+        //       alert('Geocode was not successful for the following reason: ' + status);
+        //     }
+        //   });
+        // }
+    
+        // Set default zipcode to 75063
+        // window.onload = function () {
+        //     // searchInput.value = '75063'; // Set default zipcode to 75063
+        //     filterDoctors(); // Trigger filter on page load
+        // };
+    
+        // Attach events
+        searchInput.addEventListener('input', filterDoctors);
+        document.getElementById("inspiredFilter").addEventListener("change", filterDoctors);
+        document.getElementById("boardCertifiedFilter").addEventListener("change", filterDoctors);
+    
+        // Initial render
+        displayDoctors(doctors);
+        searchInput.value = '75063';
+        initMap(); // Initialize the map on page load
+      </script>
+    </section>
+  </main>
+
+  <special-footer></special-footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+</body>
+
+</html>

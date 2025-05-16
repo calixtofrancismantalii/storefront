@@ -4441,7 +4441,7 @@ th {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 10px;
+    padding: 5px;
     max-height: 325px; /* Set a max height for the list */
     overflow-y: auto; /* Enable vertical scrolling */
 }
@@ -4513,15 +4513,29 @@ th {
 /* --------------------New Find------------------ */
 .check-it {
   display: flex;
+  margin-left: 5px;
 }
 
 .check-it label {
   margin-right: 10px;
   font-size: 15px !important;
   font-family: Poppins;
+  margin-bottom: 10px !important;
 }
 
 .check-it label input[type=checkbox] {
   width: auto;
   height: 40%;
+}
+
+.check-it button[type=button] {
+  border: none;
+  background: none;
+  text-decoration: underline;
+  margin-top: -10px !important;
+  color: #1977cc;
+}
+
+.check-it button[type=button]:hover {
+  color: #DC4F4B;
 }

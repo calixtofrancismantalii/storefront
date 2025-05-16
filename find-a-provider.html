@@ -61,6 +61,7 @@
             <div class="check-it">
               <label><input type="checkbox" id="inspiredFilter" /> Inspire Doctors</label><br />
               <label><input type="checkbox" id="boardCertifiedFilter" /> Board Certified Sleep Doctors</label>
+              <button type="button" id="clearFiltersBtn">Clear Filters</button>
             </div>
 
             <p id="resultCount" style="font-family: 'Poppins';"></p>
@@ -1200,28 +1201,28 @@
     
         function displayDoctors(filteredDoctors, searchValue) {
           const resultCount = document.getElementById('resultCount');
-          doctorList.innerHTML = '';
-
+          
           if (filteredDoctors.length === 0) {
             doctorList.innerHTML = '<p style="padding: 1rem;">No doctors found.</p>';
             resultCount.textContent = '0 Provider locations found.';
             return;
           }
 
-          // Try to infer the location type from the search value
           let locationType = '';
           if (/^\d+$/.test(searchValue)) {
             locationType = `within ZIP code ${searchValue}`;
           } else if (searchValue) {
             locationType = `within ${searchValue.toUpperCase()}`;
           } else {
-            locationType = ''; // Will default to blank
+            locationType = '';
           }
 
           resultCount.textContent = `${filteredDoctors.length} Provider location${filteredDoctors.length > 1 ? 's' : ''} ${locationType}`.trim();
 
+          // Build HTML string first
+          let html = '';
           filteredDoctors.forEach(doc => {
-            doctorList.innerHTML += `
+            html += `
               <div class="doctor-card">
                 <div class="doctor-info">
                   <img src="${doc.image}" alt="Doctor Photo">
@@ -1235,7 +1236,10 @@
               </div>
             `;
           });
+
+          doctorList.innerHTML = html;
         }
+
     
         function filterDoctors() {
         const searchValue = searchInput.value.trim().toLowerCase();
@@ -1255,6 +1259,16 @@
 
         displayDoctors(filtered, searchValue);
         }
+
+        const clearFiltersBtn = document.getElementById('clearFiltersBtn');
+
+        clearFiltersBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        document.getElementById('inspiredFilter').checked = false;
+        document.getElementById('boardCertifiedFilter').checked = false;
+
+        filterDoctors();
+        });
     
         // function updateMap(zipcode) {
         //   // Geocode the zipcode to get the coordinates (For the demo, using fixed values)
