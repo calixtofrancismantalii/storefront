@@ -54,11 +54,17 @@
       <div class="find-prov">
         <!-- Left Column: Doctor Search -->
         <div class="search-section">
-            <form class="search-form">
-              <label>Search by Zipcode or State</label>
-              <input type="text" id="searchInput" placeholder="Enter Zipcode or State">
-              <p id="resultCount" style="font-family: 'Poppins';"></p>
-            </form>
+          <form class="search-form">
+            <label>Search by Zipcode or State</label>
+            <input type="text" id="searchInput" placeholder="Enter Zipcode or State">
+
+            <div class="check-it">
+              <label><input type="checkbox" id="inspiredFilter" /> Inspired-Trained Provider</label><br />
+              <label><input type="checkbox" id="boardCertifiedFilter" /> Board Certified</label>
+            </div>
+
+            <p id="resultCount" style="font-family: 'Poppins';"></p>
+          </form>
     
           <div class="doctor-list" id="doctorList">
             <!-- Cards will be inserted by JavaScript -->
@@ -77,49 +83,59 @@
       <script>
         const doctors = [
           {
-            name: "Dr. Henry G. Raroque",  // Added new doctor
+            name: "Dr. Henry G. Raroque",
             specialty: "SNI Neurology & Sleep",
             address: "1215 Kinwest Parkway, #120 Irving, TX 75063",
             phone: "+1 469-765-3073",
-            zipcode: "75063",  // Added zipcode for location-based filtering
+            zipcode: "75063",
             state: "Texas",
-            image: "assets/img/new-doctors/Dr. Henry Raroque"
+            image: "assets/img/new-doctors/Dr. Henry Raroque",
+            inspiredTrained: true,
+            boardCertified: true,
           },
           {
-            name: "Dr. Manoher Gurru",  // Added new doctor
+            name: "Dr. Manoher Gurru",
             specialty: "Sleep Medicine and Neurology",
             address: "3400 Andrews Highway Midland, TX 79703",
             phone: "+1 432-226-7334",
-            zipcode: "79703",  // Added zipcode for location-based filtering
+            zipcode: "79703",
             state: "Texas",
-            image: "assets/img/new-doctors/Dr. Manoher Gurru"
+            image: "assets/img/new-doctors/Dr. Manoher Gurru",
+            inspiredTrained: false,
+            boardCertified: true,
           },
           {
-            name: "Dr. Traci Bailey",  // Added new doctor
+            name: "Dr. Traci Bailey",
             specialty: "Allergy & ENT Associates - Sterling Ridge",
             address: "10847 Kuykendahl Road, Suite 100 The Woodlands, TX 77382",
             phone: "+1 281-545-3116",
-            zipcode: "77382",  // Added zipcode for location-based filtering
+            zipcode: "77382",
             state: "Texas",
-            image: "assets/img/new-doctors/Dr. Traci Bailey"
+            image: "assets/img/new-doctors/Dr. Traci Bailey",
+            inspiredTrained: true,
+            boardCertified: false,
           },
           {
-            name: "Dr. Traci Bailey",  // Added new doctor
+            name: "Dr. Traci Bailey",
             specialty: "Allergy and ENT Associates - Town Center",
             address: "9301 Pinecroft Drive, Suite 100 Shenandoah, TX 77380",
             phone: "+1 713-881-9783",
-            zipcode: "77380",  // Added zipcode for location-based filtering
+            zipcode: "77380",
             state: "Texas",
-            image: "assets/img/new-doctors/Dr. Traci Bailey"
+            image: "assets/img/new-doctors/Dr. Traci Bailey",
+            inspiredTrained: false,
+            boardCertified: false,
           },
           {
-            name: "Dr. Mahmood Dweik",  // Added new doctor
+            name: "Dr. Mahmood Dweik",
             specialty: "American Sleep Medicine",
             address: "1046A Hercules Ave Houston, TX 77058",
             phone: "+1 713-766-4668",
-            zipcode: "77058",  // Added zipcode for location-based filtering
+            zipcode: "77058",
             state: "Texas",
-            image: "assets/img/new-doctors/Dr. Mahmood Dweik"
+            image: "assets/img/new-doctors/Dr. Mahmood Dweik",
+            inspiredTrained: true,
+            boardCertified: true,
           },
           {
             name: "Dr. Bradley Evans",  // Added new doctor
@@ -1058,6 +1074,24 @@
             image: "assets/img/new-doctors/Dr. Evan Longfield"
           },
           {
+            name: "Dr. Jason Acevedo",  // Added new doctor
+            specialty: "West Texas Ear, Nose & Throat",
+            address: "35 Windmill Circle Abilene, TX 79606",
+            phone: "+1 325-715-8316",
+            zipcode: "79606",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Jason Acevedo"
+          },
+          {
+            name: "Dr. Raphael Nwojo",  // Added new doctor
+            specialty: "West Texas ENT and Sinus Institute",
+            address: "225 N Lincoln Ave Odessa, TX 79761",
+            phone: "+1 432-226-7223",
+            zipcode: "79761",  // Added zipcode for location-based filtering
+            state: "Texas",
+            image: "assets/img/new-doctors/Dr. Raphael Nwojo"
+          },
+          {
             name: "Dr. Jennifer Jordan",  // Added new doctor
             specialty: "White Rock ENT",
             address: "1130 Beachview Street, Suite 240, Dallas, TX 75218",
@@ -1067,229 +1101,13 @@
             image: "assets/img/new-doctors/Dr. Jennifer Jordan"
           },
           {
-            name: "Dr. Michael Vincent Abene",  // Added new doctor
-            specialty: "Baylor Scott And White Clinic College Station University Drive",
-            address: "1700 University Dr E College Station, TX, 77840",
-            phone: "+1 979-691-3300",
-            zipcode: "77840",  // Added zipcode for location-based filtering
+            name: "Dr. Yadro Ducic",  // Added new doctor
+            specialty: "Yadro Ducic - Head & Neck Surgery",
+            address: "923 Pennsylvania Avenue, Suite 100 Fort Worth, TX 76104",
+            phone: "+1 817-893-2762",
+            zipcode: "76104",  // Added zipcode for location-based filtering
             state: "Texas",
-            image: "assets/img/new-doctors/Providers.svg"
-          },
-          {
-            name: "Dr. Yousef Abou-Kayyas",
-            specialty: "Internal Medicine, Pulmonology, Sleep Medicine",
-            address: "1611 North Belt Line Road, Mesquite, TX 75149",
-            phone: "+1 972-612-7273",
-            zipcode: "75149",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Providers.svg"
-          },
-          {
-            name: "Dr. Ricardo Abreu",
-            specialty: "Pulmonology, Sleep Medicine",
-            address: "1604 E 8th St, Weslaco, TX 78596",
-            phone: "+1 956-447-5557",
-            zipcode: "78596",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Providers.svg"
-          },
-          {
-            name: "Dr. Philip Mani Alapat",
-            specialty: "Baylor College of Medicine Medical Center, McNair Campus",
-            address: "7200 Cambridge St., 8th Floor, Suite 8A Houston, TX 77030",
-            phone: "+1 713-798-3300",
-            zipcode: "77030",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Providers.svg"
-          },
-          {
-            name: "Dr. Ali J Al-Himyary",
-            specialty: "Internal Medicine, Pulmonology, Sleep Medicine",
-            address: "3900 Essex Ln, Houston, TX 77027",
-            phone: "+1 713-442-0000",
-            zipcode: "77027",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Providers.svg"
-          },
-          {
-            name: "Dr. James M Andry",
-            specialty: "Sleep Medicine Internist",
-            address: "5290 Medical Dr San Antonio, TX 78229",
-            phone: "+1 210-614-6000",
-            zipcode: "78229",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Providers.svg"
-          },
-          {
-            name: "Dr. Strahil T. Atanasov",
-            specialty: "Neurology",
-            address: "13455 Cutten Rd, Ste 2K, Houston, TX, 77069",
-            phone: "+1 832-232-0030",
-            zipcode: "77069",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Providers.svg"
-          },
-          {
-            name: "Dr. Soe M. Aung",
-            specialty: "Neurology",
-            address: "14527 Ridgetop Ter, Austin, TX, 78732",
-            phone: "+1 512-477-5337",
-            zipcode: "78732",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Providers.svg"
-          },
-          {
-            name: "Dr. Tehmina A. Badar",
-            specialty: "Pulmonary Medicine",
-            address: "4396, 7500 Beechnut St #250, Houston, TX 77074",
-            phone: "+1 713-988-0850",
-            zipcode: "77074",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Providers.svg"
-          },
-          {
-            name: "Dr. Jehangir Gowani",
-            specialty: "Primary Care Doctor",
-            address: "8845 Gary Burns Dr Ste 180, Frisco, TX 75034",
-            phone: "+1 469-972-7860",
-            zipcode: "75034",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Jehangir Gowani.png"
-          },
-          {
-            name: "Dr. Uzoeshi Anukam",
-            specialty: "Primary Care Doctor",
-            address: "2700 E Broad St, Mansfield, TX 76063",
-            phone: "+1 682-622-2000",
-            zipcode: "76063",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Uzoeshi Anukam.png"
-          },
-          {
-            name: "Dr. Tomi Ola-Peters",
-            specialty: "Internist",
-            address: "304 N Mitchell Rd , Mansfield, TX, 76063",
-            phone: "+1 682-422-9950",
-            zipcode: "76063",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Tomi Ola-Peters.png"
-          },
-          {
-            name: "Dr. Ikechukwu Ogbu",
-            specialty: "Internist",
-            address: "1631 11th Street, Ste B Wichita Falls, TX 76301",
-            phone: "+1 940-263-3000",
-            zipcode: "76301",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Ikechukwu Ogbu.png"
-          },
-          {
-            name: "Dr. Lakshmi Reddy",
-            specialty: "Primary Care Doctor",
-            address: "21336 Provincial Blvd, Katy, TX 77450",
-            phone: "+1 281-809-0085",
-            zipcode: "77450",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Lakshmi Reddy.png"
-          },
-          {
-            name: "Dr. Lata Pablani",
-            specialty: "Primary Care Doctor",
-            address: "14111 King Rd suite 310, Frisco, TX 75036",
-            phone: "+1 469-888-4890",
-            zipcode: "75036",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Lata Pablani.png"
-          },
-          {
-            name: "Dr. Ramy Elhalwagi, DO",
-            specialty: "Internist",
-            address: "525 Shiloh Rd Suite 4100, Plano, TX 75074",
-            phone: "+1 469-613-1948",
-            zipcode: "75074",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Ramy Elhalwagi, DO.png"
-          },
-          {
-            name: "Dr. Arifa Abid",
-            specialty: "Primary Care Doctor",
-            address: "10611 Garland Rd, Suite 114, Dallas, TX 75218",
-            phone: "+1 214-396-6331",
-            zipcode: "75218",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Arifa Abid.png"
-          },
-          {
-            name: "Dr. Irene Lomeda",
-            specialty: "Family Physician",
-            address: "3129 Kingsley Dr, Ste 320, Pearland, TX 77584",
-            phone: "+1 346-590-2120",
-            zipcode: "77584",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Irene Lomeda, MD.png"
-          },
-          {
-            name: "Dr. Sreedhar Gottiparthy",
-            specialty: "Primary Care Doctor",
-            address: "28606 Northwest Fwy, Cypress, TX 77433",
-            phone: "+1 281-737-7355",
-            zipcode: "77433",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Sreedhar Gottiparthy.png"
-          },
-          {
-            name: "Dr. Adewumi Bakare, DMSc, PA-C",
-            specialty: "Physician Assistant",
-            address: "5115 N Galloway Ave Ste 203, Mesquite, TX 75150",
-            phone: "+1 737-273-9380",
-            zipcode: "75150",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Adewumi Bakare, DMSc, PA-C.png"
-          },
-          {
-            name: "Dr. Manjula Raguthu",
-            specialty: "Primary Care Doctor",
-            address: "315 Jose Marti Blvd, Brownsville, TX 78526",
-            phone: "+1 956-546-7530",
-            zipcode: "78526",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Manjula Raguthu.png"
-          },
-          {
-            name: "Dr. Jennifer Ann Pak, DO",
-            specialty: "Primary Care Doctor",
-            address: "9915 Barker Cypress Rd, Building 5, Ste 200, Cypress, TX 77433",
-            phone: "+1 281-737-1555",
-            zipcode: "77433",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Jennifer Ann Pak, DO.png"
-          },
-          {
-            name: "Dr. Gregory Burzynski",
-            specialty: "Primary Care Doctor",
-            address: "9432 Katy Fwy, Suite 400, Houston, TX 77055",
-            phone: "+1 713-333-6464",
-            zipcode: "77055",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Dr. Gregory Burzynski.png"
-          },
-          {
-            name: "Dr. Juan Bahamon",
-            specialty: "Neurology",
-            address: "3301 S Alameda St Ste 501, Corpus Christi, TX 78411",
-            phone: "+1 361-853-0867",
-            zipcode: "78411",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Providers.svg"
-          },
-          {
-            name: "Dr. Christopher Bailey",
-            specialty: "Pediatric Pulmonology",
-            address: "5002 Cowhorn Creek Rd Ste. 5033A, Texarkana, TX 75503",
-            phone: "+1 903-614-3000",
-            zipcode: "75503",  // Added zipcode for location-based filtering
-            state: "Texas",
-            image: "assets/img/new-doctors/Providers.svg"
+            image: "assets/img/new-doctors/Dr. Yadro Ducic"
           },
         ];
     
@@ -1346,15 +1164,22 @@
         }
     
         function filterDoctors() {
-          const searchValue = searchInput.value.trim().toLowerCase();
+        const searchValue = searchInput.value.trim().toLowerCase();
+        const inspiredChecked = document.getElementById("inspiredFilter").checked;
+        const boardChecked = document.getElementById("boardCertifiedFilter").checked;
 
-          const filtered = doctors.filter(doc => {
+        const filtered = doctors.filter(doc => {
             const matchesZipcode = doc.zipcode.toLowerCase().includes(searchValue);
             const matchesState = doc.state.toLowerCase().includes(searchValue);
-            return searchValue === '' || matchesZipcode || matchesState;
-          });
+            const matchesSearch = searchValue === '' || matchesZipcode || matchesState;
 
-          displayDoctors(filtered, searchValue);
+            const matchesInspired = inspiredChecked ? doc.inspiredTrained === true : true;
+            const matchesBoard = boardChecked ? doc.boardCertified === true : true;
+
+            return matchesSearch && matchesInspired && matchesBoard;
+        });
+
+        displayDoctors(filtered, searchValue);
         }
     
         // function updateMap(zipcode) {
@@ -1386,6 +1211,8 @@
     
         // Attach events
         searchInput.addEventListener('input', filterDoctors);
+        document.getElementById("inspiredFilter").addEventListener("change", filterDoctors);
+        document.getElementById("boardCertifiedFilter").addEventListener("change", filterDoctors);
     
         // Initial render
         displayDoctors(doctors);

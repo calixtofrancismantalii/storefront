@@ -4508,3 +4508,20 @@ th {
   font-size: 20px;
   margin-bottom: 10px;
 }
+
+
+/* --------------------New Find------------------ */
+.check-it {
+  display: flex;
+}
+
+.check-it label {
+  margin-right: 10px;
+  font-size: 15px !important;
+  font-family: Poppins;
+}
+
+.check-it label input[type=checkbox] {
+  width: auto;
+  height: 40%;
+}
