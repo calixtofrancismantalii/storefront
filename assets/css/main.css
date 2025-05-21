@@ -4539,3 +4539,49 @@ th {
 .check-it button[type=button]:hover {
   color: #DC4F4B;
 }
+
+/* --------------------Thank You Page------------------ */
+.thank-you {
+  text-align: center;
+  display: flex;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px; */
+}
+
+.thank-you h3 {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.thank-you p {
+  font-size: 16px;
+  font-family: Poppins;
+  margin-bottom: 30px !important;
+}
+
+.thank-you a {
+  background-color: #1977cc;
+  padding: 10px;
+  font-family: Poppins;
+  color: white;
+  border-radius: 5px;
+}
+
+.thank-you a:hover {
+  background-color: #DC4F4B;
+}
+
+.thank-you .you {
+  width: 50%;
+}
+
+.thank-you img {
+  width: 100%;
+}
+
+.thank-you .thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
