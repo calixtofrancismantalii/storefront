@@ -4528,6 +4528,12 @@ th {
   height: 40%;
 }
 
+/* .check-it label input[type=radio] {
+  width: auto;
+  height: 40%;
+  margin-right: 1px !important;
+} */
+
 .check-it button[type=button] {
   border: none;
   background: none;
