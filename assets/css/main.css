@@ -4523,16 +4523,16 @@ th {
   margin-bottom: 10px !important;
 }
 
-.check-it label input[type=checkbox] {
+/* .check-it label input[type=checkbox] {
   width: auto;
   height: 40%;
-}
+} */
 
-/* .check-it label input[type=radio] {
+.check-it label input[type=radio] {
   width: auto;
   height: 40%;
   margin-right: 1px !important;
-} */
+}
 
 .check-it button[type=button] {
   border: none;
