@@ -4435,7 +4435,14 @@ th {
   flex: 1 1 200px;
   width: 100%;
   margin-bottom: 0.5rem;
+  font-family: 'Poppins';
 }
+
+.find-prov .search-section input::placeholder {
+  font-size: 15px;
+  font-family: 'Poppins';
+}
+
 
 .find-prov .doctor-list {
     display: flex;
@@ -4530,7 +4537,7 @@ th {
 .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
   position: relative;
   padding: 8px !important;
-  font-size: 14px;
+  font-size: 15px;
   font-family: 'Poppins' !important;
 }
 
