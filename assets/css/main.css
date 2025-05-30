@@ -4429,7 +4429,7 @@ th {
 }
 
 .find-prov .search-section input {
-  padding: 0.5rem;
+  padding: 0.6rem;
   border: 1px solid #ccc;
   border-radius: 4px;
   flex: 1 1 200px;
@@ -4509,7 +4509,34 @@ th {
   margin-bottom: 10px;
 }
 
+.zip-state {
+  display: flex;
+  gap: 5px;
+}
 
+.by-state {
+  width: 45%;
+}
+
+.by-zipcode {
+  width: 100%;
+}
+
+.choices__placeholder {
+  opacity: 100% !important;
+  font-family: 'Poppins' !important;
+}
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+  position: relative;
+  padding: 8px !important;
+  font-size: 14px;
+  font-family: 'Poppins' !important;
+}
+
+.choices[data-type*=select-one] .choices__input {
+  font-family: 'Poppins' !important;
+}
 /* --------------------New Find------------------ */
 .check-it {
   display: flex;
