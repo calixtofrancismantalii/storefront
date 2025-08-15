@@ -76,7 +76,7 @@ class SpecialHeader extends HTMLElement {
                         <li><a href="pap-problem-and-solutions.html">PAP Problems and Solutions</a></li>
                         <li><a href="sleep-disorders.html">Sleep Disorders</a></li>
                         <li><a href="alternative-sleep-apnea-therapies.html">Alternative Sleep Apnea Therapies</a></li>
-                        <li><a href="type-of-sleep-studies.html">Type Of Sleep Studies</a></li>
+                        <li><a href="types-of-sleep-studies.html">Types Of Sleep Studies</a></li>
                     </ul>
                     </li>
                     <li><a href="stories.html">News</a></li>
@@ -206,7 +206,7 @@ class SpecialFooter extends HTMLElement {
                     <li><a href="pap-problem-and-solutions.html">PAP Problems and Solutions</a></li>
                     <li><a href="sleep-disorders.html">Sleep Disorders</a></li>
                     <li><a href="alternative-sleep-apnea-therapies.html">Alternative Sleep Apnea Therapies</a></li>
-                    <li><a href="type-of-sleep-studies.html">Type Of Sleep Studies</a></li>
+                    <li><a href="types-of-sleep-studies.html">Types Of Sleep Studies</a></li>
                 </ul>
                 </div>
 
