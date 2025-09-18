@@ -4084,7 +4084,6 @@ Sleep Apnea Quiz Cont
   color: white;
 }
 
-/* ↓ 1024px */
 @media (max-width: 1024px) {
   .workflow {
     flex-direction: column;
@@ -4108,11 +4107,9 @@ Sleep Apnea Quiz Cont
   .cross-arrow-left-2,
   .cross-arrow-left-3,
   .cross-arrow-left-4 {
-    display: none; /* Hide arrows on smaller screens */
+    display: none;
   }
 }
-
-/* ↓ 768px */
 @media (max-width: 768px) {
   .workflow {
     flex-direction: column;
@@ -4140,8 +4137,6 @@ Sleep Apnea Quiz Cont
     padding: 60px 0px;
   }
 }
-
-/* ↓ 480px */
 @media (max-width: 480px) {
   .workflow {
     gap: 12px;
@@ -4169,8 +4164,6 @@ Sleep Apnea Quiz Cont
     padding: 6px 14px;
   }
 }
-
-/* ↓ 425px */
 @media (max-width: 425px) {
   .workflow {
     gap: 8px;
