@@ -4084,6 +4084,121 @@ Sleep Apnea Quiz Cont
   color: white;
 }
 
+/* ↓ 1024px */
+@media (max-width: 1024px) {
+  .workflow {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 15px 0;
+  }
+  .column {
+    width: 80%;
+    min-width: 260px;
+    max-width: 600px;
+  }
+  .column2 {
+    min-width: 10px;
+  }
+  .cross-arrow-1,
+  .cross-arrow-2,
+  .cross-arrow-3,
+  .cross-arrow-4,
+  .cross-arrow-left-1,
+  .cross-arrow-left-2,
+  .cross-arrow-left-3,
+  .cross-arrow-left-4 {
+    display: none; /* Hide arrows on smaller screens */
+  }
+}
+
+/* ↓ 768px */
+@media (max-width: 768px) {
+  .workflow {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  .column {
+    width: 95%;
+    min-width: 180px;
+    max-width: 100%;
+    padding: 8px;
+  }
+  .column h3 {
+    font-size: 20px;
+    padding: 8px;
+  }
+  .step {
+    font-size: 15px;
+    padding: 4px;
+  }
+  .spacing {
+    padding: 30px 0px;
+  }
+  .spaces {
+    padding: 60px 0px;
+  }
+}
+
+/* ↓ 480px */
+@media (max-width: 480px) {
+  .workflow {
+    gap: 12px;
+    padding: 6px 0;
+  }
+  .column {
+    width: 100%;
+    min-width: 120px;
+    padding: 6px;
+  }
+  .column h3 {
+    font-size: 16px;
+    padding: 6px;
+  }
+  .step {
+    font-size: 13px;
+    padding: 3px;
+  }
+  .spacing,
+  .spaces {
+    padding: 20px 0px;
+  }
+  .hst-btn a {
+    font-size: 16px;
+    padding: 6px 14px;
+  }
+}
+
+/* ↓ 425px */
+@media (max-width: 425px) {
+  .workflow {
+    gap: 8px;
+    padding: 4px 0;
+  }
+  .column {
+    width: 100%;
+    min-width: 80px;
+    padding: 4px;
+  }
+  .column h3 {
+    font-size: 14px;
+    padding: 4px;
+  }
+  .step {
+    font-size: 12px;
+    padding: 2px;
+  }
+  .hst-btn a {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  .based-home-sleep-study-program a {
+    font-size: 14px;
+    padding: 7px 12px;
+  }
+}
+
 /*-------------------------Login For Patient and Provider------------------------------*/
 
 .for-patient-log {
