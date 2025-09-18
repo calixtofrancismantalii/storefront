@@ -3875,6 +3875,23 @@ Sleep Apnea Quiz Cont
   transform: translateZ(-1px);
 }
 
+/* Color Sleep Apnea Sleep Quiz ------------------------------*/
+
+.low-risk {
+  color: green;
+  font-weight: bold;
+}
+
+.moderate-risk {
+  color: orange; /* or use 'yellow' with background if too light */
+  font-weight: bold;
+}
+
+.high-risk {
+  color: red;
+  font-weight: bold;
+}
+
 /* Based Home Sleep Study ------------------------------*/
 
 .based-home-sleep-study-program {
@@ -3895,23 +3912,6 @@ Sleep Apnea Quiz Cont
 .based-home-sleep-study-program a:hover {
   background-color: #DC4F4B;
   color: white;
-}
-
-/* Color Sleep Apnea Sleep Quiz ------------------------------*/
-
-.low-risk {
-  color: green;
-  font-weight: bold;
-}
-
-.moderate-risk {
-  color: orange; /* or use 'yellow' with background if too light */
-  font-weight: bold;
-}
-
-.high-risk {
-  color: red;
-  font-weight: bold;
 }
 
 /* Sleep Study Program Table------------------------------*/
@@ -3938,6 +3938,10 @@ Sleep Apnea Quiz Cont
   align-items: center;
 }
 
+.column mgr h3 {
+  padding: 10px 40px;
+}
+
 .column2 {
   background-color: white;
   /* padding: 10px; */
@@ -3955,6 +3959,7 @@ Sleep Apnea Quiz Cont
   padding: 10px;
   color: white;
   font-size: 25px;
+  text-transform: uppercase;
 }
 
 .column.primary h3 {
@@ -3982,13 +3987,56 @@ Sleep Apnea Quiz Cont
   font-size: 16px;
   color: white;
 }
+
+.step2 {
+  background-color: #d9f0ff;
+  border: 1px solid #99d3ff;
+  /* margin: 10px 0; */
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+.step3 {
+  background-color: #d9f0ff;
+  border: 1px solid #99d3ff;
+  /* margin: 10px 0; */
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+}
+
+.step em, .step2 em {
+  font-size: 14px;
+}
+
 .column.primary .step {
   background-color: #1977cc;
   border-color: #1977cc;
 }
+
+.column.primary .step3 {
+  background-color: #1977cc;
+  border-color: #1977cc;
+  margin-bottom: 30px;
+}
+
 .column.mgr .step {
   background-color: #DC4F4B;
   border-color: #DC4F4B;
+  margin-bottom: 0px;
+}
+
+.column.mgr .step2 {
+  background-color: #DC4F4B;
+  border-color: #DC4F4B;
+  margin-bottom: 20px;
 }
 .column.specialist .step {
   background-color: #1977cc;
@@ -4050,7 +4098,7 @@ Sleep Apnea Quiz Cont
 
 .cross-arrow-left-3 {
   right: 64.5%;
-  top: 710px;  /* Adjust this value based on actual vertical position  */
+  top: 670px;  /* Adjust this value based on actual vertical position  */
   position: absolute;
   font-size: 20px;
 }
@@ -4062,6 +4110,11 @@ Sleep Apnea Quiz Cont
   font-size: 20px;
   z-index: 10; /* Ensure it's above other elements */
 }
+
+.cross-arrow-left-4 i{
+  transform: rotate(-35deg);
+}
+
 .hst-btn {
   display: flex;
   margin-top: 20px;
@@ -4084,111 +4137,137 @@ Sleep Apnea Quiz Cont
   color: white;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .workflow {
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-    padding: 15px 0;
+    flex-wrap: nowrap;
+    align-items: flex-start;
   }
   .column {
     width: 80%;
-    min-width: 260px;
-    max-width: 600px;
-  }
-  .column2 {
-    min-width: 10px;
-  }
-  .cross-arrow-1,
-  .cross-arrow-2,
-  .cross-arrow-3,
-  .cross-arrow-4,
-  .cross-arrow-left-1,
-  .cross-arrow-left-2,
-  .cross-arrow-left-3,
-  .cross-arrow-left-4 {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .workflow {
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px 0;
-  }
-  .column {
-    width: 95%;
-    min-width: 180px;
-    max-width: 100%;
-    padding: 8px;
+    min-width: auto;
   }
   .column h3 {
-    font-size: 20px;
-    padding: 8px;
+    font-size: 18px;
   }
   .step {
-    font-size: 15px;
-    padding: 4px;
+    font-size: 14px;
   }
-  .spacing {
-    padding: 30px 0px;
+  .column.mgr .step {
+    font-size: 14px;
+  }
+  .column.mgr .step2 {
+    font-size: 14px;
+  }
+  .column.primary .step3 {
+    font-size: 14px;
+  }
+  .arrow {
+    text-align: center;
+    font-size: 17px;
+  }
+  .cross-arrow-1, .cross-arrow-2, .cross-arrow-3, .cross-arrow-4, .cross-arrow-left-1, .cross-arrow-left-2, .cross-arrow-left-3, .cross-arrow-left-4 {
+    font-size: 17px;
+  }
+  .cross-arrow-left-2 {
+    right: 64.5%;
+    top: 525px;
+  }
+  .cross-arrow-3 {
+    top: 605px;
+  }
+  .cross-arrow-left-3 {
+    top: 790px;
+  }
+  .cross-arrow-left-3 i {
+    transform: rotate(45deg);
+  }
+  .cross-arrow-4 {
+    right: 33%;
+    top: 430px;
+  }
+  .cross-arrow-left-4 {
+    left: 65.4%;
+    top: 473px;
   }
   .spaces {
-    padding: 60px 0px;
+    padding: 170px 0px;
   }
 }
+
 @media (max-width: 480px) {
   .workflow {
-    gap: 12px;
-    padding: 6px 0;
+    gap: 5px;
+    align-items: flex-start;
+    padding: 5px;
   }
   .column {
-    width: 100%;
-    min-width: 120px;
-    padding: 6px;
+    padding: 5px;
   }
   .column h3 {
     font-size: 16px;
-    padding: 6px;
   }
   .step {
     font-size: 13px;
-    padding: 3px;
+    padding: 1px;
   }
-  .spacing,
-  .spaces {
-    padding: 20px 0px;
+  .step em, .step2 em {
+    font-size: 13px;
+    align-items: stretch;
   }
-  .hst-btn a {
-    font-size: 16px;
-    padding: 6px 14px;
+  .column.mgr .step {
+    font-size: 13px;
+  }
+  .column.mgr .step2 {
+    font-size: 13px;
+  }
+  .column.primary .step3 {
+    font-size: 13px;
+  }
+  .arrow, .cross-arrow-1, .cross-arrow-2, .cross-arrow-3, .cross-arrow-4, .cross-arrow-left-1, .cross-arrow-left-2, .cross-arrow-left-3, .cross-arrow-left-4 {
+    font-size: 12px;
+  }
+  .column.mgr .step2 {
+    margin-bottom: 10px;
+  }
+  .spacing {
+    padding: 29px 0px;
+  }
+  .cross-arrow-1 {
+    top: 185px;
+  }
+  .cross-arrow-left-1 {
+    top: 295px;
+  }
+  .cross-arrow-2 {
+    top: 410px;
+  }
+  .cross-arrow-3 {
+    top: 640px;
+  }
+  .cross-arrow-left-3 {
+    top: 825px;
+  }
+  .cross-arrow-4 {
+    right: 32%;
   }
 }
-@media (max-width: 425px) {
-  .workflow {
-    gap: 8px;
-    padding: 4px 0;
+
+/* Hide this block on tablet and mobile */
+@media (max-width: 768px) {
+  .footer-links.providers-desktop {
+    display: none;
   }
-  .column {
-    width: 100%;
-    min-width: 80px;
-    padding: 4px;
-  }
-  .column h3 {
-    font-size: 14px;
-    padding: 4px;
-  }
-  .step {
-    font-size: 12px;
-    padding: 2px;
-  }
-  .hst-btn a {
-    font-size: 14px;
-    padding: 5px 10px;
-  }
-  .based-home-sleep-study-program a {
-    font-size: 14px;
-    padding: 7px 12px;
+}
+
+/* Hide mobile-only links by default (desktop) */
+#footer .footer-links .mobile-only {
+  display: none;
+}
+
+/* Show on tablet & mobile (≤768px) */
+@media (max-width: 768px) {
+  #footer .footer-links .mobile-only {
+    display: list-item;
   }
 }
 

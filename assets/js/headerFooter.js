@@ -211,23 +211,28 @@ class SpecialFooter extends HTMLElement {
                 </div>
 
                 <div class="col-lg-2 col-md-3 footer-links">
-                <h4>For Providers</h4>
-                <ul>
-                    <li><a href="new-primary-care.html">Primary Care</a></li>
-                    <li><a href="new-dental-sleep-medicine.html">Dental Sleep Medicine</a></li>
-                    <li><a href="new-sleep-surgery.html">Sleep Surgery</a></li>
-                    <li><a href="new-neurostimulator-implant.html">Neurostimulator Implant</a></li>
-                    <li><a href="new-durable-medical-equipment.html">Durable Medical Equipment</a></li>
-                </ul>
+                    <h4>For Providers</h4>
+                    <ul>
+                        <li><a href="{{ url('/new-primary-care') }}">Primary Care</a></li>
+                        <li><a href="{{ url('/new-dental-sleep-medicine') }}">Dental Sleep Medicine</a></li>
+                        <li><a href="{{ url('/new-sleep-surgery') }}">Sleep Surgery</a></li>
+                        <li><a href="{{ url('/new-neurostimulator-implant') }}">Neurostimulator Implant</a></li>
+                        <li><a href="{{ url('/new-durable-medical-equipment') }}">Durable Medical Equipment</a></li>
+
+                        <!-- These only show on tablet & mobile -->
+                        <li class="mobile-only"><a href="{{ url('/new-weight-loss') }}">Weight Loss</a></li>
+                        <li class="mobile-only"><a href="{{ url('/new-sleep-specialist') }}">Sleep Specialist</a></li>
+                        <li class="mobile-only"><a href="{{ url('/new-sleep-testing-facility') }}">Sleep Testing Facility</a></li>
+                    </ul>
                 </div>
 
-                <div class="col-lg-2 col-md-3 footer-links">
-                <h4 style="color: #d6e2e7; cursor: default;">For Providers</h4>
-                <ul>
-                    <li><a href="new-weight-loss.html">Weight Loss</a></li>
-                    <li><a href="new-sleep-specialist.html">Sleep Specialist</a></li>
-                    <li><a href="new-sleep-testing-facility.html">Sleep Testing Facility</a></li>
-                </ul>
+                <div class="col-lg-2 col-md-3 footer-links providers-desktop">
+                    <h4 style="color: #d6e2e7; cursor: default;">For Providers</h4>
+                    <ul>
+                        <li><a href="{{ url('/new-weight-loss') }}">Weight Loss</a></li>
+                        <li><a href="{{ url('/new-sleep-specialist') }}">Sleep Specialist</a></li>
+                        <li><a href="{{ url('/new-sleep-testing-facility') }}">Sleep Testing Facility</a></li>
+                    </ul>
                 </div>
 
                 <!-- <div class="col-lg-2 col-md-3 footer-links">
