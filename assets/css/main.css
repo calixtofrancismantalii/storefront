@@ -4731,7 +4731,94 @@ th {
 .choices[data-type*=select-one] .choices__input {
   font-family: 'Poppins' !important;
 }
+
+/* ---------- Tablet (≤768px) ---------- */
+@media (max-width: 768px) {
+  .find-prov {
+    gap: 15px;
+  }
+
+  .find-prov .search-form label {
+    font-size: 16px;
+  }
+  .find-prov .search-section input {
+    font-size: 14px;
+    padding: 0.7rem;
+  }
+  .by-state {
+    width: 80%;
+  }
+  .choices[data-type*=select-one] .choices__inner {
+    padding-bottom: 5.5px;
+  }
+  .check-it {
+    flex-wrap: wrap;
+  }
+  .find-prov .doctor-card {
+    padding: 0.5rem;
+  }
+  .find-prov .doctor-card img {
+    width: 70px;
+  }
+  .find-prov .doctor-details h3 {
+    font-size: 16px;
+  }
+  .find-prov .doctor-details p {
+    font-size: 13px;
+  }
+}
+
+/* ---------- Mobile (≤480px) ---------- */
+@media (max-width: 480px) {
+  .find-prov {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* search inputs */
+  .find-prov .search-section input {
+    font-size: 14px;
+    padding: 0.5rem;
+  }
+
+  /* doctor cards compact */
+  .find-prov .doctor-info {
+    align-items: center;
+    gap: 10px;
+    display: flex;
+  }
+
+  .find-prov .doctor-card img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .find-prov .doctor-details h3 {
+    font-size: 16px;
+  }
+
+  .find-prov .doctor-details p {
+    font-size: 13px;
+  }
+
+  /* zip/state inputs stacked */
+  .zip-state {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .by-state,
+  .by-zipcode {
+    width: 100%;
+  }
+
+  .check-it {
+    margin-top: 10px;
+  }
+}
+
 /* --------------------New Find------------------ */
+
 .check-it {
   display: flex;
   margin-left: 5px;
