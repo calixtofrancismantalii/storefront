@@ -74,25 +74,101 @@
               <p>All relevant information in one platform; making it easily accessible to all providers appropriate and participating providers, for rapid and efficient care coordination and monitoring.</p>
             </div>
           </div>
-          <br>
-          <div class="needs">
-            <h3>NEEDS</h3>
-            <ul>
-              <li>There is a significant amount of information required from DMEs before insurance approval of PAP equipment and delivery, in many cases from disparate sources, leading to delays, and creating frustration for the patient and ordering physicians.</li>
-              <li>There is lack of consistent system for referring provider (and patient) tracking of PAP delivery.</li>
-              <li>There is lack of consistently available sleep specialists to refer patients who do not have an ordering physician, but who are in need of prescriptions for PAP equipment and supplies.</li>
-              <li>There is difficulty for some providers (and patients) to access DMEs for new supplies.</li>
-            </ul>
-            <h3>MyApneaPath</h3>
-            <ul>
-              <li>Provides access to all pertinent demographic, insurance and clinical data, HST/PSG/PAP titration results and prescription information necessary for insurance approval.</li>
-              <li>Provides for tracking of PAP delivery and monitoring of PAP therapy.</li>
-              <li>Provides Introductory PAP SetUp call service.</li>
-              <li>Provides follow up free service for patients having adjustment problems with PAP therapy with possible appropriate solutions.</li>
-              <li>Provides practice support if needed (precertification, insurance verification, etc).</li>
-              <li>Provides a referral source and allows for sleep specialist consultation if needed.</li>
-            </ul>
+          
+          <button class="open-modal-button" id="openModalBtn">
+            View Needs & Solutions
+          </button>
+
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close-btn">&times;</span>
+              <h2>Durable Medical Equipment</h2>
+
+              <div class="button-container">
+                <button class="content-button needs-button active" id="showNeedsBtn">
+                  Needs 💡
+                </button>
+                <button class="content-button solutions-button" id="showSolutionsBtn">
+                  Solutions ✅
+                </button>
+              </div>
+                  
+              <div id="contentDisplay">
+              </div>
+            </div>
           </div>
+
+          <script>
+              // Get elements
+              const modal = document.getElementById("myModal");
+              const openBtn = document.getElementById("openModalBtn");
+              const closeSpan = document.getElementsByClassName("close-btn")[0];
+              const needsBtn = document.getElementById("showNeedsBtn");
+              const solutionsBtn = document.getElementById("showSolutionsBtn");
+              const contentDisplay = document.getElementById("contentDisplay");
+
+              // --- Content Definitions ---
+              const needsContent = `
+                  <h3>NEEDS</h3>
+                  <ul>
+                    <li>There is a significant amount of information required from DMEs before insurance approval of PAP equipment and delivery, in many cases from disparate sources, leading to delays, and creating frustration for the patient and ordering physicians.</li>
+                    <li>There is lack of consistent system for referring provider (and patient) tracking of PAP delivery.</li>
+                    <li>There is lack of consistently available sleep specialists to refer patients who do not have an ordering physician, but who are in need of prescriptions for PAP equipment and supplies.</li>
+                    <li>There is difficulty for some providers (and patients) to access DMEs for new supplies.</li>
+                  </ul>
+              `;
+              
+              const solutionsContent = `
+                  <h3>MyApneaPath</h3>
+                  <ul>
+                    <li>Provides access to all pertinent demographic, insurance and clinical data, HST/PSG/PAP titration results and prescription information necessary for insurance approval.</li>
+                    <li>Provides for tracking of PAP delivery and monitoring of PAP therapy.</li>
+                    <li>Provides Introductory PAP SetUp call service.</li>
+                    <li>Provides follow up free service for patients having adjustment problems with PAP therapy with possible appropriate solutions.</li>
+                    <li>Provides practice support if needed (precertification, insurance verification, etc).</li>
+                    <li>Provides a referral source and allows for sleep specialist consultation if needed.</li>
+                  </ul>
+              `;
+
+              // Function to set the active button and update content
+              function setContent(content, activeBtn, inactiveBtn) {
+                  contentDisplay.innerHTML = content;
+                  activeBtn.classList.add('active');
+                  inactiveBtn.classList.remove('active');
+              }
+
+              // --- Event Listeners for Content Switching ---
+              needsBtn.addEventListener('click', () => {
+                  setContent(needsContent, needsBtn, solutionsBtn);
+              });
+
+              solutionsBtn.addEventListener('click', () => {
+                  setContent(solutionsContent, solutionsBtn, needsBtn);
+              });
+
+
+              // --- Event Listeners for Modal Open/Close ---
+
+              // Open Modal
+              openBtn.onclick = function() {
+                  modal.style.display = "block";
+                  // Default to showing Needs content when opened
+                  setContent(needsContent, needsBtn, solutionsBtn); 
+              }
+
+              // Close Modal via (x)
+              closeSpan.onclick = function() {
+                  modal.style.display = "none";
+              }
+
+              // Close Modal when clicking outside the content area
+              window.onclick = function(event) {
+                  if (event.target === modal) {
+                      modal.style.display = "none";
+                  }
+              }
+          </script>
+
         </div>
     </section><!-- /About Section -->
 
