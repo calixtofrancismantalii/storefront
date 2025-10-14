@@ -4905,29 +4905,28 @@ th {
 /* --- Main Open Button Styling --- */
 /* Basic styling for the buttons */
 .button-container {
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  gap: 500px;
 }
 
 .tab-button {
-  padding: 10px 70px;
+  padding: 12px 287px;
   margin-right: 10px;
-  border: 1px solid #2c4964;
-  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  background-color: gray;
   cursor: pointer;
   font-weight: bold;
-  font-size: 16px;
-  color: #2c4964;
+  font-size: 18px;
+  color: #ccc;
   border-radius: 5px;
 }
 
 .tab-button.active {
-  background-color: #007bff; /* Active button color */
+  background-color: #DC4F4B; /* Active button color */
   color: white;
-  border-color: #007bff;
+  border: 1px solid #ccc;
 }
 
 /* Style for the content area */
