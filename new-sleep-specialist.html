@@ -74,23 +74,66 @@
               <p>All relevant information in one platform; making it easily accessible to all providers appropriate and participating providers, for rapid and efficient care coordination and monitoring.</p>
             </div>
           </div>
-          <br>
-          <div class="needs">
-            <h3>NEEDS</h3>
-            <ul>
-              <li>Sleep specialists may be involved in every aspect of sleep care, but each subspecialist (otolaryngology, oral-maxillofacial surgeon, neurologist, psychiatrist, neurologist, internist/family medicine, dentists, orthodontists) may focus more on their field of interest and comfort.</li>
-              <li>Sleep specialist may still need diagnostic services from IDTFs, back-office and technical support services for clinical practice, and DME suppliers.</li>
-            </ul>
-            <h3>MyApneaPath</h3>
-            <ul>
-              <li>Provides a platform for interaction with other sleep subspecialists, access to different diagnostic modalities and companies and DME providers, access to back-office (preauthorization, insurance verification, scheduling) and technical (scoring) services.</li>
-              <li>Provides a referral source for patients at different stages of the sleep care continuum.</li>
-            </ul>
+          <div class="button-container">
+            <button id="needs-btn" class="tab-button active" onclick="showContent('needs')">
+              Needs
+            </button>
+
+            <button id="solutions-btn" class="tab-button" onclick="showContent('solutions')">
+              Solutions
+            </button>
           </div>
+
+          <div class="content-box">
+            <div id="needs-content">
+              <h3>NEEDS</h3>
+              <ul>
+                <li>Sleep specialists may be involved in every aspect of sleep care, but each subspecialist (otolaryngology, oral-maxillofacial surgeon, neurologist, psychiatrist, neurologist, internist/family medicine, dentists, orthodontists) may focus more on their field of interest and comfort.</li>
+                <li>Sleep specialist may still need diagnostic services from IDTFs, back-office and technical support services for clinical practice, and DME suppliers.</li>
+              </ul>
+            </div>
+
+            <div id="solutions-content" class="hidden">
+              <h3>MyApneaPath</h3>
+              <ul>
+                <li>Provides a platform for interaction with other sleep subspecialists, access to different diagnostic modalities and companies and DME providers, access to back-office (preauthorization, insurance verification, scheduling) and technical (scoring) services.</li>
+                <li>Provides a referral source for patients at different stages of the sleep care continuum.</li>
+              </ul>
+            </div>
+          </div>
+
+          <script>
+            function showContent(tabName) {
+              // Get content and button elements
+              const needsContent = document.getElementById('needs-content');
+              const solutionsContent = document.getElementById('solutions-content');
+              const needsBtn = document.getElementById('needs-btn');
+              const solutionsBtn = document.getElementById('solutions-btn');
+
+              if (tabName === 'needs') {
+                // Show Needs, Hide Solutions
+                needsContent.classList.remove('hidden');
+                solutionsContent.classList.add('hidden');
+                      
+                // Set active button: Needs becomes active, Solutions becomes non-active
+                needsBtn.classList.add('active');
+                solutionsBtn.classList.remove('active');
+                      
+              } else if (tabName === 'solutions') {
+                // Show Solutions, Hide Needs
+                solutionsContent.classList.remove('hidden');
+                needsContent.classList.add('hidden');
+                      
+                // Set active button: Solutions becomes active, Needs becomes non-active
+                solutionsBtn.classList.add('active');
+                needsBtn.classList.remove('active'); // <-- THIS LINE removes 'active' from Needs
+              }
+            }
+          </script>
         </div>
     </section><!-- /About Section -->
 
-    <section id="about" class="about section" style="margin-top: -80px;">
+    <section id="about" class="about section">
         <div class="container">
           <div style="text-align: center;">
             <img src="assets/img/Sleep Specialist.png" alt="" class="img-how-it-works">

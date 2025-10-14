@@ -4905,6 +4905,7 @@ th {
 /* --- Main Open Button Styling --- */
 /* Basic styling for the buttons */
 .button-container {
+  margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
