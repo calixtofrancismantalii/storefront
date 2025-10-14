@@ -75,21 +75,64 @@
             </div>
           </div>
           <br>
-          <div class="needs">
+
+          <div class="button-container">
+            <button id="needs-btn" class="tab-button active" onclick="showContent('needs')">
+              Needs
+            </button>
+
+            <button id="solutions-btn" class="tab-button" onclick="showContent('solutions')">
+              Solutions
+            </button>
+          </div>
+
+          <div class="content-box">
+            <div id="needs-content">
               <h3>NEEDS</h3>
               <ul>
                 <li>Primary Care Providers are the primary gatekeepers in identifying patients with sleep apnea: yet, for a variety of reasons, do not usually have access to the full spectrum of diagnostic and therapeutic approaches and feedback mechanisms.</li>
                 <li>Primary Care Providers have multiple barriers to sleep apnea care.</li>
               </ul>
+            </div>
 
+            <div id="solutions-content" class="hidden">
               <h3>MyApneaPath</h3>
               <ul>
                 <li>Provides a platform to navigate the continuum of sleep apnea care, by providing single repository of all pertinent demographic, clinical, testing and treatment results.</li>
                 <li>Provides ready access to diagnostic modalities and therapeutic options and feedback mechanisms.</li>
                 <li>Provides a turnkey complete sleep program, with all the necessary back office, technical and clinical support services, if desired.</li>
               </ul>
+            </div>
           </div>
 
+          <script>
+            function showContent(tabName) {
+              // Get content and button elements
+              const needsContent = document.getElementById('needs-content');
+              const solutionsContent = document.getElementById('solutions-content');
+              const needsBtn = document.getElementById('needs-btn');
+              const solutionsBtn = document.getElementById('solutions-btn');
+
+              if (tabName === 'needs') {
+                // Show Needs, Hide Solutions
+                needsContent.classList.remove('hidden');
+                solutionsContent.classList.add('hidden');
+                      
+                // Set active button: Needs becomes active, Solutions becomes non-active
+                needsBtn.classList.add('active');
+                solutionsBtn.classList.remove('active');
+                      
+              } else if (tabName === 'solutions') {
+                // Show Solutions, Hide Needs
+                solutionsContent.classList.remove('hidden');
+                needsContent.classList.add('hidden');
+                      
+                // Set active button: Solutions becomes active, Needs becomes non-active
+                solutionsBtn.classList.add('active');
+                needsBtn.classList.remove('active'); // <-- THIS LINE removes 'active' from Needs
+              }
+            }
+          </script>
         </div>
     </section><!-- /About Section -->
 
