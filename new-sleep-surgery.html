@@ -47,7 +47,7 @@
 
       
     <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="about" class="about section" style="margin-bottom: -60px;">
           <!-- Section Title -->
             <div class="container section-title" data-aos="fade-in">
               <h2>Sleep Surgery</h2>
@@ -76,65 +76,70 @@
           </div>
 
           <div class="button-container">
-            <button id="needs-btn" class="tab-button active" onclick="showContent('needs')">
+            <button id="needs-btn" class="tab-button active" onmouseenter="showContent('needs')" onmouseleave="hideContent('needs')">
               Needs
             </button>
-
-            <button id="solutions-btn" class="tab-button" onclick="showContent('solutions')">
+            <button id="solutions-btn" class="tab-button active" onmouseenter="showContent('solutions')" onmouseleave="hideContent('solutions')">
               Solutions
             </button>
           </div>
 
-          <div class="content-box">
-            <div id="needs-content">
-              <h3>NEEDS</h3>
-              <ul>
-                <li>The full spectrum of surgical options to treat sleep apnea is often overlooked by many medical providers and patients.</li>
-                <li>Otolaryngologists (ENT) and Oral-Maxillofacial surgeons do not have easy access to a comprehensive system that offer tiered or multifaceted therapeutic approaches to sleep apnea care, from which referrals can emanate and on which, perisurgical data and results can be made available to referring providers.</li>
-                <li>ENT and Oral-Maxillofacial surgeons may need other sleep specialists, for multilevel apnea care, for treatment failures and the need for alternative treatments, or to assess for additional sleep disorders that may impede full patient satisfaction.</li>
-              </ul>
-            </div>
+          <div id="needs-content" class="hidden content-box">
+            <h3>NEEDS</h3>
+            <ul>
+              <li>The full spectrum of surgical options to treat sleep apnea is often overlooked by many medical providers and patients.</li>
+              <li>Otolaryngologists (ENT) and Oral-Maxillofacial surgeons do not have easy access to a comprehensive system that offer tiered or multifaceted therapeutic approaches to sleep apnea care, from which referrals can emanate and on which, perisurgical data and results can be made available to referring providers.</li>
+              <li>ENT and Oral-Maxillofacial surgeons may need other sleep specialists, for multilevel apnea care, for treatment failures and the need for alternative treatments, or to assess for additional sleep disorders that may impede full patient satisfaction.</li>
+            </ul>
+          </div>
 
-            <div id="solutions-content" class="hidden">
-              <h3>MyApneaPath</h3>
-              <ul>
-                <li>Provides a platform for a complete and independent SLEEP Surgical Practice, yet part of a comprehensive sleep care ecosystem.</li>
-                <li>Provides a conduit for Primary Provider referrals.</li>
-                <li>Provides direct access to initial diagnostic testing, scoring, interpretation, and retesting to assess treatment efficacy.</li>
-                <li>Provides interaction with other Subspecialty Sleep Specialists who may provide additional multimodal treatment for sleep apnea and evaluation of other possible concomitant sleep disorders (i.e. insomnia, hypersomnia, and more) that may limit patient satisfaction.</li>
-                <li>Provides practice support (pre-authorization, insurance verification, scheduling and more) if needed.</li>
-              </ul>
-            </div>
+          <div id="solutions-content" class="hidden content-box">
+            <h3>MyApneaPath</h3>
+            <ul>
+              <li>Provides a platform for a complete and independent SLEEP Surgical Practice, yet part of a comprehensive sleep care ecosystem.</li>
+              <li>Provides a conduit for Primary Provider referrals.</li>
+              <li>Provides direct access to initial diagnostic testing, scoring, interpretation, and retesting to assess treatment efficacy.</li>
+              <li>Provides interaction with other Subspecialty Sleep Specialists who may provide additional multimodal treatment for sleep apnea and evaluation of other possible concomitant sleep disorders (i.e. insomnia, hypersomnia, and more) that may limit patient satisfaction.</li>
+              <li>Provides practice support (pre-authorization, insurance verification, scheduling and more) if needed.</li>
+            </ul>
           </div>
 
           <script>
             function showContent(tabName) {
-              // Get content and button elements
               const needsContent = document.getElementById('needs-content');
               const solutionsContent = document.getElementById('solutions-content');
               const needsBtn = document.getElementById('needs-btn');
               const solutionsBtn = document.getElementById('solutions-btn');
 
               if (tabName === 'needs') {
-                // Show Needs, Hide Solutions
                 needsContent.classList.remove('hidden');
                 solutionsContent.classList.add('hidden');
-                      
-                // Set active button: Needs becomes active, Solutions becomes non-active
                 needsBtn.classList.add('active');
                 solutionsBtn.classList.remove('active');
-                      
               } else if (tabName === 'solutions') {
-                // Show Solutions, Hide Needs
                 solutionsContent.classList.remove('hidden');
                 needsContent.classList.add('hidden');
-                      
-                // Set active button: Solutions becomes active, Needs becomes non-active
                 solutionsBtn.classList.add('active');
-                needsBtn.classList.remove('active'); // <-- THIS LINE removes 'active' from Needs
+                needsBtn.classList.remove('active');
+              }
+            }
+
+            function hideContent(tabName) {
+              const needsContent = document.getElementById('needs-content');
+              const solutionsContent = document.getElementById('solutions-content');
+              const needsBtn = document.getElementById('needs-btn');
+              const solutionsBtn = document.getElementById('solutions-btn');
+
+              if (tabName === 'needs') {
+                needsContent.classList.add('hidden');
+                needsBtn.classList.remove('active');
+              } else if (tabName === 'solutions') {
+                solutionsContent.classList.add('hidden');
+                solutionsBtn.classList.remove('active');
               }
             }
           </script>
+
         </div>
     </section><!-- /About Section -->
 

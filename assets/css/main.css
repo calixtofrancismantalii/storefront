@@ -4906,7 +4906,7 @@ th {
 /* Basic styling for the buttons */
 .button-container {
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
 }
@@ -4914,13 +4914,13 @@ th {
 .tab-button {
   padding: 12px 287px;
   margin-right: 10px;
-  border: 1px solid #ccc;
-  background-color: gray;
+  border: 1px solid white;
+  background-color: #1977cc;
   cursor: pointer;
   font-weight: bold;
   font-size: 18px;
-  color: #ccc;
-  border-radius: 5px;
+  color: white;
+  border-radius: 25px;
 }
 
 .tab-button.active {
@@ -4929,14 +4929,92 @@ th {
   border: 1px solid #ccc;
 }
 
-/* Style for the content area */
-.content-box {
+.tab-button:hover{
+  background-color: #DC4F4B; /* Active button color */
+  color: white;
   border: 1px solid #ccc;
-  padding: 20px;
-  min-height: 100px; /* Ensure a minimum height for visibility */
+}
+
+.content-box {
+  background-color: #f0f4ff;
+  padding: 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 /* Utility class to hide content */
 .hidden {
   display: none;
+}
+
+/* Responsive adjustments for tab/button area */
+@media (max-width: 1024px) {
+  .button-container{
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .tab-button{
+    padding: 12px 160px;
+    font-size: 17px;
+    /* allow buttons to shrink if there are many */
+    min-width: 160px;
+  }
+  .content-box{
+    padding: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-container{
+    gap: 10px;
+    justify-content: center;
+  }
+  .tab-button{
+    padding: 10px 90px;
+    font-size: 16px;
+    min-width: 140px;
+  }
+  .content-box{
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-container{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .tab-button{
+    width: 100%;
+    padding: 10px 18px;
+    font-size: 15px;
+    margin-right: 0;
+    min-width: 0;
+    text-align: center;
+  }
+  .tab-button + .tab-button {
+    margin-top: 6px;
+  }
+  .content-box{
+    padding: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .button-container{
+    gap: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .tab-button{
+    width: 100%;
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+  .content-box{
+    padding: 8px;
+    font-size: 14px;
+  }
 }

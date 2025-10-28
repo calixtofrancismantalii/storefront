@@ -47,7 +47,7 @@
 
       
     <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="about" class="about section" style="margin-bottom: -60px;">
           <!-- Section Title -->
             <div class="container section-title" data-aos="fade-in">
               <h2>Durable Medical Equipment</h2>
@@ -76,67 +76,72 @@
           </div>
 
           <div class="button-container">
-            <button id="needs-btn" class="tab-button active" onclick="showContent('needs')">
+            <button id="needs-btn" class="tab-button active" onmouseenter="showContent('needs')" onmouseleave="hideContent('needs')">
               Needs
             </button>
-
-            <button id="solutions-btn" class="tab-button" onclick="showContent('solutions')">
+            <button id="solutions-btn" class="tab-button active" onmouseenter="showContent('solutions')" onmouseleave="hideContent('solutions')">
               Solutions
             </button>
           </div>
 
-          <div class="content-box">
-            <div id="needs-content">
-              <h3>NEEDS</h3>
-              <ul>
-                <li>There is a significant amount of information required from DMEs before insurance approval of PAP equipment and delivery, in many cases from disparate sources, leading to delays, and creating frustration for the patient and ordering physicians.</li>
-                <li>There is lack of consistent system for referring provider (and patient) tracking of PAP delivery.</li>
-                <li>There is lack of consistently available sleep specialists to refer patients who do not have an ordering physician, but who are in need of prescriptions for PAP equipment and supplies.</li>
-                <li>There is difficulty for some providers (and patients) to access DMEs for new supplies.</li>
-              </ul>
-            </div>
+          <div id="needs-content" class="hidden content-box">
+            <h3>NEEDS</h3>
+            <ul>
+              <li>There is a significant amount of information required from DMEs before insurance approval of PAP equipment and delivery, in many cases from disparate sources, leading to delays, and creating frustration for the patient and ordering physicians.</li>
+              <li>There is lack of consistent system for referring provider (and patient) tracking of PAP delivery.</li>
+              <li>There is lack of consistently available sleep specialists to refer patients who do not have an ordering physician, but who are in need of prescriptions for PAP equipment and supplies.</li>
+              <li>There is difficulty for some providers (and patients) to access DMEs for new supplies.</li>
+            </ul>
+          </div>
 
-            <div id="solutions-content" class="hidden">
-              <h3>MyApneaPath</h3>
-              <ul>
-                <li>Provides access to all pertinent demographic, insurance and clinical data, HST/PSG/PAP titration results and prescription information necessary for insurance approval.</li>
-                <li>Provides for tracking of PAP delivery and monitoring of PAP therapy.</li>
-                <li>Provides Introductory PAP SetUp call service.</li>
-                <li>Provides follow up free service for patients having adjustment problems with PAP therapy with possible appropriate solutions.</li>
-                <li>Provides practice support if needed (precertification, insurance verification, etc).</li>
-                <li>Provides a referral source and allows for sleep specialist consultation if needed.</li>
-              </ul>
-            </div>
+          <div id="solutions-content" class="hidden content-box">
+            <h3>MyApneaPath</h3>
+            <ul>
+              <li>Provides access to all pertinent demographic, insurance and clinical data, HST/PSG/PAP titration results and prescription information necessary for insurance approval.</li>
+              <li>Provides for tracking of PAP delivery and monitoring of PAP therapy.</li>
+              <li>Provides Introductory PAP SetUp call service.</li>
+              <li>Provides follow up free service for patients having adjustment problems with PAP therapy with possible appropriate solutions.</li>
+              <li>Provides practice support if needed (precertification, insurance verification, etc).</li>
+              <li>Provides a referral source and allows for sleep specialist consultation if needed.</li>
+            </ul>
           </div>
 
           <script>
             function showContent(tabName) {
-              // Get content and button elements
               const needsContent = document.getElementById('needs-content');
               const solutionsContent = document.getElementById('solutions-content');
               const needsBtn = document.getElementById('needs-btn');
               const solutionsBtn = document.getElementById('solutions-btn');
 
               if (tabName === 'needs') {
-                // Show Needs, Hide Solutions
                 needsContent.classList.remove('hidden');
                 solutionsContent.classList.add('hidden');
-                      
-                // Set active button: Needs becomes active, Solutions becomes non-active
                 needsBtn.classList.add('active');
                 solutionsBtn.classList.remove('active');
-                      
               } else if (tabName === 'solutions') {
-                // Show Solutions, Hide Needs
                 solutionsContent.classList.remove('hidden');
                 needsContent.classList.add('hidden');
-                      
-                // Set active button: Solutions becomes active, Needs becomes non-active
                 solutionsBtn.classList.add('active');
-                needsBtn.classList.remove('active'); // <-- THIS LINE removes 'active' from Needs
+                needsBtn.classList.remove('active');
+              }
+            }
+
+            function hideContent(tabName) {
+              const needsContent = document.getElementById('needs-content');
+              const solutionsContent = document.getElementById('solutions-content');
+              const needsBtn = document.getElementById('needs-btn');
+              const solutionsBtn = document.getElementById('solutions-btn');
+
+              if (tabName === 'needs') {
+                needsContent.classList.add('hidden');
+                needsBtn.classList.remove('active');
+              } else if (tabName === 'solutions') {
+                solutionsContent.classList.add('hidden');
+                solutionsBtn.classList.remove('active');
               }
             }
           </script>
+
         </div>
     </section><!-- /About Section -->
 
